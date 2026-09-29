@@ -65,8 +65,16 @@ def ig_login():
         try:
             cl.load_settings(str(session_path))
             cl.get_timeline_feed()  # validate the rehydrated session — no password used
+            got = cl.account_info().username.lower()
+            if got != EXPECTED_USERNAME.lower():
+                raise PermanentError(
+                    f"Instagram session is for '{got}', expected '{EXPECTED_USERNAME}'. "
+                    "Refusing to publish to the wrong account."
+                )
             print("  instagram: reusing persisted session (no password login)")
             return cl
+        except PermanentError:
+            raise
         except Exception as e:
             print(f"  instagram: persisted session invalid ({type(e).__name__}) — re-login required")
 
