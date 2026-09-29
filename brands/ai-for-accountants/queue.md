@@ -1,0 +1,22 @@
+# AIForAccountants — initial queue
+
+- [ ] Turn raw client meeting notes into a follow-up email + action list, with human-review checklist
+- [ ] Bad vs good month-end variance prompt using a synthetic P&L
+- [ ] Five things never to remove from an AI-generated client email review
+- [ ] Excel cleanup workflow: messy transaction descriptions → suggested categories → review queue
+- [ ] Build a standard client-document request list from engagement type
+- [ ] Summarise a 30-page PDF without losing page-level source references
+- [ ] Turn a recurring email into a reusable accounting prompt template
+- [ ] AI meeting-prep brief: company context + last meeting + outstanding actions
+- [ ] Can AI draft an SOP from a screen recording? Show the workflow
+- [ ] Red-team an AI-generated variance explanation: find three unsupported claims
+- [ ] Test an AI model on a bank-reconciliation anomaly: where does it get uncertain?
+- [ ] Turn a long accounting-standard update into a staff briefing: citation workflow
+- [ ] Generate first-draft management commentary from a synthetic monthly pack
+- [ ] Three tasks to automate before touching journal-entry approval
+- [ ] A one-page AI acceptable-use policy for a small accounting firm
+- [ ] Tool test: which model catches more inconsistencies in the same synthetic spreadsheet?
+- [ ] Extract questions from a client's messy email into a structured response checklist
+- [ ] Why "act as an expert accountant" is a bad prompt — replace with explicit task, sources and review criteria
+- [ ] Create a review checklist from an accounting process without letting AI make the final judgement
+- [ ] AI tool buying checklist for a 10-person practice: data handling, auditability, access, citations, workflow fit
