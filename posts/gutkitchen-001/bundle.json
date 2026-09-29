@@ -1,0 +1,14 @@
+{
+  "brand": "gutkitchen",
+  "post_id": "gutkitchen-001",
+  "title": "Five ways to add ~5g fibre to breakfast (real numbers)",
+  "caption": "You're tracking protein. Now look at the number most people ignore.\n\nFive breakfast upgrades, each adding ~5g fibre:\n1 tbsp chia seeds +4g\n2 tbsp milled flaxseed +4g\n50g jumbo oats +5g\n100g raspberries +6g\n30g oat bran +5g\n\n24g added before you've cooked anything. Most adults should average 30g fibre a day (NHS).",
+  "hashtags": ["highfibre", "guthealth", "fibre", "nutrition", "breakfastideas", "foodtok"],
+  "assets": [
+    { "path": "fibre-upgrades.mp4", "type": "video", "role": "primary" },
+    { "path": "cover.jpg", "type": "image", "role": "cover" }
+  ],
+  "visibility": "public",
+  "aigc": true,
+  "platforms": ["youtube", "tiktok", "instagram"]
+}

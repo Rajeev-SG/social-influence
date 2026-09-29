@@ -10,7 +10,7 @@ Keep the common backend deliberately small:
 |---|---|---|
 | **Discover** | Find topics/questions/trends worth covering | Manual / ChatGPT deep research first; automate later |
 | **Create** | Research → script → assets → finished short-form content | Content Machine and/or MoneyPrinterTurbo + LLMs |
-| **Publish** | Schedule and publish across social platforms | Postiz |
+| **Publish** | Schedule and publish across social platforms | Self-hosted publisher (YouTube Data API + cookie/session-based TikTok & Instagram uploaders) — see `docs/PUBLISHING.md`; Postiz is not used |
 | **Sell** | Storefront, checkout and digital delivery | Existing commerce platform; do not rebuild |
 | **Measure** | Collect social performance and sales/conversion data | Platform/Postiz + store APIs; thin normalisation layer |
 | **Decide** | Use results to choose what to make/post/sell next | **Primary custom component** |
