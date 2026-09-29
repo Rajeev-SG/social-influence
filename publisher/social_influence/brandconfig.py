@@ -19,8 +19,12 @@ import os
 PLATFORM_KEYS = {"youtube": ("YOUTUBE_HANDLE", "YT_HANDLE"), "tiktok": ("TIKTOK_USERNAME", "TT_USERNAME"), "instagram": ("IG_USERNAME", "IG_USERNAME")}
 
 
-def _prefix(brand: str) -> str:
+def prefix(brand: str) -> str:
     return brand.upper().replace("-", "_")
+
+
+def _prefix(brand: str) -> str:
+    return prefix(brand)
 
 
 def expected_account(brand: str, platform: str) -> str:
@@ -35,8 +39,11 @@ def expected_account(brand: str, platform: str) -> str:
 
 
 def instagram_password(brand: str) -> str:
-    prefix = _prefix(brand)
-    return os.environ.get(f"{prefix}_IG_PASSWORD") or os.environ.get("GUTKITCHEN_IG_PASSWORD") or ""
+    # Legacy fallback is scoped to the gutkitchen brand only — a non-gutkitchen
+    # brand must never authenticate with another brand's password.
+    if _prefix(brand) == "GUTKITCHEN":
+        return os.environ.get("GUTKITCHEN_IG_PASSWORD") or ""
+    return os.environ.get(f"{_prefix(brand)}_IG_PASSWORD") or ""
 
 
 def ig_session_name(brand: str) -> str:

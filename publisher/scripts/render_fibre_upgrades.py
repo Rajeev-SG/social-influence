@@ -112,6 +112,13 @@ SCENES = [
 frames_dir = OUT / "_frames"
 frames_dir.mkdir(exist_ok=True)
 
+import shutil
+import sys
+
+ffmpeg = shutil.which("ffmpeg")
+if not ffmpeg:
+    sys.exit("ffmpeg not found on PATH — install it (brew install ffmpeg) before rendering; no frames were written")
+
 i = 0
 for img, dur in SCENES:
     n = int(dur * FPS)
@@ -125,22 +132,31 @@ print(f"frames: {i}, duration: {total_dur:.1f}s")
 
 # encode + cover (kept in-script so a fresh clone can produce the bundle assets)
 import subprocess
-import sys
 
 MP4 = OUT / "fibre-upgrades.mp4"
 subprocess.run(
     [
-        "ffmpeg", "-y", "-framerate", str(FPS), "-i", str(frames_dir / "%05d.png"),
+        ffmpeg, "-y", "-framerate", str(FPS), "-i", str(frames_dir / "%05d.png"),
         "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "20", "-preset", "medium",
         "-movflags", "+faststart", str(MP4),
     ],
     check=True,
 )
+
+# input seeking (-ss before -i): fast and safe for any duration
 subprocess.run(
     [
-        "ffmpeg", "-y", "-i", str(MP4), "-vframes", "1", "-ss", "13",
-        "-vf", "scale=1080:1920", str(OUT / "cover.jpg"),
+        ffmpeg, "-y", "-ss", "13", "-i", str(MP4),
+        "-vframes", "1", "-vf", "scale=1080:1920", str(OUT / "cover.jpg"),
     ],
     check=True,
 )
+
+# guard against a degenerate (black/empty) cover
+from PIL import ImageStat
+
+cover = Image.open(OUT / "cover.jpg").convert("L")
+spread = ImageStat.Stat(cover).stddev[0]
+if spread < 5:
+    sys.exit(f"cover.jpg looks degenerate (pixel stddev {spread:.1f}) — refusing to ship a black cover")
 print(f"wrote {MP4} and {OUT / 'cover.jpg'}")
