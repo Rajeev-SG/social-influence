@@ -18,7 +18,7 @@ from decimal import Decimal, DecimalException
 CM_REVISION = "46cfe459d9ffbf40f847399e3f88c7c380074e7b"
 QUEUE = re.compile(r"^(- \[) (\] )(.+?)(\r?\n)?$")
 CHECKS = ("profile", "claims_and_calculations", "visual_grammar", "first_frame",
-          "pacing", "captions", "audio", "cta", "rights", "privacy")
+          "pacing", "captions", "audio", "cta", "rights", "privacy", "ai_label")
 
 
 class Blocked(Exception):
@@ -134,6 +134,8 @@ def production_pack(brand_dir: Path, topic: str, profile: str):
                 raise Blocked("Generated illustration requires explicit authorization and disclosure")
             if not all(item["rights"].get(k) for k in ("provider", "model", "prompt", "workflow")):
                 raise Blocked("Generated media needs provider, model, prompt and workflow provenance")
+            if pack.get("ai_content_label_required") is not True or not pack.get("ai_content_label_text"):
+                raise Blocked("Generated media requires a platform AI-content label contract")
         elif item.get("kind") not in {"real-food-footage", "screen-recording"}:
             raise Blocked("Unapproved visual kind")
     return pack, snapshots
@@ -361,6 +363,10 @@ def enrich_ledger(run: Path, pack: dict):
 
 
 def check_machine_review(run: Path):
+    production = read_json(run / "production-input.json")
+    if any(item.get("kind") == "generated-food-illustration" for item in production.get("media", [])):
+        if production.get("ai_content_label_required") is not True or not production.get("ai_content_label_text"):
+            raise Blocked("Generated-food render lacks a hard platform AI-content label contract")
     for relative in ("publish-prep/validate.json", "publish-prep/score.json",
                      "publish-prep/provenance.json"):
         if read_json(run / "engine" / relative).get("passed") is not True:
@@ -528,8 +534,15 @@ def create(root: Path, brand: str):
                     }],
                 }],
             }
+            generated_food = any(item.get("kind") == "generated-food-illustration" for item in pack.get("media", []))
             write_json(bundle / "postiz-handoff.json", {
                 "status": "structurally-ready-awaiting-upload-and-integration-binding",
+                "publish_readiness": {
+                    "ready_for_publication": not generated_food,
+                    "blockers": ["AI-generated food visuals require explicit public-use approval and platform AI-content labeling"] if generated_food else [],
+                },
+                "platform_ai_label_required": generated_food,
+                "platform_ai_label_text": pack.get("ai_content_label_text") if generated_food else None,
                 "publish": False,
                 "media": {"path": str(bundle / "video.mp4"), "sha256": review["video_sha256"]},
                 "title": brief["title"], "content": content,

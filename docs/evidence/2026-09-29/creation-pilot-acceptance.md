@@ -12,7 +12,7 @@ bundle. The two brands must use one interface without brand-name orchestration.
 
 ## Executed steps
 
-1. Ran 22 unit tests covering queue order, source/media hashes, arithmetic,
+1. Ran 23 unit tests covering queue order, source/media hashes, arithmetic,
    fallback rejection, machine QA, review staleness/completeness, locking and
    resume.
 2. Produced and reviewed the GutKitchen pizza-bean bowl pilot with the supplied
@@ -58,7 +58,8 @@ workflow recording for AIForAccountants.
 - GutKitchen uses disclosed AI food illustrations; real footage of the cooked
   recipe is preferable before public publishing.
 - Postiz deployment, account connection, upload binding, manual publish and
-  generated-post publishing remain unproven. The bundle payload is structurally
+  generated-post publishing remain unproven. The two pilot media folders are
+  committed and `scripts/validate_packs.py` rechecks every pack hash in CI. The bundle payload is structurally
   shaped for Postiz drafts but contains deliberate binding placeholders. Issue #2 must remain open.
 - Output and `brands/*/media/` are gitignored; retain run bundles and source
   media in durable storage.

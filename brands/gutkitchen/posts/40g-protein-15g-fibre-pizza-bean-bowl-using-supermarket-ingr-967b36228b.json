@@ -3,26 +3,31 @@
   "sources": [
     {
       "url": "https://www.sainsburys.co.uk/groceries/product/sainsburys-cannellini-beans-in-water-400g-235g",
-      "file": "sources/pizza-bean-bowl-source-snapshots.md",
-      "sha256": "8e30aeb61094b6dfcfbe718427a28abdd535785f75d2f1f3944b032b30552df5"
+      "file": "sources/sainsburys-cannellini.md",
+      "sha256": "2e7ccfb7e5f755332b36394662caaae6c1dbad6659d2544c15abb75e276c26ed"
     },
     {
       "url": "https://www.sainsburys.co.uk/groceries/product/sainsburys-lighter-mozzarella-cheese-125g",
-      "file": "sources/pizza-bean-bowl-source-snapshots.md",
-      "sha256": "8e30aeb61094b6dfcfbe718427a28abdd535785f75d2f1f3944b032b30552df5"
+      "file": "sources/sainsburys-lighter-mozzarella.md",
+      "sha256": "de5bdfef51a730cfccc49b0b003a4fcfadb202ebceb0c3b07e68074d5b434d15"
     },
     {
       "url": "https://www.sainsburys.co.uk/groceries/product/sainsburys-passata-500g",
-      "file": "sources/pizza-bean-bowl-source-snapshots.md",
-      "sha256": "8e30aeb61094b6dfcfbe718427a28abdd535785f75d2f1f3944b032b30552df5"
+      "file": "sources/sainsburys-passata.md",
+      "sha256": "18ae86e460a6f61d1587259642dd253e61143fa311de0b765bf276eaf50a48d5"
     },
     {
       "url": "https://www.sainsburys.co.uk/groceries/product/sainsburys-baby-leaf-spinach-200g",
-      "file": "sources/pizza-bean-bowl-source-snapshots.md",
-      "sha256": "8e30aeb61094b6dfcfbe718427a28abdd535785f75d2f1f3944b032b30552df5"
+      "file": "sources/sainsburys-baby-spinach.md",
+      "sha256": "5faad76b30f3314c04c17988995643f64c163b57f5ffac09706685118df42f98"
     },
     {
-      "url": "https://www.sainsburys.co.uk/groceries/product/sainsburys-cannellini-beans-in-water-400g-235g",
+      "url": "https://www.tesco.com/shop/en-GB/products/262489348",
+      "file": "sources/tesco-cannellini-unverified.md",
+      "sha256": "6971cb4ad1d6a5627438dbbb33a7b53797c4b4bbc4532f5a66815893a0268765"
+    },
+    {
+      "url": "repo:brands/gutkitchen/sources/pizza-bean-bowl-calculation.json",
       "file": "sources/pizza-bean-bowl-calculation.json",
       "sha256": "170858f8a8349cdd70596322f3c90b1777a16c26b4d643c2c3e2deb52273f597"
     }
@@ -269,5 +274,8 @@
   ],
   "editorial_constraints": "The spoken copy is pre-approved and must be copied verbatim. Do not rewrite, expand, summarize, or add sentences. Ignore generic word-count expansion rules. Output hook plus exactly six scenes plus one CTA. Keep visualDirection concise. Use 40g, 15g, 235g, 150g, 50g and 100g numerals in captions. No time or cost claims. Include ingredient grams, one portion, source URLs, AI-illustration and untested-recipe disclosures in social caption.",
   "hook_narration": "Pizza bowl: forty protein, fifteen fibre.",
-  "cta_narration": "Save this for your next shop."
+  "cta_narration": "Save this for your next shop.",
+  "ai_content_label_required": true,
+  "ai_content_label_text": "AI-generated content",
+  "evidence_review_method": "Human/agent review input with claim-trigger scan; not machine proof of claim truth."
 }

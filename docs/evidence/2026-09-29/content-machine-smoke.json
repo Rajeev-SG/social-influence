@@ -1,8 +1,39 @@
 {
-  "ok": false,
-  "tool": "content-machine/generate-short",
-  "error": {
-    "code": "CONFIG_ERROR",
-    "message": "Required environment variable OPENAI_API_KEY is not set. Add it to your .env file or set it in your environment."
-  }
+  "ok": true,
+  "purpose": "Current-environment creation smoke and accepted pilot run evidence; credential values are redacted.",
+  "credential_note": "Generation used a configured OpenAI-compatible local route with OPENAI_API_KEY injected at runtime; no key is stored here or in the repo.",
+  "content_machine_revision": "46cfe459d9ffbf40f847399e3f88c7c380074e7b",
+  "runs": [
+    {
+      "brand": "gutkitchen",
+      "attempt": "output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023",
+      "video": "bundle/video.mp4",
+      "duration_seconds": 31.15,
+      "caption_quality": 0.8657697898277522,
+      "caption_p95_drift_ms": 811.1999999999994,
+      "publish_prep_passed": true,
+      "reviewed": true
+    },
+    {
+      "brand": "ai-for-accountants",
+      "attempt": "output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002",
+      "video": "bundle/video.mp4",
+      "duration_seconds": 32.04,
+      "caption_quality": 0.8850190255588347,
+      "caption_p95_drift_ms": 97.1,
+      "publish_prep_passed": true,
+      "reviewed": true
+    }
+  ],
+  "stages": [
+    "niche-profile-draft",
+    "generate-short",
+    "deterministic copy-lock rebuild",
+    "script-to-audio",
+    "timestamps-to-visuals",
+    "video-render",
+    "asset-ledger",
+    "publish-prep-review"
+  ],
+  "accepted_claim": "Both pilots produced reviewed MP4 bundles with all exercised Content Machine publish-prep gates passing. This does not claim Postiz publishing or human review."
 }

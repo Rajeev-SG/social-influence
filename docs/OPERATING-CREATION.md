@@ -59,7 +59,9 @@ packages. The local checkout used `npm install --package-lock=false
 --ignore-scripts --no-audit --no-fund` without changing tracked upstream files.
 Its `.venv` contains `scenedetect` and `opencv-python-headless` for the cadence
 gate. Node 26 raised a better-sqlite3 engine warning; prefer upstream-supported
-Node 22/24 in a production environment.
+Node 22/24 in a production environment. The dependency inventory still reports a
+missing standalone Whisper binary/model; the exercised audio path uses Kokoro
+timed unit timestamps and does not require Whisper. `docs/evidence/2026-09-29/content-machine-doctor.json` records that distinction.
 
 ## Workflow
 
@@ -176,7 +178,7 @@ prompt/brief, copied media and manifest, every Content Machine request/response
 and log, full stage artefacts, provenance, review requirement/decision and the
 final bundle when approved. Failed attempts remain for diagnosis.
 
-Output directories and `brands/*/media/` are gitignored to keep large media out of Git. Retain reviewed bundles and approved source media in durable storage.
+Output directories and future media are gitignored to keep large files out of Git. The two pilot media folders are committed so their pack hashes can be revalidated from a clone. Retain later media and reviewed bundles in durable storage.
 
 Bundle contents:
 
@@ -188,7 +190,7 @@ Bundle contents:
 
 ## Verification performed (2026-09-29)
 
-- 22 standard-library tests pass, covering ordered queue selection, evidence and
+- 23 standard-library tests pass, covering ordered queue selection, evidence and
   hash failures, calculation mismatch, fallback rejection, machine-QA failures,
   stale/partial/string-true review rejection, path traversal, locking, resume,
   distinct profile artifacts and the harness banner/JSON parser.

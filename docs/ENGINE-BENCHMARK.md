@@ -32,7 +32,7 @@ Benchmarked 2026-09-29 by shallow clone into `/tmp/si-benchmark`.
 | short-video-maker | `gyoridavid/short-video-maker` | `9bb9a212ced86caa7e09099c382da1a44d638760` (v1.3.4) | MIT | Node/TS, Remotion 4.0.286, kokoro-js, whisper.cpp, Pexels |
 | OpenNolan | `het8802/OpenNolan` | `4457349c386ea1a89c01547f9a76fa650970c131` (v1.0.2) | **AGPL-3.0** | Python + FastAPI, Remotion composer, Node, FFmpeg, optional Claude Agent SDK |
 | OpenShorts | `mutonby/openshorts` | `29c54fa04c42621310f768adf40c81a1f3436bf2` | MIT | Python + FastAPI, torch/ultralytics/mediapipe, faster-whisper, google-genai, Docker |
-| Content Machine (parent-owned) | local `/Users/rajeev/Code/content-machine` | `46cfe459d9ffbf40f847399e3f88c7c380074e7b` | MIT | `@45ck/content-machine` 0.2.2, `generate-short` skill |
+| Content Machine (parent-owned) | local `CONTENT_MACHINE_DIR` checkout | `46cfe459d9ffbf40f847399e3f88c7c380074e7b` | MIT | `@45ck/content-machine` 0.2.2, `generate-short` skill |
 
 Repo-resolution notes:
 

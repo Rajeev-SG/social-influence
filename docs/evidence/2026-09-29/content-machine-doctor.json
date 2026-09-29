@@ -34,10 +34,8 @@
     {
       "id": "llm",
       "label": "LLM provider",
-      "status": "warn",
-      "detail": "openai (OPENAI_API_KEY missing)",
-      "fix": "Set OPENAI_API_KEY in your environment or .env file",
-      "code": "CONFIG_WARN"
+      "status": "ok",
+      "detail": "openai (API key set)"
     },
     {
       "id": "visuals-provider",
@@ -67,5 +65,12 @@
       "fix": "Install yt-dlp (and ensure `yt-dlp` is on PATH)",
       "code": "DEPENDENCY_ERROR"
     }
-  ]
+  ],
+  "interpretation": "Actual creation runtime uses Kokoro timed unit timestamps, so the missing standalone Whisper binary/model are not on the exercised path. LLM, ffmpeg, ffprobe and Python cadence dependencies were configured. Pexels is intentionally unused because the local visual provider is required. Doctor ok=false is recorded as a dependency inventory, not acceptance evidence; publish-prep gates are the acceptance evidence.",
+  "exercised_environment": {
+    "llm": "configured OpenAI-compatible local route (credential redacted)",
+    "python": "Content Machine .venv with scenedetect",
+    "ffmpeg": "Homebrew ffmpeg with process-local DYLD_FALLBACK_LIBRARY_PATH",
+    "visuals": "local approved media only"
+  }
 }

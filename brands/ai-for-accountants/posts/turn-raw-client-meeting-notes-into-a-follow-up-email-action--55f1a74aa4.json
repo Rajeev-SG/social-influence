@@ -3,31 +3,31 @@
   "sources": [
     {
       "url": "https://developers.openai.com/api/docs/guides/text",
-      "file": "sources/pilot-narration-and-notes.md",
-      "sha256": "ba2b0ac04bf27d1ff73f23e15a673dcfdab410a3777f35082367f75bb045790f"
+      "file": "sources/openai-text-generation.md",
+      "sha256": "549792aa27295721c67385dd6ce5ce5833f22a44f829c64559d0b3c58d6717e6"
     },
     {
       "url": "https://developers.openai.com/api/docs/guides/evals",
-      "file": "sources/pilot-narration-and-notes.md",
-      "sha256": "ba2b0ac04bf27d1ff73f23e15a673dcfdab410a3777f35082367f75bb045790f"
+      "file": "sources/openai-evals.md",
+      "sha256": "920a1ceea1ea86f73400ab63456772a3b8f8d6ad8da295035c0472e7d30d87a8"
     },
     {
       "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
-      "file": "sources/pilot-narration-and-notes.md",
-      "sha256": "ba2b0ac04bf27d1ff73f23e15a673dcfdab410a3777f35082367f75bb045790f"
+      "file": "sources/nist-ai-600-1.md",
+      "sha256": "9c66dd097aa4ae23cc9c632212f0e0c646f1b37ba41b03ebb2ac65b97216285c"
     },
     {
-      "url": "file:///Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/brands/ai-for-accountants/sources/pilot-model-response.json",
+      "url": "repo:brands/ai-for-accountants/sources/pilot-model-response.json",
       "file": "sources/pilot-model-response.json",
       "sha256": "fe16dd5d9aba41089a12fc69e90860fcba8a1c9b212b26c76aaf9c3bcd66a17a"
     },
     {
-      "url": "file:///Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/brands/ai-for-accountants/sources/pilot-notes.json",
+      "url": "repo:brands/ai-for-accountants/sources/pilot-notes.json",
       "file": "sources/pilot-notes.json",
       "sha256": "f8b4e3926da652bf41ec6f37189c74fa9bd03b9e461b206bbd9de4264294a790"
     },
     {
-      "url": "file:///Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/brands/ai-for-accountants/sources/pilot-prompt.txt",
+      "url": "repo:brands/ai-for-accountants/sources/pilot-prompt.txt",
       "file": "sources/pilot-prompt.txt",
       "sha256": "4cb8e3bdab81ee65b3ec39febdebba10b8b5d21b93f421cd9b99ddf841c5ac7e"
     }
@@ -123,5 +123,15 @@
       }
     }
   ],
-  "editorial_constraints": "Use hook_narration, scene_narration and cta_narration verbatim. Exactly six scenes plus hook plus one CTA. Preserve INPUT -> AI STEP -> HUMAN CHECK, SYNTHETIC DATA and REVIEW REQUIRED callouts. Show the human checklist before save. No vendor UI imitation, real client data, invented dates, tax/accounting advice, compliance claims, productivity claims or autonomous approval."
+  "editorial_constraints": "Use hook_narration, scene_narration and cta_narration verbatim. Exactly six scenes plus hook plus one CTA. Preserve INPUT -> AI STEP -> HUMAN CHECK, SYNTHETIC DATA and REVIEW REQUIRED callouts. Show the human checklist before save. No vendor UI imitation, real client data, invented dates, tax/accounting advice, compliance claims, productivity claims or autonomous approval.",
+  "evidence_review_method": "Human/agent review input with claim-trigger scan; not machine proof of claim truth.",
+  "claim_triggers": [
+    "time-saving",
+    "productivity",
+    "compliance",
+    "tax advice",
+    "accounting advice",
+    "invented date",
+    "real client data"
+  ]
 }

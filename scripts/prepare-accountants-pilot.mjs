@@ -12,11 +12,10 @@
  *
  * All data is synthetic. No real client data. No time-saving or tax claims.
  */
-import { chromium } from '/Users/rajeev/Code/content-machine/node_modules/playwright/index.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = path.join(REPO, 'brands/ai-for-accountants/sources');
@@ -24,7 +23,10 @@ const MEDIA = path.join(REPO, 'brands/ai-for-accountants/media/pilot');
 fs.mkdirSync(SRC, { recursive: true });
 fs.mkdirSync(MEDIA, { recursive: true });
 
-const FFMPEG_ENV = { ...process.env, DYLD_FALLBACK_LIBRARY_PATH: '/opt/homebrew/Cellar/x265/4.1/lib' };
+const FFMPEG_ENV = { ...process.env, DYLD_FALLBACK_LIBRARY_PATH: process.env.DYLD_FALLBACK_LIBRARY_PATH ?? '/opt/homebrew/Cellar/x265/4.1/lib' };
+const CM_DIR = process.env.CONTENT_MACHINE_DIR;
+if (!CM_DIR) throw new Error('CONTENT_MACHINE_DIR is required');
+const { chromium } = await import(pathToFileURL(path.join(CM_DIR, 'node_modules/playwright/index.mjs')).href);
 const DUR = 8.0;
 const W = 1080, H = 1920;
 

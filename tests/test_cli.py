@@ -196,6 +196,15 @@ class WorkflowTests(unittest.TestCase):
         with self.assertRaisesRegex(cli.Blocked, 'Every profile'):
             self.invoke()
 
+    def test_generated_food_requires_ai_label_contract(self):
+        self.pack['media'][0]['kind'] = 'generated-food-illustration'
+        self.pack['generation_authorization'] = 'explicit user authorization'
+        self.pack['disclosure'] = 'AI food illustration'
+        self.pack['media'][0]['rights'].update({'provider': 'provider', 'model': 'model', 'prompt': 'prompt', 'workflow': 'workflow'})
+        self.save_pack()
+        with self.assertRaisesRegex(cli.Blocked, 'platform AI-content label'):
+            self.invoke()
+
     def test_media_hash_required(self):
         (self.brand / 'clip.mp4').write_text('different')
         with self.assertRaisesRegex(cli.Blocked, 'Media has changed'):
