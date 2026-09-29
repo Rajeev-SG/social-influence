@@ -133,5 +133,6 @@
     "accounting advice",
     "invented date",
     "real client data"
-  ]
+  ],
+  "input_integrity": "git-tracked-and-hash-checked"
 }

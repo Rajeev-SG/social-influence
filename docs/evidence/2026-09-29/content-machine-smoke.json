@@ -2,99 +2,99 @@
   "ok": true,
   "tool": "content-machine/generate-short",
   "result": {
-    "outputDir": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine",
+    "outputDir": "/tmp/si-cm-smoke-final-2",
     "referenceOutputDir": null,
-    "scriptPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/script/script.json",
-    "audioPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/audio/audio.wav",
-    "timestampsPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/audio/timestamps.json",
-    "visualsPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/visuals/visuals.json",
-    "visualQualityPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/visuals/visual-quality.json",
-    "videoPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/render/video.mp4",
-    "renderMetadataPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/render/render.json",
-    "qualitySummaryPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/quality-summary.json",
-    "qualityReady": true,
-    "visualQualityPassed": true,
-    "visualQualityScore": 1,
-    "captionQualityPassed": true,
-    "captionQualityScore": 0.982,
-    "captionExportPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/render/captions.remotion.json",
-    "captionSrtPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/render/captions.srt",
-    "captionAssPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/render/captions.ass",
-    "assetLedgerPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/provenance/asset-ledger.json",
+    "scriptPath": "/tmp/si-cm-smoke-final-2/script/script.json",
+    "audioPath": "/tmp/si-cm-smoke-final-2/audio/audio.wav",
+    "timestampsPath": "/tmp/si-cm-smoke-final-2/audio/timestamps.json",
+    "visualsPath": "/tmp/si-cm-smoke-final-2/visuals/visuals.json",
+    "visualQualityPath": "/tmp/si-cm-smoke-final-2/visuals/visual-quality.json",
+    "videoPath": "/tmp/si-cm-smoke-final-2/render/video.mp4",
+    "renderMetadataPath": "/tmp/si-cm-smoke-final-2/render/render.json",
+    "qualitySummaryPath": "/tmp/si-cm-smoke-final-2/quality-summary.json",
+    "qualityReady": false,
+    "visualQualityPassed": false,
+    "visualQualityScore": 0.7,
+    "captionQualityPassed": false,
+    "captionQualityScore": 0.987,
+    "captionExportPath": "/tmp/si-cm-smoke-final-2/render/captions.remotion.json",
+    "captionSrtPath": "/tmp/si-cm-smoke-final-2/render/captions.srt",
+    "captionAssPath": "/tmp/si-cm-smoke-final-2/render/captions.ass",
+    "assetLedgerPath": "/tmp/si-cm-smoke-final-2/provenance/asset-ledger.json",
     "publishPrepDir": null,
     "publishReady": null,
-    "archetype": "howto",
+    "archetype": null,
     "referenceArchetype": null,
     "laneId": null
   },
   "artifacts": [
     {
-      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine",
+      "path": "/tmp/si-cm-smoke-final-2",
       "kind": "directory",
       "description": "Generate-short output directory"
     },
     {
-      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/script/script.json",
+      "path": "/tmp/si-cm-smoke-final-2/script/script.json",
       "kind": "file",
       "description": "Generated script artifact"
     },
     {
-      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/audio/audio.wav",
+      "path": "/tmp/si-cm-smoke-final-2/audio/audio.wav",
       "kind": "file",
       "description": "Generated audio artifact"
     },
     {
-      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/audio/timestamps.json",
+      "path": "/tmp/si-cm-smoke-final-2/audio/timestamps.json",
       "kind": "file",
       "description": "Generated timestamps artifact"
     },
     {
-      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/audio/audio.json",
+      "path": "/tmp/si-cm-smoke-final-2/audio/audio.json",
       "kind": "file",
       "description": "Audio stage metadata artifact"
     },
     {
-      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/visuals/visuals.json",
+      "path": "/tmp/si-cm-smoke-final-2/visuals/visuals.json",
       "kind": "file",
       "description": "Generated visuals artifact"
     },
     {
-      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/visuals/visual-quality.json",
+      "path": "/tmp/si-cm-smoke-final-2/visuals/visual-quality.json",
       "kind": "file",
       "description": "Visual quality preflight artifact"
     },
     {
-      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/render/video.mp4",
+      "path": "/tmp/si-cm-smoke-final-2/render/video.mp4",
       "kind": "file",
       "description": "Rendered video artifact"
     },
     {
-      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/render/render.json",
+      "path": "/tmp/si-cm-smoke-final-2/render/render.json",
       "kind": "file",
       "description": "Render metadata artifact"
     },
     {
-      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/render/captions.remotion.json",
+      "path": "/tmp/si-cm-smoke-final-2/render/captions.remotion.json",
       "kind": "file",
       "description": "Remotion-compatible caption JSON artifact"
     },
     {
-      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/render/captions.srt",
+      "path": "/tmp/si-cm-smoke-final-2/render/captions.srt",
       "kind": "file",
       "description": "SRT caption artifact"
     },
     {
-      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/render/captions.ass",
+      "path": "/tmp/si-cm-smoke-final-2/render/captions.ass",
       "kind": "file",
       "description": "ASS caption artifact"
     },
     {
-      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/quality-summary.json",
+      "path": "/tmp/si-cm-smoke-final-2/quality-summary.json",
       "kind": "file",
       "description": "Generate-short quality summary artifact"
     },
     {
-      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/provenance/asset-ledger.json",
+      "path": "/tmp/si-cm-smoke-final-2/provenance/asset-ledger.json",
       "kind": "file",
       "description": "Asset provenance ledger artifact"
     }

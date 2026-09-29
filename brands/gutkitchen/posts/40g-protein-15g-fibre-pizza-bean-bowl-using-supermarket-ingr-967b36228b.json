@@ -272,5 +272,6 @@
   "cta_narration": "Save this for your next shop.",
   "ai_content_label_required": true,
   "ai_content_label_text": "AI-generated content",
-  "evidence_review_method": "Human/agent review input with claim-trigger scan; not machine proof of claim truth."
+  "evidence_review_method": "Human/agent review input with claim-trigger scan; not machine proof of claim truth.",
+  "input_integrity": "git-tracked-and-hash-checked"
 }

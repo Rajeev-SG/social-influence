@@ -1,0 +1,10 @@
+{"level":30,"time":1790725980997,"pid":30843,"hostname":"Mac.lan","module":"script","topic":"Current smoke only. No publish output.","archetype":"listicle","targetDuration":5,"targetWordCount":13,"msg":"Generating script"}
+{"level":40,"time":1790725988138,"pid":30843,"hostname":"Mac.lan","module":"script","topic":"Current smoke only. No publish output.","wordCount":145,"estimatedDuration":58,"maxWordCount":80,"targetDuration":5,"msg":"Script is longer than target. Attempting to shorten."}
+{"level":30,"time":1790725990530,"pid":30843,"hostname":"Mac.lan","module":"script","topic":"Current smoke only. No publish output.","wordCount":78,"estimatedDuration":31.2,"sceneCount":6,"msg":"Script generated successfully"}
+{"level":30,"time":1790725990532,"pid":30843,"hostname":"Mac.lan","module":"audio","voice":"af_heart","sceneCount":6,"mock":true,"msg":"Starting audio generation"}
+{"level":30,"time":1790725990536,"pid":30843,"hostname":"Mac.lan","module":"audio","mock":true,"duration":20.100000000000026,"wordCount":67,"msg":"Mock audio generation complete"}
+{"level":30,"time":1790725990538,"pid":30843,"hostname":"Mac.lan","module":"visuals","provider":"mock","sceneCount":7,"duration":20.100000000000026,"mock":true,"gameplay":null,"msg":"Starting visual matching"}
+{"level":30,"time":1790725990538,"pid":30843,"hostname":"Mac.lan","module":"visuals","provider":"mock","assetCount":7,"msg":"Mock visual matching complete"}
+{"level":30,"time":1790725990540,"pid":30843,"hostname":"Mac.lan","module":"render","outputPath":"/tmp/si-cm-smoke-final-2/render/video.mp4","orientation":"portrait","fps":30,"duration":20.100000000000026,"sceneCount":7,"hook":null,"mock":true,"compositionId":"ShortVideo","msg":"Starting video render"}
+{"level":30,"time":1790725991542,"pid":30843,"hostname":"Mac.lan","module":"render","outputPath":"/tmp/si-cm-smoke-final-2/render/video.mp4","durationInFrames":604,"msg":"Rendering video"}
+{"level":30,"time":1790725997836,"pid":30843,"hostname":"Mac.lan","module":"render","outputPath":"/tmp/si-cm-smoke-final-2/render/video.mp4","duration":20.100000000000026,"fileSize":2454770,"msg":"Video render complete"}
