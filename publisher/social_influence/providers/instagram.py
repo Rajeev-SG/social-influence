@@ -44,7 +44,11 @@ def _client():
 
 
 def ig_login():
-    """Return an authenticated instagrapi Client, reusing persisted session state."""
+    """Return an authenticated instagrapi Client.
+
+    Rehydrates the persisted session WITHOUT a password login on every publish;
+    falls back to a fresh password login only when the session is invalid.
+    """
     from dotenv import get_key
 
     username = os.environ.get("GUTKITCHEN_IG_USERNAME") or get_key(_dotenv_path(), "GUTKITCHEN_IG_USERNAME")
@@ -60,20 +64,24 @@ def ig_login():
     if session_path.exists():
         try:
             cl.load_settings(str(session_path))
-            cl.login(username, password)
-            cl.get_timeline_feed()  # touch the session; raises if invalid
-        except Exception:
-            # stale device/session — re-login fresh
-            cl = _client()
-            cl.login(username, password)
-    else:
-        cl.login(username, password)
+            cl.get_timeline_feed()  # validate the rehydrated session — no password used
+            print("  instagram: reusing persisted session (no password login)")
+            return cl
+        except Exception as e:
+            print(f"  instagram: persisted session invalid ({type(e).__name__}) — re-login required")
+
+    # Only here: fresh password login (first publish, or session invalidated)
+    cl = _client()
+    cl.login(username, password)
+    if cl.username is None:
+        raise SessionExpired("Instagram password login failed — check credentials or complete any challenge in the browser.")
     if cl.username.lower() != EXPECTED_USERNAME.lower():
         raise PermanentError(
-            f"Instagram session is for '{cl.username}', expected '{EXPECTED_USERNAME}'. "
+            f"Instagram login is for '{cl.username}', expected '{EXPECTED_USERNAME}'. "
             "Refusing to publish to the wrong account."
         )
     session_path.write_text(json.dumps(cl.get_settings()))
+    print("  instagram: fresh password login complete — session persisted")
     return cl
 
 

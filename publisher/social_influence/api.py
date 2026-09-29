@@ -15,6 +15,7 @@ For remote (Tailscale) use the token is mandatory — see docs/PUBLISHING.md §H
 
 from __future__ import annotations
 
+import json
 import os
 from pathlib import Path
 
@@ -37,6 +38,8 @@ def allowed_roots() -> list[Path]:
 
 
 def _require_token(authorization: str = Header(default="")) -> None:
+    import hmac
+
     expected = os.environ.get("SOCIAL_INFLUENCE_API_TOKEN", "")
     if not expected:
         raise HTTPException(
@@ -45,7 +48,7 @@ def _require_token(authorization: str = Header(default="")) -> None:
             "Set a strong token in .env to enable it.",
         )
     supplied = authorization.removeprefix("Bearer ").strip()
-    if not supplied or supplied != expected:
+    if not supplied or not hmac.compare_digest(supplied, expected):
         raise HTTPException(status_code=401, detail="Missing or invalid bearer token")
 
 
@@ -75,8 +78,15 @@ def publish(req: PublishRequest):
     resolved = _resolve_bundle(req.bundle)
     try:
         bundle = load_bundle(resolved)
-    except FileNotFoundError as e:
-        raise HTTPException(status_code=404, detail=str(e)) from e
+    except FileNotFoundError:
+        raise HTTPException(status_code=404, detail=f"bundle or asset not found under {req.bundle}") from None
+    except json.JSONDecodeError as e:
+        raise HTTPException(status_code=400, detail=f"bundle is not valid JSON: {e.msg} (line {e.lineno})") from e
+    except KeyError as e:
+        raise HTTPException(status_code=400, detail=f"bundle missing required field: {e}") from e
+    except Exception as e:
+        # never leak server-side paths in error details
+        raise HTTPException(status_code=400, detail=f"bundle rejected: {type(e).__name__}") from e
     results = publish_bundle(str(resolved), req.platforms, dry_run=req.dry_run)
     return {
         "bundle": {"brand": bundle.brand, "post_id": bundle.post_id},

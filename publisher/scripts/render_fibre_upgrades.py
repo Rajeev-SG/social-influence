@@ -122,3 +122,25 @@ for img, dur in SCENES:
 
 total_dur = i / FPS
 print(f"frames: {i}, duration: {total_dur:.1f}s")
+
+# encode + cover (kept in-script so a fresh clone can produce the bundle assets)
+import subprocess
+import sys
+
+MP4 = OUT / "fibre-upgrades.mp4"
+subprocess.run(
+    [
+        "ffmpeg", "-y", "-framerate", str(FPS), "-i", str(frames_dir / "%05d.png"),
+        "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "20", "-preset", "medium",
+        "-movflags", "+faststart", str(MP4),
+    ],
+    check=True,
+)
+subprocess.run(
+    [
+        "ffmpeg", "-y", "-i", str(MP4), "-vframes", "1", "-ss", "13",
+        "-vf", "scale=1080:1920", str(OUT / "cover.jpg"),
+    ],
+    check=True,
+)
+print(f"wrote {MP4} and {OUT / 'cover.jpg'}")
