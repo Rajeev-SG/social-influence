@@ -67,3 +67,18 @@ research → create → publish → measure → decide
 ```
 
 Everything else is an optimisation or later capability unless real operating data proves it is needed.
+
+
+## Launch critical path
+
+This is the shortest path to a live audience and is deliberately separate from later backend automation:
+
+1. **Content research** — pick the niche/sub-niche, audience, positioning, content pillars, hooks, formats and visual style.
+2. **Accounts** — create the initial TikTok, Instagram and YouTube accounts.
+3. **Postiz** — connect the accounts and verify publishing.
+4. **Creation engine** — wire Content Machine and/or MoneyPrinterTurbo into Postiz.
+5. **Initial batch** — generate and QA roughly 10–20 posts.
+6. **Publish** — start a consistent cadence immediately.
+7. **Observe** — capture basic post-level performance from day one.
+
+Automated trend discovery, sophisticated attribution, product generation and the decision engine are **not launch blockers**. Manual/ChatGPT deep research should supply discovery until live performance data justifies deeper automation.
