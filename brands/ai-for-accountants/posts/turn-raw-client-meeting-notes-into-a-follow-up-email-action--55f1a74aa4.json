@@ -1,0 +1,127 @@
+{
+  "topic": "Turn raw client meeting notes into a follow-up email + action list, with human-review checklist",
+  "sources": [
+    {
+      "url": "https://developers.openai.com/api/docs/guides/text",
+      "file": "sources/pilot-narration-and-notes.md",
+      "sha256": "ba2b0ac04bf27d1ff73f23e15a673dcfdab410a3777f35082367f75bb045790f"
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/evals",
+      "file": "sources/pilot-narration-and-notes.md",
+      "sha256": "ba2b0ac04bf27d1ff73f23e15a673dcfdab410a3777f35082367f75bb045790f"
+    },
+    {
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "file": "sources/pilot-narration-and-notes.md",
+      "sha256": "ba2b0ac04bf27d1ff73f23e15a673dcfdab410a3777f35082367f75bb045790f"
+    },
+    {
+      "url": "file:///Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/brands/ai-for-accountants/sources/pilot-model-response.json",
+      "file": "sources/pilot-model-response.json",
+      "sha256": "fe16dd5d9aba41089a12fc69e90860fcba8a1c9b212b26c76aaf9c3bcd66a17a"
+    },
+    {
+      "url": "file:///Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/brands/ai-for-accountants/sources/pilot-notes.json",
+      "file": "sources/pilot-notes.json",
+      "sha256": "f8b4e3926da652bf41ec6f37189c74fa9bd03b9e461b206bbd9de4264294a790"
+    },
+    {
+      "url": "file:///Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/brands/ai-for-accountants/sources/pilot-prompt.txt",
+      "file": "sources/pilot-prompt.txt",
+      "sha256": "4cb8e3bdab81ee65b3ec39febdebba10b8b5d21b93f421cd9b99ddf841c5ac7e"
+    }
+  ],
+  "evidence": {
+    "Vendor capability claims come from current vendor documentation plus independent testing where practical.": "No vendor feature claim is made. The only model behavior shown is the retained real request/response in pilot-model-response.json.",
+    "Standards/tax assertions come from the relevant official regulator/professional body.": "No standards or tax assertion is made.",
+    "UK accounting-standard claims should anchor to FRC material.": "No UK accounting-standard claim is made.",
+    "Do not invent productivity savings; measure them if used.": "No productivity, time-saving, compliance or cost claim is made.",
+    "Any workflow output that could affect a filing, accounting judgement or client advice must show the human review/control point.": "The workflow explicitly blocks save until a person checks every action, owner and unstated due date; it is a draft and not advice."
+  },
+  "hook_narration": "Synthetic input becomes a reviewable artifact.",
+  "scene_narration": [
+    "Raw notes open this workflow.",
+    "Explicit task rules precede generation.",
+    "One model call returns structured JSON.",
+    "AI response writes follow-up email.",
+    "A person traces every action to source.",
+    "Checklist completion gates release."
+  ],
+  "cta_narration": "Save this process for your practice.",
+  "media": [
+    {
+      "file": "media/pilot/scene-001.mp4",
+      "sha256": "da0b88a4bc6171b81c0460603cb920d6c7c2c645090f31ab63e384db2c2ad970",
+      "kind": "screen-recording",
+      "rights": {
+        "reviewStatus": "owned",
+        "rightsStatus": "owned",
+        "licenseName": "Own functional demo recording using synthetic data only",
+        "attributionRequired": false,
+        "contentIdRisk": "none-known"
+      }
+    },
+    {
+      "file": "media/pilot/scene-002.mp4",
+      "sha256": "39edc917e378c3eb72c68eff1628411533fef2235dac46186d923f33b93fa2cb",
+      "kind": "screen-recording",
+      "rights": {
+        "reviewStatus": "owned",
+        "rightsStatus": "owned",
+        "licenseName": "Own functional demo recording using synthetic data only",
+        "attributionRequired": false,
+        "contentIdRisk": "none-known"
+      }
+    },
+    {
+      "file": "media/pilot/scene-003.mp4",
+      "sha256": "b57367a0fb58ec9d903e94b232c01517c1f038fc401bfaf75c4af1ccdb487242",
+      "kind": "screen-recording",
+      "rights": {
+        "reviewStatus": "owned",
+        "rightsStatus": "owned",
+        "licenseName": "Own functional demo recording using synthetic data only",
+        "attributionRequired": false,
+        "contentIdRisk": "none-known"
+      }
+    },
+    {
+      "file": "media/pilot/scene-004.mp4",
+      "sha256": "4e7c03f4bba3262b1f8a8f9b729adf74da4a3f280e759f462563ee92dbdb44be",
+      "kind": "screen-recording",
+      "rights": {
+        "reviewStatus": "owned",
+        "rightsStatus": "owned",
+        "licenseName": "Own functional demo recording using synthetic data only",
+        "attributionRequired": false,
+        "contentIdRisk": "none-known"
+      }
+    },
+    {
+      "file": "media/pilot/scene-005.mp4",
+      "sha256": "262a6cace2d54d4fd852d68e104398c837f191a42438ce53f2a21e086b8b0eb1",
+      "kind": "screen-recording",
+      "rights": {
+        "reviewStatus": "owned",
+        "rightsStatus": "owned",
+        "licenseName": "Own functional demo recording using synthetic data only",
+        "attributionRequired": false,
+        "contentIdRisk": "none-known"
+      }
+    },
+    {
+      "file": "media/pilot/scene-006.mp4",
+      "sha256": "23ee410962ba917e963853ebea1d5eef74c1a715c0919f3379c0c460165e83dd",
+      "kind": "screen-recording",
+      "rights": {
+        "reviewStatus": "owned",
+        "rightsStatus": "owned",
+        "licenseName": "Own functional demo recording using synthetic data only",
+        "attributionRequired": false,
+        "contentIdRisk": "none-known"
+      }
+    }
+  ],
+  "editorial_constraints": "Use hook_narration, scene_narration and cta_narration verbatim. Exactly six scenes plus hook plus one CTA. Preserve INPUT -> AI STEP -> HUMAN CHECK, SYNTHETIC DATA and REVIEW REQUIRED callouts. Show the human checklist before save. No vendor UI imitation, real client data, invented dates, tax/accounting advice, compliance claims, productivity claims or autonomous approval."
+}

@@ -82,3 +82,17 @@ This is the shortest path to a live audience and is deliberately separate from l
 7. **Observe** — capture basic post-level performance from day one.
 
 Automated trend discovery, sophisticated attribution, product generation and the decision engine are **not launch blockers**. Manual/ChatGPT deep research should supply discovery until live performance data justifies deeper automation.
+
+## Creation CLI prototype (Issue #2)
+
+`social-influence create --brand gutkitchen --next` and the same command for
+`ai-for-accountants` select the next queued topic, run profile-driven Content
+Machine creation, enforce publish-prep QA, pause for review-bound resumption,
+and create a final MP4 bundle only after approval. Two different-style pilot
+posts have completed that path. See
+[operating instructions and verification](docs/OPERATING-CREATION.md).
+
+Postiz deployment, connected accounts and real publishing remain unverified.
+The GutKitchen pilot uses disclosed AI food illustrations; real footage of the
+cooked recipe is preferable before public publishing. Run checks with
+`python3 -m unittest discover -s tests -v`.

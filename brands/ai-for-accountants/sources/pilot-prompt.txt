@@ -1,0 +1,15 @@
+You are drafting an internal client follow-up for an accounting practice.
+Use ONLY the supplied notes. Never invent dates, deadlines, amounts, advice or commitments.
+If a date or deadline is not stated in the notes, write exactly "TO CONFIRM".
+Return strict JSON with keys: email_subject, email_body, actions (array of {action, owner, due}), review_flags (array of strings).
+Keep the email short and neutral. Every action due not stated in the notes must be "TO CONFIRM".
+
+NOTES:
+Attendees: Alex (partner), Priya (client finance lead).
+Discussed 2024/25 draft accounts.
+Priya to send the missing March bank statement.
+VAT return for next quarter mentioned; no date given.
+Alex will check the payroll query.
+Client asked about a fixed-fee proposal; no amount agreed.
+A next meeting was mentioned but no date set.
+No engagement-letter changes discussed.

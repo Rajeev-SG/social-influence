@@ -1,0 +1,29 @@
+{
+  "model": "opencode-go/deepseek-v4.1-flash",
+  "provider": "cliproxyapi /chat/completions",
+  "endpoint_host": "127.0.0.1:8080",
+  "captured": "2026-09-29T21:38:35.396Z",
+  "raw_content": "{\n  \"email_subject\": \"Client follow-up: 2024/25 draft accounts\",\n  \"email_body\": \"Internal follow-up: Discussed the 2024/25 draft accounts with Priya. Priya to send the missing March bank statement. Alex will check the payroll query. VAT return for next quarter mentioned; date TO CONFIRM. Client asked about a fixed-fee proposal; no amount agreed. Next meeting mentioned; date TO CONFIRM. No engagement-letter changes discussed.\",\n  \"actions\": [\n    {\n      \"action\": \"Send the missing March bank statement\",\n      \"owner\": \"Priya\",\n      \"due\": \"TO CONFIRM\"\n    },\n    {\n      \"action\": \"Check the payroll query\",\n      \"owner\": \"Alex\",\n      \"due\": \"TO CONFIRM\"\n    }\n  ],\n  \"review_flags\": [\n    \"VAT return for next quarter mentioned; date TO CONFIRM.\",\n    \"Fixed-fee proposal requested; no amount agreed.\",\n    \"Next meeting mentioned; date TO CONFIRM.\",\n    \"No engagement-letter changes discussed.\"\n  ]\n}",
+  "parsed": {
+    "email_subject": "Client follow-up: 2024/25 draft accounts",
+    "email_body": "Internal follow-up: Discussed the 2024/25 draft accounts with Priya. Priya to send the missing March bank statement. Alex will check the payroll query. VAT return for next quarter mentioned; date TO CONFIRM. Client asked about a fixed-fee proposal; no amount agreed. Next meeting mentioned; date TO CONFIRM. No engagement-letter changes discussed.",
+    "actions": [
+      {
+        "action": "Send the missing March bank statement",
+        "owner": "Priya",
+        "due": "TO CONFIRM"
+      },
+      {
+        "action": "Check the payroll query",
+        "owner": "Alex",
+        "due": "TO CONFIRM"
+      }
+    ],
+    "review_flags": [
+      "VAT return for next quarter mentioned; date TO CONFIRM.",
+      "Fixed-fee proposal requested; no amount agreed.",
+      "Next meeting mentioned; date TO CONFIRM.",
+      "No engagement-letter changes discussed."
+    ]
+  }
+}
