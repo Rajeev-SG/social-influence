@@ -32,9 +32,6 @@ SCOPES = [
     "https://www.googleapis.com/auth/youtube.readonly",
 ]
 
-# The channel we must publish to. Guard against publishing to the wrong account.
-EXPECTED_HANDLE = os.environ.get("GUTKITCHEN_YT_HANDLE", "thegutkitchen")
-
 
 def _client_secret_path() -> Path:
     p = state_dir() / "google_oauth_client.json"
@@ -74,18 +71,26 @@ def youtube_client():
     return build("youtube", "v3", credentials=creds)
 
 
-def verify_channel(service) -> str:
-    """Return the handle of the authenticated channel, verifying it matches EXPECTED_HANDLE."""
+def verify_channel(service, brand: str) -> str:
+    """Return the handle of the authenticated channel, verifying it matches the brand's config."""
+    from .. import brandconfig
+
+    expected = brandconfig.expected_account(brand, "youtube") or os.environ.get("GUTKITCHEN_YT_HANDLE", "")
+    if not expected:
+        raise PermanentError(
+            f"No YouTube handle configured for brand '{brand}'. Set "
+            f"{brand.upper().replace('-', '_')}_YOUTUBE_HANDLE."
+        )
     resp = service.channels().list(part="snippet", mine=True).execute()
     items = resp.get("items", [])
     if not items:
         raise SessionExpired("No YouTube channel on this Google account — is the right account logged in?")
     sn = items[0]["snippet"]
     custom = sn.get("customUrl", "")
-    if EXPECTED_HANDLE not in custom.lstrip("@"):
+    if expected not in custom.lstrip("@"):
         raise PermanentError(
-            f"Authenticated YouTube channel is '{custom}', expected '@{EXPECTED_HANDLE}'. "
-            "Refusing to publish to the wrong account. Fix GUTKITCHEN_YT_HANDLE or re-auth."
+            f"Authenticated YouTube channel is '{custom}', expected '@{expected}'. "
+            "Refusing to publish to the wrong account. Fix the brand config or re-auth."
         )
     return custom
 
@@ -98,7 +103,7 @@ def upload(bundle: PostBundle) -> PublishResult:
         return PublishResult("youtube", False, error="YouTube requires a video asset; bundle has none", visibility=bundle.visibility)
 
     service = youtube_client()
-    verify_channel(service)
+    verify_channel(service, bundle.brand)
 
     desc = bundle.caption_with_hashtags()
     if bundle.aigc:

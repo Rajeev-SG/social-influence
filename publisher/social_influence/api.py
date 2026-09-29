@@ -21,10 +21,13 @@ from pathlib import Path
 
 from fastapi import Depends, FastAPI, Header, HTTPException
 from pydantic import BaseModel, Field
+from dotenv import load_dotenv
 
 from .bundle import load_bundle
 from .cli import publish_bundle
 from .providers.base import PLATFORMS
+
+load_dotenv()
 
 app = FastAPI(title="social-influence publisher", version="0.1.0")
 

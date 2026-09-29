@@ -31,6 +31,7 @@ import re
 import time
 from pathlib import Path
 
+from .. import brandconfig
 from ..bundle import PostBundle
 from .base import (
     PermanentError,
@@ -39,25 +40,23 @@ from .base import (
     state_dir,
 )
 
-EXPECTED_HANDLE = os.environ.get("GUTKITCHEN_TT_USERNAME", "gutkitchen.uk")
-
 VIS_MAP = {"public": "everyone", "unlisted": "friends", "private": "only_you"}
 
 _UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
 
 
-def _cookies_path() -> Path:
-    p = state_dir() / "tiktok_cookies.json"
+def _cookies_path(brand: str) -> Path:
+    p = state_dir() / brandconfig.tiktok_cookies_name(brand)
     if not p.exists():
         raise PermanentError(
-            f"Missing {p}. Export TikTok cookies from the GutKitchen Chrome profile "
+            f"Missing {p}. Export TikTok cookies from this brand's Chrome profile "
             "(see docs/PUBLISHING.md §TikTok auth)."
         )
     return p
 
 
-def _load_cookies() -> list[dict]:
-    raw = json.loads(_cookies_path().read_text())
+def _load_cookies(brand: str) -> list[dict]:
+    raw = json.loads(_cookies_path(brand).read_text())
     cookies = [
         {"name": c["name"], "value": c["value"], "domain": c.get("domain", ""), "path": c.get("path", "/")}
         for c in raw
@@ -67,7 +66,7 @@ def _load_cookies() -> list[dict]:
     return cookies
 
 
-def _latest_video_id(cookies: list[dict]) -> str | None:
+def _latest_video_id(cookies: list[dict], handle: str) -> str | None:
     """Best-effort scrape of the newest video id on our own profile grid."""
     import requests
 
@@ -76,7 +75,7 @@ def _latest_video_id(cookies: list[dict]) -> str | None:
         sess.cookies.set(c["name"], c["value"], domain=c.get("domain") or ".tiktok.com")
     try:
         resp = sess.get(
-            f"https://www.tiktok.com/@{EXPECTED_HANDLE}",
+            f"https://www.tiktok.com/@{handle}",
             timeout=30,
             headers={"User-Agent": _UA},
         )
@@ -112,11 +111,11 @@ def _latest_video_id(cookies: list[dict]) -> str | None:
     return None
 
 
-def _verify_new_post(cookies: list[dict], before_id: str | None, timeout_s: int = 90) -> str | None:
+def _verify_new_post(cookies: list[dict], handle: str, before_id: str | None, timeout_s: int = 90) -> str | None:
     """Poll the profile for a video id different from `before_id`. Returns id or None."""
     deadline = time.time() + timeout_s
     while time.time() < deadline:
-        latest = _latest_video_id(cookies)
+        latest = _latest_video_id(cookies, handle)
         if latest and latest != before_id:
             return latest
         time.sleep(10)
@@ -130,12 +129,18 @@ def upload(bundle: PostBundle) -> PublishResult:
     if asset is None:
         return PublishResult("tiktok", False, error="TikTok requires a video asset; bundle has none", visibility=bundle.visibility)
 
-    cookies = _load_cookies()
+    handle = brandconfig.expected_account(bundle.brand, "tiktok")
+    if not handle:
+        raise PermanentError(
+            f"No TikTok account configured for brand '{bundle.brand}'. Set "
+            f"{bundle.brand.upper().replace('-', '_')}_TIKTOK_USERNAME."
+        )
+    cookies = _load_cookies(brand=bundle.brand)
     description = bundle.caption_with_hashtags()[:2200]
     if bundle.aigc:
         description += " AIGC-assisted"  # honest disclosure for TikTok's AIGC labelling rules
 
-    before_id = _latest_video_id(cookies)
+    before_id = _latest_video_id(cookies, handle)
     cover = bundle.cover()
     try:
         failed_videos = upload_video(
@@ -155,13 +160,13 @@ def upload(bundle: PostBundle) -> PublishResult:
             return PublishResult("tiktok", False, error=f"SessionExpired: {e}", visibility=bundle.visibility)
         return PublishResult("tiktok", False, error=f"{type(e).__name__}: {e}", visibility=bundle.visibility)
 
-    post_id = _verify_new_post(cookies, before_id)
+    post_id = _verify_new_post(cookies, handle, before_id)
     if post_id:
         return PublishResult(
             "tiktok",
             True,
             post_id=post_id,
-            url=f"https://www.tiktok.com/@{EXPECTED_HANDLE}/video/{post_id}",
+            url=f"https://www.tiktok.com/@{handle}/video/{post_id}",
             visibility=bundle.visibility,
             verified=True,
         )

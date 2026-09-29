@@ -53,9 +53,15 @@ All reusable state lives in `$SOCIAL_INFLUENCE_STATE_DIR` (default
 |---|---|
 | `google_oauth_client.json` | OAuth desktop client secret (Google Cloud) |
 | `google_token.json` | OAuth refresh token (auto-refreshed) |
-| `ig_session.json` | Instagram session (device + cookies via instagrapi) |
-| `tiktok_cookies.json` | TikTok cookies exported from the Chrome profile |
+| `{brand}_ig_session.json` | Instagram session per brand (device + cookies via instagrapi) |
+| `{brand}_tiktok_cookies.json` | TikTok cookies per brand, exported from the Chrome profile |
 | `publications.jsonl` | publication ledger |
+
+Brand config contract: each brand resolves its own accounts via
+`{BRAND}_IG_USERNAME`, `{BRAND}_IG_PASSWORD`, `{BRAND}_TIKTOK_USERNAME`,
+`{BRAND}_YOUTUBE_HANDLE` (see `publisher/social_influence/brandconfig.py`).
+A bundle's `brand` selects the config; providers refuse to publish if the
+authenticated account doesn't match the brand's configured account.
 
 ## Authentication per platform
 
@@ -80,7 +86,7 @@ All reusable state lives in `$SOCIAL_INFLUENCE_STATE_DIR` (default
 Credentials from `.env` (`GUTKITCHEN_IG_USERNAME` / `GUTKITCHEN_IG_PASSWORD`).
 First use logs in and persists device+session to `~/.social-influence/ig_session.json`;
 later publishes reuse it without re-login (verified). If a session is
-invalidated (`login_required` / challenge), delete `ig_session.json` and let
+invalidated (`login_required` / challenge), delete the brand's `_ig_session.json` and let
 the next publish re-login. If Instagram throws a verification challenge,
 complete it manually in the GutKitchen Chrome profile first, then retry.
 
@@ -93,7 +99,7 @@ complete it manually in the GutKitchen Chrome profile first, then retry.
    playwriter -s <session> -e 'state.page = context.pages().find(p => p.url().includes("tiktok.com")) ?? (await context.newPage()); await state.page.goto("https://www.tiktok.com/explore"); await import("<repo>/publisher/scripts/...")'
    ```
    or inline: `getCDPSession({ page })` + `Network.getCookies` for tiktok.com
-   → write JSON to `~/.social-influence/tiktok_cookies.json`
+   → write JSON to `~/.social-influence/gutkitchen_tiktok_cookies.json`
    (the script `publisher/scripts/tiktok-cookie-export.js` documents this).
 3. Session validity = `sessionid` cookie present. If uploads start failing
    with session errors, re-export the cookies.

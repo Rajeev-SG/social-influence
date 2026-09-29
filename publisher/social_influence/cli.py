@@ -75,6 +75,10 @@ def publish_bundle(bundle_path: str, platforms: list[str], dry_run: bool = False
 
 
 def main(argv: list[str] | None = None) -> int:
+    from dotenv import load_dotenv
+
+    load_dotenv()  # brand config + credentials must be in env before any provider runs
+
     ap = argparse.ArgumentParser(prog="social-influence")
     sub = ap.add_subparsers(dest="cmd", required=True)
 

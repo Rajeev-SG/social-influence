@@ -1,11 +1,13 @@
-"""Instagram provider — instagrapi (subzeroid/instagrasi -> subzeroid/instagrapi).
+"""Instagram provider — instagrapi (subzeroid/instagrapi).
 
 Private-API publishing for accounts we own; avoids Meta App Review entirely.
 
 Auth model:
-- Credentials come from env (GUTKITCHEN_IG_USERNAME / GUTKITCHEN_IG_PASSWORD, via .env).
-- Device + session state persist at $SOCIAL_INFLUENCE_STATE_DIR/ig_session.json so
-  repeat publishes never re-login. Re-login only if the session is invalidated.
+- Per-brand credentials resolve via brandconfig: {BRAND}_IG_USERNAME /
+  {BRAND}_IG_PASSWORD (env or .env, gitignored).
+- Device + session state persist at $SOCIAL_INFLUENCE_STATE_DIR/{brand}_ig_session.json.
+  Repeat publishes rehydrate that session WITHOUT a password login; a fresh
+  password login happens only when the session is invalid.
 
 Publishing modes (chosen from the PostBundle, not a fixed media format):
 - video asset  -> clip_upload (Reel)
@@ -18,6 +20,7 @@ import json
 import os
 from pathlib import Path
 
+from .. import brandconfig
 from ..bundle import PostBundle
 from .base import (
     PermanentError,
@@ -28,11 +31,29 @@ from .base import (
     state_dir,
 )
 
-EXPECTED_USERNAME = os.environ.get("GUTKITCHEN_IG_USERNAME", "gutkitchen.uk")
+
+def _session_path(brand: str) -> Path:
+    return state_dir() / brandconfig.ig_session_name(brand)
 
 
-def _session_path() -> Path:
-    return state_dir() / "ig_session.json"
+def _dotenv_path() -> Path:
+    return Path(os.environ.get("SOCIAL_INFLUENCE_DOTENV", ".env"))
+
+
+def _credentials(brand: str) -> tuple[str, str]:
+    from dotenv import get_key
+
+    username = os.environ.get(f"{brand.upper().replace('-', '_')}_IG_USERNAME") or get_key(
+        _dotenv_path(), f"{brand.upper().replace('-', '_')}_IG_USERNAME"
+    )
+    password = brandconfig.instagram_password(brand) or get_key(_dotenv_path(), "GUTKITCHEN_IG_PASSWORD")
+    if not username or not password:
+        raise PermanentError(
+            f"Instagram credentials for brand '{brand}' missing. Set "
+            f"{brand.upper().replace('-', '_')}_IG_USERNAME / {brand.upper().replace('-', '_')}_IG_PASSWORD in .env "
+            "(gitignored). See docs/PUBLISHING.md §Instagram auth."
+        )
+    return username, password
 
 
 def _client():
@@ -43,36 +64,29 @@ def _client():
     return cl
 
 
-def ig_login():
-    """Return an authenticated instagrapi Client.
+def ig_login(brand: str) -> tuple[object, str]:
+    """Return (authenticated Client, username) for this brand.
 
     Rehydrates the persisted session WITHOUT a password login on every publish;
     falls back to a fresh password login only when the session is invalid.
     """
-    from dotenv import get_key
-
-    username = os.environ.get("GUTKITCHEN_IG_USERNAME") or get_key(_dotenv_path(), "GUTKITCHEN_IG_USERNAME")
-    password = os.environ.get("GUTKITCHEN_IG_PASSWORD") or get_key(_dotenv_path(), "GUTKITCHEN_IG_PASSWORD")
-    if not username or not password:
-        raise PermanentError(
-            "Instagram credentials missing. Put GUTKITCHEN_IG_USERNAME / GUTKITCHEN_IG_PASSWORD in .env "
-            "(gitignored). See docs/PUBLISHING.md §Instagram auth."
-        )
+    username, password = _credentials(brand)
+    expected = brandconfig.expected_account(brand, "instagram") or username
 
     cl = _client()
-    session_path = _session_path()
+    session_path = _session_path(brand)
     if session_path.exists():
         try:
             cl.load_settings(str(session_path))
             cl.get_timeline_feed()  # validate the rehydrated session — no password used
             got = cl.account_info().username.lower()
-            if got != EXPECTED_USERNAME.lower():
+            if got != expected.lower():
                 raise PermanentError(
-                    f"Instagram session is for '{got}', expected '{EXPECTED_USERNAME}'. "
+                    f"Instagram session is for '{got}', expected '{expected}'. "
                     "Refusing to publish to the wrong account."
                 )
             print("  instagram: reusing persisted session (no password login)")
-            return cl
+            return cl, got
         except PermanentError:
             raise
         except Exception as e:
@@ -83,18 +97,15 @@ def ig_login():
     cl.login(username, password)
     if cl.username is None:
         raise SessionExpired("Instagram password login failed — check credentials or complete any challenge in the browser.")
-    if cl.username.lower() != EXPECTED_USERNAME.lower():
+    got = cl.username.lower()
+    if got != expected.lower():
         raise PermanentError(
-            f"Instagram login is for '{cl.username}', expected '{EXPECTED_USERNAME}'. "
+            f"Instagram login is for '{got}', expected '{expected}'. "
             "Refusing to publish to the wrong account."
         )
     session_path.write_text(json.dumps(cl.get_settings()))
     print("  instagram: fresh password login complete — session persisted")
-    return cl
-
-
-def _dotenv_path() -> Path:
-    return Path(os.environ.get("SOCIAL_INFLUENCE_DOTENV", ".env"))
+    return cl, got
 
 
 def upload(bundle: PostBundle) -> PublishResult:
@@ -104,7 +115,7 @@ def upload(bundle: PostBundle) -> PublishResult:
         return PublishResult("instagram", False, error="Bundle has no video or image asset", visibility=bundle.visibility)
 
     try:
-        cl = ig_login()
+        cl, _ = ig_login(bundle.brand)
     except Exception as e:
         kind = classify_exception(e)
         if kind is PermanentError and "expected" in str(e):
@@ -123,7 +134,7 @@ def upload(bundle: PostBundle) -> PublishResult:
         return PublishResult(
             "instagram",
             True,
-            post_id=media.pk,
+            post_id=str(media.pk),
             url=f"https://www.instagram.com/p/{media.code}/",
             visibility=bundle.visibility,
         )
