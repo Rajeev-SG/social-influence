@@ -95,17 +95,26 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.cmd == "publish":
         platforms = [p.strip() for p in args.platforms.split(",") if p.strip()]
-        if args.brand:
+        if not platforms:
+            print("error: no platforms selected (--platforms)", file=sys.stderr)
+            return 2
+        try:
             bundle = load_bundle(args.bundle)
-            if bundle.brand != args.brand:
-                print(f"error: bundle brand '{bundle.brand}' != --brand '{args.brand}'", file=sys.stderr)
-                return 2
+        except FileNotFoundError as e:
+            print(f"error: {e}", file=sys.stderr)
+            return 2
+        if args.brand and bundle.brand != args.brand:
+            print(f"error: bundle brand '{bundle.brand}' != --brand '{args.brand}'", file=sys.stderr)
+            return 2
         results = publish_bundle(args.bundle, platforms, dry_run=args.dry_run)
         failed = [r for r in results if not r.success]
         print("\nsummary:")
         for r in results:
-            print(f"  {r.platform:10s} {'OK ' if r.success else 'FAIL'} {(r.url or r.post_id or r.error or '')[:100]}")
-        return 1 if failed and not args.dry_run else 0
+            status = "OK " if r.success else "FAIL"
+            if r.success and not r.verified:
+                status = "OK (unverified — browser-verify before treating as live)"
+            print(f"  {r.platform:10s} {status} {(r.url or r.post_id or r.error or '')[:100]}")
+        return 1 if (failed and not args.dry_run) or not results else 0
 
     return 0
 

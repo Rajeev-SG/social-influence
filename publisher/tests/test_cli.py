@@ -47,7 +47,6 @@ def _mock_provider(monkeypatch, platform: str, result, calls: list):
 def test_cli_platform_parsing(isolated_ledger, monkeypatch, tmp_path):
     bundle_path = make_bundle(tmp_path)
     calls: list = []
-    ok = lambda p: type("R", (), {"__self__": None})  # placeholder, replaced below
     from social_influence.providers.base import PublishResult
 
     for platform in ("youtube", "tiktok", "instagram"):

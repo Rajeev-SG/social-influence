@@ -26,6 +26,7 @@ class PublishResult:
     url: str | None = None
     error: str | None = None
     visibility: str = "public"
+    verified: bool = True  # False = uploader reported success but platform not confirmed
 
     def to_dict(self) -> dict:
         return {
@@ -35,6 +36,7 @@ class PublishResult:
             "url": self.url,
             "error": self.error,
             "visibility": self.visibility,
+            "verified": self.verified,
             "ts": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
         }
 

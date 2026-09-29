@@ -1,6 +1,12 @@
 # secrets / session state — never commit
 .env
+*.env
+!*.env.example
 *.session
+ig_session.json
+google_token.json
+tiktok_cookies.json
+publications.jsonl
 cookies*.json
 client_secret*.json
 publisher/.venv/

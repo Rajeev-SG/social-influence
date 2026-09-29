@@ -119,8 +119,17 @@ Guarantees:
 - account guard: refuses to publish if the authenticated account doesn't
   match `GUTKITCHEN_YT_HANDLE` / `GUTKITCHEN_IG_USERNAME` / `GUTKITCHEN_TT_USERNAME`
 
-Optional API: `uvicorn social_influence.api:app --port 8756` then
-`POST /publish {"bundle": "...", "platforms": [...]}`.
+Optional API (bearer-token protected):
+```bash
+# SOCIAL_INFLUENCE_API_TOKEN must be set in .env — without it /publish returns 503
+uvicorn social_influence.api:app --port 8756
+curl -X POST http://localhost:8756/publish \
+  -H "Authorization: Bearer $SOCIAL_INFLUENCE_API_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"bundle": "../posts/gutkitchen-001", "platforms": ["youtube","tiktok"]}'
+```
+Bundle paths are allow-listed to `SOCIAL_INFLUENCE_ALLOWED_ROOTS` (default: the
+repo's `posts/` directory) — the API cannot publish arbitrary host files.
 
 ## PostBundle
 
