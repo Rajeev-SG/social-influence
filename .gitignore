@@ -1,0 +1,14 @@
+# secrets / session state — never commit
+.env
+*.session
+cookies*.json
+client_secret*.json
+publisher/.venv/
+publisher/__pycache__/
+publisher/**/__pycache__/
+publisher/*.egg-info/
+publisher/.pytest_cache/
+posts/**/_frames/
+posts/**/_check*.png
+# media artifacts are regenerable; bundles are not
+*.mp4
