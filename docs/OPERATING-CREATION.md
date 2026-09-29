@@ -178,7 +178,7 @@ prompt/brief, copied media and manifest, every Content Machine request/response
 and log, full stage artefacts, provenance, review requirement/decision and the
 final bundle when approved. Failed attempts remain for diagnosis.
 
-Output directories and future media are gitignored to keep large files out of Git. The two pilot media folders are committed so their pack hashes can be revalidated from a clone. Retain later media and reviewed bundles in durable storage.
+Output directories and future media are gitignored to keep large files out of Git. The two pilot media folders and every pack source are committed. `scripts/validate_packs.py` checks content hashes and `git ls-files --error-unmatch`, so CI fails if a pack references missing or untracked inputs. Retain later media and reviewed bundles in durable storage.
 
 Bundle contents:
 

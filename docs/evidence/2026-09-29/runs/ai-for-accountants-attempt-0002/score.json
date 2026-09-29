@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "input": {
+    "scriptPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002/engine/script/script.json"
+  },
+  "passed": true,
+  "overall": 0.99,
+  "dimensions": {
+    "title": 1,
+    "hook": 1,
+    "structure": 0.9600000000000001,
+    "safety": 1
+  },
+  "checks": [
+    {
+      "checkId": "title-present",
+      "passed": true,
+      "severity": "error",
+      "message": "Title present",
+      "fix": "set-title"
+    },
+    {
+      "checkId": "no-rage-bait",
+      "passed": true,
+      "severity": "error",
+      "message": "No rage-bait patterns detected"
+    },
+    {
+      "checkId": "hook-word-count",
+      "passed": true,
+      "severity": "warning",
+      "message": "Hook length 6 words",
+      "details": {
+        "hookWords": 6,
+        "target": [
+          3,
+          18
+        ]
+      }
+    },
+    {
+      "checkId": "scene-count",
+      "passed": true,
+      "severity": "warning",
+      "message": "Scene count 6",
+      "details": {
+        "sceneCount": 6,
+        "target": [
+          3,
+          12
+        ]
+      }
+    },
+    {
+      "checkId": "estimated-duration",
+      "passed": true,
+      "severity": "warning",
+      "message": "Estimated duration 17.6s",
+      "details": {
+        "estimatedDuration": 17.6,
+        "target": [
+          15,
+          60
+        ]
+      }
+    }
+  ],
+  "createdAt": "2026-09-29T22:03:32.896Z"
+}

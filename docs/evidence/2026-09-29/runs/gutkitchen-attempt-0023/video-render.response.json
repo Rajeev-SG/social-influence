@@ -1,0 +1,47 @@
+{
+  "ok": true,
+  "tool": "content-machine/video-render",
+  "result": {
+    "outputPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/render/video.mp4",
+    "outputMetadataPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/render/render.json",
+    "captionExportPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/render/captions.remotion.json",
+    "captionSrtPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/render/captions.srt",
+    "captionAssPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/render/captions.ass",
+    "captionQualityPassed": true,
+    "captionQualityScore": 0.998,
+    "duration": 31.085,
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "fileSize": 6226345
+  },
+  "artifacts": [
+    {
+      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/render/video.mp4",
+      "kind": "file",
+      "description": "Rendered video artifact"
+    },
+    {
+      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/render/render.json",
+      "kind": "file",
+      "description": "Render metadata artifact"
+    },
+    {
+      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/render/captions.remotion.json",
+      "kind": "file",
+      "description": "Remotion-compatible caption JSON artifact"
+    },
+    {
+      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/render/captions.srt",
+      "kind": "file",
+      "description": "SRT caption artifact"
+    },
+    {
+      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/render/captions.ass",
+      "kind": "file",
+      "description": "ASS caption artifact"
+    }
+  ],
+  "warnings": [],
+  "meta": {}
+}

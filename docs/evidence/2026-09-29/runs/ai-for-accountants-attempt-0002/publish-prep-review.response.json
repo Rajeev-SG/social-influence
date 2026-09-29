@@ -1,0 +1,44 @@
+{
+  "ok": true,
+  "tool": "content-machine/publish-prep-review",
+  "result": {
+    "outputDir": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002/engine/publish-prep",
+    "validatePath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002/engine/publish-prep/validate.json",
+    "scorePath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002/engine/publish-prep/score.json",
+    "captionSyncPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002/engine/publish-prep/caption-sync.json",
+    "packagingPath": null,
+    "publishPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002/engine/publish-prep/publish.json",
+    "provenancePath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002/engine/publish-prep/provenance.json",
+    "provenancePassed": true,
+    "passed": true
+  },
+  "artifacts": [
+    {
+      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002/engine/publish-prep/validate.json",
+      "kind": "file",
+      "description": "Video validation report"
+    },
+    {
+      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002/engine/publish-prep/score.json",
+      "kind": "file",
+      "description": "Script score report"
+    },
+    {
+      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002/engine/publish-prep/publish.json",
+      "kind": "file",
+      "description": "Publish metadata report"
+    },
+    {
+      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002/engine/publish-prep/provenance.json",
+      "kind": "file",
+      "description": "Rights and asset provenance review artifact"
+    },
+    {
+      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002/engine/publish-prep/caption-sync.json",
+      "kind": "file",
+      "description": "Rendered caption sync review artifact"
+    }
+  ],
+  "warnings": [],
+  "meta": {}
+}

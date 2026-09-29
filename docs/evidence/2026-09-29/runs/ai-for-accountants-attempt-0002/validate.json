@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "1.0.0",
+  "videoPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002/engine/render/video.mp4",
+  "profile": "portrait",
+  "passed": true,
+  "summary": {
+    "width": 1080,
+    "height": 1920,
+    "durationSeconds": 32.043,
+    "container": "mp4",
+    "videoCodec": "h264",
+    "audioCodec": "aac"
+  },
+  "gates": [
+    {
+      "gateId": "resolution",
+      "passed": true,
+      "severity": "error",
+      "fix": "adjust-render-resolution",
+      "message": "Resolution OK (1080x1920)",
+      "details": {
+        "expectedWidth": 1080,
+        "expectedHeight": 1920,
+        "actualWidth": 1080,
+        "actualHeight": 1920
+      }
+    },
+    {
+      "gateId": "duration",
+      "passed": true,
+      "severity": "error",
+      "fix": "adjust-content-length",
+      "message": "Duration OK (32.0s)",
+      "details": {
+        "minSeconds": 30,
+        "maxSeconds": 60,
+        "actualSeconds": 32.043
+      }
+    },
+    {
+      "gateId": "format",
+      "passed": true,
+      "severity": "error",
+      "fix": "adjust-render-format",
+      "message": "Format OK (mp4/h264/aac)",
+      "details": {
+        "expected": {
+          "container": "mp4",
+          "videoCodec": "h264",
+          "audioCodec": "aac"
+        },
+        "actual": {
+          "container": "mp4",
+          "videoCodec": "h264",
+          "audioCodec": "aac"
+        }
+      }
+    },
+    {
+      "gateId": "cadence",
+      "passed": true,
+      "severity": "warning",
+      "fix": "none",
+      "message": "Cadence OK (median cut interval 2.17s)",
+      "details": {
+        "cutCount": 13,
+        "medianCutIntervalSeconds": 2.1666665,
+        "maxMedianCutIntervalSeconds": 3
+      }
+    },
+    {
+      "gateId": "audio-signal",
+      "passed": true,
+      "severity": "warning",
+      "fix": "none",
+      "message": "Audio signal OK (-19.8 LUFS, peak -3.0 dBFS)",
+      "details": {
+        "loudnessLUFS": -19.75,
+        "truePeakDBFS": -2.97,
+        "loudnessRange": 2.5,
+        "clippingRatio": 0,
+        "snrDB": 0,
+        "loudnessMinLUFS": -24,
+        "loudnessMaxLUFS": -8,
+        "maxClippingRatio": 0.01,
+        "truePeakMaxDBFS": -1
+      }
+    },
+    {
+      "gateId": "caption-sync",
+      "passed": true,
+      "severity": "error",
+      "fix": "Render with the shipped caption export and re-run review. Avoid fallback subtitle burns or timing transforms that change caption timing after export.",
+      "message": "Caption sync verified (8/8 segments matched, median drift 83ms).",
+      "details": {
+        "expectedSegmentCount": 8,
+        "observedSegmentCount": 8,
+        "matchedSegmentCount": 8,
+        "segmentMatchRatio": 1,
+        "durationMatchRatio": 1,
+        "medianStartDriftMs": 82.5,
+        "p95StartDriftMs": 97.1,
+        "maxStartDriftMs": 102,
+        "coverageRatio": 0.9986580532409571,
+        "captionQualityScore": 0.8850190255588347,
+        "meanConfidence": 0.949062500000001,
+        "minSegmentMatchRatio": 0.65,
+        "minDurationMatchRatio": 0.55,
+        "maxMedianStartDriftMs": 350,
+        "maxP95StartDriftMs": 900
+      }
+    }
+  ],
+  "createdAt": "2026-09-29T22:03:32.945Z",
+  "runtimeMs": 2021
+}

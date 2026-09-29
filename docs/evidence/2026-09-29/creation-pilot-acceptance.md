@@ -31,6 +31,8 @@ bundle. The two brands must use one interface without brand-name orchestration.
 - AIForAccountants review: `output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002/review.json`
 - Candidate benchmark: `docs/ENGINE-BENCHMARK.md`
 - Operating runbook: `docs/OPERATING-CREATION.md`
+- Raw accepted run captures + manifests: `docs/evidence/2026-09-29/runs/`
+- Initial failed captures preserved unchanged: `content-machine-doctor.initial.json`, `content-machine-smoke.initial.json`
 
 GutKitchen final video: 31.15s, 1080x1920, 30fps. Caption sync: 14/14 segments,
 median drift 78.5ms, P95 811.2ms, quality 0.866. Provenance, score and validation
@@ -57,7 +59,7 @@ workflow recording for AIForAccountants.
 - Reviews are automated Codex agent reviews, not human sign-offs.
 - GutKitchen uses disclosed AI food illustrations; real footage of the cooked
   recipe is preferable before public publishing.
-- Postiz deployment, account connection, upload binding, manual publish and
+- Evidence files are copied raw from the run/dependency tools and hash-manifested; the initial failed captures are preserved separately rather than overwritten. Postiz deployment, account connection, upload binding, manual publish and
   generated-post publishing remain unproven. The two pilot media folders are
   committed and `scripts/validate_packs.py` rechecks every pack hash in CI. The bundle payload is structurally
   shaped for Postiz drafts but contains deliberate binding placeholders. Issue #2 must remain open.

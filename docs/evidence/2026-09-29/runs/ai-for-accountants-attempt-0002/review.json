@@ -1,0 +1,54 @@
+{
+  "input_sha256": "5279847b3400f53655a94e05210a6204657fc69fbffe11b1149bd1f8dfd43d4e",
+  "video_sha256": "ed4047df5d9bdccd2235e0315dc3b146eea2ca932a614089719bbb0896f5478a",
+  "engine_sha256": "40913a10a150622c612674b4db8c809c59b35d3730b9c6f7ab2f36f14ba3d256",
+  "brief_sha256": "77bc08a942781ee0b89c67b0f8cad3553425d9cda048825f0325eabee2f41357",
+  "passed": true,
+  "reviewer": "Codex automated editorial review (agent, 2026-09-29; not a human sign-off)",
+  "checks": {
+    "profile": {
+      "passed": true,
+      "notes": "Calm, concrete, operational screen-recorded workflow. Own Workflow lab UI, neutral voiceover, no avatar or vendor UI imitation, and a visible human review step before the payoff."
+    },
+    "claims_and_calculations": {
+      "passed": true,
+      "notes": "No time-saving, productivity, tax, accounting-standard, compliance or vendor-capability claim. The displayed email/actions are the retained actual model response from synthetic notes. Unstated dates remain TO CONFIRM and the output is explicitly a draft, not advice."
+    },
+    "visual_grammar": {
+      "passed": true,
+      "notes": "Real browser-recorded functional workflow with synthetic data. Persistent INPUT -> AI STEP -> HUMAN CHECK strip, SYNTHETIC DATA and REVIEW REQUIRED badges, tight per-operation UI, action trace and checklist controls. No real client data or fake accountant persona."
+    },
+    "first_frame": {
+      "passed": true,
+      "notes": "Frame 0 shows the raw synthetic meeting notes in the own functional Workflow lab UI, with synthetic-data and review-required controls visible."
+    },
+    "pacing": {
+      "passed": true,
+      "notes": "32.04s at 1080x1920 / 30fps. One operation per shot, two deliberate UI cuts per clip for cadence, explicit human check before save, and the lower caption band remains clean."
+    },
+    "captions": {
+      "passed": true,
+      "notes": "Content Machine caption sync passed: median drift 82.5ms, P95 97.1ms, caption quality 0.885, OCR confidence 0.949. Captions stay in the clean lower safe band and do not obscure UI."
+    },
+    "audio": {
+      "passed": true,
+      "notes": "Kokoro voiceover matches the six approved scene beats and separate hook/CTA. Full render is 32.04s, mean -24.2dB, peak -3.0dB; Content Machine audio and caption gates passed."
+    },
+    "cta": {
+      "passed": true,
+      "notes": "One clear CTA: Save this process for your practice."
+    },
+    "rights": {
+      "passed": true,
+      "notes": "Provenance passed. The video is an own recorded UI using synthetic data; model output is retained verbatim with prompt and response evidence. Generic OpenAI/NIST references are documented as drafting/oversight guidance, not product claims. No third-party media is used."
+    },
+    "privacy": {
+      "passed": true,
+      "notes": "All notes, practice, client, attendees and actions are synthetic/fictional. No genuine client, account, tax, filing or confidential data appears."
+    },
+    "ai_label": {
+      "passed": true,
+      "notes": "No platform AI-generated media label is required for the real screen recording; synthetic-data disclosure is visible."
+    }
+  }
+}

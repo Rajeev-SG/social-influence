@@ -22,14 +22,9 @@
       "sha256": "5faad76b30f3314c04c17988995643f64c163b57f5ffac09706685118df42f98"
     },
     {
-      "url": "https://www.tesco.com/shop/en-GB/products/262489348",
-      "file": "sources/tesco-cannellini-unverified.md",
-      "sha256": "6971cb4ad1d6a5627438dbbb33a7b53797c4b4bbc4532f5a66815893a0268765"
-    },
-    {
       "url": "repo:brands/gutkitchen/sources/pizza-bean-bowl-calculation.json",
       "file": "sources/pizza-bean-bowl-calculation.json",
-      "sha256": "170858f8a8349cdd70596322f3c90b1777a16c26b4d643c2c3e2deb52273f597"
+      "sha256": "9369bd6b1ef285650114081d0e102d4b9e63db3a113e25bc6b737f92e57992d1"
     }
   ],
   "evidence": {

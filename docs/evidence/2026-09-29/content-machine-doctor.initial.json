@@ -34,8 +34,10 @@
     {
       "id": "llm",
       "label": "LLM provider",
-      "status": "ok",
-      "detail": "openai (API key set)"
+      "status": "warn",
+      "detail": "openai (OPENAI_API_KEY missing)",
+      "fix": "Set OPENAI_API_KEY in your environment or .env file",
+      "code": "CONFIG_WARN"
     },
     {
       "id": "visuals-provider",

@@ -1,0 +1,54 @@
+{
+  "input_sha256": "08214cfddf2faba5d37b62d9d7d71e1d9f5714ce27a59db63914d285c73b2fa3",
+  "video_sha256": "7b885398d52973dfdf5dd8a0b556531e90b89950b8d7a6b21c182c9a1fbe64d3",
+  "engine_sha256": "74822d6bd1b9debfea752c2b17502b139dcef0232fa2221bee274d116a4fa07b",
+  "brief_sha256": "64e854f546eea0ce70c72487ae1ee9475b2c802b3c7fe2d6ac56cb36d1f6e7f8",
+  "passed": true,
+  "reviewer": "Codex automated editorial review (agent, 2026-09-29; not a human sign-off)",
+  "checks": {
+    "profile": {
+      "passed": true,
+      "notes": "Direct, useful GutKitchen food-first voice. Normal supermarket ingredients, numeric promise, no wellness or disease claims, and AI-illustration disclosure is visible."
+    },
+    "claims_and_calculations": {
+      "passed": true,
+      "notes": "Sainsbury label snapshots support 40.025g protein and a conservative 15.69g lower-bound fibre calculation for one portion: 235g drained cannellini, 100g lighter mozzarella, 150g passata, 50g spinach. Copy uses around 40g / 15g+ and directs viewers to check pack labels. Suggested recipe is explicitly untested and no measured time or health effect is claimed."
+    },
+    "visual_grammar": {
+      "passed": true,
+      "notes": "Explicit user-authorized generated food-illustration lane, not generic stock. Finished-bowl 45-degree hero, top-down ingredient layout, pan/build shot, 1.35s cuts, nutrient badges, progressive fibre counter, ordinary kitchen aesthetic, no medical or before/after imagery."
+    },
+    "first_frame": {
+      "passed": true,
+      "notes": "Frame 0 shows the finished pizza-bean bowl with ~40g PROTEIN and 15g+ FIBRE badges."
+    },
+    "pacing": {
+      "passed": true,
+      "notes": "31.15s at 1080x1920 / 30fps. Hook and hero meal open immediately; quick cuts occur about every 1.35s; one thought per caption; progressive fibre counter remains visible."
+    },
+    "captions": {
+      "passed": true,
+      "notes": "Full timeline inspected. Caption sync passed 14/14 segments, median drift 78.5ms, P95 811.2ms, caption quality 0.866, OCR confidence 0.940. Captions are readable and remain in the clean bottom safe zone."
+    },
+    "audio": {
+      "passed": true,
+      "notes": "Kokoro voiceover matches the approved locked script and timestamps. Full render audio is 31.15s, mean -24.2dB, peak -5.4dB, with no clipping; Content Machine audio signal and caption-sync gates passed."
+    },
+    "cta": {
+      "passed": true,
+      "notes": "One clear final CTA: Save this for your next shop."
+    },
+    "rights": {
+      "passed": true,
+      "notes": "Content Machine provenance review passed. Generated food stills retain provider, model, prompt and workflow provenance; local Kokoro TTS records none-known Content ID risk. No stock, scraped, client, or third-party copyrighted footage entered the render."
+    },
+    "privacy": {
+      "passed": true,
+      "notes": "No personal, confidential, client, patient, or account data appears. Ingredient and nutrient data are public retailer label data; the visuals are generated illustrations."
+    },
+    "ai_label": {
+      "passed": true,
+      "notes": "AI-generated food visuals require explicit public-use approval and platform AI-content labeling."
+    }
+  }
+}

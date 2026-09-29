@@ -115,7 +115,9 @@
       "table_basis": "per 100g as sold",
       "fibre_per_100g": "1.3",
       "protein_per_100g": "2.5"
-    },
+    }
+  ],
+  "excluded_candidates": [
     {
       "id": "tesco_cannellini_attempt",
       "product": "Tesco Cannellini Beans Water 400G",
