@@ -68,7 +68,7 @@ def publish_bundle(bundle_path: str, platforms: list[str], dry_run: bool = False
             print(f"  {platform}: OK {result.url or result.post_id}")
         else:
             print(f"  {platform}: FAILED — {result.error}")
-        record(result)
+        record(result, content_id=bundle.post_id)
         results.append(result)
 
     return results
