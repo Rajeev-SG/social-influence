@@ -188,6 +188,8 @@ Bundle contents:
 - `postiz-handoff.json` — media hash/path, content, target platforms and a
   structurally valid Postiz draft payload template with required bindings
 
+Visual examples from both reviewed pilots are collected in [docs/examples/README.md](examples/README.md).
+
 ## Verification performed (2026-09-29)
 
 - 23 standard-library tests pass; `scripts/validate_packs.py` and `scripts/validate_evidence.py` run in CI. Tests cover ordered queue selection, evidence and

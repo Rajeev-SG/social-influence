@@ -83,6 +83,10 @@ This is the shortest path to a live audience and is deliberately separate from l
 
 Automated trend discovery, sophisticated attribution, product generation and the decision engine are **not launch blockers**. Manual/ChatGPT deep research should supply discovery until live performance data justifies deeper automation.
 
+## Reviewed creation examples
+
+See [the examples gallery](docs/examples/README.md) for stills from the reviewed GutKitchen and AIForAccountants pilots, including packaging, captions, visual grammar, QA status and evidence links.
+
 ## Creation CLI prototype (Issue #2)
 
 `social-influence create --brand gutkitchen --next` and the same command for
