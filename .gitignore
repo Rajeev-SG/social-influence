@@ -6,7 +6,7 @@ __pycache__/
 *.egg-info/
 output/
 brands/*/.create.lock
-# Pilot media is intentionally tracked and hash-validated by scripts/validate_packs.py.
+# Pilot media is tracked and hash-validated by scripts/validate_packs.py (CI).
 # Later media remains local unless explicitly promoted into a pack.
 brands/*/media/*
 !brands/*/media/pilot/

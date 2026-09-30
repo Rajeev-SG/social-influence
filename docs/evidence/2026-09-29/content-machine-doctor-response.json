@@ -2,16 +2,16 @@
   "ok": true,
   "tool": "content-machine/doctor-report",
   "result": {
-    "outputPath": "/tmp/si-content-machine-doctor-final.json",
+    "outputPath": "/tmp/si-content-machine-doctor-strict.json",
     "ok": false,
-    "strict": false,
+    "strict": true,
     "checks": 9,
     "failures": 2,
     "warnings": 2
   },
   "artifacts": [
     {
-      "path": "/tmp/si-content-machine-doctor-final.json",
+      "path": "/tmp/si-content-machine-doctor-strict.json",
       "kind": "file",
       "description": "Doctor report artifact"
     }

@@ -25,7 +25,7 @@ def main() -> int:
         production_pack(brand_dir, pack['topic'], (brand_dir / 'profile.md').read_text())
         for item in pack.get('sources', []) + pack.get('media', []):
             assert_tracked(str((brand_dir.relative_to(ROOT) / item['file']).as_posix()))
-        print(f'OK {pack_path.relative_to(ROOT)} (tracked inputs verified)')
+        print(f'OK {pack_path.relative_to(ROOT)} (tracked inputs verified v2)')
         checked += 1
     if not checked:
         print('No production packs found', file=sys.stderr)
