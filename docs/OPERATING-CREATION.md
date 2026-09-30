@@ -190,7 +190,7 @@ Bundle contents:
 
 ## Verification performed (2026-09-29)
 
-- 23 standard-library tests pass, covering ordered queue selection, evidence and
+- 23 standard-library tests pass; `scripts/validate_packs.py` and `scripts/validate_evidence.py` run in CI. Tests cover ordered queue selection, evidence and
   hash failures, calculation mismatch, fallback rejection, machine-QA failures,
   stale/partial/string-true review rejection, path traversal, locking, resume,
   distinct profile artifacts and the harness banner/JSON parser.
