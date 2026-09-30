@@ -7,7 +7,7 @@ name = "social-influence"
 version = "0.1.0"
 description = "Brand queue to fail-closed Content Machine production bundle"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = ["Pillow>=10"]
 
 [project.scripts]
 social-influence = "social_influence.cli:main"

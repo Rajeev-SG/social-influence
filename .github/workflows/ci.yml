@@ -17,3 +17,4 @@ jobs:
       - run: python scripts/validate_packs.py
       - run: python scripts/validate_evidence.py
       - run: social-influence --help
+      - run: python scripts/render-creative-v2.py

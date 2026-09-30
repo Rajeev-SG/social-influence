@@ -87,6 +87,10 @@ Automated trend discovery, sophisticated attribution, product generation and the
 
 See [the examples gallery](docs/examples/README.md) for stills from the reviewed GutKitchen and AIForAccountants pilots, including packaging, captions, visual grammar, QA status and evidence links.
 
+## Creative Engine v2 review
+
+Open [the static GutKitchen quality review](reviews/gutkitchen-creative-v2/index.html) to compare the existing pilot with three materially different reference-led treatments. The staged engine, reference library, visual grammar and regeneration procedure are documented in [docs/CREATIVE-ENGINE-V2.md](docs/CREATIVE-ENGINE-V2.md). Candidates are review-only and are not published.
+
 ## Creation CLI prototype (Issue #2)
 
 `social-influence create --brand gutkitchen --next` and the same command for

@@ -1,0 +1,634 @@
+{
+  "stage_a_creative_direction": {
+    "angle_count": 15,
+    "ranked": [
+      "first-frame numeric hook",
+      "fibre counter climb",
+      "ordinary shopping basket",
+      "tactile spoon/pan action",
+      "before/after upgrade"
+    ],
+    "selected": [
+      "new-a",
+      "new-b",
+      "new-c"
+    ]
+  },
+  "stage_b_reference_art_direction": {
+    "reference_library": "brands/gutkitchen/references/library.json",
+    "visual_grammar": "brands/gutkitchen/visual-grammar-v2.md",
+    "context_mode": "reference frames + metadata"
+  },
+  "stage_c_asset_routing": [
+    {
+      "shot_id": "a1",
+      "route": "stock",
+      "provider_slot": "stock-image",
+      "source": "reference-safe hero still",
+      "rationale": "appetite hero without advertising gloss",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "a2",
+      "route": "image-to-video",
+      "provider_slot": "replaceable-video-provider",
+      "source": "hero spoon-lift plate",
+      "rationale": "proof of texture and cheese pull",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "a3",
+      "route": "code-generated",
+      "provider_slot": "deterministic-svg",
+      "source": "IngredientBuild",
+      "rationale": "weights and hierarchy are code-owned",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "a4",
+      "route": "image-to-video",
+      "provider_slot": "replaceable-video-provider",
+      "source": "ingredient plate",
+      "rationale": "ingredient action keeps the build moving",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "a5",
+      "route": "text-to-video",
+      "provider_slot": "replaceable-video-provider",
+      "source": "pan brief",
+      "rationale": "pan action breaks the slideshow pattern",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "a6",
+      "route": "image-to-video",
+      "provider_slot": "replaceable-video-provider",
+      "source": "pan melt still",
+      "rationale": "tactile protein payoff",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "a7",
+      "route": "code-generated",
+      "provider_slot": "deterministic-svg",
+      "source": "FibreCounter",
+      "rationale": "factual progress stays deterministic",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "a8",
+      "route": "code-generated",
+      "provider_slot": "deterministic-svg",
+      "source": "EvidenceCard",
+      "rationale": "claim boundary is deterministic",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "a9",
+      "route": "code-generated",
+      "provider_slot": "deterministic-svg",
+      "source": "ShoppingBasket",
+      "rationale": "utility is brand-owned design",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "a10",
+      "route": "code-generated",
+      "provider_slot": "deterministic-svg",
+      "source": "SaveCTA",
+      "rationale": "single content-specific close",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "b1",
+      "route": "code-generated",
+      "provider_slot": "deterministic-svg",
+      "source": "FibreCounter",
+      "rationale": "numeric animation is deterministic",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "b2",
+      "route": "stock",
+      "provider_slot": "stock-image",
+      "source": "reference-safe hero still",
+      "rationale": "food proof keeps the calculator appetising",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "b3",
+      "route": "image-to-video",
+      "provider_slot": "replaceable-video-provider",
+      "source": "bean still",
+      "rationale": "small motion prevents card monotony",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "b4",
+      "route": "code-generated",
+      "provider_slot": "deterministic-svg",
+      "source": "BeforeAfterUpgrade",
+      "rationale": "comparison is design logic",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "b5",
+      "route": "code-generated",
+      "provider_slot": "deterministic-svg",
+      "source": "FibreCounter",
+      "rationale": "counter is the core hook",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "b6",
+      "route": "stock",
+      "provider_slot": "stock-image",
+      "source": "supermarket ingredient still",
+      "rationale": "ordinary shopping context",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "b7",
+      "route": "code-generated",
+      "provider_slot": "deterministic-svg",
+      "source": "EvidenceCard",
+      "rationale": "claim boundary is deterministic",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "b8",
+      "route": "code-generated",
+      "provider_slot": "deterministic-svg",
+      "source": "ShoppingBasket",
+      "rationale": "utility is reusable",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "b9",
+      "route": "image-to-video",
+      "provider_slot": "replaceable-video-provider",
+      "source": "hero spoon-lift plate",
+      "rationale": "closes on appetite",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "b10",
+      "route": "code-generated",
+      "provider_slot": "deterministic-svg",
+      "source": "SaveCTA",
+      "rationale": "single clear utility close",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "c1",
+      "route": "text-to-video",
+      "provider_slot": "replaceable-video-provider",
+      "source": "hero spoon-lift brief",
+      "rationale": "food realism and appetite appeal",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "c2",
+      "route": "code-generated",
+      "provider_slot": "deterministic-svg",
+      "source": "EvidenceCard",
+      "rationale": "claim boundary is deterministic",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "c3",
+      "route": "stock",
+      "provider_slot": "stock-image",
+      "source": "bean plate",
+      "rationale": "ingredient texture anchors the build",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "c4",
+      "route": "image-to-video",
+      "provider_slot": "replaceable-video-provider",
+      "source": "ingredient plate",
+      "rationale": "colour and action carry pace",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "c5",
+      "route": "text-to-video",
+      "provider_slot": "replaceable-video-provider",
+      "source": "pan brief",
+      "rationale": "pan action avoids slideshow",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "c6",
+      "route": "image-to-video",
+      "provider_slot": "replaceable-video-provider",
+      "source": "melt detail still",
+      "rationale": "close texture creates appetite",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "c7",
+      "route": "image-to-video",
+      "provider_slot": "replaceable-video-provider",
+      "source": "hero spoon-lift plate",
+      "rationale": "spoon payoff makes it edible",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "c8",
+      "route": "code-generated",
+      "provider_slot": "deterministic-svg",
+      "source": "ProteinFibreBadge",
+      "rationale": "factual layer stays deterministic",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "c9",
+      "route": "code-generated",
+      "provider_slot": "deterministic-svg",
+      "source": "ShoppingBasket",
+      "rationale": "utility close is reusable",
+      "rights": "reference-safe",
+      "replaceable": true
+    },
+    {
+      "shot_id": "c10",
+      "route": "code-generated",
+      "provider_slot": "deterministic-svg",
+      "source": "SaveCTA",
+      "rationale": "brand-owned final action",
+      "rights": "reference-safe",
+      "replaceable": true
+    }
+  ],
+  "stage_d_deterministic_design": [
+    {
+      "treatment_id": "new-a",
+      "components": [
+        "HeroMeal",
+        "ProteinFibreBadge",
+        "FibreCounter",
+        "IngredientBuild",
+        "EvidenceCard",
+        "SaveCTA"
+      ],
+      "storyboard": {
+        "first_frame": {
+          "headline": "40g PROTEIN. 15g+ FIBRE.",
+          "visual": "finished pizza-bean bowl close-up",
+          "badge": "~40g / 15g+",
+          "safe_region": "top 22% and bottom 12%"
+        },
+        "shots": [
+          {
+            "id": "a1",
+            "duration": 2.2,
+            "asset": "hero spoon lift",
+            "motion": "slow push-in",
+            "text": "THE 40g / 15g+ BOWL"
+          },
+          {
+            "id": "a2",
+            "duration": 3.0,
+            "asset": "macro bean bite",
+            "motion": "macro handheld push",
+            "text": "THE SPOON TEST."
+          },
+          {
+            "id": "a3",
+            "duration": 3.0,
+            "asset": "top-down cannellini",
+            "motion": "top-down push",
+            "text": "START WITH ONE TIN."
+          },
+          {
+            "id": "a4",
+            "duration": 3.2,
+            "asset": "passata + spinach",
+            "motion": "ingredient wipe",
+            "text": "ADD TOMATO + GREENS."
+          },
+          {
+            "id": "a5",
+            "duration": 3.0,
+            "asset": "cast-iron simmer",
+            "motion": "handheld pan",
+            "text": "SIMMER THE BUILD."
+          },
+          {
+            "id": "a6",
+            "duration": 3.4,
+            "asset": "mozzarella melt",
+            "motion": "macro melt push",
+            "text": "THE PROTEIN FINISH."
+          },
+          {
+            "id": "a7",
+            "duration": 3.2,
+            "asset": "fibre counter",
+            "motion": "number tick",
+            "text": "WATCH THE COUNTER."
+          },
+          {
+            "id": "a8",
+            "duration": 3.6,
+            "asset": "evidence card",
+            "motion": "punch-in",
+            "text": "THE LABEL DOES THE MATH."
+          },
+          {
+            "id": "a9",
+            "duration": 3.3,
+            "asset": "shopping list",
+            "motion": "list stagger",
+            "text": "SAVE THE LIST."
+          },
+          {
+            "id": "a10",
+            "duration": 3.3,
+            "asset": "save card",
+            "motion": "hard cut",
+            "text": "ONE BOWL. DONE."
+          }
+        ],
+        "motion": {
+          "cut_cadence": "3.2s median",
+          "camera": "push-ins + ingredient drops",
+          "audio": "VO-led with kitchen texture"
+        },
+        "cta": "Save this for your next shop.",
+        "required_assets": [
+          "hero-meal",
+          "ingredient-still",
+          "pan-action",
+          "label-card"
+        ]
+      }
+    },
+    {
+      "treatment_id": "new-b",
+      "components": [
+        "FibreCounter",
+        "BeforeAfterUpgrade",
+        "ShoppingBasket",
+        "ProteinFibreBadge",
+        "SaveCTA"
+      ],
+      "storyboard": {
+        "first_frame": {
+          "headline": "IF 30g FIBRE SOUNDS IMPOSSIBLE",
+          "visual": "dark calculator field with 15.69g counter",
+          "badge": "per bowl \u00b7 lower bound",
+          "safe_region": "top 18% and bottom 10%"
+        },
+        "shots": [
+          {
+            "id": "b1",
+            "duration": 2.2,
+            "asset": "counter hero",
+            "motion": "count-up",
+            "text": "IF 30g FIBRE SOUNDS IMPOSSIBLE"
+          },
+          {
+            "id": "b2",
+            "duration": 2.8,
+            "asset": "hero food proof",
+            "motion": "photo punch-in",
+            "text": "THE PHOTO PROOF."
+          },
+          {
+            "id": "b3",
+            "duration": 2.8,
+            "asset": "bean calculator",
+            "motion": "number tick",
+            "text": "ONE TIN DOES THE HEAVY LIFTING."
+          },
+          {
+            "id": "b4",
+            "duration": 3.0,
+            "asset": "before/after upgrade",
+            "motion": "split reveal",
+            "text": "THE FIX IS NOT A SUPPLEMENT."
+          },
+          {
+            "id": "b5",
+            "duration": 2.8,
+            "asset": "counter tick",
+            "motion": "bar fill",
+            "text": "WATCH 15.04 \u2192 15.69."
+          },
+          {
+            "id": "b6",
+            "duration": 3.2,
+            "asset": "ingredient photo cut",
+            "motion": "hard cut",
+            "text": "FOUR ITEMS. ONE BOWL."
+          },
+          {
+            "id": "b7",
+            "duration": 3.0,
+            "asset": "evidence math",
+            "motion": "scale-up",
+            "text": "THE LABEL DOES THE MATH."
+          },
+          {
+            "id": "b8",
+            "duration": 3.4,
+            "asset": "shopping basket",
+            "motion": "list stagger",
+            "text": "BUILD THE BASKET."
+          },
+          {
+            "id": "b9",
+            "duration": 3.2,
+            "asset": "hero payoff",
+            "motion": "macro push",
+            "text": "THE PAYOFF."
+          },
+          {
+            "id": "b10",
+            "duration": 3.4,
+            "asset": "save card",
+            "motion": "punch-in",
+            "text": "SAVE THE 30g DAY."
+          }
+        ],
+        "motion": {
+          "cut_cadence": "3.0s median",
+          "camera": "graphic scale, split reveal, bar fill",
+          "audio": "percussive beat + short VO"
+        },
+        "cta": "Save the 30g day.",
+        "required_assets": [
+          "counter",
+          "before-after",
+          "shopping-basket"
+        ]
+      }
+    },
+    {
+      "treatment_id": "new-c",
+      "components": [
+        "HeroMeal",
+        "ProteinFibreBadge",
+        "IngredientBuild",
+        "EvidenceCard",
+        "SaveCTA"
+      ],
+      "storyboard": {
+        "first_frame": {
+          "headline": "PIZZA FLAVOUR. BEAN MATHS.",
+          "visual": "tight spoon lift with cheese strand",
+          "badge": "~40g / 15g+",
+          "safe_region": "top 20% and bottom 12%"
+        },
+        "shots": [
+          {
+            "id": "c1",
+            "duration": 2.0,
+            "asset": "hero spoon lift",
+            "motion": "macro push-in",
+            "text": "PIZZA FLAVOUR. BEAN MATHS."
+          },
+          {
+            "id": "c2",
+            "duration": 2.8,
+            "asset": "label close-up",
+            "motion": "whip cut",
+            "text": "CRUNCH THE LABEL."
+          },
+          {
+            "id": "c3",
+            "duration": 3.0,
+            "asset": "beans close-up",
+            "motion": "top-down punch",
+            "text": "START WITH THE TIN."
+          },
+          {
+            "id": "c4",
+            "duration": 3.2,
+            "asset": "passata + spinach",
+            "motion": "ingredient drop",
+            "text": "BUILD THE COLOUR."
+          },
+          {
+            "id": "c5",
+            "duration": 3.0,
+            "asset": "pan action",
+            "motion": "handheld insert",
+            "text": "LET IT SIMMER."
+          },
+          {
+            "id": "c6",
+            "duration": 3.6,
+            "asset": "melt detail",
+            "motion": "slow orbit",
+            "text": "MELT THE FINISH."
+          },
+          {
+            "id": "c7",
+            "duration": 3.4,
+            "asset": "macro bite",
+            "motion": "macro push",
+            "text": "THE SPOON PAYOFF."
+          },
+          {
+            "id": "c8",
+            "duration": 3.8,
+            "asset": "evidence card",
+            "motion": "punch-in",
+            "text": "THE NUMBERS HOLD."
+          },
+          {
+            "id": "c9",
+            "duration": 3.7,
+            "asset": "shopping list",
+            "motion": "hard cut",
+            "text": "SHOP IT."
+          },
+          {
+            "id": "c10",
+            "duration": 4.0,
+            "asset": "save card",
+            "motion": "scale-up",
+            "text": "SAVE IT."
+          }
+        ],
+        "motion": {
+          "cut_cadence": "3.4s median",
+          "camera": "macro push, whip cut, handheld action",
+          "audio": "room sound + tight VO"
+        },
+        "cta": "Save this for your next shop.",
+        "required_assets": [
+          "hero-spoon",
+          "pan-action",
+          "melt-detail",
+          "evidence-card"
+        ]
+      }
+    }
+  ],
+  "stage_e_candidate_generation": [
+    {
+      "treatment_id": "new-a",
+      "name": "Quantified Recipe Build",
+      "duration_seconds": 31.2,
+      "materially_different": true
+    },
+    {
+      "treatment_id": "new-b",
+      "name": "Fibre Calculator / Counter",
+      "duration_seconds": 29.8,
+      "materially_different": true
+    },
+    {
+      "treatment_id": "new-c",
+      "name": "Tactile Editorial Food-Build",
+      "duration_seconds": 32.5,
+      "materially_different": true
+    }
+  ],
+  "stage_f_qa": {
+    "facts": true,
+    "evidence": true,
+    "technical": true,
+    "caption_safe_region": true,
+    "notes": [
+      "Existing source and Decimal calculations retained: 40.025g protein, 15.69g fibre lower bound.",
+      "Review-only static SVG treatment stills; no publishing, upload or social account action.",
+      "Creative selection is separate from factual/technical QA."
+    ],
+    "passed": true
+  }
+}

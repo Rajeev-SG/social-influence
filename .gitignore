@@ -14,6 +14,7 @@ client_secret*.json
 
 # Python / generated run state
 .venv/
+.playwright-cli/
 __pycache__/
 *.egg-info/
 output/
@@ -28,6 +29,7 @@ posts/**/_check*.png
 
 # media artifacts are regenerable; reviewed bundles are retained outside Git
 *.mp4
+!brands/gutkitchen/creative-engine-v2/candidates/*-preview.mp4
 brands/*/media/*
 # Pilot media is tracked and hash-validated by scripts/validate_packs.py (CI).
 !brands/*/media/pilot/
