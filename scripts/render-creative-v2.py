@@ -15,6 +15,15 @@ def main() -> int:
     render_photo_stills()
     write_manifest_payload(out / 'component-render.json')
     engine = CreativeEngineV2.from_path(ROOT / 'brands/gutkitchen/creative-engine-v2/manifest.json')
+    source_manifest = json.loads((ROOT / 'brands/gutkitchen/creative-engine-v2/manifest.json').read_text())
+    source_manifest['_projection'] = {
+        'source': '../manifest.json',
+        'status': 'generated-projection',
+        'decisionScope': 'copy-and-structure-only',
+        'visualQualityValidation': 'not-performed',
+        'note': 'This file exists at the candidate projection path referenced by review tooling. It is generated from ../manifest.json and must never be edited independently.',
+    }
+    (out / 'manifest.json').write_text(json.dumps(source_manifest, indent=2) + '\n')
     (out / 'review-payload.json').write_text(json.dumps(engine.static_review_payload(), indent=2) + '\n')
     (out / 'stage-output.json').write_text(json.dumps(engine.run_stages(), indent=2) + '\n')
     print('OK 30 approved-plate storyboard stills + review payload')

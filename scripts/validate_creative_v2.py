@@ -44,6 +44,19 @@ def main() -> int:
     out = ROOT / 'brands/gutkitchen/creative-engine-v2/candidates'
     expected_payload = json.loads(json.dumps(engine.static_review_payload(), sort_keys=True))
     expected_stage = json.loads(json.dumps(engine.run_stages(), sort_keys=True))
+    source_manifest = json.loads((ROOT / 'brands/gutkitchen/creative-engine-v2/manifest.json').read_text())
+    projected_manifest = json.loads((out / 'manifest.json').read_text())
+    projection = projected_manifest.pop('_projection', None)
+    expected_projection = {
+        'source': '../manifest.json',
+        'status': 'generated-projection',
+        'decisionScope': 'copy-and-structure-only',
+        'visualQualityValidation': 'not-performed',
+        'note': 'This file exists at the candidate projection path referenced by review tooling. It is generated from ../manifest.json and must never be edited independently.',
+    }
+    if projected_manifest != source_manifest or projection != expected_projection:
+        print('FAIL candidates/manifest.json is not an exact generated projection of ../manifest.json', file=sys.stderr)
+        return 1
     if json.loads((out / 'review-payload.json').read_text()) != expected_payload:
         print('FAIL review-payload.json is not a generated projection of manifest.json', file=sys.stderr)
         return 1

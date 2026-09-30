@@ -44,6 +44,11 @@ class CreativeEngineV2Tests(unittest.TestCase):
 
     def test_committed_projections_match_single_manifest_source(self):
         out = ROOT / 'brands/gutkitchen/creative-engine-v2/candidates'
+        projected = json.loads((out / 'manifest.json').read_text())
+        projection = projected.pop('_projection')
+        self.assertEqual(projected, json.loads((ROOT / 'brands/gutkitchen/creative-engine-v2/manifest.json').read_text()))
+        self.assertEqual(projection['decisionScope'], 'copy-and-structure-only')
+        self.assertEqual(projection['visualQualityValidation'], 'not-performed')
         self.assertEqual(json.loads((out / 'review-payload.json').read_text()), json.loads(json.dumps(self.engine.static_review_payload(), sort_keys=True)))
         self.assertEqual(json.loads((out / 'stage-output.json').read_text()), json.loads(json.dumps(self.engine.run_stages(), sort_keys=True)))
 

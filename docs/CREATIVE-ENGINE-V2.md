@@ -49,4 +49,4 @@ The current run passes the factual basis from the existing pilot: 40.025g protei
 
 ## Regeneration date rule
 
-A new candidate set requires a new dated evidence directory such as `docs/evidence/<YYYY-MM-DD>/creative-engine-v2/`. Keep the previous dated directory and hash manifest intact. `manifest.json`’s `generated_at` and the evidence directory date must match and must not be in the future.
+A new candidate set requires a new dated evidence directory such as `docs/evidence/<YYYY-MM-DD>/creative-engine-v2/`. Keep the previous dated directory and hash manifest intact. `manifest.json`’s `generated_at` and the evidence directory date must match and must not be in the future. `brands/gutkitchen/creative-engine-v2/candidates/manifest.json` is a generated projection of `../manifest.json`; edit only the source manifest.
