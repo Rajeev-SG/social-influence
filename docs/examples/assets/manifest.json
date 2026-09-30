@@ -1,0 +1,54 @@
+{
+  "gutkitchen": [
+    {
+      "label": "hero",
+      "timestamp": "0.2",
+      "file": "docs/examples/assets/gutkitchen-hero.jpg"
+    },
+    {
+      "label": "build",
+      "timestamp": "8",
+      "file": "docs/examples/assets/gutkitchen-build.jpg"
+    },
+    {
+      "label": "shopping-list",
+      "timestamp": "24",
+      "file": "docs/examples/assets/gutkitchen-shopping-list.jpg"
+    },
+    {
+      "label": "cta",
+      "timestamp": "30.5",
+      "file": "docs/examples/assets/gutkitchen-cta.jpg"
+    },
+    {
+      "label": "contact-sheet",
+      "file": "docs/examples/assets/gutkitchen-contact-sheet.jpg"
+    }
+  ],
+  "ai-for-accountants": [
+    {
+      "label": "raw-notes",
+      "timestamp": "0.2",
+      "file": "docs/examples/assets/ai-for-accountants-raw-notes.jpg"
+    },
+    {
+      "label": "review-rule",
+      "timestamp": "12",
+      "file": "docs/examples/assets/ai-for-accountants-review-rule.jpg"
+    },
+    {
+      "label": "human-check",
+      "timestamp": "24",
+      "file": "docs/examples/assets/ai-for-accountants-human-check.jpg"
+    },
+    {
+      "label": "gated-save",
+      "timestamp": "30.8",
+      "file": "docs/examples/assets/ai-for-accountants-gated-save.jpg"
+    },
+    {
+      "label": "contact-sheet",
+      "file": "docs/examples/assets/ai-for-accountants-contact-sheet.jpg"
+    }
+  ]
+}
