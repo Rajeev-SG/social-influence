@@ -1,0 +1,67 @@
+{
+  "brand": "GUTKITCHEN",
+  "protein": "~40g",
+  "fibre": "15g+",
+  "shots": [
+    {
+      "image": "hero.png",
+      "output": "scene-001.mp4",
+      "headline": "Pizza flavour. Bean maths.",
+      "detail": "ONE BOWL. NORMAL INGREDIENTS.",
+      "subdetail": "No supplements. No wellness promises.",
+      "counter_from": 15.69,
+      "counter": 15.69,
+      "seconds": 9
+    },
+    {
+      "image": "ingredients.png",
+      "output": "scene-002.mp4",
+      "headline": "Start with one tin.",
+      "detail": "235g DRAINED CANNELLINI BEANS",
+      "subdetail": "One 400g tin; check the drained weight.",
+      "counter_from": 0,
+      "counter": 15.04,
+      "seconds": 9
+    },
+    {
+      "image": "ingredients.png",
+      "output": "scene-003.mp4",
+      "headline": "Add tomato + greens.",
+      "detail": "150g PASSATA + 50g SPINACH",
+      "subdetail": "Warm together until the spinach wilts.",
+      "counter_from": 15.04,
+      "counter": 15.69,
+      "seconds": 9
+    },
+    {
+      "image": "pan.png",
+      "output": "scene-004.mp4",
+      "headline": "The protein finish.",
+      "detail": "100g LIGHTER MOZZARELLA",
+      "subdetail": "Tear over the beans. Cover until melted.",
+      "counter_from": 15.69,
+      "counter": 15.69,
+      "seconds": 9
+    },
+    {
+      "image": "hero.png",
+      "output": "scene-005.mp4",
+      "headline": "Read the small print.",
+      "detail": "AROUND 40g PROTEIN / 15g+ FIBRE",
+      "subdetail": "Per bowl. Estimates from product labels.",
+      "counter_from": 15.69,
+      "counter": 15.69,
+      "seconds": 9
+    },
+    {
+      "image": "hero.png",
+      "output": "scene-006.mp4",
+      "headline": "Save the shopping list.",
+      "detail": "BEANS 235g / PASSATA 150g",
+      "subdetail": "SPINACH 50g / LIGHT MOZZARELLA 100g",
+      "counter_from": 15.69,
+      "counter": 15.69,
+      "seconds": 9
+    }
+  ]
+}

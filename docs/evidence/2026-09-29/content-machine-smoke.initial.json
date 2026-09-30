@@ -1,0 +1,8 @@
+{
+  "ok": false,
+  "tool": "content-machine/generate-short",
+  "error": {
+    "code": "CONFIG_ERROR",
+    "message": "Required environment variable OPENAI_API_KEY is not set. Add it to your .env file or set it in your environment."
+  }
+}

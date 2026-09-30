@@ -1,0 +1,8 @@
+{
+  "model": "google/gemini-3.1-flash-image",
+  "prompt": "Photorealistic practical home-cooking illustration, portrait 9:16, natural bright kitchen window light, ordinary lightly worn pale wood worktop. Not glossy advertising. No text, no logos, no labels, no watermarks. All ingredients must look real and edible. Leave the top fifth pale and uncluttered for badges added in code. Close 45-degree view of a small worn black cast-iron pan on a simple hob containing white cannellini beans being simmered in red tomato passata, wilted green spinach visible. Torn pieces of mozzarella melting on top. Subtle steam, wooden spoon resting at right edge. Native home kitchen, not restaurant. No hands. Clearly beans not pasta.",
+  "images_saved": [
+    "brands/gutkitchen/media/pilot/pan.png"
+  ],
+  "count": 1
+}

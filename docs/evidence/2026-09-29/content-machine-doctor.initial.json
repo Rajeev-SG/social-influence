@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "strict": false,
+  "checks": [
+    {
+      "id": "node",
+      "label": "Node.js",
+      "status": "ok",
+      "detail": "26.7.0"
+    },
+    {
+      "id": "config",
+      "label": "Config",
+      "status": "ok",
+      "detail": "defaults only"
+    },
+    {
+      "id": "whisper:model:base",
+      "label": "Whisper model",
+      "status": "fail",
+      "detail": "/Users/rajeev/.cm/assets/whisper/ggml-base.bin",
+      "fix": "Run: cm setup whisper --model base --dir /Users/rajeev/.cm/assets/whisper --version 1.5.5",
+      "code": "DEPENDENCY_MISSING"
+    },
+    {
+      "id": "whisper:binary",
+      "label": "Whisper binary",
+      "status": "fail",
+      "detail": "/Users/rajeev/.cm/assets/whisper/main | /Users/rajeev/.cm/assets/whisper/build/bin/whisper-cli",
+      "fix": "Run: cm setup whisper --model base --dir /Users/rajeev/.cm/assets/whisper --version 1.5.5",
+      "code": "DEPENDENCY_MISSING"
+    },
+    {
+      "id": "llm",
+      "label": "LLM provider",
+      "status": "warn",
+      "detail": "openai (OPENAI_API_KEY missing)",
+      "fix": "Set OPENAI_API_KEY in your environment or .env file",
+      "code": "CONFIG_WARN"
+    },
+    {
+      "id": "visuals-provider",
+      "label": "Visuals provider",
+      "status": "warn",
+      "detail": "pexels (PEXELS_API_KEY missing)",
+      "fix": "Set PEXELS_API_KEY in your environment or .env file",
+      "code": "CONFIG_WARN"
+    },
+    {
+      "id": "ffmpeg",
+      "label": "ffmpeg",
+      "status": "ok",
+      "detail": "ffmpeg (found)"
+    },
+    {
+      "id": "ffprobe",
+      "label": "ffprobe",
+      "status": "ok",
+      "detail": "ffprobe (found)"
+    },
+    {
+      "id": "yt-dlp",
+      "label": "yt-dlp",
+      "status": "warn",
+      "detail": "yt-dlp check failed",
+      "fix": "Install yt-dlp (and ensure `yt-dlp` is on PATH)",
+      "code": "DEPENDENCY_ERROR"
+    }
+  ]
+}

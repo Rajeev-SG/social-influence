@@ -1,0 +1,1002 @@
+{
+  "schemaVersion": "1.0.0",
+  "passed": true,
+  "summary": {
+    "assetLedgerPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002/engine/provenance/review-ledger.json",
+    "mediaIndexPath": null,
+    "assetCount": 19,
+    "errorCount": 0,
+    "warningCount": 0
+  },
+  "checks": [
+    {
+      "checkId": "reviewStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "script:main",
+      "message": "reviewStatus is generated-local.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "generated-local"
+      }
+    },
+    {
+      "checkId": "rightsStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "script:main",
+      "message": "rightsStatus is generated-local.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "generated-local"
+      }
+    },
+    {
+      "checkId": "usage-mode-publishable",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "script:main",
+      "message": "Asset usage mode is not reference-only.",
+      "fix": "No fix required."
+    },
+    {
+      "checkId": "rights-flags-allowed",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "script:main",
+      "message": "No prohibited rights flags are present.",
+      "fix": "No fix required.",
+      "details": {
+        "rightsFlags": []
+      }
+    },
+    {
+      "checkId": "generated-provider-present",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "script:main",
+      "message": "Generated asset provider/model evidence is present.",
+      "fix": "Add provider plus model or workflow details for generated media."
+    },
+    {
+      "checkId": "generated-prompt-trace-present",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "script:main",
+      "message": "Generated asset prompt/job/hash trace is present.",
+      "fix": "Add prompt/reference, job id, workflow URL, output hash, or file hash for generated media."
+    },
+    {
+      "checkId": "reviewStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "audio:voiceover",
+      "message": "reviewStatus is generated-local.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "generated-local"
+      }
+    },
+    {
+      "checkId": "rightsStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "audio:voiceover",
+      "message": "rightsStatus is generated-local.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "generated-local"
+      }
+    },
+    {
+      "checkId": "usage-mode-publishable",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "audio:voiceover",
+      "message": "Asset usage mode is not reference-only.",
+      "fix": "No fix required."
+    },
+    {
+      "checkId": "rights-flags-allowed",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "audio:voiceover",
+      "message": "No prohibited rights flags are present.",
+      "fix": "No fix required.",
+      "details": {
+        "rightsFlags": []
+      }
+    },
+    {
+      "checkId": "generated-provider-present",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "audio:voiceover",
+      "message": "Generated asset provider/model evidence is present.",
+      "fix": "Add provider plus model or workflow details for generated media."
+    },
+    {
+      "checkId": "generated-prompt-trace-present",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "audio:voiceover",
+      "message": "Generated asset prompt/job/hash trace is present.",
+      "fix": "Add prompt/reference, job id, workflow URL, output hash, or file hash for generated media."
+    },
+    {
+      "checkId": "content-id-risk-cleared",
+      "passed": true,
+      "severity": "warning",
+      "assetRef": "audio:voiceover",
+      "message": "Content ID risk is none-known.",
+      "fix": "No fix required.",
+      "details": {
+        "contentIdRisk": "none-known"
+      }
+    },
+    {
+      "checkId": "reviewStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "timestamps:main",
+      "message": "reviewStatus is generated-local.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "generated-local"
+      }
+    },
+    {
+      "checkId": "rightsStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "timestamps:main",
+      "message": "rightsStatus is generated-local.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "generated-local"
+      }
+    },
+    {
+      "checkId": "usage-mode-publishable",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "timestamps:main",
+      "message": "Asset usage mode is not reference-only.",
+      "fix": "No fix required."
+    },
+    {
+      "checkId": "rights-flags-allowed",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "timestamps:main",
+      "message": "No prohibited rights flags are present.",
+      "fix": "No fix required.",
+      "details": {
+        "rightsFlags": []
+      }
+    },
+    {
+      "checkId": "generated-provider-present",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "timestamps:main",
+      "message": "Generated asset provider/model evidence is present.",
+      "fix": "Add provider plus model or workflow details for generated media."
+    },
+    {
+      "checkId": "generated-prompt-trace-present",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "timestamps:main",
+      "message": "Generated asset prompt/job/hash trace is present.",
+      "fix": "Add prompt/reference, job id, workflow URL, output hash, or file hash for generated media."
+    },
+    {
+      "checkId": "content-id-risk-cleared",
+      "passed": true,
+      "severity": "warning",
+      "assetRef": "timestamps:main",
+      "message": "Content ID risk is none-known.",
+      "fix": "No fix required.",
+      "details": {
+        "contentIdRisk": "none-known"
+      }
+    },
+    {
+      "checkId": "reviewStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "audio:metadata",
+      "message": "reviewStatus is generated-local.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "generated-local"
+      }
+    },
+    {
+      "checkId": "rightsStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "audio:metadata",
+      "message": "rightsStatus is generated-local.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "generated-local"
+      }
+    },
+    {
+      "checkId": "usage-mode-publishable",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "audio:metadata",
+      "message": "Asset usage mode is not reference-only.",
+      "fix": "No fix required."
+    },
+    {
+      "checkId": "rights-flags-allowed",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "audio:metadata",
+      "message": "No prohibited rights flags are present.",
+      "fix": "No fix required.",
+      "details": {
+        "rightsFlags": []
+      }
+    },
+    {
+      "checkId": "generated-provider-present",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "audio:metadata",
+      "message": "Generated asset provider/model evidence is present.",
+      "fix": "Add provider plus model or workflow details for generated media."
+    },
+    {
+      "checkId": "generated-prompt-trace-present",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "audio:metadata",
+      "message": "Generated asset prompt/job/hash trace is present.",
+      "fix": "Add prompt/reference, job id, workflow URL, output hash, or file hash for generated media."
+    },
+    {
+      "checkId": "content-id-risk-cleared",
+      "passed": true,
+      "severity": "warning",
+      "assetRef": "audio:metadata",
+      "message": "Content ID risk is none-known.",
+      "fix": "No fix required.",
+      "details": {
+        "contentIdRisk": "none-known"
+      }
+    },
+    {
+      "checkId": "reviewStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visuals:plan",
+      "message": "reviewStatus is generated-local.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "generated-local"
+      }
+    },
+    {
+      "checkId": "rightsStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visuals:plan",
+      "message": "rightsStatus is generated-local.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "generated-local"
+      }
+    },
+    {
+      "checkId": "usage-mode-publishable",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visuals:plan",
+      "message": "Asset usage mode is not reference-only.",
+      "fix": "No fix required."
+    },
+    {
+      "checkId": "rights-flags-allowed",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visuals:plan",
+      "message": "No prohibited rights flags are present.",
+      "fix": "No fix required.",
+      "details": {
+        "rightsFlags": []
+      }
+    },
+    {
+      "checkId": "generated-provider-present",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visuals:plan",
+      "message": "Generated asset provider/model evidence is present.",
+      "fix": "Add provider plus model or workflow details for generated media."
+    },
+    {
+      "checkId": "generated-prompt-trace-present",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visuals:plan",
+      "message": "Generated asset prompt/job/hash trace is present.",
+      "fix": "Add prompt/reference, job id, workflow URL, output hash, or file hash for generated media."
+    },
+    {
+      "checkId": "reviewStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:hook",
+      "message": "reviewStatus is owned.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "owned"
+      }
+    },
+    {
+      "checkId": "rightsStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:hook",
+      "message": "rightsStatus is owned.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "owned"
+      }
+    },
+    {
+      "checkId": "usage-mode-publishable",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:hook",
+      "message": "Asset usage mode is not reference-only.",
+      "fix": "No fix required."
+    },
+    {
+      "checkId": "rights-flags-allowed",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:hook",
+      "message": "No prohibited rights flags are present.",
+      "fix": "No fix required.",
+      "details": {
+        "rightsFlags": []
+      }
+    },
+    {
+      "checkId": "reviewStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:scene-001",
+      "message": "reviewStatus is owned.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "owned"
+      }
+    },
+    {
+      "checkId": "rightsStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:scene-001",
+      "message": "rightsStatus is owned.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "owned"
+      }
+    },
+    {
+      "checkId": "usage-mode-publishable",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:scene-001",
+      "message": "Asset usage mode is not reference-only.",
+      "fix": "No fix required."
+    },
+    {
+      "checkId": "rights-flags-allowed",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:scene-001",
+      "message": "No prohibited rights flags are present.",
+      "fix": "No fix required.",
+      "details": {
+        "rightsFlags": []
+      }
+    },
+    {
+      "checkId": "reviewStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:scene-002",
+      "message": "reviewStatus is owned.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "owned"
+      }
+    },
+    {
+      "checkId": "rightsStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:scene-002",
+      "message": "rightsStatus is owned.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "owned"
+      }
+    },
+    {
+      "checkId": "usage-mode-publishable",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:scene-002",
+      "message": "Asset usage mode is not reference-only.",
+      "fix": "No fix required."
+    },
+    {
+      "checkId": "rights-flags-allowed",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:scene-002",
+      "message": "No prohibited rights flags are present.",
+      "fix": "No fix required.",
+      "details": {
+        "rightsFlags": []
+      }
+    },
+    {
+      "checkId": "reviewStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:scene-003",
+      "message": "reviewStatus is owned.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "owned"
+      }
+    },
+    {
+      "checkId": "rightsStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:scene-003",
+      "message": "rightsStatus is owned.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "owned"
+      }
+    },
+    {
+      "checkId": "usage-mode-publishable",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:scene-003",
+      "message": "Asset usage mode is not reference-only.",
+      "fix": "No fix required."
+    },
+    {
+      "checkId": "rights-flags-allowed",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:scene-003",
+      "message": "No prohibited rights flags are present.",
+      "fix": "No fix required.",
+      "details": {
+        "rightsFlags": []
+      }
+    },
+    {
+      "checkId": "reviewStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:scene-004",
+      "message": "reviewStatus is owned.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "owned"
+      }
+    },
+    {
+      "checkId": "rightsStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:scene-004",
+      "message": "rightsStatus is owned.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "owned"
+      }
+    },
+    {
+      "checkId": "usage-mode-publishable",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:scene-004",
+      "message": "Asset usage mode is not reference-only.",
+      "fix": "No fix required."
+    },
+    {
+      "checkId": "rights-flags-allowed",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:scene-004",
+      "message": "No prohibited rights flags are present.",
+      "fix": "No fix required.",
+      "details": {
+        "rightsFlags": []
+      }
+    },
+    {
+      "checkId": "reviewStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:scene-005",
+      "message": "reviewStatus is owned.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "owned"
+      }
+    },
+    {
+      "checkId": "rightsStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:scene-005",
+      "message": "rightsStatus is owned.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "owned"
+      }
+    },
+    {
+      "checkId": "usage-mode-publishable",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:scene-005",
+      "message": "Asset usage mode is not reference-only.",
+      "fix": "No fix required."
+    },
+    {
+      "checkId": "rights-flags-allowed",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:scene-005",
+      "message": "No prohibited rights flags are present.",
+      "fix": "No fix required.",
+      "details": {
+        "rightsFlags": []
+      }
+    },
+    {
+      "checkId": "reviewStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:scene-006",
+      "message": "reviewStatus is owned.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "owned"
+      }
+    },
+    {
+      "checkId": "rightsStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:scene-006",
+      "message": "rightsStatus is owned.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "owned"
+      }
+    },
+    {
+      "checkId": "usage-mode-publishable",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:scene-006",
+      "message": "Asset usage mode is not reference-only.",
+      "fix": "No fix required."
+    },
+    {
+      "checkId": "rights-flags-allowed",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:scene-006",
+      "message": "No prohibited rights flags are present.",
+      "fix": "No fix required.",
+      "details": {
+        "rightsFlags": []
+      }
+    },
+    {
+      "checkId": "reviewStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:cta",
+      "message": "reviewStatus is owned.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "owned"
+      }
+    },
+    {
+      "checkId": "rightsStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:cta",
+      "message": "rightsStatus is owned.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "owned"
+      }
+    },
+    {
+      "checkId": "usage-mode-publishable",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:cta",
+      "message": "Asset usage mode is not reference-only.",
+      "fix": "No fix required."
+    },
+    {
+      "checkId": "rights-flags-allowed",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "visual:cta",
+      "message": "No prohibited rights flags are present.",
+      "fix": "No fix required.",
+      "details": {
+        "rightsFlags": []
+      }
+    },
+    {
+      "checkId": "reviewStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "render:video",
+      "message": "reviewStatus is generated-local.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "generated-local"
+      }
+    },
+    {
+      "checkId": "rightsStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "render:video",
+      "message": "rightsStatus is generated-local.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "generated-local"
+      }
+    },
+    {
+      "checkId": "usage-mode-publishable",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "render:video",
+      "message": "Asset usage mode is not reference-only.",
+      "fix": "No fix required."
+    },
+    {
+      "checkId": "rights-flags-allowed",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "render:video",
+      "message": "No prohibited rights flags are present.",
+      "fix": "No fix required.",
+      "details": {
+        "rightsFlags": []
+      }
+    },
+    {
+      "checkId": "generated-provider-present",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "render:video",
+      "message": "Generated asset provider/model evidence is present.",
+      "fix": "Add provider plus model or workflow details for generated media."
+    },
+    {
+      "checkId": "generated-prompt-trace-present",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "render:video",
+      "message": "Generated asset prompt/job/hash trace is present.",
+      "fix": "Add prompt/reference, job id, workflow URL, output hash, or file hash for generated media."
+    },
+    {
+      "checkId": "reviewStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "render:metadata",
+      "message": "reviewStatus is generated-local.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "generated-local"
+      }
+    },
+    {
+      "checkId": "rightsStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "render:metadata",
+      "message": "rightsStatus is generated-local.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "generated-local"
+      }
+    },
+    {
+      "checkId": "usage-mode-publishable",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "render:metadata",
+      "message": "Asset usage mode is not reference-only.",
+      "fix": "No fix required."
+    },
+    {
+      "checkId": "rights-flags-allowed",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "render:metadata",
+      "message": "No prohibited rights flags are present.",
+      "fix": "No fix required.",
+      "details": {
+        "rightsFlags": []
+      }
+    },
+    {
+      "checkId": "generated-provider-present",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "render:metadata",
+      "message": "Generated asset provider/model evidence is present.",
+      "fix": "Add provider plus model or workflow details for generated media."
+    },
+    {
+      "checkId": "generated-prompt-trace-present",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "render:metadata",
+      "message": "Generated asset prompt/job/hash trace is present.",
+      "fix": "Add prompt/reference, job id, workflow URL, output hash, or file hash for generated media."
+    },
+    {
+      "checkId": "reviewStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "captions:remotion",
+      "message": "reviewStatus is generated-local.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "generated-local"
+      }
+    },
+    {
+      "checkId": "rightsStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "captions:remotion",
+      "message": "rightsStatus is generated-local.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "generated-local"
+      }
+    },
+    {
+      "checkId": "usage-mode-publishable",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "captions:remotion",
+      "message": "Asset usage mode is not reference-only.",
+      "fix": "No fix required."
+    },
+    {
+      "checkId": "rights-flags-allowed",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "captions:remotion",
+      "message": "No prohibited rights flags are present.",
+      "fix": "No fix required.",
+      "details": {
+        "rightsFlags": []
+      }
+    },
+    {
+      "checkId": "generated-provider-present",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "captions:remotion",
+      "message": "Generated asset provider/model evidence is present.",
+      "fix": "Add provider plus model or workflow details for generated media."
+    },
+    {
+      "checkId": "generated-prompt-trace-present",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "captions:remotion",
+      "message": "Generated asset prompt/job/hash trace is present.",
+      "fix": "Add prompt/reference, job id, workflow URL, output hash, or file hash for generated media."
+    },
+    {
+      "checkId": "reviewStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "captions:srt",
+      "message": "reviewStatus is generated-local.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "generated-local"
+      }
+    },
+    {
+      "checkId": "rightsStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "captions:srt",
+      "message": "rightsStatus is generated-local.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "generated-local"
+      }
+    },
+    {
+      "checkId": "usage-mode-publishable",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "captions:srt",
+      "message": "Asset usage mode is not reference-only.",
+      "fix": "No fix required."
+    },
+    {
+      "checkId": "rights-flags-allowed",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "captions:srt",
+      "message": "No prohibited rights flags are present.",
+      "fix": "No fix required.",
+      "details": {
+        "rightsFlags": []
+      }
+    },
+    {
+      "checkId": "generated-provider-present",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "captions:srt",
+      "message": "Generated asset provider/model evidence is present.",
+      "fix": "Add provider plus model or workflow details for generated media."
+    },
+    {
+      "checkId": "generated-prompt-trace-present",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "captions:srt",
+      "message": "Generated asset prompt/job/hash trace is present.",
+      "fix": "Add prompt/reference, job id, workflow URL, output hash, or file hash for generated media."
+    },
+    {
+      "checkId": "reviewStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "captions:ass",
+      "message": "reviewStatus is generated-local.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "generated-local"
+      }
+    },
+    {
+      "checkId": "rightsStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "captions:ass",
+      "message": "rightsStatus is generated-local.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "generated-local"
+      }
+    },
+    {
+      "checkId": "usage-mode-publishable",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "captions:ass",
+      "message": "Asset usage mode is not reference-only.",
+      "fix": "No fix required."
+    },
+    {
+      "checkId": "rights-flags-allowed",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "captions:ass",
+      "message": "No prohibited rights flags are present.",
+      "fix": "No fix required.",
+      "details": {
+        "rightsFlags": []
+      }
+    },
+    {
+      "checkId": "generated-provider-present",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "captions:ass",
+      "message": "Generated asset provider/model evidence is present.",
+      "fix": "Add provider plus model or workflow details for generated media."
+    },
+    {
+      "checkId": "generated-prompt-trace-present",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "captions:ass",
+      "message": "Generated asset prompt/job/hash trace is present.",
+      "fix": "Add prompt/reference, job id, workflow URL, output hash, or file hash for generated media."
+    },
+    {
+      "checkId": "reviewStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "quality:summary",
+      "message": "reviewStatus is generated-local.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "generated-local"
+      }
+    },
+    {
+      "checkId": "rightsStatus-approved",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "quality:summary",
+      "message": "rightsStatus is generated-local.",
+      "fix": "No fix required.",
+      "details": {
+        "status": "generated-local"
+      }
+    },
+    {
+      "checkId": "usage-mode-publishable",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "quality:summary",
+      "message": "Asset usage mode is not reference-only.",
+      "fix": "No fix required."
+    },
+    {
+      "checkId": "rights-flags-allowed",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "quality:summary",
+      "message": "No prohibited rights flags are present.",
+      "fix": "No fix required.",
+      "details": {
+        "rightsFlags": []
+      }
+    },
+    {
+      "checkId": "generated-provider-present",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "quality:summary",
+      "message": "Generated asset provider/model evidence is present.",
+      "fix": "Add provider plus model or workflow details for generated media."
+    },
+    {
+      "checkId": "generated-prompt-trace-present",
+      "passed": true,
+      "severity": "error",
+      "assetRef": "quality:summary",
+      "message": "Generated asset prompt/job/hash trace is present.",
+      "fix": "Add prompt/reference, job id, workflow URL, output hash, or file hash for generated media."
+    }
+  ],
+  "createdAt": "2026-09-29T22:03:41.894Z"
+}

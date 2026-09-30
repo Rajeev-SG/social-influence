@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "1.0.0",
+  "videoPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/render/video.mp4",
+  "profile": "portrait",
+  "passed": true,
+  "summary": {
+    "width": 1080,
+    "height": 1920,
+    "durationSeconds": 31.147,
+    "container": "mp4",
+    "videoCodec": "h264",
+    "audioCodec": "aac"
+  },
+  "gates": [
+    {
+      "gateId": "resolution",
+      "passed": true,
+      "severity": "error",
+      "fix": "adjust-render-resolution",
+      "message": "Resolution OK (1080x1920)",
+      "details": {
+        "expectedWidth": 1080,
+        "expectedHeight": 1920,
+        "actualWidth": 1080,
+        "actualHeight": 1920
+      }
+    },
+    {
+      "gateId": "duration",
+      "passed": true,
+      "severity": "error",
+      "fix": "adjust-content-length",
+      "message": "Duration OK (31.1s)",
+      "details": {
+        "minSeconds": 30,
+        "maxSeconds": 60,
+        "actualSeconds": 31.147
+      }
+    },
+    {
+      "gateId": "format",
+      "passed": true,
+      "severity": "error",
+      "fix": "adjust-render-format",
+      "message": "Format OK (mp4/h264/aac)",
+      "details": {
+        "expected": {
+          "container": "mp4",
+          "videoCodec": "h264",
+          "audioCodec": "aac"
+        },
+        "actual": {
+          "container": "mp4",
+          "videoCodec": "h264",
+          "audioCodec": "aac"
+        }
+      }
+    },
+    {
+      "gateId": "cadence",
+      "passed": true,
+      "severity": "warning",
+      "fix": "none",
+      "message": "Cadence OK (median cut interval 1.30s)",
+      "details": {
+        "cutCount": 21,
+        "medianCutIntervalSeconds": 1.3000000000000007,
+        "maxMedianCutIntervalSeconds": 3
+      }
+    },
+    {
+      "gateId": "audio-signal",
+      "passed": true,
+      "severity": "warning",
+      "fix": "none",
+      "message": "Audio signal OK (-19.6 LUFS, peak -5.4 dBFS)",
+      "details": {
+        "loudnessLUFS": -19.56,
+        "truePeakDBFS": -5.4,
+        "loudnessRange": 1.9,
+        "clippingRatio": 0,
+        "snrDB": 0,
+        "loudnessMinLUFS": -24,
+        "loudnessMaxLUFS": -8,
+        "maxClippingRatio": 0.01,
+        "truePeakMaxDBFS": -1
+      }
+    },
+    {
+      "gateId": "caption-sync",
+      "passed": true,
+      "severity": "error",
+      "fix": "Render with the shipped caption export and re-run review. Avoid fallback subtitle burns or timing transforms that change caption timing after export.",
+      "message": "Caption sync verified (14/14 segments matched, median drift 79ms).",
+      "details": {
+        "expectedSegmentCount": 14,
+        "observedSegmentCount": 14,
+        "matchedSegmentCount": 14,
+        "segmentMatchRatio": 1,
+        "durationMatchRatio": 1,
+        "medianStartDriftMs": 78.5,
+        "p95StartDriftMs": 811.1999999999994,
+        "maxStartDriftMs": 1950,
+        "coverageRatio": 0.9845785040827904,
+        "captionQualityScore": 0.8657697898277522,
+        "meanConfidence": 0.9399999999999997,
+        "minSegmentMatchRatio": 0.65,
+        "minDurationMatchRatio": 0.55,
+        "maxMedianStartDriftMs": 350,
+        "maxP95StartDriftMs": 900
+      }
+    }
+  ],
+  "createdAt": "2026-09-29T21:22:08.462Z",
+  "runtimeMs": 2196
+}

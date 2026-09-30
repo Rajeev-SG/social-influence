@@ -1,0 +1,24 @@
+{
+  "ok": true,
+  "tool": "content-machine/asset-ledger",
+  "result": {
+    "outputPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/provenance/asset-ledger.json",
+    "assetCount": 19,
+    "generatedCount": 11,
+    "externalCount": 8,
+    "needsReviewCount": 8,
+    "audioCount": 1
+  },
+  "artifacts": [
+    {
+      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/provenance/asset-ledger.json",
+      "kind": "file",
+      "description": "Asset provenance ledger artifact"
+    }
+  ],
+  "warnings": [
+    "timestamps:main is audio-like but missing contentIdRisk.",
+    "audio:metadata is audio-like but missing contentIdRisk."
+  ],
+  "meta": {}
+}

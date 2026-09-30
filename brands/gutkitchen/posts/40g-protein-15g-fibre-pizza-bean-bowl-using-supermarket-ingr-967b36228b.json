@@ -1,0 +1,277 @@
+{
+  "topic": "40g protein + 15g fibre pizza-bean bowl using supermarket ingredients",
+  "sources": [
+    {
+      "url": "https://www.sainsburys.co.uk/groceries/product/sainsburys-cannellini-beans-in-water-400g-235g",
+      "file": "sources/sainsburys-cannellini.md",
+      "sha256": "2e7ccfb7e5f755332b36394662caaae6c1dbad6659d2544c15abb75e276c26ed"
+    },
+    {
+      "url": "https://www.sainsburys.co.uk/groceries/product/sainsburys-lighter-mozzarella-cheese-125g",
+      "file": "sources/sainsburys-lighter-mozzarella.md",
+      "sha256": "de5bdfef51a730cfccc49b0b003a4fcfadb202ebceb0c3b07e68074d5b434d15"
+    },
+    {
+      "url": "https://www.sainsburys.co.uk/groceries/product/sainsburys-passata-500g",
+      "file": "sources/sainsburys-passata.md",
+      "sha256": "18ae86e460a6f61d1587259642dd253e61143fa311de0b765bf276eaf50a48d5"
+    },
+    {
+      "url": "https://www.sainsburys.co.uk/groceries/product/sainsburys-baby-leaf-spinach-200g",
+      "file": "sources/sainsburys-baby-spinach.md",
+      "sha256": "5faad76b30f3314c04c17988995643f64c163b57f5ffac09706685118df42f98"
+    },
+    {
+      "url": "repo:brands/gutkitchen/sources/pizza-bean-bowl-calculation.json",
+      "file": "sources/pizza-bean-bowl-calculation.json",
+      "sha256": "9369bd6b1ef285650114081d0e102d4b9e63db3a113e25bc6b737f92e57992d1"
+    }
+  ],
+  "evidence": {
+    "Every recipe needs validated nutrient calculations.": "Verified UK Sainsbury product table snapshots and Decimal calculation: 40.025g protein; conservative fibre lower bound 15.69g. Less-than values use0g lower bound. One portion. State estimates and check bought labels.",
+    "Any non-obvious health claim needs a source.": "No dietary guidance or health claim is made. Only estimated label nutrient totals and a suggested untested cooking method.",
+    "State jurisdiction when quoting dietary guidance.": "No dietary guidance or health claim is made. Only estimated label nutrient totals and a suggested untested cooking method.",
+    "Increase-fibre guidance should be gradual and practical.": "No dietary guidance or health claim is made. Only estimated label nutrient totals and a suggested untested cooking method.",
+    "Prefer NHS, BDA, BNF and high-quality systematic reviews.": "No dietary guidance or health claim is made. Only estimated label nutrient totals and a suggested untested cooking method."
+  },
+  "generation_authorization": "User 2026-09-29: use your web search tools to go out and get it, generate anything else yourself. Illustrations disclosed; not represented as filmed or tested food.",
+  "disclosure": "AI food illustration | label-based estimate. Suggested recipe not physically tested.",
+  "calculations": [
+    {
+      "name": "protein_g",
+      "terms": [
+        {
+          "grams": 235,
+          "per100g": 7.5
+        },
+        {
+          "grams": 100,
+          "per100g": 18.9
+        },
+        {
+          "grams": 150,
+          "per100g": 1.5
+        },
+        {
+          "grams": 50,
+          "per100g": 2.5
+        }
+      ],
+      "claimed": 40.025
+    },
+    {
+      "name": "fibre_g_lower_bound",
+      "terms": [
+        {
+          "grams": 235,
+          "per100g": 6.4
+        },
+        {
+          "grams": 100,
+          "per100g": 0
+        },
+        {
+          "grams": 150,
+          "per100g": 0
+        },
+        {
+          "grams": 50,
+          "per100g": 1.3
+        }
+      ],
+      "claimed": 15.69
+    }
+  ],
+  "media": [
+    {
+      "file": "media/pilot/scene-001.mp4",
+      "sha256": "5eac32849625fc43f1b5c3caf47459c991b2f9ad514070c881bc6b203bbf8f0f",
+      "kind": "generated-food-illustration",
+      "rights": {
+        "reviewStatus": "generated",
+        "rightsStatus": "generated",
+        "licenseName": "Generated with Google Gemini through OpenRouter; provider terms; no reference image",
+        "licenseUrl": "https://ai.google.dev/gemini-api/terms",
+        "attributionRequired": false,
+        "contentIdRisk": "none-known",
+        "provider": "OpenRouter / Google AI Studio",
+        "model": "google/gemini-3.1-flash-image",
+        "prompt": "Photorealistic practical home-cooking illustration, portrait 9:16, natural bright kitchen window light, ordinary lightly worn pale wood worktop. Not glossy advertising. No text, no logos, no labels, no watermarks. All ingredients must look real and edible. Leave the top fifth pale and uncluttered for badges added in code. Close 45-degree view of an ordinary shallow off-white ceramic bowl filled with pizza beans: plump white cannellini beans in thick red tomato sauce, wilted dark green spinach, melted torn mozzarella with a few browned spots, pinch dried oregano. Spoon lifts several beans with a short cheese strand. Clearly beans not pasta. Meal fills lower two thirds. This is an illustrative asset, not documentation of a tested recipe.",
+        "workflow": "image generation JSON retained alongside source PNG; prepare_visuals.py shots.json",
+        "usageMode": "generated-asset"
+      }
+    },
+    {
+      "file": "media/pilot/scene-002.mp4",
+      "sha256": "d6853162318f429740d7c820e836276d213fbb18380064f1b08527571c161bd6",
+      "kind": "generated-food-illustration",
+      "rights": {
+        "reviewStatus": "generated",
+        "rightsStatus": "generated",
+        "licenseName": "Generated with Google Gemini through OpenRouter; provider terms; no reference image",
+        "licenseUrl": "https://ai.google.dev/gemini-api/terms",
+        "attributionRequired": false,
+        "contentIdRisk": "none-known",
+        "provider": "OpenRouter / Google AI Studio",
+        "model": "google/gemini-3.1-flash-image",
+        "prompt": "Photorealistic practical home-cooking illustration, portrait 9:16, natural bright kitchen window light, ordinary lightly worn pale wood worktop. Not glossy advertising. No text, no logos, no labels, no watermarks. All ingredients must look real and edible. Leave the top fifth pale and uncluttered for badges added in code. True top-down flatlay of four plain small bowls: drained white cannellini beans (largest bowl), red tomato passata in a glass jug, a pile of fresh baby spinach, and torn white mozzarella pieces. A small pinch of dried oregano next to the bowls. A clean ordinary silver spoon. No packages, no hands. Composition leaves room across upper fifth.",
+        "workflow": "image generation JSON retained alongside source PNG; prepare_visuals.py shots.json",
+        "usageMode": "generated-asset"
+      }
+    },
+    {
+      "file": "media/pilot/scene-003.mp4",
+      "sha256": "047b742b2d39c769aaa0b0ff77e5a03a04dba21911efb33206faf9bc846366d1",
+      "kind": "generated-food-illustration",
+      "rights": {
+        "reviewStatus": "generated",
+        "rightsStatus": "generated",
+        "licenseName": "Generated with Google Gemini through OpenRouter; provider terms; no reference image",
+        "licenseUrl": "https://ai.google.dev/gemini-api/terms",
+        "attributionRequired": false,
+        "contentIdRisk": "none-known",
+        "provider": "OpenRouter / Google AI Studio",
+        "model": "google/gemini-3.1-flash-image",
+        "prompt": "Photorealistic practical home-cooking illustration, portrait 9:16, natural bright kitchen window light, ordinary lightly worn pale wood worktop. Not glossy advertising. No text, no logos, no labels, no watermarks. All ingredients must look real and edible. Leave the top fifth pale and uncluttered for badges added in code. True top-down flatlay of four plain small bowls: drained white cannellini beans (largest bowl), red tomato passata in a glass jug, a pile of fresh baby spinach, and torn white mozzarella pieces. A small pinch of dried oregano next to the bowls. A clean ordinary silver spoon. No packages, no hands. Composition leaves room across upper fifth.",
+        "workflow": "image generation JSON retained alongside source PNG; prepare_visuals.py shots.json",
+        "usageMode": "generated-asset"
+      }
+    },
+    {
+      "file": "media/pilot/scene-004.mp4",
+      "sha256": "2ec005742f7db74e2f38b2da3290183f91b22ea8d28ab05fd43079303a4c057b",
+      "kind": "generated-food-illustration",
+      "rights": {
+        "reviewStatus": "generated",
+        "rightsStatus": "generated",
+        "licenseName": "Generated with Google Gemini through OpenRouter; provider terms; no reference image",
+        "licenseUrl": "https://ai.google.dev/gemini-api/terms",
+        "attributionRequired": false,
+        "contentIdRisk": "none-known",
+        "provider": "OpenRouter / Google AI Studio",
+        "model": "google/gemini-3.1-flash-image",
+        "prompt": "Photorealistic practical home-cooking illustration, portrait 9:16, natural bright kitchen window light, ordinary lightly worn pale wood worktop. Not glossy advertising. No text, no logos, no labels, no watermarks. All ingredients must look real and edible. Leave the top fifth pale and uncluttered for badges added in code. Close 45-degree view of a small worn black cast-iron pan on a simple hob containing white cannellini beans being simmered in red tomato passata, wilted green spinach visible. Torn pieces of mozzarella melting on top. Subtle steam, wooden spoon resting at right edge. Native home kitchen, not restaurant. No hands. Clearly beans not pasta.",
+        "workflow": "image generation JSON retained alongside source PNG; prepare_visuals.py shots.json",
+        "usageMode": "generated-asset"
+      }
+    },
+    {
+      "file": "media/pilot/scene-005.mp4",
+      "sha256": "8ee2b1881bb681608e022de75438f377aa365dee6a03ab296bdafeccaa06769c",
+      "kind": "generated-food-illustration",
+      "rights": {
+        "reviewStatus": "generated",
+        "rightsStatus": "generated",
+        "licenseName": "Generated with Google Gemini through OpenRouter; provider terms; no reference image",
+        "licenseUrl": "https://ai.google.dev/gemini-api/terms",
+        "attributionRequired": false,
+        "contentIdRisk": "none-known",
+        "provider": "OpenRouter / Google AI Studio",
+        "model": "google/gemini-3.1-flash-image",
+        "prompt": "Photorealistic practical home-cooking illustration, portrait 9:16, natural bright kitchen window light, ordinary lightly worn pale wood worktop. Not glossy advertising. No text, no logos, no labels, no watermarks. All ingredients must look real and edible. Leave the top fifth pale and uncluttered for badges added in code. Close 45-degree view of an ordinary shallow off-white ceramic bowl filled with pizza beans: plump white cannellini beans in thick red tomato sauce, wilted dark green spinach, melted torn mozzarella with a few browned spots, pinch dried oregano. Spoon lifts several beans with a short cheese strand. Clearly beans not pasta. Meal fills lower two thirds. This is an illustrative asset, not documentation of a tested recipe.",
+        "workflow": "image generation JSON retained alongside source PNG; prepare_visuals.py shots.json",
+        "usageMode": "generated-asset"
+      }
+    },
+    {
+      "file": "media/pilot/scene-006.mp4",
+      "sha256": "0b1a3ffd9da654dc9b9c41f2ac273d39df582d1841d5d6fea4c67f408d5bc568",
+      "kind": "generated-food-illustration",
+      "rights": {
+        "reviewStatus": "generated",
+        "rightsStatus": "generated",
+        "licenseName": "Generated with Google Gemini through OpenRouter; provider terms; no reference image",
+        "licenseUrl": "https://ai.google.dev/gemini-api/terms",
+        "attributionRequired": false,
+        "contentIdRisk": "none-known",
+        "provider": "OpenRouter / Google AI Studio",
+        "model": "google/gemini-3.1-flash-image",
+        "prompt": "Photorealistic practical home-cooking illustration, portrait 9:16, natural bright kitchen window light, ordinary lightly worn pale wood worktop. Not glossy advertising. No text, no logos, no labels, no watermarks. All ingredients must look real and edible. Leave the top fifth pale and uncluttered for badges added in code. Close 45-degree view of an ordinary shallow off-white ceramic bowl filled with pizza beans: plump white cannellini beans in thick red tomato sauce, wilted dark green spinach, melted torn mozzarella with a few browned spots, pinch dried oregano. Spoon lifts several beans with a short cheese strand. Clearly beans not pasta. Meal fills lower two thirds. This is an illustrative asset, not documentation of a tested recipe.",
+        "workflow": "image generation JSON retained alongside source PNG; prepare_visuals.py shots.json",
+        "usageMode": "generated-asset"
+      }
+    }
+  ],
+  "shot_plan": {
+    "brand": "GUTKITCHEN",
+    "protein": "~40g",
+    "fibre": "15g+",
+    "shots": [
+      {
+        "image": "hero.png",
+        "output": "scene-001.mp4",
+        "headline": "Pizza flavour. Bean maths.",
+        "detail": "ONE BOWL. NORMAL INGREDIENTS.",
+        "subdetail": "No supplements. No wellness promises.",
+        "counter_from": 15.69,
+        "counter": 15.69,
+        "seconds": 9
+      },
+      {
+        "image": "ingredients.png",
+        "output": "scene-002.mp4",
+        "headline": "Start with one tin.",
+        "detail": "235g DRAINED CANNELLINI BEANS",
+        "subdetail": "One 400g tin; check the drained weight.",
+        "counter_from": 0,
+        "counter": 15.04,
+        "seconds": 9
+      },
+      {
+        "image": "ingredients.png",
+        "output": "scene-003.mp4",
+        "headline": "Add tomato + greens.",
+        "detail": "150g PASSATA + 50g SPINACH",
+        "subdetail": "Warm together until the spinach wilts.",
+        "counter_from": 15.04,
+        "counter": 15.69,
+        "seconds": 9
+      },
+      {
+        "image": "pan.png",
+        "output": "scene-004.mp4",
+        "headline": "The protein finish.",
+        "detail": "100g LIGHTER MOZZARELLA",
+        "subdetail": "Tear over the beans. Cover until melted.",
+        "counter_from": 15.69,
+        "counter": 15.69,
+        "seconds": 9
+      },
+      {
+        "image": "hero.png",
+        "output": "scene-005.mp4",
+        "headline": "Read the small print.",
+        "detail": "AROUND 40g PROTEIN / 15g+ FIBRE",
+        "subdetail": "Per bowl. Estimates from product labels.",
+        "counter_from": 15.69,
+        "counter": 15.69,
+        "seconds": 9
+      },
+      {
+        "image": "hero.png",
+        "output": "scene-006.mp4",
+        "headline": "Save the shopping list.",
+        "detail": "BEANS 235g / PASSATA 150g",
+        "subdetail": "SPINACH 50g / LIGHT MOZZARELLA 100g",
+        "counter_from": 15.69,
+        "counter": 15.69,
+        "seconds": 9
+      }
+    ]
+  },
+  "scene_narration": [
+    "One tin. Normal supermarket food.",
+    "Cannellini beans do the heavy lifting.",
+    "One fifty passata. Fifty spinach. Warm.",
+    "One hundred mozzarella. Cover until melted.",
+    "Check pack labels. Brands vary.",
+    "Four ingredients. One filling bowl."
+  ],
+  "editorial_constraints": "The spoken copy is pre-approved and must be copied verbatim. Do not rewrite, expand, summarize, or add sentences. Ignore generic word-count expansion rules. Output hook plus exactly six scenes plus one CTA. Keep visualDirection concise. Use 40g, 15g, 235g, 150g, 50g and 100g numerals in captions. No time or cost claims. Include ingredient grams, one portion, source URLs, AI-illustration and untested-recipe disclosures in social caption.",
+  "hook_narration": "Pizza bowl: forty protein, fifteen fibre.",
+  "cta_narration": "Save this for your next shop.",
+  "ai_content_label_required": true,
+  "ai_content_label_text": "AI-generated content",
+  "evidence_review_method": "Human/agent review input with claim-trigger scan; not machine proof of claim truth.",
+  "input_integrity": "git-tracked-and-hash-checked-v2"
+}

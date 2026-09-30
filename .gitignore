@@ -1,6 +1,8 @@
 # secrets / session state — never commit
 .env
+.env.*
 *.env
+!*.env.example
 !*.env.example
 *.session
 ig_session.json
@@ -9,6 +11,13 @@ tiktok_cookies.json
 publications.jsonl
 cookies*.json
 client_secret*.json
+
+# Python / generated run state
+.venv/
+__pycache__/
+*.egg-info/
+output/
+brands/*/.create.lock
 publisher/.venv/
 publisher/__pycache__/
 publisher/**/__pycache__/
@@ -16,5 +25,10 @@ publisher/*.egg-info/
 publisher/.pytest_cache/
 posts/**/_frames/
 posts/**/_check*.png
-# media artifacts are regenerable; bundles are not
+
+# media artifacts are regenerable; reviewed bundles are retained outside Git
 *.mp4
+brands/*/media/*
+# Pilot media is tracked and hash-validated by scripts/validate_packs.py (CI).
+!brands/*/media/pilot/
+!brands/*/media/pilot/**

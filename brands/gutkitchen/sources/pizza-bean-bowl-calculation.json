@@ -1,0 +1,129 @@
+{
+  "recipe": "Pizza-bean bowl (single serving)",
+  "brand": "gutkitchen",
+  "status": "calculation_only_recipe_not_physically_cooked",
+  "computed_on": "2026-09-29",
+  "jurisdiction": "United Kingdom (England)",
+  "servings": 1,
+  "chosen_grams": {
+    "beans_drained": "235",
+    "lighter_mozzarella_drained": "100",
+    "passata": "150",
+    "baby_spinach": "50"
+  },
+  "ingredients": [
+    {
+      "ingredient": "cannellini_beans",
+      "product": "Sainsbury's Cannellini Beans In Water",
+      "grams": "235",
+      "protein_g": "17.625",
+      "fibre_g_lower": "15.040",
+      "fibre_g_upper": "15.040",
+      "basis": "per 100g as drained"
+    },
+    {
+      "ingredient": "lighter_mozzarella",
+      "product": "Sainsbury's Lighter Mozzarella Cheese",
+      "grams": "100",
+      "protein_g": "18.9",
+      "fibre_g_lower": "0",
+      "fibre_g_upper": "0.5",
+      "basis": "per 100g as drained"
+    },
+    {
+      "ingredient": "passata",
+      "product": "Sainsbury's Passata",
+      "grams": "150",
+      "protein_g": "2.25",
+      "fibre_g_lower": "0.0",
+      "fibre_g_upper": "0.75",
+      "basis": "per 100g as sold"
+    },
+    {
+      "ingredient": "baby_spinach",
+      "product": "Sainsbury's Baby Leaf Spinach",
+      "grams": "50",
+      "protein_g": "1.25",
+      "fibre_g_lower": "0.65",
+      "fibre_g_upper": "0.65",
+      "basis": "per 100g as sold"
+    }
+  ],
+  "totals_per_serving": {
+    "protein_g": "40.025",
+    "protein_g_rounded": "40.0",
+    "fibre_g_upper_bound": "16.940",
+    "fibre_g_lower_bound": "15.690",
+    "fibre_g_reported": "16.9 upper / 15.7 lower"
+  },
+  "claim": "Around 40g protein and at least 15g fibre per serving.",
+  "fibre_bound_note": "Mozzarella and passata list fibre as '<0.5g per 100g'. Upper bound counts those as 0.5g; lower bound as 0g. 16.94g is the upper-bound sum, 15.69g the lower bound.",
+  "protein_exactness_note": "Protein column has no '<' values; 40.025g is the exact sum of the four verified per-100g figures at the chosen grams.",
+  "basis_notes": [
+    "Beans and mozzarella use per-100g drained figures; no raw/dry bean weight is used.",
+    "One 400g can of Sainsbury's cannellini beans declares 235g drained weight, so 235g drained is one can and avoids opening a second.",
+    "Passata and baby spinach are used as sold, which is the only basis their tables give."
+  ],
+  "cooking_instructions": {
+    "status": "suggested method only - not physically cooked or timed as part of this task",
+    "steps": [
+      "Drain and rinse one 400g can of cannellini beans; about 235g beans.",
+      "Warm 150g passata in a pan, add the beans and 50g baby spinach, stir until the spinach wilts.",
+      "Tear or grate 100g lighter mozzarella over the top, cover briefly or grill until melted.",
+      "Season to taste and serve as one portion."
+    ],
+    "time_note": "No measured cooking time is claimed. Retailer pack/can guidance is the only time reference; the method is a reasonable suggestion, untested here."
+  },
+  "qa": {
+    "health_claims": "None. No gut, microbiome, detox, IBS/IBD or disease claims; only protein and fibre totals are stated.",
+    "physical_cooking_test": "Not applicable to this task: source verification and arithmetic only. No pan/bowl was cooked, so no measured time, yield or sensory result is claimed.",
+    "label_currency": "Retailer nutrient tables can change; always verify the pack bought. Figures captured 2026-09-29."
+  },
+  "sources": [
+    {
+      "id": "sainsburys_cannellini",
+      "product": "Sainsbury's Cannellini Beans In Water 400g (235g*)",
+      "url": "https://www.sainsburys.co.uk/groceries/product/sainsburys-cannellini-beans-in-water-400g-235g",
+      "accessed": "2026-09-29",
+      "table_basis": "Typical Values as Drained, per 100g",
+      "fibre_per_100g": "6.4",
+      "protein_per_100g": "7.5"
+    },
+    {
+      "id": "sainsburys_lighter_mozzarella",
+      "product": "Sainsbury's Lighter Mozzarella Cheese 125g",
+      "url": "https://www.sainsburys.co.uk/groceries/product/sainsburys-lighter-mozzarella-cheese-125g",
+      "accessed": "2026-09-29",
+      "table_basis": "Typical Values as drained, per 100g",
+      "fibre_per_100g": "<0.5",
+      "protein_per_100g": "18.9"
+    },
+    {
+      "id": "sainsburys_passata",
+      "product": "Sainsbury's Passata 500g",
+      "url": "https://www.sainsburys.co.uk/groceries/product/sainsburys-passata-500g",
+      "accessed": "2026-09-29",
+      "table_basis": "per 100g as sold",
+      "fibre_per_100g": "<0.5",
+      "protein_per_100g": "1.5"
+    },
+    {
+      "id": "sainsburys_baby_leaf_spinach",
+      "product": "Sainsbury's Baby Leaf Spinach 200g",
+      "url": "https://www.sainsburys.co.uk/groceries/product/sainsburys-baby-leaf-spinach-200g",
+      "accessed": "2026-09-29",
+      "table_basis": "per 100g as sold",
+      "fibre_per_100g": "1.3",
+      "protein_per_100g": "2.5"
+    }
+  ],
+  "excluded_candidates": [
+    {
+      "id": "tesco_cannellini_attempt",
+      "product": "Tesco Cannellini Beans Water 400G",
+      "url": "https://www.tesco.com/shop/en-GB/products/262489348",
+      "accessed": "2026-09-29",
+      "result": "HTTP 403 via web_url_read, Chrome-UA curl, and Tesco IE equivalent; table not retrievable and not used."
+    }
+  ]
+}

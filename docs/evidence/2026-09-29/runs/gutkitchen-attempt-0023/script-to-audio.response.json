@@ -1,0 +1,33 @@
+{
+  "ok": true,
+  "tool": "content-machine/script-to-audio",
+  "result": {
+    "audioPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/audio/audio.wav",
+    "timestampsPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/audio/timestamps.json",
+    "outputMetadataPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/audio/audio.json",
+    "duration": 31.085,
+    "wordCount": 45,
+    "voice": "bf_emma",
+    "ttsEngine": "kokoro",
+    "asrEngine": "kokoro-timed"
+  },
+  "artifacts": [
+    {
+      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/audio/audio.wav",
+      "kind": "file",
+      "description": "Generated audio artifact"
+    },
+    {
+      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/audio/timestamps.json",
+      "kind": "file",
+      "description": "Generated timestamps artifact"
+    },
+    {
+      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/gutkitchen/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b/attempt-0023/engine/audio/audio.json",
+      "kind": "file",
+      "description": "Audio stage metadata artifact"
+    }
+  ],
+  "warnings": [],
+  "meta": {}
+}

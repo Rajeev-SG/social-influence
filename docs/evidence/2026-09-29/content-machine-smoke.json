@@ -1,0 +1,104 @@
+{
+  "ok": true,
+  "tool": "content-machine/generate-short",
+  "result": {
+    "outputDir": "/tmp/si-cm-smoke-final-2",
+    "referenceOutputDir": null,
+    "scriptPath": "/tmp/si-cm-smoke-final-2/script/script.json",
+    "audioPath": "/tmp/si-cm-smoke-final-2/audio/audio.wav",
+    "timestampsPath": "/tmp/si-cm-smoke-final-2/audio/timestamps.json",
+    "visualsPath": "/tmp/si-cm-smoke-final-2/visuals/visuals.json",
+    "visualQualityPath": "/tmp/si-cm-smoke-final-2/visuals/visual-quality.json",
+    "videoPath": "/tmp/si-cm-smoke-final-2/render/video.mp4",
+    "renderMetadataPath": "/tmp/si-cm-smoke-final-2/render/render.json",
+    "qualitySummaryPath": "/tmp/si-cm-smoke-final-2/quality-summary.json",
+    "qualityReady": false,
+    "visualQualityPassed": false,
+    "visualQualityScore": 0.7,
+    "captionQualityPassed": false,
+    "captionQualityScore": 0.987,
+    "captionExportPath": "/tmp/si-cm-smoke-final-2/render/captions.remotion.json",
+    "captionSrtPath": "/tmp/si-cm-smoke-final-2/render/captions.srt",
+    "captionAssPath": "/tmp/si-cm-smoke-final-2/render/captions.ass",
+    "assetLedgerPath": "/tmp/si-cm-smoke-final-2/provenance/asset-ledger.json",
+    "publishPrepDir": null,
+    "publishReady": null,
+    "archetype": null,
+    "referenceArchetype": null,
+    "laneId": null
+  },
+  "artifacts": [
+    {
+      "path": "/tmp/si-cm-smoke-final-2",
+      "kind": "directory",
+      "description": "Generate-short output directory"
+    },
+    {
+      "path": "/tmp/si-cm-smoke-final-2/script/script.json",
+      "kind": "file",
+      "description": "Generated script artifact"
+    },
+    {
+      "path": "/tmp/si-cm-smoke-final-2/audio/audio.wav",
+      "kind": "file",
+      "description": "Generated audio artifact"
+    },
+    {
+      "path": "/tmp/si-cm-smoke-final-2/audio/timestamps.json",
+      "kind": "file",
+      "description": "Generated timestamps artifact"
+    },
+    {
+      "path": "/tmp/si-cm-smoke-final-2/audio/audio.json",
+      "kind": "file",
+      "description": "Audio stage metadata artifact"
+    },
+    {
+      "path": "/tmp/si-cm-smoke-final-2/visuals/visuals.json",
+      "kind": "file",
+      "description": "Generated visuals artifact"
+    },
+    {
+      "path": "/tmp/si-cm-smoke-final-2/visuals/visual-quality.json",
+      "kind": "file",
+      "description": "Visual quality preflight artifact"
+    },
+    {
+      "path": "/tmp/si-cm-smoke-final-2/render/video.mp4",
+      "kind": "file",
+      "description": "Rendered video artifact"
+    },
+    {
+      "path": "/tmp/si-cm-smoke-final-2/render/render.json",
+      "kind": "file",
+      "description": "Render metadata artifact"
+    },
+    {
+      "path": "/tmp/si-cm-smoke-final-2/render/captions.remotion.json",
+      "kind": "file",
+      "description": "Remotion-compatible caption JSON artifact"
+    },
+    {
+      "path": "/tmp/si-cm-smoke-final-2/render/captions.srt",
+      "kind": "file",
+      "description": "SRT caption artifact"
+    },
+    {
+      "path": "/tmp/si-cm-smoke-final-2/render/captions.ass",
+      "kind": "file",
+      "description": "ASS caption artifact"
+    },
+    {
+      "path": "/tmp/si-cm-smoke-final-2/quality-summary.json",
+      "kind": "file",
+      "description": "Generate-short quality summary artifact"
+    },
+    {
+      "path": "/tmp/si-cm-smoke-final-2/provenance/asset-ledger.json",
+      "kind": "file",
+      "description": "Asset provenance ledger artifact"
+    }
+  ],
+  "warnings": [],
+  "meta": {}
+}

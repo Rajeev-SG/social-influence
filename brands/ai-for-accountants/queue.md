@@ -1,6 +1,6 @@
 # AIForAccountants — initial queue
 
-- [ ] Turn raw client meeting notes into a follow-up email + action list, with human-review checklist
+- [x] Turn raw client meeting notes into a follow-up email + action list, with human-review checklist
 - [ ] Bad vs good month-end variance prompt using a synthetic P&L
 - [ ] Five things never to remove from an AI-generated client email review
 - [ ] Excel cleanup workflow: messy transaction descriptions → suggested categories → review queue

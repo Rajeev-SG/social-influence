@@ -1,0 +1,8 @@
+{
+  "model": "google/gemini-3.1-flash-image",
+  "prompt": "Photorealistic practical home-cooking illustration, portrait 9:16, natural bright kitchen window light, ordinary lightly worn pale wood worktop. Not glossy advertising. No text, no logos, no labels, no watermarks. All ingredients must look real and edible. Leave the top fifth pale and uncluttered for badges added in code. Close 45-degree view of an ordinary shallow off-white ceramic bowl filled with pizza beans: plump white cannellini beans in thick red tomato sauce, wilted dark green spinach, melted torn mozzarella with a few browned spots, pinch dried oregano. Spoon lifts several beans with a short cheese strand. Clearly beans not pasta. Meal fills lower two thirds. This is an illustrative asset, not documentation of a tested recipe.",
+  "images_saved": [
+    "brands/gutkitchen/media/pilot/hero.png"
+  ],
+  "count": 1
+}

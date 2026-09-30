@@ -1,0 +1,33 @@
+{
+  "ok": true,
+  "tool": "content-machine/script-to-audio",
+  "result": {
+    "audioPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002/engine/audio/audio.wav",
+    "timestampsPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002/engine/audio/timestamps.json",
+    "outputMetadataPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002/engine/audio/audio.json",
+    "duration": 31.985,
+    "wordCount": 44,
+    "voice": "bf_emma",
+    "ttsEngine": "kokoro",
+    "asrEngine": "kokoro-timed"
+  },
+  "artifacts": [
+    {
+      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002/engine/audio/audio.wav",
+      "kind": "file",
+      "description": "Generated audio artifact"
+    },
+    {
+      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002/engine/audio/timestamps.json",
+      "kind": "file",
+      "description": "Generated timestamps artifact"
+    },
+    {
+      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002/engine/audio/audio.json",
+      "kind": "file",
+      "description": "Audio stage metadata artifact"
+    }
+  ],
+  "warnings": [],
+  "meta": {}
+}

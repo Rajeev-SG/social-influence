@@ -2,7 +2,7 @@
 
 Use in order only until enough live data exists to reprioritise.
 
-- [ ] 40g protein + 15g fibre pizza-bean bowl using supermarket ingredients
+- [x] 40g protein + 15g fibre pizza-bean bowl using supermarket ingredients
 - [ ] A realistic 30g fibre day with four normal eating occasions
 - [ ] Turn chicken-and-rice into a 12g-fibre meal without doubling the portion
 - [ ] £20 high-fibre shopping basket → five lunches

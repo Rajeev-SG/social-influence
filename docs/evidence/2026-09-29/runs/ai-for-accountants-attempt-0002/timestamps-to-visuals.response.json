@@ -1,0 +1,30 @@
+{
+  "ok": true,
+  "tool": "content-machine/timestamps-to-visuals",
+  "result": {
+    "outputPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002/engine/visuals/visuals.json",
+    "visualQualityPath": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002/engine/visuals/visual-quality.json",
+    "visualQualityPassed": true,
+    "visualQualityScore": 1,
+    "sceneCount": 8,
+    "fallbacks": 0,
+    "fromStock": 0,
+    "fromGenerated": 0,
+    "fromUserFootage": 8,
+    "gameplayClip": null
+  },
+  "artifacts": [
+    {
+      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002/engine/visuals/visuals.json",
+      "kind": "file",
+      "description": "Generated visuals artifact"
+    },
+    {
+      "path": "/Users/rajeev/.codex-worktrees/social-influence-issue-2-reviewed-creation/output/ai-for-accountants/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4/attempt-0002/engine/visuals/visual-quality.json",
+      "kind": "file",
+      "description": "Visual quality preflight artifact"
+    }
+  ],
+  "warnings": [],
+  "meta": {}
+}
