@@ -30,4 +30,4 @@ Do not bake `AI-generated content`, `AIGC-assisted`, `AI food illustration` or i
 
 ## Reference use in generation
 
-The manifest lists reference IDs per treatment. Each treatment intentionally borrows a different combination: A uses number + ingredient-build cadence; B uses calculator/counter + shopping utility; C uses tactile action inserts + editorial hierarchy. Reference screenshots/frames are retained under `brands/gutkitchen/references/frames/` for internal multimodal review and are not distributable candidate media.
+The manifest lists reference IDs per treatment. Each treatment intentionally borrows a different combination: A uses number + ingredient-build cadence; B uses calculator/counter + shopping utility; C uses tactile action inserts + editorial hierarchy. Public-page captures are retained only in gitignored `output/gutkitchen-reference-captures/` for internal multimodal review. The tracked library keeps URLs and metadata; creator-owned frames are not committed or distributable.

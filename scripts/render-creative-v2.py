@@ -17,7 +17,7 @@ def main() -> int:
     engine = CreativeEngineV2.from_path(ROOT / 'brands/gutkitchen/creative-engine-v2/manifest.json')
     (out / 'review-payload.json').write_text(json.dumps(engine.static_review_payload(), indent=2) + '\n')
     (out / 'stage-output.json').write_text(json.dumps(engine.run_stages(), indent=2) + '\n')
-    print('OK 30 photo-led candidate stills + review payload')
+    print('OK 30 approved-plate storyboard stills + review payload')
     return 0
 
 if __name__ == '__main__':

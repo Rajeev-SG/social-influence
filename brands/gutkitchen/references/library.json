@@ -14,7 +14,7 @@
   ],
   "notes": [
     "Public search results were scanned for recurring creative grammar; live platform screenshots were not treated as distributable media.",
-    "Captured research-page frames in frames/ are internal multimodal analysis evidence from public pages and are not distributable/generated brand media.",
+    "Public-page captures are retained only in the gitignored `output/gutkitchen-reference-captures/` directory for internal multimodal analysis. The tracked library keeps URLs, observations and capture filenames; creator-owned frames are intentionally not committed or distributable.",
     "Performance is only recorded where the source page exposed an observable public count at collection time.",
     "Brave Search was used as escalation after local SearXNG timed out; exact URLs and observable counts are recorded in searchEvidence."
   ],
@@ -290,7 +290,8 @@
         "per-serving macro breakdown",
         "save prompt"
       ],
-      "capture": "frames/ref-dr-rachelpaul-7354927176044514603.png"
+      "capture": "output/gutkitchen-reference-captures/ref-dr-rachelpaul-7354927176044514603.png",
+      "captureStatus": "local-untracked-internal-only"
     },
     {
       "url": "https://www.tiktok.com/@hunt4shredz/video/7518805084499627277",
@@ -300,7 +301,8 @@
         "ingredient weights",
         "fast saveable meal-prep format"
       ],
-      "capture": "frames/ref-hunt4shredz-7518805084499627277.png"
+      "capture": "output/gutkitchen-reference-captures/ref-hunt4shredz-7518805084499627277.png",
+      "captureStatus": "local-untracked-internal-only"
     },
     {
       "url": "https://www.tiktok.com/@makayla_thomas_fit/video/7661734178211302686",
@@ -310,7 +312,8 @@
         "large batch build",
         "ordinary supermarket ingredients"
       ],
-      "capture": "frames/ref-makayla-thomas-fit-7661734178211302686.png"
+      "capture": "output/gutkitchen-reference-captures/ref-makayla-thomas-fit-7661734178211302686.png",
+      "captureStatus": "local-untracked-internal-only"
     }
   ]
 }

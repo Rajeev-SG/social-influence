@@ -64,6 +64,11 @@ def ingredient_chips(draw, items, active):
         draw.ellipse((88,yy+14,122,yy+48),fill=TOMATO if i==active else (244,227,178))
         draw.text((144,yy+29),item,font=font(27),fill=INK,anchor='lm')
 
+def review_badge(draw):
+    draw.rounded_rectangle((650,18,1038,86),radius=16,fill=(28,42,33,225))
+    draw.text((844,38),'REVIEW STORYBOARD COMP',font=font(18),fill=CHEESE,anchor='mm')
+    draw.text((844,66),'SHOT MEDIA PENDING',font=font(15),fill=CREAM,anchor='mm')
+
 def footer(draw, label='REAL NUMBERS. NORMAL INGREDIENTS.'):
     draw.rectangle((0,1760,W,H),fill=INK); draw.text((52,1804),label,font=font(22),fill=CREAM)
     draw.text((52,1850),'GUTKITCHEN',font=font(36),fill=CHEESE); draw.text((W-52,1850),'SAVE THIS FOR YOUR NEXT SHOP',font=font(21),fill=CREAM,anchor='ra')
@@ -94,6 +99,7 @@ def render_a(i):
         rounded(d,(70,1280,1010,1535),(255,247,233,238),28); d.text((105,1335),'THE MATH',font=font(26),fill=TOMATO)
         d.text((105,1395),'40.025g protein',font=font(56),fill=INK); d.text((105,1470),'15.69g fibre lower bound · one bowl',font=font(30),fill=INK)
     footer(d)
+    review_badge(d)
     return im
 
 def render_b(i):
@@ -135,5 +141,5 @@ def main():
             render(treatment,i).save(OUT/f'{treatment}-frame-{i+1:02d}.jpg',quality=88,subsampling=1,optimize=True)
             (OUT/f'{treatment}-frame-{i+1:02d}.svg').unlink(missing_ok=True)
             (OUT/f'{treatment}-frame-{i+1:02d}.png').unlink(missing_ok=True)
-    print('OK 30 photo-led candidate stills')
+    print('OK 30 approved-plate storyboard stills')
 if __name__=='__main__': main()

@@ -82,9 +82,9 @@
         "ref-09"
       ],
       "asset_stack": [
-        "reference-safe stock still",
-        "image-to-video spoon lift",
-        "code-generated label card"
+        "approved GutKitchen food plates",
+        "deterministic camera motion and overlays",
+        "planned per-shot provider routes"
       ],
       "design_stack": [
         "HeroMeal",
@@ -187,6 +187,7 @@
           "provider_slot": "stock-image",
           "source": "reference-safe hero still",
           "rationale": "appetite hero without advertising gloss",
+          "execution_status": "planned-not-executed",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -196,6 +197,7 @@
           "provider_slot": "replaceable-video-provider",
           "source": "hero spoon-lift plate",
           "rationale": "proof of texture and cheese pull",
+          "execution_status": "planned-not-executed",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -205,6 +207,7 @@
           "provider_slot": "deterministic-svg",
           "source": "IngredientBuild",
           "rationale": "weights and hierarchy are code-owned",
+          "execution_status": "executed-local",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -214,6 +217,7 @@
           "provider_slot": "replaceable-video-provider",
           "source": "ingredient plate",
           "rationale": "ingredient action keeps the build moving",
+          "execution_status": "planned-not-executed",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -223,6 +227,7 @@
           "provider_slot": "replaceable-video-provider",
           "source": "pan brief",
           "rationale": "pan action breaks the slideshow pattern",
+          "execution_status": "planned-not-executed",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -232,6 +237,7 @@
           "provider_slot": "replaceable-video-provider",
           "source": "pan melt still",
           "rationale": "tactile protein payoff",
+          "execution_status": "planned-not-executed",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -241,6 +247,7 @@
           "provider_slot": "deterministic-svg",
           "source": "FibreCounter",
           "rationale": "factual progress stays deterministic",
+          "execution_status": "executed-local",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -250,6 +257,7 @@
           "provider_slot": "deterministic-svg",
           "source": "EvidenceCard",
           "rationale": "claim boundary is deterministic",
+          "execution_status": "executed-local",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -259,6 +267,7 @@
           "provider_slot": "deterministic-svg",
           "source": "ShoppingBasket",
           "rationale": "utility is brand-owned design",
+          "execution_status": "executed-local",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -268,6 +277,7 @@
           "provider_slot": "deterministic-svg",
           "source": "SaveCTA",
           "rationale": "single content-specific close",
+          "execution_status": "executed-local",
           "rights": "reference-safe",
           "replaceable": true
         }
@@ -284,9 +294,9 @@
         "ref-11"
       ],
       "asset_stack": [
-        "deterministic motion graphics",
-        "label/data cards",
-        "reference-safe ingredient stills"
+        "approved GutKitchen food plates",
+        "deterministic calculator graphics",
+        "planned per-shot provider routes"
       ],
       "design_stack": [
         "FibreCounter",
@@ -388,6 +398,7 @@
           "provider_slot": "deterministic-svg",
           "source": "FibreCounter",
           "rationale": "numeric animation is deterministic",
+          "execution_status": "executed-local",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -397,6 +408,7 @@
           "provider_slot": "stock-image",
           "source": "reference-safe hero still",
           "rationale": "food proof keeps the calculator appetising",
+          "execution_status": "planned-not-executed",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -406,6 +418,7 @@
           "provider_slot": "replaceable-video-provider",
           "source": "bean still",
           "rationale": "small motion prevents card monotony",
+          "execution_status": "planned-not-executed",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -415,6 +428,7 @@
           "provider_slot": "deterministic-svg",
           "source": "BeforeAfterUpgrade",
           "rationale": "comparison is design logic",
+          "execution_status": "executed-local",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -424,6 +438,7 @@
           "provider_slot": "deterministic-svg",
           "source": "FibreCounter",
           "rationale": "counter is the core hook",
+          "execution_status": "executed-local",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -433,6 +448,7 @@
           "provider_slot": "stock-image",
           "source": "supermarket ingredient still",
           "rationale": "ordinary shopping context",
+          "execution_status": "planned-not-executed",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -442,6 +458,7 @@
           "provider_slot": "deterministic-svg",
           "source": "EvidenceCard",
           "rationale": "claim boundary is deterministic",
+          "execution_status": "executed-local",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -451,6 +468,7 @@
           "provider_slot": "deterministic-svg",
           "source": "ShoppingBasket",
           "rationale": "utility is reusable",
+          "execution_status": "executed-local",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -460,6 +478,7 @@
           "provider_slot": "replaceable-video-provider",
           "source": "hero spoon-lift plate",
           "rationale": "closes on appetite",
+          "execution_status": "planned-not-executed",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -469,6 +488,7 @@
           "provider_slot": "deterministic-svg",
           "source": "SaveCTA",
           "rationale": "single clear utility close",
+          "execution_status": "executed-local",
           "rights": "reference-safe",
           "replaceable": true
         }
@@ -486,9 +506,9 @@
         "ref-12"
       ],
       "asset_stack": [
-        "generated cinematic food still",
-        "image-to-video pan action",
-        "deterministic typography overlays"
+        "approved GutKitchen food plates",
+        "deterministic editorial overlays",
+        "planned per-shot provider routes"
       ],
       "design_stack": [
         "HeroMeal",
@@ -590,6 +610,7 @@
           "provider_slot": "replaceable-video-provider",
           "source": "hero spoon-lift brief",
           "rationale": "food realism and appetite appeal",
+          "execution_status": "planned-not-executed",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -599,6 +620,7 @@
           "provider_slot": "deterministic-svg",
           "source": "EvidenceCard",
           "rationale": "claim boundary is deterministic",
+          "execution_status": "executed-local",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -608,6 +630,7 @@
           "provider_slot": "stock-image",
           "source": "bean plate",
           "rationale": "ingredient texture anchors the build",
+          "execution_status": "planned-not-executed",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -617,6 +640,7 @@
           "provider_slot": "replaceable-video-provider",
           "source": "ingredient plate",
           "rationale": "colour and action carry pace",
+          "execution_status": "planned-not-executed",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -626,6 +650,7 @@
           "provider_slot": "replaceable-video-provider",
           "source": "pan brief",
           "rationale": "pan action avoids slideshow",
+          "execution_status": "planned-not-executed",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -635,6 +660,7 @@
           "provider_slot": "replaceable-video-provider",
           "source": "melt detail still",
           "rationale": "close texture creates appetite",
+          "execution_status": "planned-not-executed",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -644,6 +670,7 @@
           "provider_slot": "replaceable-video-provider",
           "source": "hero spoon-lift plate",
           "rationale": "spoon payoff makes it edible",
+          "execution_status": "planned-not-executed",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -653,6 +680,7 @@
           "provider_slot": "deterministic-svg",
           "source": "ProteinFibreBadge",
           "rationale": "factual layer stays deterministic",
+          "execution_status": "executed-local",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -662,6 +690,7 @@
           "provider_slot": "deterministic-svg",
           "source": "ShoppingBasket",
           "rationale": "utility close is reusable",
+          "execution_status": "executed-local",
           "rights": "reference-safe",
           "replaceable": true
         },
@@ -671,6 +700,7 @@
           "provider_slot": "deterministic-svg",
           "source": "SaveCTA",
           "rationale": "brand-owned final action",
+          "execution_status": "executed-local",
           "rights": "reference-safe",
           "replaceable": true
         }
@@ -694,6 +724,8 @@
     "generated_at": "2026-09-30",
     "model_provider_slots": "replaceable per asset route; no provider hard-coded in brand logic",
     "internal_only": true,
-    "publish": false
+    "publish": false,
+    "render_status": "storyboard-motion-comp",
+    "route_execution_note": "Code-generated overlays are executed locally. Stock, image-to-video and text-to-video routes are planned provider slots only and are not executed in this milestone."
   }
 }

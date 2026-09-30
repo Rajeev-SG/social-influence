@@ -32,10 +32,20 @@ class CreativeEngineV2Tests(unittest.TestCase):
         self.assertTrue((ROOT / self.engine.manifest.reference_library).is_file())
         self.assertTrue((ROOT / self.engine.manifest.visual_grammar).is_file())
 
-    def test_asset_routes_are_replaceable_per_shot(self):
+    def test_asset_routes_are_replaceable_and_execution_is_explicit(self):
         for route in self.engine.stage_c():
             self.assertTrue(route['replaceable'])
             self.assertIn(route['route'], {'stock', 'image-generation', 'image-to-video', 'text-to-video', 'code-generated'})
+            self.assertIn(route['execution_status'], {'executed-local', 'executed-provider', 'planned-not-executed'})
+            if route['route'] == 'code-generated':
+                self.assertEqual(route['execution_status'], 'executed-local')
+            else:
+                self.assertEqual(route['execution_status'], 'planned-not-executed')
+
+    def test_committed_projections_match_single_manifest_source(self):
+        out = ROOT / 'brands/gutkitchen/creative-engine-v2/candidates'
+        self.assertEqual(json.loads((out / 'review-payload.json').read_text()), json.loads(json.dumps(self.engine.static_review_payload(), sort_keys=True)))
+        self.assertEqual(json.loads((out / 'stage-output.json').read_text()), json.loads(json.dumps(self.engine.run_stages(), sort_keys=True)))
 
     def test_no_redundant_ai_branding_in_new_storyboards(self):
         payload = self.engine.static_review_payload()
@@ -64,7 +74,7 @@ class CreativeEngineV2Tests(unittest.TestCase):
 
     def test_review_page_mentions_baseline_and_all_new_lanes(self):
         page = (ROOT / 'reviews/gutkitchen-creative-v2/index.html').read_text()
-        for label in ('OLD / BASELINE', 'NEW A', 'NEW B', 'NEW C', 'references/library.json', 'visual-grammar-v2.md'):
+        for label in ('OLD / BASELINE', 'NEW A', 'NEW B', 'NEW C', 'STORYBOARD', 'planned, not executed', 'references/library.json', 'visual-grammar-v2.md'):
             self.assertIn(label, page)
 
 

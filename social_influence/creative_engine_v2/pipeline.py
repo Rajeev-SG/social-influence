@@ -31,6 +31,7 @@ class AssetRoute:
     provider_slot: str
     source: str
     rationale: str
+    execution_status: str = "planned-not-executed"
     rights: str = "reference-safe"
     replaceable: bool = True
 
@@ -157,6 +158,12 @@ class CreativeEngineV2:
                     raise ValueError(f"Unknown asset route: {route.route}")
                 if not route.replaceable:
                     raise ValueError(f"Asset route is hard-coded: {route.shot_id}")
+                if route.execution_status not in {"executed-local", "executed-provider", "planned-not-executed"}:
+                    raise ValueError(f"Unknown route execution status: {route.execution_status}")
+                if route.route == "code-generated" and route.execution_status != "executed-local":
+                    raise ValueError(f"Code-generated route must be executed locally: {route.shot_id}")
+                if route.route != "code-generated" and route.execution_status == "executed-local":
+                    raise ValueError(f"Provider route cannot claim local execution: {route.shot_id}")
             copy = " ".join(str(item) for item in treatment.storyboard.first_frame.values()).lower()
             copy += " " + " ".join(str(item) for shot in treatment.storyboard.shots for item in shot.values()).lower()
             if any(term in copy for term in FORBIDDEN_CREATIVE_COPY):

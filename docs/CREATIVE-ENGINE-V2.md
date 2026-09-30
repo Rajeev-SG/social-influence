@@ -20,7 +20,7 @@ The page includes playable baseline preview, first frames, treatment rationale, 
 2. **Stage B — reference interpretation:** `brands/gutkitchen/references/library.json` plus `brands/gutkitchen/visual-grammar-v2.md`; reference IDs are attached to each treatment and analysis frames are retained separately.
 3. **Stage C — asset routing:** each shot has a provider slot and route (`stock`, `image-to-video`, `text-to-video` or `code-generated`). Brand logic does not hard-code one provider.
 4. **Stage D — deterministic design:** reusable SVG/HTML-style components: `HeroMeal`, `ProteinFibreBadge`, `FibreCounter`, `IngredientBuild`, `BeforeAfterUpgrade`, `ShoppingBasket`, `EvidenceCard`, `SaveCTA`.
-5. **Stage E — candidate generation:** explicit manifests, ten photo-led shot stills and playable motion comps for each treatment.
+5. **Stage E — candidate generation:** explicit manifests, ten approved-plate storyboard stills and playable storyboard motion comps for each treatment.
 6. **Stage F — QA:** existing fact/evidence/technical checks remain separate from creative selection.
 
 ## Regenerate another candidate set
@@ -45,4 +45,4 @@ python3 scripts/render-creative-v2.py
 python3 scripts/render_creative_v2_video.py  # local FFmpeg; review comps are committed
 ```
 
-The current run passes the factual basis from the existing pilot: 40.025g protein and a 15.69g fibre lower bound per bowl. The photo-led candidates and silent motion comps are review artifacts, not published media. The comps use deterministic camera motion and no VO/music mix; provider slots can replace each shot with native/generated footage later. Real/native footage remains preferable before public publishing where appetite realism is the objective.
+The current run passes the factual basis from the existing pilot: 40.025g protein and a 15.69g fibre lower bound per bowl. The approved-plate storyboard candidates and silent storyboard motion comps are review artifacts, not published media. The comps use deterministic camera motion and no VO/music mix; provider slots can replace each shot with native/generated footage later. Real/native footage remains preferable before public publishing where appetite realism is the objective.
