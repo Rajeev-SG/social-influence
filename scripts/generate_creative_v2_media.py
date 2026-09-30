@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 from hashlib import sha256
 from pathlib import Path
 import argparse
+import gzip
 import json
 import sys
 from threading import Lock
@@ -90,6 +91,12 @@ def save_json(path: Path, value: object) -> None:
     path.write_text(json.dumps(value, indent=2) + "\n")
 
 
+def save_gzip_json(path: Path, value: object) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with gzip.open(path, "wt", encoding="utf-8") as handle:
+        json.dump(value, handle, indent=2)
+
+
 def cached_record(route: str, output_path: Path) -> GenerationRecord | None:
     for item in load_records(RUN_DIR / "provenance/generations.json"):
         if item.get("route") == route and Path(item.get("output_path", "")) == output_path:
@@ -163,8 +170,8 @@ def main() -> int:
     RUN_DIR.mkdir(parents=True, exist_ok=True)
     discovery_images = client.discover_image_models()
     discovery_videos = client.discover_video_models()
-    save_json(RUN_DIR / "discovery/images.json", discovery_images)
-    save_json(RUN_DIR / "discovery/videos.json", discovery_videos)
+    save_gzip_json(RUN_DIR / "discovery/raw/images.json.gz", discovery_images)
+    save_gzip_json(RUN_DIR / "discovery/raw/videos.json.gz", discovery_videos)
 
     image_models = discovery_images.get("data", [])
     video_models = discovery_videos.get("data", [])
@@ -173,7 +180,25 @@ def main() -> int:
     image_endpoint_records = {}
     for model in (primary_image, iteration_image):
         image_endpoint_records[model["id"]] = client.image_model_endpoints(model["id"])
-    save_json(RUN_DIR / "discovery/image-endpoints.json", image_endpoint_records)
+    save_gzip_json(RUN_DIR / "discovery/raw/image-endpoints.json.gz", image_endpoint_records)
+    save_json(
+        RUN_DIR / "discovery/summary.json",
+        {
+            "queriedAtUtc": utc_now(),
+            "api": plan["api"],
+            "imageModels": [primary_image, iteration_image],
+            "videoModels": [
+                model_by_id(video_models, model_id)
+                for model_id in sorted(set(plan["models"]["i2v"] + plan["models"]["t2v"]))
+            ],
+            "imageEndpointCapabilities": image_endpoint_records,
+            "rawSnapshots": [
+                "raw/images.json.gz",
+                "raw/videos.json.gz",
+                "raw/image-endpoints.json.gz",
+            ],
+        },
+    )
 
     references = frame_hashes(args.reference_dir, plan)
     save_json(RUN_DIR / "reference-inputs.json", {"frames": references, "policy": plan["referenceInputs"]})

@@ -68,9 +68,10 @@ dd280510dafc06a8953fba66c8dc4000d9f757554385419bc43cf23d691d3543  ../../../../br
 a652eabc7138fd9758976aa319a830d2e234fa6ab04f893433c8d031c319990c  ../../../../brands/gutkitchen/creative-engine-v2/manifest.json
 ca50fd7e5f188fcc37188c13b3a676997a1fd9f0dbb4a1f9c93e1e7923d931e2  ../../../../brands/gutkitchen/creative-engine-v2/openrouter-media-plan.json
 a6d2ca9dc7fa5dfb2117cf3b5c548ed7160c427ebb29c993257ee354296e83ea  ../../../../brands/gutkitchen/creative-engine-v2/openrouter-run/creative-direction.json
-8dc47e22ac3f3ba3620d889279b819c4c667c16dd9b77031fcf535bc1d3bd244  ../../../../brands/gutkitchen/creative-engine-v2/openrouter-run/discovery/image-endpoints.json
-62b41f12d53a9379926e862c7bb4dd651447ef481ae138839f965f3d8bc2c80b  ../../../../brands/gutkitchen/creative-engine-v2/openrouter-run/discovery/images.json
-98aa0a91309250bc1fce6aac6ccc15650b8e732f9609923a63393660c220bf12  ../../../../brands/gutkitchen/creative-engine-v2/openrouter-run/discovery/videos.json
+7028d9f9b5d804c53d357d5c7228797dad313e7022fbb8a2c43bd450e9604d28  ../../../../brands/gutkitchen/creative-engine-v2/openrouter-run/discovery/raw/image-endpoints.json.gz
+59025791243007a650ef21f52565c652f864f0642695b24e3188138ce5712f48  ../../../../brands/gutkitchen/creative-engine-v2/openrouter-run/discovery/raw/images.json.gz
+ed6306bde275d833a216656fa3461991ff4e3d8e537eed02bd1554ab424e935c  ../../../../brands/gutkitchen/creative-engine-v2/openrouter-run/discovery/raw/videos.json.gz
+38e3b89718f78fa1621716205f2cb2129614c10d227fc085e1a4285df63e8f11  ../../../../brands/gutkitchen/creative-engine-v2/openrouter-run/discovery/summary.json
 17225e47cca921a673ee5f13303d7058947d4d6b400c96f1c6abe55da91d45ad  ../../../../brands/gutkitchen/creative-engine-v2/openrouter-run/images/beans-pan.png
 af79ae0ca7e74489014ad2a480efebe66ebf5165e3643138a217c3a6241fd75a  ../../../../brands/gutkitchen/creative-engine-v2/openrouter-run/images/cheese-melt-flare-alt.png
 bc92e5e6c832e9eb9694fb69fe5de59346ba5b27dcf72029ccfebced2c30d735  ../../../../brands/gutkitchen/creative-engine-v2/openrouter-run/images/cheese-melt.png
@@ -96,7 +97,7 @@ fd24a25b6bf617510920249a835ecdd61b5c2b19ed51ca5cc4a072605b9afbaf  ../../../../br
 032a8a7a24bde5b167db1222d87ec02e7d9d0693e178ff70d2f78210584f7991  ../../../../brands/gutkitchen/creative-engine-v2/openrouter-run/videos/t2v/simmer.mp4
 02bcbbf6b74fd183a764826dc0860c7647f7fdb0fe3db3e6340813a982c5ff7e  ../../../../brands/gutkitchen/references/library.json
 e24b4ba834d91559b6c974bc6f3d9f5513bfd55016c170f070b7678f65c2b9ee  ../../../../brands/gutkitchen/visual-grammar-v2.md
-13532f3e08889c38ba493eabdaf3ec07aff0249e6d2a2ec932872786089ea8d9  ../../../CREATIVE-ENGINE-V2.md
+fc4ebda4df7b54371ee5354fa06b554970730c8619fdc8a59490d357d956f17e  ../../../CREATIVE-ENGINE-V2.md
 bdc8fed24666062a2f2ac1dfe2acc8033763157f4ba19f0726829ffd43b45b93  acceptance.md
 81c48bc20c5452f6102af56e6a353926f91e4a14f9eeb408ca8b377b6bebc22b  repair-metrics.json
 3f44343b04698906ef89b9a971188d28d0c6cb7dc4ddef7eb11bd2c9edc43d32  review-desktop.png
@@ -104,7 +105,7 @@ bdc8fed24666062a2f2ac1dfe2acc8033763157f4ba19f0726829ffd43b45b93  acceptance.md
 7b832cd44d41ac97936f088768d7cd3a07e51ce27c8099f0cadd55f0cfe4af7d  verification-output.txt
 8a8d8d9b39c8220077c9618d30bdc0f7c2a826f7ea1a7d28361747c071b30292  verification.json
 ef8e794b3d71d126184124ce5b7d9caa42ce4a2c740b80ce59e06296b78815a7  ../../../../reviews/gutkitchen-creative-v2/index.html
-f6496429ed16212366914074cb4fdf09e2ab9ae80e530f0e071acde39dc5dc61  ../../../../scripts/generate_creative_v2_media.py
+de708fbf56c9a3c3812022e0c3536c147d1d012ef4f8b78727473e9f9aee576e  ../../../../scripts/generate_creative_v2_media.py
 22c4908bb273dcd803262beea26150f7d619ed407d481e9a12b1116f0c5ecca2  ../../../../scripts/render-creative-v2.py
 79b17d79ccef1dae5317485b4d7edd9566aac89b9dab2e6029953f192591e863  ../../../../scripts/render_creative_v2_media.py
 5a15ff44e9607b87b2970c21424e11293ace8b7edfbf33fcce753443b7b92f60  ../../../../scripts/validate_creative_v2.py

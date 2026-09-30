@@ -30,7 +30,7 @@ The reusable client is `social_influence/openrouter_media.py`. It uses only `OPE
 - video download: `GET /api/v1/videos/{jobId}/content`
 - multimodal creative direction: `POST /api/v1/chat/completions`
 
-The configuration is `brands/gutkitchen/creative-engine-v2/openrouter-media-plan.json`; model IDs are not hard-coded in GutKitchen-specific logic. The run ledger is `brands/gutkitchen/creative-engine-v2/openrouter-run/provenance/generations.json` and records prompt, redacted input-reference hashes, request parameters, output hash, job ID where recovered, elapsed time, usage/cost where available and failures/recovery notes.
+The configuration is `brands/gutkitchen/creative-engine-v2/openrouter-media-plan.json`; model IDs are not hard-coded in GutKitchen-specific logic. `openrouter-run/discovery/summary.json` keeps the selected live capabilities readable, while the complete catalogs are retained as gzip snapshots in `discovery/raw/`. The run ledger is `brands/gutkitchen/creative-engine-v2/openrouter-run/provenance/generations.json` and records prompt, redacted input-reference hashes, request parameters, output hash, job ID where recovered, elapsed time, usage/cost where available and failures/recovery notes.
 
 ### Exact models used
 
