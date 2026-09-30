@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>GutKitchen Creative Engine v2 — visual review</title>
+<style>
+:root{--ink:#1c2a21;--cream:#fff7e9;--tomato:#d84b36;--cheese:#ffd166;--sky:#cbe8e7;--lavender:#ddd8ff;--muted:#5e695f;--line:#c8c4b7;--card:#fffdf8}
+*{box-sizing:border-box}body{margin:0;background:#e9e5dc;color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.4}
+header{background:var(--ink);color:var(--cream);padding:36px clamp(20px,5vw,72px) 28px}header h1{margin:0 0 8px;font-size:clamp(30px,5vw,58px);letter-spacing:-.04em}header p{max-width:920px;margin:0;color:#dce8dc;font-size:18px}
+.wrap{padding:28px clamp(16px,4vw,56px) 64px;max-width:1500px;margin:auto}.notice{background:var(--cheese);border:2px solid var(--ink);padding:15px 18px;border-radius:14px;margin-bottom:24px;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;align-items:start}.card{background:var(--card);border:2px solid var(--ink);border-radius:18px;overflow:hidden;box-shadow:6px 6px 0 #bbb4a6}.card h2{margin:0;padding:16px 18px 8px;font-size:22px}.card .tag{margin:0 18px 12px;display:inline-block;padding:5px 9px;border-radius:999px;background:var(--tomato);color:#fff;font-size:12px;font-weight:800;letter-spacing:.06em}.preview{aspect-ratio:9/16;background:#d8d2c7;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}.preview img{width:100%;height:100%;object-fit:cover}.preview video{width:100%;height:100%;object-fit:contain;background:#111}.first-frame{height:155px;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);overflow:hidden;background:#e5ded2}.first-frame img{width:100%;height:100%;object-fit:cover;object-position:top}.meta{padding:14px 18px 18px;font-size:14px}.meta dl{display:grid;grid-template-columns:92px 1fr;gap:6px 10px;margin:12px 0}.meta dt{font-weight:800;color:var(--muted)}.meta dd{margin:0}.small{font-size:12px;color:var(--muted)}.qa{margin-top:12px;padding:10px 12px;background:#e8f2e8;border-radius:10px;font-size:12px}.qa.warn{background:#fff1c8}.section{margin:38px 0 18px}.section h2{font-size:30px;letter-spacing:-.03em;margin:0 0 8px}.section p{margin:0 0 16px;color:var(--muted);max-width:900px}.table{width:100%;table-layout:fixed;border-collapse:collapse;background:var(--card);border:2px solid var(--ink);border-radius:14px;overflow:hidden}.table th,.table td{padding:11px 13px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;font-size:13px;overflow-wrap:anywhere;word-break:break-word}.table th{background:var(--ink);color:var(--cream)}.table tr:last-child td{border-bottom:0}.pill{display:inline-block;border:1px solid var(--ink);border-radius:999px;padding:3px 8px;margin:2px;font-size:11px;background:#f2eee5}.footer{color:var(--muted);font-size:12px;border-top:1px solid var(--line);padding-top:18px}
+@media(max-width:1100px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.grid{grid-template-columns:1fr}.meta dl{grid-template-columns:82px 1fr}.wrap{padding-left:12px;padding-right:12px}}
+</style>
+</head>
+<body>
+<header>
+<h1>GutKitchen Creative Engine v2</h1>
+<p>Reference-led quality milestone for the same pizza-bean bowl brief. Compare the current pilot against three materially different storyboard treatments: a quantified recipe build, a fibre calculator, and a tactile editorial food-build.</p>
+</header>
+<main class="wrap">
+<div class="notice">Review-only storyboard set. Nothing on this page is published. A/B/C is a copy-and-structure decision, not a visual/creative-quality decision. The comps use approved GutKitchen food plates plus deterministic overlays and camera motion; stock/image/video provider routes are planned, not executed. The old disclosure is retained only to identify the historical baseline.</div>
+
+<section class="section">
+<h2>Side-by-side review</h2>
+<p>Open the video preview on the old card or scroll each treatment's first frame and shot cards. Each new candidate keeps the same factual basis: 40.025g protein and a 15.69g fibre lower bound per bowl, from validated product-label calculations.</p>
+<div class="grid">
+<article class="card" id="old-baseline">
+<h2>OLD / BASELINE</h2><span class="tag">existing pilot</span>
+<div class="preview"><video controls preload="metadata" poster="../../brands/gutkitchen/media/pilot/first-frame.png"><source src="../../brands/gutkitchen/media/pilot/scene-001.mp4" type="video/mp4">Your browser cannot play the pilot MP4.</video></div>
+<div class="first-frame"><img src="../../brands/gutkitchen/media/pilot/first-frame.png" alt="Existing GutKitchen first frame"></div>
+<div class="meta">
+<p><strong>Treatment:</strong> generated food-illustration six-shot build</p>
+<dl><dt>Rationale</dt><dd>Technically validated baseline; useful factual badge and fibre counter, but repeated stills and long holds make the edit feel like a card sequence.</dd><dt>References</dt><dd>Existing pilot only</dd><dt>Asset stack</dt><dd>Generated food illustrations + FFmpeg shot assembly</dd><dt>Design stack</dt><dd>Python overlay cards + static PNG composition</dd><dt>Duration</dt><dd>31.15s · 1080×1920 · 30fps</dd></dl>
+<div class="qa warn"><strong>QA status:</strong> factual/evidence/technical pass; creative weakness is repeat-still pacing and low shot diversity.</div>
+<p class="small"><strong>Known compromise:</strong> historical on-frame disclosure is kept for fair comparison and must not be reused in new editorial copy.</p>
+</div>
+</article>
+
+<article class="card" id="new-a">
+<h2>NEW A</h2><span class="tag">Quantified Recipe Build</span><span class="tag" style="background:#1c2a21">STORYBOARD · SHOT MEDIA PENDING</span>
+<div class="preview"><video controls loop muted playsinline preload="metadata" poster="../../brands/gutkitchen/creative-engine-v2/candidates/new-a-frame-01.jpg"><source src="../../brands/gutkitchen/creative-engine-v2/candidates/new-a-preview.mp4" type="video/mp4">Your browser cannot play the review comp.</video></div>
+<div class="first-frame"><img src="../../brands/gutkitchen/creative-engine-v2/candidates/new-a-frame-01.jpg" alt="New A first frame detail"></div>
+<div class="meta">
+<p><strong>Rationale:</strong> hero meal first, then exact weights and a visible fibre counter through each beat. It borrows numeric hooks and ingredient-drop cadence from reference set 01/02/04/09.</p>
+<dl><dt>References</dt><dd><span class="pill">ref-01</span><span class="pill">ref-02</span><span class="pill">ref-04</span><span class="pill">ref-09</span></dd><dt>Asset stack</dt><dd>approved GutKitchen food plates · deterministic camera motion and overlays · planned provider routes (not executed)</dd><dt>Design stack</dt><dd>HeroMeal · ProteinFibreBadge · FibreCounter · IngredientBuild · EvidenceCard · SaveCTA</dd><dt>Duration</dt><dd>31.2s · 9:16 treatment manifest</dd></dl>
+<div class="qa"><strong>QA status:</strong> facts/evidence/technical/caption-safe region pass. Storyboard motion comp plus first-frame still; final per-shot media QA is pending.</div>
+<p class="small"><strong>Known compromise:</strong> this is a storyboard motion comp; non-code provider routes are planned, not executed. Replace shot media before publishing.</p>
+</div>
+</article>
+
+<article class="card" id="new-b">
+<h2>NEW B</h2><span class="tag">Fibre Calculator / Counter</span><span class="tag" style="background:#1c2a21">STORYBOARD · SHOT MEDIA PENDING</span>
+<div class="preview"><video controls loop muted playsinline preload="metadata" poster="../../brands/gutkitchen/creative-engine-v2/candidates/new-b-frame-01.jpg"><source src="../../brands/gutkitchen/creative-engine-v2/candidates/new-b-preview.mp4" type="video/mp4">Your browser cannot play the review comp.</video></div>
+<div class="first-frame"><img src="../../brands/gutkitchen/creative-engine-v2/candidates/new-b-frame-01.jpg" alt="New B first frame detail"></div>
+<div class="meta">
+<p><strong>Rationale:</strong> the number is the protagonist. Counter, before/after upgrade and shopping basket make the information more saveable and less like a recipe slideshow.</p>
+<dl><dt>References</dt><dd><span class="pill">ref-02</span><span class="pill">ref-06</span><span class="pill">ref-10</span><span class="pill">ref-11</span></dd><dt>Asset stack</dt><dd>approved GutKitchen food plates · deterministic calculator graphics · planned provider routes (not executed)</dd><dt>Design stack</dt><dd>FibreCounter · BeforeAfterUpgrade · ShoppingBasket · ProteinFibreBadge · SaveCTA</dd><dt>Duration</dt><dd>29.8s · 9:16 treatment manifest</dd></dl>
+<div class="qa"><strong>QA status:</strong> facts/evidence/technical/caption-safe region pass. This is a storyboard comp; final per-shot media QA is pending.</div>
+<p class="small"><strong>Known compromise:</strong> this is a storyboard motion comp; non-code provider routes are planned, not executed. Replace shot media before publishing.</p>
+</div>
+</article>
+
+<article class="card" id="new-c">
+<h2>NEW C</h2><span class="tag">Tactile Editorial Food-Build</span><span class="tag" style="background:#1c2a21">STORYBOARD · SHOT MEDIA PENDING</span>
+<div class="preview"><video controls loop muted playsinline preload="metadata" poster="../../brands/gutkitchen/creative-engine-v2/candidates/new-c-frame-01.jpg"><source src="../../brands/gutkitchen/creative-engine-v2/candidates/new-c-preview.mp4" type="video/mp4">Your browser cannot play the review comp.</video></div>
+<div class="first-frame"><img src="../../brands/gutkitchen/creative-engine-v2/candidates/new-c-frame-01.jpg" alt="New C first frame detail"></div>
+<div class="meta">
+<p><strong>Rationale:</strong> closer food texture, macro push-ins, whip cuts and pan/melt action. This is the strongest appetite-led lane and the most native-social in feel.</p>
+<dl><dt>References</dt><dd><span class="pill">ref-03</span><span class="pill">ref-05</span><span class="pill">ref-07</span><span class="pill">ref-08</span><span class="pill">ref-12</span></dd><dt>Asset stack</dt><dd>approved GutKitchen food plates · deterministic editorial overlays · planned provider routes (not executed)</dd><dt>Design stack</dt><dd>HeroMeal · ProteinFibreBadge · IngredientBuild · EvidenceCard · SaveCTA</dd><dt>Duration</dt><dd>32.5s · 9:16 treatment manifest</dd></dl>
+<div class="qa"><strong>QA status:</strong> facts/evidence/technical/caption-safe region pass. This is a storyboard comp; final per-shot media QA is pending.</div>
+<p class="small"><strong>Known compromise:</strong> this is a storyboard motion comp; non-code provider routes are planned, not executed. Replace shot media before publishing.</p>
+</div>
+</article>
+</div>
+</section>
+
+<section class="section">
+<h2>What changed in Creative Engine v2</h2>
+<table class="table"><thead><tr><th>Stage</th><th>What the reviewer can inspect</th><th>Where</th></tr></thead><tbody>
+<tr><td>A · Creative direction</td><td>15 angles, ranked hooks, critic criteria and three selected treatments</td><td><a href="../../brands/gutkitchen/creative-engine-v2/manifest.json">manifest.json</a></td></tr>
+<tr><td>B · Reference interpretation</td><td>12 source records plus derived visual grammar</td><td><a href="../../brands/gutkitchen/references/library.json">library.json</a> · <a href="../../brands/gutkitchen/visual-grammar-v2.md">visual-grammar-v2.md</a></td></tr>
+<tr><td>C · Asset routing</td><td>Planned provider slots per shot; code overlays execute locally, non-code routes are not executed</td><td><a href="../../brands/gutkitchen/creative-engine-v2/manifest.json">manifest.json</a></td></tr>
+<tr><td>D · Deterministic design</td><td>Reusable SVG components and explicit storyboard/motion/timing</td><td><a href="../../social_influence/creative_engine_v2/components.py">components.py</a></td></tr>
+<tr><td>E · Candidate generation</td><td>Three materially different storyboard treatments from one factual brief</td><td><a href="../../brands/gutkitchen/creative-engine-v2/candidates/stage-output.json">stage-output.json</a></td></tr>
+<tr><td>F · QA</td><td>Fact/evidence/technical checks remain separate from creative selection</td><td><a href="../../brands/gutkitchen/creative-engine-v2/candidates/review-payload.json">review-payload.json</a></td></tr>
+</tbody></table>
+</section>
+
+<section class="section">
+<h2>Reviewer prompt</h2>
+<p>Which treatment direction should become the new GutKitchen baseline? Judge first-second impact, copy, structure, pacing, information hierarchy, brand consistency and saveability. This is a copy-and-structure decision, not a visual/creative-quality decision; do not treat the storyboard comps as final footage.</p>
+</section>
+
+<div class="footer">Static review artifact · <code>reviews/gutkitchen-creative-v2/index.html</code> · generated 2026-09-30 · no publish action performed</div>
+</main>
+</body>
+</html>

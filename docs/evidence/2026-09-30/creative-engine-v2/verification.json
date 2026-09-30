@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAtUtc": "2026-09-30T18:09:01Z",
+  "clockSource": "execution host date -u; Codex client context date 2026-09-30",
+  "commands": [
+    ".venv/bin/python -m unittest discover -s tests -v",
+    ".venv/bin/python scripts/validate_packs.py",
+    ".venv/bin/python scripts/validate_creative_v2.py"
+  ],
+  "unitTests": {
+    "count": 34,
+    "status": "pass"
+  },
+  "playwright": {
+    "desktop": {
+      "url": "https://gutkitchen-review.localhost:1355/reviews/gutkitchen-creative-v2/index.html",
+      "viewport": [
+        1440,
+        1100
+      ],
+      "scroll": [
+        1440,
+        2644
+      ],
+      "overflow": false,
+      "cards": 4,
+      "videos": [
+        {
+          "src": "https://gutkitchen-review.localhost:1355/brands/gutkitchen/media/pilot/scene-001.mp4",
+          "readyState": 4,
+          "duration": 9,
+          "width": 1080,
+          "height": 1920,
+          "error": null
+        },
+        {
+          "src": "https://gutkitchen-review.localhost:1355/brands/gutkitchen/creative-engine-v2/candidates/new-a-preview.mp4",
+          "readyState": 4,
+          "duration": 31.2,
+          "width": 1080,
+          "height": 1920,
+          "error": null
+        },
+        {
+          "src": "https://gutkitchen-review.localhost:1355/brands/gutkitchen/creative-engine-v2/candidates/new-b-preview.mp4",
+          "readyState": 4,
+          "duration": 29.8,
+          "width": 1080,
+          "height": 1920,
+          "error": null
+        },
+        {
+          "src": "https://gutkitchen-review.localhost:1355/brands/gutkitchen/creative-engine-v2/candidates/new-c-preview.mp4",
+          "readyState": 4,
+          "duration": 32.5,
+          "width": 1080,
+          "height": 1920,
+          "error": null
+        }
+      ]
+    },
+    "mobile": {
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        7759
+      ],
+      "overflow": false
+    },
+    "console": []
+  },
+  "reviewPage": "reviews/gutkitchen-creative-v2/index.html",
+  "localUrl": "https://gutkitchen-review.localhost:1355/reviews/gutkitchen-creative-v2/index.html",
+  "publish": false
+}

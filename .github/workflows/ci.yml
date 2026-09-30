@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Install media probe
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -17,3 +19,4 @@ jobs:
       - run: python scripts/validate_packs.py
       - run: python scripts/validate_evidence.py
       - run: social-influence --help
+      - run: python scripts/validate_creative_v2.py

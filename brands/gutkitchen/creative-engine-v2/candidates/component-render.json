@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-09-30",
+  "components": [
+    "HeroMeal",
+    "ProteinFibreBadge",
+    "FibreCounter",
+    "IngredientBuild",
+    "BeforeAfterUpgrade",
+    "ShoppingBasket",
+    "EvidenceCard",
+    "SaveCTA"
+  ],
+  "shots_per_treatment": 6
+}
