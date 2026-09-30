@@ -5,10 +5,10 @@ OK brands/ai-for-accountants/posts/turn-raw-client-meeting-notes-into-a-follow-u
 OK brands/gutkitchen/posts/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b.json (tracked inputs verified v2)
 
 $ .venv/bin/python scripts/validate_creative_v2.py
-OK Creative Engine v2 artifacts and generated projections verified
+OK Creative Engine v2 artifacts, projections, dates, HTML and media verified
 
 $ date -u
-Wed Sep 30 18:09:01 UTC 2026
+Wed Sep 30 18:18:43 UTC 2026
 
 $ python3 --version
 Python 3.14.7

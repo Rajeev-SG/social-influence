@@ -6,7 +6,7 @@ Issue: Rajeev-SG/social-influence#8
 
 ## Result
 
-PASS for the requested review-only creative-quality milestone. The reviewer can open one static page and compare the existing GutKitchen pilot with three materially different Creative Engine v2 treatments from the same pizza-bean bowl brief.
+PASS for the requested review-only creative-quality milestone, with one explicit boundary: the reviewer can open one static page and compare the existing GutKitchen pilot with three materially different Creative Engine v2 storyboard treatments from the same pizza-bean bowl brief. The A/B/C comparison is a copy-and-structure decision, not a visual/creative-quality decision or final footage review.
 
 Review page: `reviews/gutkitchen-creative-v2/index.html`
 
@@ -26,7 +26,7 @@ The old content remains in the comparison as the baseline.
 
 - `brands/gutkitchen/references/library.json` records 12 reference patterns and exact high-performing public examples where counts were available.
 - `brands/gutkitchen/visual-grammar-v2.md` derives the recurring first-frame, pacing, typography, ingredient, motion, caption and CTA grammar.
-- Public-page captures are retained only in gitignored `output/gutkitchen-reference-captures/`, separate from candidate media and outside Git.
+- No creator-owned frames are committed or expected to exist in tracked evidence. The tracked library is self-contained: public URL, account, observed performance and creative observations only. Local captures, if used during research, are ephemeral and untracked.
 - Local SearXNG searches timed out; Brave Search was used as the documented escalation route.
 
 ## Creative Engine v2
@@ -66,7 +66,7 @@ All preserve the existing factual basis: 40.025g protein and a 15.69g fibre lowe
 
 ## Known compromises
 
-- The review comps are explicitly labeled storyboard motion comps. They use the existing approved GutKitchen food plates with deterministic camera motion and overlays. Code-generated overlays execute locally; stock/image-to-video/text-to-video routes are marked `planned-not-executed` and must be replaced with final shot media before publishing.
+- The review comps are explicitly labeled storyboard motion comps. They use the existing approved GutKitchen food plates with deterministic camera motion and overlays. Code-generated overlays execute locally; stock/image-to-video/text-to-video routes are marked `planned-not-executed` and must be replaced with final shot media before publishing. The A/B/C comparison is therefore a copy-and-structure gate, not a visual/creative-quality verdict.
 - The comps are silent review renders; VO, music and caption-sync timing are not part of these candidate previews.
 - The recipe remains label-estimated and was not physically cooked or tested. The review page preserves that claim boundary.
 - Human creative selection is intentionally still open: the milestone proves the comparison and system, not which treatment wins.
@@ -84,3 +84,7 @@ Frontier review #1 findings were addressed in the repair commit:
 - Every route records `execution_status`; non-code provider routes are `planned-not-executed` and all new frames/videos carry a visible review-storyboard label.
 - Third-party research captures are local-only under `output/gutkitchen-reference-captures/`; the tracked library retains URLs and metadata only.
 - `verification-output.txt`, `verification.json` and `repair-metrics.json` record reproducible checks, timestamp/clock source and Playwright results.
+
+## Date integrity
+
+The `2026-09-30` evidence directory and `generated_at` values are generated from the actual run clock. A future candidate set must use a new dated evidence directory and preserve this one.

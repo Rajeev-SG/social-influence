@@ -30,7 +30,7 @@ The page includes playable baseline preview, first frames, treatment rationale, 
 3. Update `brands/gutkitchen/references/library.json` and `visual-grammar-v2.md` when the reference territory changes.
 4. Run `python3 scripts/render-creative-v2.py
 python3 scripts/render_creative_v2_video.py  # local FFmpeg; review comps are committed`.
-5. Open `reviews/gutkitchen-creative-v2/index.html` and compare the playable comps, first frames and treatment stills.
+5. Open `reviews/gutkitchen-creative-v2/index.html` and compare the storyboard comps, first frames and treatment stills. Do not treat the comparison as final visual-quality validation.
 6. Do not publish candidates. Keep provider/model/prompt provenance in manifests, never as redundant on-frame AI branding.
 
 ## Verification
@@ -46,3 +46,7 @@ python3 scripts/render_creative_v2_video.py  # local FFmpeg; review comps are co
 ```
 
 The current run passes the factual basis from the existing pilot: 40.025g protein and a 15.69g fibre lower bound per bowl. The approved-plate storyboard candidates and silent storyboard motion comps are review artifacts, not published media. The comps use deterministic camera motion and no VO/music mix; provider slots can replace each shot with native/generated footage later. Real/native footage remains preferable before public publishing where appetite realism is the objective.
+
+## Regeneration date rule
+
+A new candidate set requires a new dated evidence directory such as `docs/evidence/<YYYY-MM-DD>/creative-engine-v2/`. Keep the previous dated directory and hash manifest intact. `manifest.json`’s `generated_at` and the evidence directory date must match and must not be in the future.

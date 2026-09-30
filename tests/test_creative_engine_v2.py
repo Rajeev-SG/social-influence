@@ -74,8 +74,21 @@ class CreativeEngineV2Tests(unittest.TestCase):
 
     def test_review_page_mentions_baseline_and_all_new_lanes(self):
         page = (ROOT / 'reviews/gutkitchen-creative-v2/index.html').read_text()
-        for label in ('OLD / BASELINE', 'NEW A', 'NEW B', 'NEW C', 'STORYBOARD', 'planned, not executed', 'references/library.json', 'visual-grammar-v2.md'):
+        for label in ('OLD / BASELINE', 'NEW A', 'NEW B', 'NEW C', 'STORYBOARD', 'planned, not executed', 'copy-and-structure decision', 'not a visual/creative-quality decision', 'references/library.json', 'visual-grammar-v2.md'):
             self.assertIn(label, page)
+
+    def test_reference_library_is_self_contained(self):
+        library = json.loads((ROOT / 'brands/gutkitchen/references/library.json').read_text())
+        self.assertIn('No committable creator frames are expected to exist', library['capturePolicy'])
+        for item in library['references'] + library['searchEvidence']:
+            self.assertNotIn('capture', item)
+            self.assertNotIn('capturePath', item)
+        self.assertFalse((ROOT / 'brands/gutkitchen/references/frames').exists())
+
+    def test_generation_date_matches_evidence_directory(self):
+        self.assertEqual(self.engine.manifest.provenance['generated_at'], '2026-09-30')
+        verification = json.loads((ROOT / 'docs/evidence/2026-09-30/creative-engine-v2/verification.json').read_text())
+        self.assertEqual(verification['generatedAtUtc'][:10], self.engine.manifest.provenance['generated_at'])
 
 
 if __name__ == '__main__':

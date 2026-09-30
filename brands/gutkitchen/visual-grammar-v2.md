@@ -30,4 +30,8 @@ Do not bake `AI-generated content`, `AIGC-assisted`, `AI food illustration` or i
 
 ## Reference use in generation
 
-The manifest lists reference IDs per treatment. Each treatment intentionally borrows a different combination: A uses number + ingredient-build cadence; B uses calculator/counter + shopping utility; C uses tactile action inserts + editorial hierarchy. Public-page captures are retained only in gitignored `output/gutkitchen-reference-captures/` for internal multimodal review. The tracked library keeps URLs and metadata; creator-owned frames are not committed or distributable.
+The manifest lists reference IDs per treatment. Each treatment intentionally borrows a different combination: A uses number + ingredient-build cadence; B uses calculator/counter + shopping utility; C uses tactile action inserts + editorial hierarchy. This grammar is self-contained from public source URLs, observable post structure and the repository’s existing GutKitchen baseline. No creator-owned frames are committed or expected to exist in tracked evidence; the patterns below are an independent summary, not a replica of any creator’s work.
+
+## Decision boundary
+
+Creative Engine v2 candidates in this milestone are **storyboard/copy/structure comps**. They are not a visual-quality verdict or final footage review. Non-code provider routes must execute and be reviewed before any candidate becomes a publishing baseline.

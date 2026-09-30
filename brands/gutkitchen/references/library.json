@@ -14,7 +14,7 @@
   ],
   "notes": [
     "Public search results were scanned for recurring creative grammar; live platform screenshots were not treated as distributable media.",
-    "Public-page captures are retained only in the gitignored `output/gutkitchen-reference-captures/` directory for internal multimodal analysis. The tracked library keeps URLs, observations and capture filenames; creator-owned frames are intentionally not committed or distributable.",
+    "No creator-owned frames are committed. The tracked library is self-contained and intentionally records no filenames or paths to local captures.",
     "Performance is only recorded where the source page exposed an observable public count at collection time.",
     "Brave Search was used as escalation after local SearXNG timed out; exact URLs and observable counts are recorded in searchEvidence."
   ],
@@ -280,7 +280,8 @@
         "macro number in first beat",
         "fast ingredient assembly",
         "saveable recipe utility"
-      ]
+      ],
+      "captureStatus": "not-retained-in-git"
     },
     {
       "url": "https://www.tiktok.com/@dr.rachelpaul/video/7354927176044514603",
@@ -290,8 +291,7 @@
         "per-serving macro breakdown",
         "save prompt"
       ],
-      "capture": "output/gutkitchen-reference-captures/ref-dr-rachelpaul-7354927176044514603.png",
-      "captureStatus": "local-untracked-internal-only"
+      "captureStatus": "not-retained-in-git"
     },
     {
       "url": "https://www.tiktok.com/@hunt4shredz/video/7518805084499627277",
@@ -301,8 +301,7 @@
         "ingredient weights",
         "fast saveable meal-prep format"
       ],
-      "capture": "output/gutkitchen-reference-captures/ref-hunt4shredz-7518805084499627277.png",
-      "captureStatus": "local-untracked-internal-only"
+      "captureStatus": "not-retained-in-git"
     },
     {
       "url": "https://www.tiktok.com/@makayla_thomas_fit/video/7661734178211302686",
@@ -312,8 +311,8 @@
         "large batch build",
         "ordinary supermarket ingredients"
       ],
-      "capture": "output/gutkitchen-reference-captures/ref-makayla-thomas-fit-7661734178211302686.png",
-      "captureStatus": "local-untracked-internal-only"
+      "captureStatus": "not-retained-in-git"
     }
-  ]
+  ],
+  "capturePolicy": "No committable creator frames are expected to exist. The tracked library is intentionally self-contained: public URL, account, observable performance and creative observations only. Local captures, if used during research, are ephemeral, untracked and non-distributable."
 }

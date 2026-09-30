@@ -8,7 +8,7 @@
     ".venv/bin/python scripts/validate_creative_v2.py"
   ],
   "unitTests": {
-    "count": 32,
+    "count": 34,
     "status": "pass"
   },
   "playwright": {
