@@ -1,0 +1,120 @@
+{
+  "frames": [
+    {
+      "id": "ref-05-first",
+      "sourceId": "ref-05-action",
+      "sourceUrl": "https://www.tiktok.com/@hunt4shredz/video/7518805084499627277",
+      "path": "/tmp/gutkitchen-ref-captures/ref-05-first.jpg",
+      "sha256": "f9591648632f21edd6d1d11ff4d7c1478eada5576ebbb0c24e42ec7946a98bbe",
+      "bytes": 128200,
+      "retention": "ephemeral-not-committed"
+    },
+    {
+      "id": "ref-05-middle",
+      "sourceId": "ref-05-action",
+      "sourceUrl": "https://www.tiktok.com/@hunt4shredz/video/7518805084499627277",
+      "path": "/tmp/gutkitchen-ref-captures/ref-05-middle.jpg",
+      "sha256": "ca12f2727e300699b026313d0b81af4513e0049cc8884d349c1f66d8c22938ea",
+      "bytes": 109860,
+      "retention": "ephemeral-not-committed"
+    },
+    {
+      "id": "ref-05-action",
+      "sourceId": "ref-05-action",
+      "sourceUrl": "https://www.tiktok.com/@hunt4shredz/video/7518805084499627277",
+      "path": "/tmp/gutkitchen-ref-captures/ref-05-action.jpg",
+      "sha256": "f918a7fabe1e4b8ae572d853dd5a18422f85ee30ec4acc20f02a43986310f8fc",
+      "bytes": 119806,
+      "retention": "ephemeral-not-committed"
+    },
+    {
+      "id": "ref-09-first",
+      "sourceId": "ref-09-action",
+      "sourceUrl": "https://www.tiktok.com/@dr.rachelpaul/video/7354927176044514603",
+      "path": "/tmp/gutkitchen-ref-captures/ref-09-first.jpg",
+      "sha256": "86d5e28cff9695225d6b89383419460f4fd475758df1e726ef0216f14f62a503",
+      "bytes": 108596,
+      "retention": "ephemeral-not-committed"
+    },
+    {
+      "id": "ref-09-middle",
+      "sourceId": "ref-09-action",
+      "sourceUrl": "https://www.tiktok.com/@dr.rachelpaul/video/7354927176044514603",
+      "path": "/tmp/gutkitchen-ref-captures/ref-09-middle.jpg",
+      "sha256": "122c78bdf35752f142ca4c61b326c527ab29ce15b6d4bf5cc4160abee74af19c",
+      "bytes": 77571,
+      "retention": "ephemeral-not-committed"
+    },
+    {
+      "id": "ref-09-action",
+      "sourceId": "ref-09-action",
+      "sourceUrl": "https://www.tiktok.com/@dr.rachelpaul/video/7354927176044514603",
+      "path": "/tmp/gutkitchen-ref-captures/ref-09-action.jpg",
+      "sha256": "0f46185c6391a7ff1688da2e673124eb501285edc87099e8814e8278143f6aac",
+      "bytes": 78161,
+      "retention": "ephemeral-not-committed"
+    },
+    {
+      "id": "ref-12-first",
+      "sourceId": "ref-12-action",
+      "sourceUrl": "https://www.tiktok.com/@makayla_thomas_fit/video/7661734178211302686",
+      "path": "/tmp/gutkitchen-ref-captures/ref-12-first.jpg",
+      "sha256": "30f839d70c30b42f025a27440a2720f2ecdd082b7709cd9612a79211424da407",
+      "bytes": 170278,
+      "retention": "ephemeral-not-committed"
+    },
+    {
+      "id": "ref-12-middle",
+      "sourceId": "ref-12-action",
+      "sourceUrl": "https://www.tiktok.com/@makayla_thomas_fit/video/7661734178211302686",
+      "path": "/tmp/gutkitchen-ref-captures/ref-12-middle.jpg",
+      "sha256": "c0aa5e0b886c32a7c5459fd7bca73460e0847fe77235bdf8f7e260e050dd74e2",
+      "bytes": 78756,
+      "retention": "ephemeral-not-committed"
+    },
+    {
+      "id": "ref-12-action",
+      "sourceId": "ref-12-action",
+      "sourceUrl": "https://www.tiktok.com/@makayla_thomas_fit/video/7661734178211302686",
+      "path": "/tmp/gutkitchen-ref-captures/ref-12-action.jpg",
+      "sha256": "00bc8e95d114fe271fcc84349ea3e6d2e260eeae7411357e4ad0ba19afbcee8e",
+      "bytes": 166931,
+      "retention": "ephemeral-not-committed"
+    }
+  ],
+  "policy": [
+    {
+      "id": "ref-05-action",
+      "sourceUrl": "https://www.tiktok.com/@hunt4shredz/video/7518805084499627277",
+      "capture": "first/middle/action frames",
+      "retention": "ephemeral-not-committed",
+      "influences": [
+        "0.6-1.6s action cadence",
+        "ingredient weights",
+        "finished-food payoff"
+      ]
+    },
+    {
+      "id": "ref-09-action",
+      "sourceUrl": "https://www.tiktok.com/@dr.rachelpaul/video/7354927176044514603",
+      "capture": "first/middle/action frames",
+      "retention": "ephemeral-not-committed",
+      "influences": [
+        "fibre-first information hierarchy",
+        "compact nutrition panel",
+        "direct save framing"
+      ]
+    },
+    {
+      "id": "ref-12-action",
+      "sourceUrl": "https://www.tiktok.com/@makayla_thomas_fit/video/7661734178211302686",
+      "capture": "first/middle/action frames",
+      "retention": "ephemeral-not-committed",
+      "influences": [
+        "macro-led first frame",
+        "meal-prep utility",
+        "simple call-to-action"
+      ]
+    }
+  ]
+}

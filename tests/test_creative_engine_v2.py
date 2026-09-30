@@ -79,8 +79,24 @@ class CreativeEngineV2Tests(unittest.TestCase):
 
     def test_review_page_mentions_baseline_and_all_new_lanes(self):
         page = (ROOT / 'reviews/gutkitchen-creative-v2/index.html').read_text()
-        for label in ('OLD / BASELINE', 'NEW A', 'NEW B', 'NEW C', 'STORYBOARD', 'planned, not executed', 'copy-and-structure decision', 'not a visual/creative-quality decision', 'references/library.json', 'visual-grammar-v2.md'):
+        for label in ('OLD BASELINE', 'CURRENT V2 STORYBOARD', 'NEW A', 'NEW B', 'NEW C', 'FINAL MEDIA', 'Mark as winner', 'Local review notes', 'ref-05-action'):
             self.assertIn(label, page)
+
+    def test_finished_openrouter_media_has_zero_planned_critical_routes(self):
+        path = ROOT / 'brands/gutkitchen/creative-engine-v2/candidates/final-media/final-media-manifest.json'
+        manifest = json.loads(path.read_text())
+        self.assertTrue(manifest['openRouterOnly'])
+        self.assertEqual(manifest['candidateCount'], 3)
+        self.assertEqual(manifest['plannedCriticalRoutes'], 0)
+        self.assertEqual([item['id'] for item in manifest['candidates']], ['new-a', 'new-b', 'new-c'])
+        for candidate in manifest['candidates']:
+            self.assertTrue((ROOT / candidate['video'].removeprefix('../../')).is_file())
+            self.assertTrue((ROOT / candidate['firstFrame'].removeprefix('../../')).is_file())
+            self.assertTrue((ROOT / candidate['filmstrip'].removeprefix('../../')).is_file())
+            for shot in candidate['shots']:
+                self.assertEqual(shot['executionStatus'], 'executed-provider')
+                self.assertNotEqual(shot['route'], 'planned-not-executed')
+                self.assertTrue(shot['model'])
 
     def test_reference_library_is_self_contained(self):
         library = json.loads((ROOT / 'brands/gutkitchen/references/library.json').read_text())

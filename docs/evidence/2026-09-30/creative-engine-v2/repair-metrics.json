@@ -1,1 +1,80 @@
-{"desktop":{"url":"https://gutkitchen-review.localhost:1355/reviews/gutkitchen-creative-v2/index.html","viewport":[1440,1100],"scroll":[1440,2644],"overflow":false,"cards":4,"videos":[{"src":"https://gutkitchen-review.localhost:1355/brands/gutkitchen/media/pilot/scene-001.mp4","readyState":4,"duration":9,"width":1080,"height":1920,"error":null},{"src":"https://gutkitchen-review.localhost:1355/brands/gutkitchen/creative-engine-v2/candidates/new-a-preview.mp4","readyState":4,"duration":31.2,"width":1080,"height":1920,"error":null},{"src":"https://gutkitchen-review.localhost:1355/brands/gutkitchen/creative-engine-v2/candidates/new-b-preview.mp4","readyState":4,"duration":29.8,"width":1080,"height":1920,"error":null},{"src":"https://gutkitchen-review.localhost:1355/brands/gutkitchen/creative-engine-v2/candidates/new-c-preview.mp4","readyState":4,"duration":32.5,"width":1080,"height":1920,"error":null}]},"mobile":{"viewport":[390,844],"scroll":[390,7759],"overflow":false},"console":[]}
+{
+  "desktop": {
+    "viewportCss": [
+      1440,
+      1100
+    ],
+    "screenshotPixels": [
+      2850,
+      14144
+    ],
+    "overflow": false,
+    "cards": 5
+  },
+  "mobile": {
+    "viewportCss": [
+      390,
+      844
+    ],
+    "screenshotPixels": [
+      750,
+      15122
+    ],
+    "overflow": false,
+    "cards": 5,
+    "noteFields": 5,
+    "winnerControls": 3
+  },
+  "videos": [
+    {
+      "src": "brands/gutkitchen/media/pilot/scene-001.mp4",
+      "readyState": 4,
+      "duration": 9.0,
+      "width": 1080,
+      "height": 1920,
+      "error": null
+    },
+    {
+      "src": "brands/gutkitchen/creative-engine-v2/candidates/new-c-preview.mp4",
+      "readyState": 4,
+      "duration": 32.5,
+      "width": 1080,
+      "height": 1920,
+      "error": null
+    },
+    {
+      "src": "brands/gutkitchen/creative-engine-v2/candidates/final-media/new-a.mp4",
+      "readyState": 4,
+      "duration": 8.1,
+      "width": 1080,
+      "height": 1920,
+      "error": null
+    },
+    {
+      "src": "brands/gutkitchen/creative-engine-v2/candidates/final-media/new-b.mp4",
+      "readyState": 4,
+      "duration": 8.1,
+      "width": 1080,
+      "height": 1920,
+      "error": null
+    },
+    {
+      "src": "brands/gutkitchen/creative-engine-v2/candidates/final-media/new-c.mp4",
+      "readyState": 4,
+      "duration": 8.1,
+      "width": 1080,
+      "height": 1920,
+      "error": null
+    }
+  ],
+  "interactions": {
+    "winner": "new-c",
+    "winnerPersistedAfterReload": true,
+    "notePersistedAfterReload": true,
+    "restartAll": true,
+    "playAllMuted": true
+  },
+  "console": [],
+  "creativeEngineV2": "pass",
+  "plannedCriticalRoutes": 0
+}

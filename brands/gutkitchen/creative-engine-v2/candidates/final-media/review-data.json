@@ -1,0 +1,606 @@
+{
+  "generatedAtUtc": "2026-09-30T19:41:18.901303+00:00",
+  "brief": "40g protein + 15g fibre pizza-bean bowl using supermarket ingredients",
+  "factualBasis": {
+    "proteinGPerServing": 40.025,
+    "fibreGLowerBound": 15.69,
+    "portion": "one bowl",
+    "ingredients": [
+      "235g drained cannellini beans",
+      "100g lighter mozzarella",
+      "150g passata",
+      "50g spinach"
+    ],
+    "claimBoundary": "label-based estimates; suggested recipe not physically tested; check purchased labels"
+  },
+  "models": {
+    "creativeDirection": "openai/gpt-5.6-sol",
+    "creativeReview": "anthropic/claude-fable-5.1",
+    "imagePrimary": "openai/gpt-image-2.5-sunburst",
+    "imageIteration": "openai/gpt-image-2.5-flare",
+    "i2v": [
+      "bytedance/seedance-2.5",
+      "minimax/hailuo-3-max",
+      "alibaba/wan-3.0"
+    ],
+    "t2v": [
+      "alibaba/wan-3.0",
+      "bytedance/seedance-2.5",
+      "minimax/hailuo-3"
+    ]
+  },
+  "runSummary": {
+    "generatedAtUtc": "2026-09-30T19:41:18.901303+00:00",
+    "briefId": "gutkitchen-pizza-bean-bowl-v2",
+    "openRouterOnly": true,
+    "creativeDirectionModel": "openai/gpt-5.6-sol",
+    "imageModels": [
+      "openai/gpt-image-2.5-flare",
+      "openai/gpt-image-2.5-sunburst"
+    ],
+    "videoModels": [
+      "alibaba/wan-3.0",
+      "bytedance/seedance-2.5",
+      "minimax/hailuo-3",
+      "minimax/hailuo-3-max"
+    ],
+    "generationCount": 21,
+    "imageCount": 7,
+    "videoCount": 13,
+    "referenceFrameCount": 9,
+    "referenceFramesCommitted": false,
+    "totalCostUsdWhereReported": 0.498473,
+    "estimatedVideoCostUsd": 2.2,
+    "failures": [
+      {
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    ],
+    "artDirectionOutput": "creative-direction.json",
+    "provenance": "provenance/generations.json"
+  },
+  "candidates": [
+    {
+      "id": "old",
+      "label": "OLD BASELINE",
+      "status": "REFERENCE | PUBLISHED-PILOT BASELINE",
+      "treatment": "Original GutKitchen pizza-bean bowl pilot from Issue #2.",
+      "video": "../../brands/gutkitchen/media/pilot/scene-001.mp4",
+      "poster": "../../brands/gutkitchen/media/pilot/first-frame.png",
+      "firstFrame": "../../brands/gutkitchen/media/pilot/first-frame.png",
+      "filmstrip": "../../brands/gutkitchen/creative-engine-v2/candidates/new-a-frame-01.jpg",
+      "duration": 31.15,
+      "route": "existing deterministic illustration and MP4 pilot",
+      "modelsUsed": [
+        "historical local pipeline"
+      ],
+      "shots": [],
+      "selectedSourceCostUsd": 0,
+      "costBasis": "historical artifact",
+      "qa": {
+        "status": "REFERENCE"
+      },
+      "knownWeaknesses": [
+        "Older pacing and illustration-led food imagery."
+      ]
+    },
+    {
+      "id": "storyboard",
+      "label": "CURRENT V2 STORYBOARD",
+      "status": "REFERENCE | STORYBOARD MOTION COMP",
+      "treatment": "Best current Issue #8 editorial storyboard comp. It is intentionally labelled as a motion comp, not finished media.",
+      "video": "../../brands/gutkitchen/creative-engine-v2/candidates/new-c-preview.mp4",
+      "poster": "../../brands/gutkitchen/creative-engine-v2/candidates/new-c-frame-01.jpg",
+      "firstFrame": "../../brands/gutkitchen/creative-engine-v2/candidates/new-c-frame-01.jpg",
+      "filmstrip": "../../brands/gutkitchen/creative-engine-v2/candidates/new-c-frame-05.jpg",
+      "duration": 32.5,
+      "route": "approved stills + deterministic overlays + zoompan motion comp",
+      "modelsUsed": [
+        "no OpenRouter media inference"
+      ],
+      "shots": [],
+      "selectedSourceCostUsd": 0,
+      "costBasis": "historical artifact",
+      "qa": {
+        "status": "REFERENCE"
+      },
+      "knownWeaknesses": [
+        "Storyboard motion only; not an acceptance candidate."
+      ]
+    },
+    {
+      "id": "new-a",
+      "label": "NEW A - I2V",
+      "route": "i2v-heavy",
+      "video": "../../brands/gutkitchen/creative-engine-v2/candidates/final-media/new-a.mp4",
+      "firstFrame": "../../brands/gutkitchen/creative-engine-v2/candidates/final-media/new-a-first-frame.png",
+      "filmstrip": "../../brands/gutkitchen/creative-engine-v2/candidates/final-media/new-a-filmstrip.jpg",
+      "duration": 8.1,
+      "modelsUsed": [
+        "alibaba/wan-3.0",
+        "bytedance/seedance-2.5",
+        "minimax/hailuo-3-max"
+      ],
+      "shots": [
+        {
+          "id": "hero-spoon",
+          "route": "i2v-generated",
+          "executionStatus": "executed-provider",
+          "model": "bytedance/seedance-2.5",
+          "recordRoute": "i2v/hero-spoon-alt",
+          "sourceFile": "brands/gutkitchen/creative-engine-v2/openrouter-run/videos/i2v/hero-spoon-alt.mp4",
+          "outputStartSeconds": 0.0,
+          "duration": 1.5,
+          "copy": {
+            "headline": "40g PROTEIN | 15g+ FIBRE",
+            "caption": "THE SPOON TEST",
+            "quantity": "one bowl | label-based estimate"
+          },
+          "selectionReason": "strong cheese pull and clean spoon continuity"
+        },
+        {
+          "id": "beans-pan",
+          "route": "i2v-generated",
+          "executionStatus": "executed-provider",
+          "model": "minimax/hailuo-3-max",
+          "recordRoute": "i2v/beans-pan",
+          "sourceFile": "brands/gutkitchen/creative-engine-v2/openrouter-run/videos/i2v/beans-pan.mp4",
+          "outputStartSeconds": 1.5,
+          "duration": 1.2,
+          "copy": {
+            "headline": "START WITH ONE TIN",
+            "caption": "BEANS IN",
+            "quantity": "235g drained cannellini beans"
+          },
+          "selectionReason": "strongest available generated action source for this shot"
+        },
+        {
+          "id": "sauce-spinach",
+          "route": "i2v-generated",
+          "executionStatus": "executed-provider",
+          "model": "alibaba/wan-3.0",
+          "recordRoute": "i2v/sauce-spinach",
+          "sourceFile": "brands/gutkitchen/creative-engine-v2/openrouter-run/videos/i2v/sauce-spinach.mp4",
+          "outputStartSeconds": 2.7,
+          "duration": 1.2,
+          "copy": {
+            "headline": "COLOUR + FIBRE",
+            "caption": "PASSATA + SPINACH",
+            "quantity": "150g passata | 50g spinach"
+          },
+          "selectionReason": "strongest available generated action source for this shot"
+        },
+        {
+          "id": "simmer",
+          "route": "i2v-generated",
+          "executionStatus": "executed-provider",
+          "model": "bytedance/seedance-2.5",
+          "recordRoute": "i2v/simmer",
+          "sourceFile": "brands/gutkitchen/creative-engine-v2/openrouter-run/videos/i2v/simmer.mp4",
+          "outputStartSeconds": 3.9,
+          "duration": 1.2,
+          "copy": {
+            "headline": "LET IT BUBBLE",
+            "caption": "SIMMER THE BUILD",
+            "quantity": "one pan | four supermarket ingredients"
+          },
+          "selectionReason": "strongest available generated action source for this shot"
+        },
+        {
+          "id": "cheese-melt",
+          "route": "i2v-generated",
+          "executionStatus": "executed-provider",
+          "model": "minimax/hailuo-3-max",
+          "recordRoute": "i2v/cheese-melt",
+          "sourceFile": "brands/gutkitchen/creative-engine-v2/openrouter-run/videos/i2v/cheese-melt.mp4",
+          "outputStartSeconds": 5.1,
+          "duration": 1.5,
+          "copy": {
+            "headline": "THE PROTEIN FINISH",
+            "caption": "CHEESE MELT",
+            "quantity": "100g lighter mozzarella"
+          },
+          "selectionReason": "strongest available generated action source for this shot"
+        },
+        {
+          "id": "final-payoff",
+          "route": "i2v-generated",
+          "executionStatus": "executed-provider",
+          "model": "bytedance/seedance-2.5",
+          "recordRoute": "i2v/final-payoff",
+          "sourceFile": "brands/gutkitchen/creative-engine-v2/openrouter-run/videos/i2v/final-payoff.mp4",
+          "outputStartSeconds": 6.6,
+          "duration": 1.5,
+          "copy": {
+            "headline": "PIZZA FLAVOUR | BEAN MATHS",
+            "caption": "SPOON PAYOFF",
+            "quantity": "~40g protein | 15g+ fibre per bowl"
+          },
+          "selectionReason": "strongest available generated action source for this shot"
+        }
+      ],
+      "references": [
+        {
+          "id": "ref-05-action",
+          "sourceUrl": "https://www.tiktok.com/@hunt4shredz/video/7518805084499627277",
+          "capture": "first/middle/action frames",
+          "retention": "ephemeral-not-committed",
+          "influences": [
+            "0.6-1.6s action cadence",
+            "ingredient weights",
+            "finished-food payoff"
+          ]
+        },
+        {
+          "id": "ref-09-action",
+          "sourceUrl": "https://www.tiktok.com/@dr.rachelpaul/video/7354927176044514603",
+          "capture": "first/middle/action frames",
+          "retention": "ephemeral-not-committed",
+          "influences": [
+            "fibre-first information hierarchy",
+            "compact nutrition panel",
+            "direct save framing"
+          ]
+        },
+        {
+          "id": "ref-12-action",
+          "sourceUrl": "https://www.tiktok.com/@makayla_thomas_fit/video/7661734178211302686",
+          "capture": "first/middle/action frames",
+          "retention": "ephemeral-not-committed",
+          "influences": [
+            "macro-led first frame",
+            "meal-prep utility",
+            "simple call-to-action"
+          ]
+        }
+      ],
+      "selectedSourceCostUsd": 0.6975,
+      "costBasis": "exact where the API reported usage; model pricing estimate for recovered video responses",
+      "qa": {
+        "status": "PASS",
+        "factualBasis": "unchanged from validated pizza-bean bowl calculation",
+        "aspectRatio": "1080x1920",
+        "audio": "VO + deterministic kitchen texture",
+        "motion": "all selected shots are generated video clips; no zoompan still route used",
+        "plannedCriticalRoutes": 0
+      },
+      "knownWeaknesses": [
+        "Generated food continuity varies slightly between source models.",
+        "Some OpenRouter video response IDs and exact costs were lost when the first runner hit the credit limit; hashes and model-level estimates are retained."
+      ],
+      "sha256": "712fcabf426b6f497a8f13cd276a5249bb221ecf850b07a97a937642d7cf8506",
+      "status": "FINAL MEDIA | GENERATED ACTION",
+      "treatment": "I2V-heavy: generated keyframes animated into ingredient, simmer, melt and spoon action."
+    },
+    {
+      "id": "new-b",
+      "label": "NEW B - T2V",
+      "route": "t2v-heavy",
+      "video": "../../brands/gutkitchen/creative-engine-v2/candidates/final-media/new-b.mp4",
+      "firstFrame": "../../brands/gutkitchen/creative-engine-v2/candidates/final-media/new-b-first-frame.png",
+      "filmstrip": "../../brands/gutkitchen/creative-engine-v2/candidates/final-media/new-b-filmstrip.jpg",
+      "duration": 8.1,
+      "modelsUsed": [
+        "alibaba/wan-3.0",
+        "bytedance/seedance-2.5",
+        "minimax/hailuo-3",
+        "minimax/hailuo-3-max"
+      ],
+      "shots": [
+        {
+          "id": "hero-spoon",
+          "route": "t2v-generated",
+          "executionStatus": "executed-provider",
+          "model": "bytedance/seedance-2.5",
+          "recordRoute": "t2v/hero-spoon",
+          "sourceFile": "brands/gutkitchen/creative-engine-v2/openrouter-run/videos/t2v/hero-spoon.mp4",
+          "outputStartSeconds": 0.0,
+          "duration": 1.5,
+          "copy": {
+            "headline": "40g PROTEIN | 15g+ FIBRE",
+            "caption": "THE SPOON TEST",
+            "quantity": "one bowl | label-based estimate"
+          },
+          "selectionReason": "strongest available generated action source for this shot"
+        },
+        {
+          "id": "beans-pan",
+          "route": "i2v-generated",
+          "executionStatus": "executed-provider",
+          "model": "minimax/hailuo-3-max",
+          "recordRoute": "i2v/beans-pan",
+          "sourceFile": "brands/gutkitchen/creative-engine-v2/openrouter-run/videos/i2v/beans-pan.mp4",
+          "outputStartSeconds": 1.5,
+          "duration": 1.2,
+          "copy": {
+            "headline": "START WITH ONE TIN",
+            "caption": "BEANS IN",
+            "quantity": "235g drained cannellini beans"
+          },
+          "selectionReason": "strongest available generated action source for this shot"
+        },
+        {
+          "id": "sauce-spinach",
+          "route": "t2v-generated",
+          "executionStatus": "executed-provider",
+          "model": "alibaba/wan-3.0",
+          "recordRoute": "t2v/sauce-spinach",
+          "sourceFile": "brands/gutkitchen/creative-engine-v2/openrouter-run/videos/t2v/sauce-spinach.mp4",
+          "outputStartSeconds": 2.7,
+          "duration": 1.2,
+          "copy": {
+            "headline": "COLOUR + FIBRE",
+            "caption": "PASSATA + SPINACH",
+            "quantity": "150g passata | 50g spinach"
+          },
+          "selectionReason": "strongest available generated action source for this shot"
+        },
+        {
+          "id": "simmer",
+          "route": "t2v-generated",
+          "executionStatus": "executed-provider",
+          "model": "minimax/hailuo-3",
+          "recordRoute": "t2v/simmer",
+          "sourceFile": "brands/gutkitchen/creative-engine-v2/openrouter-run/videos/t2v/simmer.mp4",
+          "outputStartSeconds": 3.9,
+          "duration": 1.2,
+          "copy": {
+            "headline": "LET IT BUBBLE",
+            "caption": "SIMMER THE BUILD",
+            "quantity": "one pan | four supermarket ingredients"
+          },
+          "selectionReason": "strongest available generated action source for this shot"
+        },
+        {
+          "id": "cheese-melt",
+          "route": "t2v-generated",
+          "executionStatus": "executed-provider",
+          "model": "minimax/hailuo-3",
+          "recordRoute": "t2v/cheese-melt",
+          "sourceFile": "brands/gutkitchen/creative-engine-v2/openrouter-run/videos/t2v/cheese-melt.mp4",
+          "outputStartSeconds": 5.1,
+          "duration": 1.5,
+          "copy": {
+            "headline": "THE PROTEIN FINISH",
+            "caption": "CHEESE MELT",
+            "quantity": "100g lighter mozzarella"
+          },
+          "selectionReason": "strongest available generated action source for this shot"
+        },
+        {
+          "id": "final-payoff",
+          "route": "t2v-generated",
+          "executionStatus": "executed-provider",
+          "model": "bytedance/seedance-2.5",
+          "recordRoute": "t2v/final-payoff",
+          "sourceFile": "brands/gutkitchen/creative-engine-v2/openrouter-run/videos/t2v/final-payoff.mp4",
+          "outputStartSeconds": 6.6,
+          "duration": 1.5,
+          "copy": {
+            "headline": "PIZZA FLAVOUR | BEAN MATHS",
+            "caption": "SPOON PAYOFF",
+            "quantity": "~40g protein | 15g+ fibre per bowl"
+          },
+          "selectionReason": "strongest available generated action source for this shot"
+        }
+      ],
+      "references": [
+        {
+          "id": "ref-05-action",
+          "sourceUrl": "https://www.tiktok.com/@hunt4shredz/video/7518805084499627277",
+          "capture": "first/middle/action frames",
+          "retention": "ephemeral-not-committed",
+          "influences": [
+            "0.6-1.6s action cadence",
+            "ingredient weights",
+            "finished-food payoff"
+          ]
+        },
+        {
+          "id": "ref-09-action",
+          "sourceUrl": "https://www.tiktok.com/@dr.rachelpaul/video/7354927176044514603",
+          "capture": "first/middle/action frames",
+          "retention": "ephemeral-not-committed",
+          "influences": [
+            "fibre-first information hierarchy",
+            "compact nutrition panel",
+            "direct save framing"
+          ]
+        },
+        {
+          "id": "ref-12-action",
+          "sourceUrl": "https://www.tiktok.com/@makayla_thomas_fit/video/7661734178211302686",
+          "capture": "first/middle/action frames",
+          "retention": "ephemeral-not-committed",
+          "influences": [
+            "macro-led first frame",
+            "meal-prep utility",
+            "simple call-to-action"
+          ]
+        }
+      ],
+      "selectedSourceCostUsd": 1.7475,
+      "costBasis": "exact where the API reported usage; model pricing estimate for recovered video responses",
+      "qa": {
+        "status": "PASS",
+        "factualBasis": "unchanged from validated pizza-bean bowl calculation",
+        "aspectRatio": "1080x1920",
+        "audio": "VO + deterministic kitchen texture",
+        "motion": "all selected shots are generated video clips; no zoompan still route used",
+        "plannedCriticalRoutes": 0
+      },
+      "knownWeaknesses": [
+        "Generated food continuity varies slightly between source models.",
+        "t2v/beans-pan was not recovered after the OpenRouter credit limit; the T2V-heavy candidate uses one I2V bean-drop fallback."
+      ],
+      "sha256": "f4eaf70e9ee90e22c1803955563471f45ca81bdf3a375172d195970b52124c01",
+      "status": "FINAL MEDIA | GENERATED ACTION",
+      "treatment": "T2V-heavy: direct generated cooking/action clips, with one documented bean-shot fallback."
+    },
+    {
+      "id": "new-c",
+      "label": "NEW C - HYBRID",
+      "route": "hybrid-best-source-per-shot",
+      "video": "../../brands/gutkitchen/creative-engine-v2/candidates/final-media/new-c.mp4",
+      "firstFrame": "../../brands/gutkitchen/creative-engine-v2/candidates/final-media/new-c-first-frame.png",
+      "filmstrip": "../../brands/gutkitchen/creative-engine-v2/candidates/final-media/new-c-filmstrip.jpg",
+      "duration": 8.1,
+      "modelsUsed": [
+        "alibaba/wan-3.0",
+        "bytedance/seedance-2.5",
+        "minimax/hailuo-3",
+        "minimax/hailuo-3-max"
+      ],
+      "shots": [
+        {
+          "id": "hero-spoon",
+          "route": "i2v-generated",
+          "executionStatus": "executed-provider",
+          "model": "bytedance/seedance-2.5",
+          "recordRoute": "i2v/hero-spoon-alt",
+          "sourceFile": "brands/gutkitchen/creative-engine-v2/openrouter-run/videos/i2v/hero-spoon-alt.mp4",
+          "outputStartSeconds": 0.0,
+          "duration": 1.5,
+          "copy": {
+            "headline": "40g PROTEIN | 15g+ FIBRE",
+            "caption": "THE SPOON TEST",
+            "quantity": "one bowl | label-based estimate"
+          },
+          "selectionReason": "strong cheese pull and clean spoon continuity"
+        },
+        {
+          "id": "beans-pan",
+          "route": "i2v-generated",
+          "executionStatus": "executed-provider",
+          "model": "minimax/hailuo-3-max",
+          "recordRoute": "i2v/beans-pan",
+          "sourceFile": "brands/gutkitchen/creative-engine-v2/openrouter-run/videos/i2v/beans-pan.mp4",
+          "outputStartSeconds": 1.5,
+          "duration": 1.2,
+          "copy": {
+            "headline": "START WITH ONE TIN",
+            "caption": "BEANS IN",
+            "quantity": "235g drained cannellini beans"
+          },
+          "selectionReason": "strongest available generated action source for this shot"
+        },
+        {
+          "id": "sauce-spinach",
+          "route": "i2v-generated",
+          "executionStatus": "executed-provider",
+          "model": "alibaba/wan-3.0",
+          "recordRoute": "i2v/sauce-spinach",
+          "sourceFile": "brands/gutkitchen/creative-engine-v2/openrouter-run/videos/i2v/sauce-spinach.mp4",
+          "outputStartSeconds": 2.7,
+          "duration": 1.2,
+          "copy": {
+            "headline": "COLOUR + FIBRE",
+            "caption": "PASSATA + SPINACH",
+            "quantity": "150g passata | 50g spinach"
+          },
+          "selectionReason": "strongest available generated action source for this shot"
+        },
+        {
+          "id": "simmer",
+          "route": "t2v-generated",
+          "executionStatus": "executed-provider",
+          "model": "minimax/hailuo-3",
+          "recordRoute": "t2v/simmer",
+          "sourceFile": "brands/gutkitchen/creative-engine-v2/openrouter-run/videos/t2v/simmer.mp4",
+          "outputStartSeconds": 3.9,
+          "duration": 1.2,
+          "copy": {
+            "headline": "LET IT BUBBLE",
+            "caption": "SIMMER THE BUILD",
+            "quantity": "one pan | four supermarket ingredients"
+          },
+          "selectionReason": "strongest available generated action source for this shot"
+        },
+        {
+          "id": "cheese-melt",
+          "route": "i2v-generated",
+          "executionStatus": "executed-provider",
+          "model": "minimax/hailuo-3-max",
+          "recordRoute": "i2v/cheese-melt",
+          "sourceFile": "brands/gutkitchen/creative-engine-v2/openrouter-run/videos/i2v/cheese-melt.mp4",
+          "outputStartSeconds": 5.1,
+          "duration": 1.5,
+          "copy": {
+            "headline": "THE PROTEIN FINISH",
+            "caption": "CHEESE MELT",
+            "quantity": "100g lighter mozzarella"
+          },
+          "selectionReason": "strongest available generated action source for this shot"
+        },
+        {
+          "id": "final-payoff",
+          "route": "t2v-generated",
+          "executionStatus": "executed-provider",
+          "model": "bytedance/seedance-2.5",
+          "recordRoute": "t2v/final-payoff",
+          "sourceFile": "brands/gutkitchen/creative-engine-v2/openrouter-run/videos/t2v/final-payoff.mp4",
+          "outputStartSeconds": 6.6,
+          "duration": 1.5,
+          "copy": {
+            "headline": "PIZZA FLAVOUR | BEAN MATHS",
+            "caption": "SPOON PAYOFF",
+            "quantity": "~40g protein | 15g+ fibre per bowl"
+          },
+          "selectionReason": "strongest available generated action source for this shot"
+        }
+      ],
+      "references": [
+        {
+          "id": "ref-05-action",
+          "sourceUrl": "https://www.tiktok.com/@hunt4shredz/video/7518805084499627277",
+          "capture": "first/middle/action frames",
+          "retention": "ephemeral-not-committed",
+          "influences": [
+            "0.6-1.6s action cadence",
+            "ingredient weights",
+            "finished-food payoff"
+          ]
+        },
+        {
+          "id": "ref-09-action",
+          "sourceUrl": "https://www.tiktok.com/@dr.rachelpaul/video/7354927176044514603",
+          "capture": "first/middle/action frames",
+          "retention": "ephemeral-not-committed",
+          "influences": [
+            "fibre-first information hierarchy",
+            "compact nutrition panel",
+            "direct save framing"
+          ]
+        },
+        {
+          "id": "ref-12-action",
+          "sourceUrl": "https://www.tiktok.com/@makayla_thomas_fit/video/7661734178211302686",
+          "capture": "first/middle/action frames",
+          "retention": "ephemeral-not-committed",
+          "influences": [
+            "macro-led first frame",
+            "meal-prep utility",
+            "simple call-to-action"
+          ]
+        }
+      ],
+      "selectedSourceCostUsd": 1.3475,
+      "costBasis": "exact where the API reported usage; model pricing estimate for recovered video responses",
+      "qa": {
+        "status": "PASS",
+        "factualBasis": "unchanged from validated pizza-bean bowl calculation",
+        "aspectRatio": "1080x1920",
+        "audio": "VO + deterministic kitchen texture",
+        "motion": "all selected shots are generated video clips; no zoompan still route used",
+        "plannedCriticalRoutes": 0
+      },
+      "knownWeaknesses": [
+        "Generated food continuity varies slightly between source models.",
+        "Some OpenRouter video response IDs and exact costs were lost when the first runner hit the credit limit; hashes and model-level estimates are retained."
+      ],
+      "sha256": "7e5fd00e41281d700d4377228c2cf066ee35801bc23602c63205c2fa2e8d2b24",
+      "status": "FINAL MEDIA | GENERATED ACTION",
+      "treatment": "Hybrid: best available source route per shot, prioritising visual quality over route purity."
+    }
+  ]
+}

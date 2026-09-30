@@ -1,0 +1,30 @@
+{
+  "generatedAtUtc": "2026-09-30T19:41:18.901303+00:00",
+  "briefId": "gutkitchen-pizza-bean-bowl-v2",
+  "openRouterOnly": true,
+  "creativeDirectionModel": "openai/gpt-5.6-sol",
+  "imageModels": [
+    "openai/gpt-image-2.5-flare",
+    "openai/gpt-image-2.5-sunburst"
+  ],
+  "videoModels": [
+    "alibaba/wan-3.0",
+    "bytedance/seedance-2.5",
+    "minimax/hailuo-3",
+    "minimax/hailuo-3-max"
+  ],
+  "generationCount": 21,
+  "imageCount": 7,
+  "videoCount": 13,
+  "referenceFrameCount": 9,
+  "referenceFramesCommitted": false,
+  "totalCostUsdWhereReported": 0.498473,
+  "estimatedVideoCostUsd": 2.2,
+  "failures": [
+    {
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    }
+  ],
+  "artDirectionOutput": "creative-direction.json",
+  "provenance": "provenance/generations.json"
+}
