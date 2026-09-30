@@ -6,7 +6,7 @@ Use in order only until enough live data exists to reprioritise.
 - [ ] A realistic 30g fibre day with four normal eating occasions
 - [ ] Turn chicken-and-rice into a 12g-fibre meal without doubling the portion
 - [ ] £20 high-fibre shopping basket → five lunches
-- [ ] Five ways to add 5g fibre to breakfast
+- [ ] Five ways to add 5g fibre to breakfast — ✅ published 2026-09-29 as gutkitchen-001: [YouTube](https://www.youtube.com/watch?v=WOuEbPzdQvQ) · [TikTok](https://www.tiktok.com/@gutkitchen.uk/video/7691028344669932802) · [Instagram](https://www.instagram.com/p/Dd4a_tdxFLJ/)
 - [ ] Beans ranked by fibre per typical serving with preparation ideas
 - [ ] High-fibre overnight oats that still hit 30g+ protein
 - [ ] The 10-minute lentil bolognese upgrade to an ordinary mince sauce
