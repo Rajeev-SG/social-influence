@@ -124,7 +124,7 @@ class CreativeEngineV2Tests(unittest.TestCase):
     def test_generation_date_matches_evidence_directory(self):
         self.assertEqual(self.engine.manifest.provenance['generated_at'], '2026-09-30')
         verification = json.loads((ROOT / 'docs/evidence/2026-09-30/creative-engine-v2/verification.json').read_text())
-        self.assertEqual(verification['generatedAtUtc'][:10], self.engine.manifest.provenance['generated_at'])
+        self.assertEqual(verification['evidenceDate'], self.engine.manifest.provenance['generated_at'])
 
 
 if __name__ == '__main__':

@@ -130,8 +130,8 @@ def main() -> int:
         print(f'FAIL generated_at {generated_at} is in the future', file=sys.stderr)
         return 1
     verification = json.loads((evidence_dir / 'verification.json').read_text())
-    if verification['generatedAtUtc'][:10] != evidence_date:
-        print('FAIL verification timestamp does not match evidence date', file=sys.stderr)
+    if verification.get('evidenceDate') != evidence_date:
+        print('FAIL verification evidenceDate does not match evidence date', file=sys.stderr)
         return 1
     for treatment in engine.manifest.treatments:
         path = out / f'{treatment.treatment_id}-preview.mp4'
