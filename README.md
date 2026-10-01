@@ -89,7 +89,7 @@ See [the examples gallery](docs/examples/README.md) for stills from the reviewed
 
 ## Creative Engine v2 review
 
-Open [the static GutKitchen quality review](reviews/gutkitchen-creative-v2/index.html) to compare the existing pilot with three materially different reference-led treatments. The staged engine, reference library, visual grammar and regeneration procedure are documented in [docs/CREATIVE-ENGINE-V2.md](docs/CREATIVE-ENGINE-V2.md). Candidates are review-only storyboard comps and are not published. The A/B/C comparison is a copy-and-structure decision, not final visual-quality validation.
+Open [the static GutKitchen quality review](reviews/gutkitchen-creative-v2/index.html) to compare the old pilot, the current Issue #8 storyboard comp and three finished OpenRouter media candidates: I2V-heavy, T2V-heavy and hybrid. The new candidates are 8.1-second, 9:16 action edits with generated food motion, deterministic protein/fibre overlays, audio, first frames and filmstrips. Model IDs, shot routes, reference inputs, costs, QA and rerun instructions are documented in [docs/CREATIVE-ENGINE-V2.md](docs/CREATIVE-ENGINE-V2.md). Nothing is published automatically; the strongest agent-reviewed candidate is NEW C — HYBRID.
 
 ## Creation CLI prototype (Issue #2)
 

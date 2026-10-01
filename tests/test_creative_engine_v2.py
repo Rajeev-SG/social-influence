@@ -79,8 +79,39 @@ class CreativeEngineV2Tests(unittest.TestCase):
 
     def test_review_page_mentions_baseline_and_all_new_lanes(self):
         page = (ROOT / 'reviews/gutkitchen-creative-v2/index.html').read_text()
-        for label in ('OLD / BASELINE', 'NEW A', 'NEW B', 'NEW C', 'STORYBOARD', 'planned, not executed', 'copy-and-structure decision', 'not a visual/creative-quality decision', 'references/library.json', 'visual-grammar-v2.md'):
+        for label in ('OLD BASELINE', 'CURRENT V2 STORYBOARD', 'NEW A', 'NEW B', 'NEW C', 'FINAL MEDIA', 'Mark as winner', 'Local review notes', 'ref-05-action'):
             self.assertIn(label, page)
+
+    def test_finished_openrouter_media_has_zero_planned_critical_routes(self):
+        path = ROOT / 'brands/gutkitchen/creative-engine-v2/candidates/final-media/final-media-manifest.json'
+        manifest = json.loads(path.read_text())
+        self.assertTrue(manifest['openRouterOnly'])
+        self.assertEqual(manifest['candidateCount'], 3)
+        self.assertEqual(manifest['plannedCriticalRoutes'], 0)
+        self.assertEqual(manifest['experiment']['issueTargetDurationSeconds'], [8, 15])
+        self.assertEqual(manifest['experiment']['scopeAuthority']['quote'], 'Target roughly 8–15 seconds.')
+        self.assertEqual([item['id'] for item in manifest['candidates']], ['new-a', 'new-b', 'new-c'])
+        for candidate in manifest['candidates']:
+            self.assertGreaterEqual(candidate['duration'], 8.0)
+            self.assertLessEqual(candidate['duration'], 15.0)
+            self.assertTrue((ROOT / candidate['video'].removeprefix('../../')).is_file())
+            self.assertTrue((ROOT / candidate['firstFrame'].removeprefix('../../')).is_file())
+            self.assertTrue((ROOT / candidate['filmstrip'].removeprefix('../../')).is_file())
+            for shot in candidate['shots']:
+                self.assertEqual(shot['executionStatus'], 'executed-provider')
+                self.assertNotEqual(shot['route'], 'planned-not-executed')
+                self.assertFalse(shot['fallback'])
+                self.assertTrue(shot['model'])
+                self.assertNotIn('selectionScore', shot)
+                self.assertEqual(shot['selectionMethod'], 'subjective visual comparison; no numeric score assigned')
+            self.assertEqual(
+                candidate['qa']['routeComposition'],
+                {'new-a': {'i2v': 6, 't2v': 0, 'fallback': 0}, 'new-b': {'i2v': 0, 't2v': 6, 'fallback': 0}, 'new-c': {'i2v': 3, 't2v': 3, 'fallback': 0}}[candidate['id']],
+            )
+        self.assertEqual(manifest['candidateOverlap']['new-a:new-b'], [])
+        review_data = (ROOT / 'brands/gutkitchen/creative-engine-v2/candidates/final-media/review-data.json').read_text()
+        self.assertNotIn('tiktok.com', review_data)
+        self.assertNotIn('sourceUrl', review_data)
 
     def test_reference_library_is_self_contained(self):
         library = json.loads((ROOT / 'brands/gutkitchen/references/library.json').read_text())
@@ -93,7 +124,7 @@ class CreativeEngineV2Tests(unittest.TestCase):
     def test_generation_date_matches_evidence_directory(self):
         self.assertEqual(self.engine.manifest.provenance['generated_at'], '2026-09-30')
         verification = json.loads((ROOT / 'docs/evidence/2026-09-30/creative-engine-v2/verification.json').read_text())
-        self.assertEqual(verification['generatedAtUtc'][:10], self.engine.manifest.provenance['generated_at'])
+        self.assertEqual(verification['evidenceDate'], self.engine.manifest.provenance['generated_at'])
 
 
 if __name__ == '__main__':
