@@ -936,5 +936,89 @@
         "output_sha256": "fd24a25b6bf617510920249a835ecdd61b5c2b19ed51ca5cc4a072605b9afbaf"
       }
     ]
+  },
+  {
+    "route": "t2v/beans-pan",
+    "model": "alibaba/wan-3.0",
+    "prompt": "Top-down cooking action in a cast-iron pan: drained cannellini beans fall in a loose arc into glossy tomato passata, bounce softly once and settle. Sauce ripples, steam rises, the pan is hot but controlled. Crisp food texture, natural physics, quick satisfying insert, vertical 9:16. No text, no logos, no packaging, no duplicated beans, no malformed pan or hands.",
+    "request": {
+      "model": "alibaba/wan-3.0",
+      "prompt": "Top-down cooking action in a cast-iron pan: drained cannellini beans fall in a loose arc into glossy tomato passata, bounce softly once and settle. Sauce ripples, steam rises, the pan is hot but controlled. Crisp food texture, natural physics, quick satisfying insert, vertical 9:16. No text, no logos, no packaging, no duplicated beans, no malformed pan or hands.",
+      "duration": 5,
+      "resolution": "480p",
+      "aspect_ratio": "9:16",
+      "generate_audio": true,
+      "seed": 202
+    },
+    "input_references": [],
+    "output_path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/videos/t2v/beans-pan.mp4",
+    "output_sha256": "faa3bda74690ac0e2d6f93387dee545bcf8d28dc2021840d5a7f7dbc6d234744",
+    "started_at": "2026-09-30T23:30:40.953105+00:00",
+    "completed_at": "2026-09-30T23:34:07.342925+00:00",
+    "elapsed_seconds": 206.3904594170017,
+    "job_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt",
+    "generation_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt",
+    "provider": null,
+    "usage": {
+      "cost": 0.210375,
+      "is_byok": false
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "status": "submitted",
+        "job_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt"
+      },
+      {
+        "attempt": 2,
+        "status": "pending",
+        "job_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt"
+      },
+      {
+        "attempt": 3,
+        "status": "pending",
+        "job_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt"
+      },
+      {
+        "attempt": 4,
+        "status": "pending",
+        "job_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt"
+      },
+      {
+        "attempt": 5,
+        "status": "pending",
+        "job_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt"
+      },
+      {
+        "attempt": 6,
+        "status": "pending",
+        "job_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt"
+      },
+      {
+        "attempt": 7,
+        "status": "pending",
+        "job_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt"
+      },
+      {
+        "attempt": 8,
+        "status": "pending",
+        "job_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt"
+      },
+      {
+        "attempt": 9,
+        "status": "pending",
+        "job_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt"
+      },
+      {
+        "attempt": 10,
+        "status": "pending",
+        "job_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt"
+      },
+      {
+        "attempt": 11,
+        "status": "completed",
+        "job_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt"
+      }
+    ]
   }
 ]

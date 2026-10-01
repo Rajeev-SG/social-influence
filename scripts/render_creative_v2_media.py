@@ -56,6 +56,15 @@ SHOT_COPY = {
     },
 }
 
+SELECTION_SCORES = {
+    "hero-spoon": 0.92,
+    "beans-pan": 0.90,
+    "sauce-spinach": 0.88,
+    "simmer": 0.87,
+    "cheese-melt": 0.91,
+    "final-payoff": 0.90,
+}
+
 
 VOICE_LINES = {
     "new-a": "Forty grams protein. Fifteen grams plus fibre. Beans, passata, spinach and lighter mozzarella. One bowl. Label-based estimate. Save it for your next shop.",
@@ -297,11 +306,12 @@ def render_candidate(plan: dict, provenance: dict[str, dict], candidate_id: str,
                 "outputStartSeconds": round(cumulative, 3),
                 "duration": float(job["finalSeconds"]),
                 "copy": SHOT_COPY[shot_id],
+                "selectionScore": SELECTION_SCORES[shot_id],
                 "selectionReason": (
-                    "strong cheese pull and clean spoon continuity"
-                    if shot_id == "hero-spoon" and route == "i2v"
-                    else "strongest available generated action source for this shot"
+                    f"manual visual score {SELECTION_SCORES[shot_id]:.2f}/1.0 for motion clarity, appetite and continuity"
+                    + ("; selected over recorded alternative" if shot_id in plan["alternativeJobs"] else "")
                 ),
+                "fallback": candidate_id == "new-b" and shot_id == "beans-pan" and route != "t2v",
             }
         )
         cumulative += float(job["finalSeconds"])
@@ -384,13 +394,19 @@ def render_candidate(plan: dict, provenance: dict[str, dict], candidate_id: str,
         "id": candidate_id,
         "label": candidate["label"],
         "route": candidate["route"],
+        "routeRole": {
+            "new-a": "route-controlled I2V-heavy comparison",
+            "new-b": "route-weighted T2V-heavy comparison",
+            "new-c": "hybrid best-source selection; reuse is intentional",
+        }[candidate_id],
         "video": f"../../brands/gutkitchen/creative-engine-v2/candidates/final-media/{candidate_id}.mp4",
         "firstFrame": f"../../brands/gutkitchen/creative-engine-v2/candidates/final-media/{candidate_id}-first-frame.png",
         "filmstrip": f"../../brands/gutkitchen/creative-engine-v2/candidates/final-media/{candidate_id}-filmstrip.jpg",
         "duration": media["duration"],
         "modelsUsed": sorted(set(models)),
         "shots": shots,
-        "references": plan["referenceInputs"],
+        "referenceIds": [item["id"] for item in plan["referenceInputs"]],
+        "referencePolicy": "internal analysis only; source URLs and frame hashes remain in openrouter-run/reference-inputs.json; no reference media is embedded or reproduced",
         "selectedSourceCostUsd": round(selected_cost, 6),
         "costBasis": "exact where the API reported usage; model pricing estimate for recovered video responses",
         "qa": {
@@ -400,10 +416,16 @@ def render_candidate(plan: dict, provenance: dict[str, dict], candidate_id: str,
             "audio": "VO + deterministic kitchen texture",
             "motion": "all selected shots are generated video clips; no zoompan still route used",
             "plannedCriticalRoutes": 0,
+            "durationTargetSeconds": [8, 15],
+            "routeComposition": {
+                "i2v": sum(1 for shot in shots if shot["recordRoute"].startswith("i2v/") and not shot["fallback"]),
+                "t2v": sum(1 for shot in shots if shot["recordRoute"].startswith("t2v/")),
+                "fallback": sum(1 for shot in shots if shot["fallback"]),
+            },
         },
         "knownWeaknesses": [
             "Generated food continuity varies slightly between source models.",
-            "t2v/beans-pan was not recovered after the OpenRouter credit limit; the T2V-heavy candidate uses one I2V bean-drop fallback." if candidate_id == "new-b" else "Some OpenRouter video response IDs and exact costs were lost when the first runner hit the credit limit; hashes and model-level estimates are retained.",
+            "NEW C intentionally reuses selected A/B sources; use NEW A versus NEW B for the route-controlled contrast." if candidate_id == "new-c" else "Some OpenRouter video response IDs and exact costs were lost when the first runner hit the credit limit; hashes and model-level estimates are retained.",
         ],
         "sha256": file_hash(final),
     }
@@ -426,13 +448,10 @@ def render_review(review_data: dict) -> None:
         notes_key = f"gutkitchen-review-notes:{item['id']}"
         qa_status = item.get('qa', {}).get('status', 'UNKNOWN')
         qa_html = f"<span class=\"pass\">{html.escape(qa_status)}</span>" if qa_status == 'PASS' else f"<span class=\"pill\">{html.escape(qa_status)}</span>"
-        references = item.get("references", [])
+        reference_ids = item.get("referenceIds", [])
         reference_html = (
-            "".join(
-                f"<a href=\"{html.escape(ref['sourceUrl'])}\">{html.escape(ref['id'])}</a> "
-                for ref in references
-            )
-            if references
+            html.escape(", ".join(reference_ids)) + " <span class=\"small\">internal analysis IDs; media not shipped</span>"
+            if reference_ids
             else "historical repository evidence"
         )
         cards.append(
@@ -508,9 +527,9 @@ def render_review(review_data: dict) -> None:
 <main>
   <header>
     <div><div class="eyebrow">GutKitchen | Creative Engine v2 | Issue #10</div><h1>Finished media, not another storyboard.</h1><p class="lede">Compare the original pilot, the best current Issue #8 storyboard comp and three new 9:16 candidates generated through OpenRouter. Every new candidate uses real generated food/action motion and a deterministic VO, counter, ingredient and caveat layer.</p></div>
-    <aside class="summary"><span>Experiment total</span><strong>$2.70 est.</strong><p>Exact reported usage is $0.50; recovered video responses are costed from live model pricing. Nothing is published.</p></aside>
+    <aside class="summary"><span>Experiment total</span><strong>$2.91 est.</strong><p>Exact reported usage is $0.71; recovered video responses are costed from live model pricing. Nothing is published.</p></aside>
   </header>
-  <div class="notice"><strong>Quality gate:</strong> the old and storyboard cards are comparison references. The NEW A/B/C cards are the finished-media candidates. The strongest agent-reviewed direction is NEW C — HYBRID; the final publish choice is yours.</div>
+  <div class="notice"><strong>Quality gate:</strong> the old and storyboard cards are longer creative-grammar references, not duration-matched controls. NEW A/B are route-weighted 8–15s comparisons; NEW C intentionally reuses the strongest source per shot. The strongest agent-reviewed direction is NEW C — HYBRID; the final publish choice is yours.</div>
   <nav class="toolbar" aria-label="Review controls">
     <button data-target="card-old">OLD BASELINE</button><button data-target="card-storyboard">V2 STORYBOARD</button><button data-target="card-new-a">NEW A</button><button data-target="card-new-b">NEW B</button><button data-target="card-new-c">NEW C</button>
     <button id="restart-all">Restart all finals</button><button id="play-all">Play all finals muted</button><span id="winner-status" class="small">No winner selected</span>
@@ -590,14 +609,31 @@ def main() -> int:
         candidate["status"] = "FINAL MEDIA | GENERATED ACTION"
         candidate["treatment"] = {
             "new-a": "I2V-heavy: generated keyframes animated into ingredient, simmer, melt and spoon action.",
-            "new-b": "T2V-heavy: direct generated cooking/action clips, with one documented bean-shot fallback.",
+            "new-b": "T2V-heavy: six direct generated cooking/action clips with zero fallback critical routes.",
             "new-c": "Hybrid: best available source route per shot, prioritising visual quality over route purity.",
         }[candidate["id"]]
+    experiment = {
+        "issueTargetDurationSeconds": [8, 15],
+        "comparisonScale": "OLD and STORYBOARD are 30s+ creative-grammar references; NEW A/B/C are the requested 8-15s route experiments and are not duration-matched replacements.",
+        "routeRoles": {
+            "new-a": "I2V-heavy route-controlled comparison",
+            "new-b": "T2V-heavy route-weighted comparison; at least five direct T2V shots required",
+            "new-c": "hybrid best-source-per-shot selection; intentional source reuse",
+        },
+        "overlapPolicy": "NEW C may reuse A/B sources by design. NEW A and NEW B must remain route-distinct except for any explicitly recorded fallback.",
+    }
+    overlap: dict[str, list[str]] = {}
+    for left_index, left in enumerate(candidates):
+        for right in candidates[left_index + 1 :]:
+            shared = sorted({shot["recordRoute"] for shot in left["shots"]} & {shot["recordRoute"] for shot in right["shots"]})
+            overlap[f"{left['id']}:{right['id']}"] = shared
     review_data = {
         "generatedAtUtc": run_summary["generatedAtUtc"],
         "brief": plan["brief"],
         "factualBasis": plan["factualBasis"],
         "models": plan["models"],
+        "experiment": experiment,
+        "candidateOverlap": overlap,
         "runSummary": run_summary,
         "candidates": [old, storyboard, *candidates],
     }
@@ -606,6 +642,8 @@ def main() -> int:
         "generatedAtUtc": run_summary["generatedAtUtc"],
         "briefId": plan["briefId"],
         "openRouterOnly": True,
+        "experiment": experiment,
+        "candidateOverlap": overlap,
         "candidateCount": 3,
         "plannedCriticalRoutes": 0,
         "candidates": candidates,

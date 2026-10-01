@@ -15,6 +15,8 @@ PASS. Creative Engine v2 now produces three finished 8.1-second candidates from 
 
 The strongest agent-reviewed candidate is **NEW C — HYBRID**. Its first-second cheese pull, bean drop, passata/spinach action, simmer/melt beats and final spoon payoff are a genuine visual improvement over the Issue #8 motion comps. It is a reasonable publish candidate after Rajeev confirms the label-based wording and watches the full motion.
 
+The three finished candidates are 8.1 seconds because Issue #10 explicitly targets approximately 8–15 seconds. The 31–32 second OLD/STORYBOARD artifacts are longer creative-grammar references, not duration-matched controls or direct runtime replacements.
+
 ## OpenRouter execution
 
 - One `OPENROUTER_API_KEY` covers creative direction, image generation and video generation.
@@ -32,7 +34,7 @@ Three TikTok sources were captured at first/middle/action positions and fed to t
 ## Media and deterministic design
 
 - NEW A uses generated keyframes plus I2V food/action motion.
-- NEW B is T2V-heavy with five direct T2V shots and one documented I2V bean-shot fallback after the OpenRouter credit limit.
+- NEW B is T2V-heavy with six direct T2V shots and zero fallback critical routes; the bean job was generated on retry with its job ID persisted before polling.
 - NEW C uses the best available I2V/T2V source per shot.
 - Core beats are real generated action: bean drop, passata pour, spinach drop, simmer/bubble, cheese melt and spoon/cheese pull.
 - All candidates are 1080x1920, 30fps, 8.1s and contain VO plus deterministic kitchen texture audio.
@@ -40,11 +42,11 @@ Three TikTok sources were captured at first/middle/action positions and fed to t
 
 ## Cost
 
-- exact reported OpenRouter usage retained: **$0.498473**
+- exact reported OpenRouter usage retained: **$0.708848**
 - model-pricing estimate for recovered video responses: **$2.20**
-- combined working estimate: **$2.70**
+- combined working estimate: **$2.91**
 
-The first runner downloaded 13 of 16 planned video outputs before a `402 Insufficient credits` response. Completed bytes and hashes were preserved; the runner was changed to fail soft and resume. Some recovered clips retain model-level estimates rather than exact job IDs/costs.
+The first runner downloaded 13 of 16 planned video outputs before a `402 Insufficient credits` response. Completed bytes and hashes were preserved; the runner now records job IDs at submission, resumes stored jobs and handles non-JSON error bodies. The missing bean job was generated on retry. Some earlier recovered clips retain model-level estimates rather than exact job IDs/costs.
 
 ## Review UX verification
 
@@ -55,14 +57,14 @@ Playwright at `https://gutkitchen-review.localhost:1355/reviews/gutkitchen-creat
 - no current console errors and no horizontal overflow on desktop/mobile;
 - NEW C winner selection and review notes persist through reload;
 - restart-all resets final videos; play-all runs them muted to completion;
-- first frames, filmstrips, reference links and per-shot model routes are visible.
+- first frames, filmstrips, opaque reference IDs and per-shot model routes are visible.
 
 Evidence captures: `review-desktop.png`, `review-mobile.png`.
 
 ## Known compromises
 
 - Food continuity changes slightly across models.
-- One T2V bean job fell back to I2V in NEW B.
+- NEW C intentionally reuses selected NEW A/NEW B sources; use NEW A versus NEW B for route contrast.
 - Exact job IDs and response costs for some recovered clips were lost when the runner stopped on the credit limit.
 - The recipe remains label-estimated and was not physically tested.
 

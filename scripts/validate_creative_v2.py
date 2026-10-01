@@ -146,19 +146,22 @@ def main() -> int:
     if final_manifest.get('candidateCount') != 3 or len(final_manifest.get('candidates', [])) != 3:
         print('FAIL final media manifest must contain exactly three candidates', file=sys.stderr)
         return 1
+    if final_manifest.get('experiment', {}).get('issueTargetDurationSeconds') != [8, 15]:
+        print('FAIL final media manifest does not encode the Issue #10 8-15s duration band', file=sys.stderr)
+        return 1
     provenance = json.loads((ROOT / 'brands/gutkitchen/creative-engine-v2/openrouter-run/provenance/generations.json').read_text())
     provenance_by_route = {item['route']: item for item in provenance}
     for candidate in final_manifest['candidates']:
         path = out / 'final-media' / f"{candidate['id']}.mp4"
         width, height, duration, has_audio = probe_video(path)
-        if (width, height) != (1080, 1920) or abs(duration - 8.1) > 0.1 or not has_audio:
+        if (width, height) != (1080, 1920) or not (8.0 <= duration <= 15.0) or not has_audio:
             print(f'FAIL final media mismatch for {path.name}: {width}x{height} {duration:.3f}s audio={has_audio}', file=sys.stderr)
             return 1
         if motion_delta(path) < 2.0:
             print(f'FAIL final media lacks measurable action motion: {path.name}', file=sys.stderr)
             return 1
         for shot in candidate['shots']:
-            if shot.get('executionStatus') != 'executed-provider' or not shot.get('model'):
+            if shot.get('executionStatus') != 'executed-provider' or not shot.get('model') or shot.get('fallback'):
                 print(f"FAIL unfinished shot route {candidate['id']}/{shot['id']}", file=sys.stderr)
                 return 1
             record = provenance_by_route.get(shot['recordRoute'])
@@ -166,6 +169,22 @@ def main() -> int:
             if not record or not source.is_file() or record.get('output_sha256') != sha256_file(source):
                 print(f"FAIL provenance mismatch {candidate['id']}/{shot['id']}", file=sys.stderr)
                 return 1
+        composition = candidate.get('qa', {}).get('routeComposition', {})
+        expected = {
+            'new-a': {'i2v': 6, 't2v': 0, 'fallback': 0},
+            'new-b': {'i2v': 0, 't2v': 6, 'fallback': 0},
+            'new-c': {'i2v': 3, 't2v': 3, 'fallback': 0},
+        }[candidate['id']]
+        if composition != expected:
+            print(f"FAIL route composition {candidate['id']}: {composition} != {expected}", file=sys.stderr)
+            return 1
+    if final_manifest.get('candidateOverlap', {}).get('new-a:new-b'):
+        print('FAIL NEW A and NEW B share route sources', file=sys.stderr)
+        return 1
+    review_data = (out / 'final-media/review-data.json').read_text()
+    if 'tiktok.com' in review_data or 'sourceUrl' in review_data:
+        print('FAIL operator-facing review data exposes third-party source URLs', file=sys.stderr)
+        return 1
     run_summary = json.loads((ROOT / 'brands/gutkitchen/creative-engine-v2/openrouter-run/run-summary.json').read_text())
     if not run_summary.get('openRouterOnly') or run_summary.get('referenceFramesCommitted') is not False:
         print('FAIL run summary is not OpenRouter-only or commits third-party frames', file=sys.stderr)

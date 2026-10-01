@@ -6,7 +6,7 @@
     ],
     "screenshotPixels": [
       2850,
-      14144
+      14120
     ],
     "overflow": false,
     "cards": 5
@@ -18,7 +18,7 @@
     ],
     "screenshotPixels": [
       750,
-      15122
+      15121
     ],
     "overflow": false,
     "cards": 5,
@@ -74,7 +74,25 @@
     "restartAll": true,
     "playAllMuted": true
   },
+  "thirdPartySourceLinks": 0,
   "console": [],
   "creativeEngineV2": "pass",
-  "plannedCriticalRoutes": 0
+  "plannedCriticalRoutes": 0,
+  "routeComposition": {
+    "new-a": {
+      "i2v": 6,
+      "t2v": 0,
+      "fallback": 0
+    },
+    "new-b": {
+      "i2v": 0,
+      "t2v": 6,
+      "fallback": 0
+    },
+    "new-c": {
+      "i2v": 3,
+      "t2v": 3,
+      "fallback": 0
+    }
+  }
 }

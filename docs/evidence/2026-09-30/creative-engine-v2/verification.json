@@ -1,7 +1,7 @@
 {
-  "schemaVersion": "2.0.0",
-  "generatedAtUtc": "2026-09-30T22:04:20.086502Z",
-  "clockSource": "execution host date -u; Codex client context date 2026-09-30",
+  "schemaVersion": "2.1.0",
+  "generatedAtUtc": "2026-09-30T23:57:50.043640Z",
+  "clockSource": "execution host date -u; Codex client context date 2026-10-01",
   "issue": "Rajeev-SG/social-influence#10",
   "commands": [
     "python3 -m unittest discover -s tests -v",
@@ -9,7 +9,7 @@
     "python3 scripts/validate_creative_v2.py"
   ],
   "unitTests": {
-    "count": 37,
+    "count": 40,
     "status": "pass"
   },
   "validators": {
@@ -27,22 +27,45 @@
       "minimax/hailuo-3",
       "alibaba/wan-3.0"
     ],
-    "exactCostUsdWhereReported": 0.498473,
+    "exactCostUsdWhereReported": 0.708848,
     "estimatedRecoveredVideoCostUsd": 2.2,
-    "combinedEstimateUsd": 2.698473,
-    "failureBoundary": "one planned t2v/beans-pan response was not recovered after 402 Insufficient credits; completed outputs were preserved and resumed"
+    "combinedEstimateUsd": 2.908848,
+    "failureBoundary": "initial 402 preserved 13 completed clips; the missing t2v/beans-pan job later completed and its ID was persisted at submission; earlier recovered clips retain hashes/model-level estimates when exact response IDs were unavailable",
+    "submissionLedger": "brands/gutkitchen/creative-engine-v2/openrouter-run/provenance/submissions.jsonl"
   },
   "referenceFrames": {
     "count": 9,
     "committed": false,
-    "consumedByMultimodalModel": "openai/gpt-5.6-sol"
+    "consumedByMultimodalModel": "openai/gpt-5.6-sol",
+    "operatorReviewUrls": "opaque IDs only"
   },
   "finalMedia": {
     "candidateCount": 3,
     "durationSeconds": 8.1,
+    "issueTargetDurationSeconds": [
+      8,
+      15
+    ],
     "dimensions": "1080x1920",
     "audio": true,
-    "plannedCriticalRoutes": 0
+    "plannedCriticalRoutes": 0,
+    "routeComposition": {
+      "new-a": {
+        "i2v": 6,
+        "t2v": 0,
+        "fallback": 0
+      },
+      "new-b": {
+        "i2v": 0,
+        "t2v": 6,
+        "fallback": 0
+      },
+      "new-c": {
+        "i2v": 3,
+        "t2v": 3,
+        "fallback": 0
+      }
+    }
   },
   "playwright": {
     "url": "https://gutkitchen-review.localhost:1355/reviews/gutkitchen-creative-v2/index.html",
@@ -53,7 +76,7 @@
       ],
       "screenshotPixels": [
         2850,
-        14144
+        14120
       ],
       "overflow": false,
       "cards": 5
@@ -65,7 +88,7 @@
       ],
       "screenshotPixels": [
         750,
-        15122
+        15121
       ],
       "overflow": false,
       "cards": 5,
@@ -121,6 +144,7 @@
       "restartAll": true,
       "playAllMuted": true
     },
+    "thirdPartySourceLinks": 0,
     "console": []
   },
   "creativeAssessment": {

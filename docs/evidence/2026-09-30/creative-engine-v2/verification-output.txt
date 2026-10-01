@@ -36,10 +36,13 @@ test_reference_library_is_self_contained (test_creative_engine_v2.CreativeEngine
 test_review_page_mentions_baseline_and_all_new_lanes (test_creative_engine_v2.CreativeEngineV2Tests.test_review_page_mentions_baseline_and_all_new_lanes) ... ok
 test_stages_are_explicit_and_three_treatments_exist (test_creative_engine_v2.CreativeEngineV2Tests.test_stages_are_explicit_and_three_treatments_exist) ... ok
 test_generation_records_are_deduplicated_by_route_output_and_start (test_openrouter_media.OpenRouterMediaTests.test_generation_records_are_deduplicated_by_route_output_and_start) ... ok
+test_invalid_success_body_is_not_reported_as_json_error (test_openrouter_media.OpenRouterMediaTests.test_invalid_success_body_is_not_reported_as_json_error) ... ok
+test_non_json_http_error_preserves_status_and_body (test_openrouter_media.OpenRouterMediaTests.test_non_json_http_error_preserves_status_and_body) ... ok
 test_reference_data_urls_are_redacted_from_provenance (test_openrouter_media.OpenRouterMediaTests.test_reference_data_urls_are_redacted_from_provenance) ... ok
+test_video_submission_is_recorded_before_polling_and_resumes_by_job_id (test_openrouter_media.OpenRouterMediaTests.test_video_submission_is_recorded_before_polling_and_resumes_by_job_id) ... ok
 
 ----------------------------------------------------------------------
-Ran 37 tests in 0.126s
+Ran 40 tests in 0.129s
 
 OK
 
@@ -54,7 +57,7 @@ OK Creative Engine v2 artifacts, projections, dates, HTML and finished OpenRoute
 
 $ date -u
 
-Wed Sep 30 22:04:20 UTC 2026
+Wed Sep 30 23:57:50 UTC 2026
 
 $ /opt/homebrew/opt/python@3.14/bin/python3.14 --version
 

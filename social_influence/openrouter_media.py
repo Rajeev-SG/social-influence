@@ -15,12 +15,14 @@ import json
 import mimetypes
 import os
 import time
-from typing import Any, Iterable
+from typing import Any, Callable, Iterable
+from threading import Lock
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 
 DEFAULT_BASE_URL = "https://openrouter.ai/api/v1"
+RECORD_LOCK = Lock()
 
 
 @dataclass
@@ -45,7 +47,12 @@ class GenerationRecord:
 
 
 class OpenRouterMediaError(RuntimeError):
-    """Raised when OpenRouter returns a non-success response."""
+    """Raised when OpenRouter returns an unusable or non-success response."""
+
+    def __init__(self, message: str, *, status_code: int | None = None, body: str | None = None) -> None:
+        super().__init__(message)
+        self.status_code = status_code
+        self.body = body
 
 
 class OpenRouterMediaClient:
@@ -84,10 +91,28 @@ class OpenRouterMediaClient:
         try:
             with urlopen(request, timeout=timeout or self.timeout) as response:
                 content = response.read()
-                return content if raw else json.loads(content.decode("utf-8"))
+                if raw:
+                    return content
+                text = content.decode("utf-8", errors="replace")
+                try:
+                    return json.loads(text)
+                except json.JSONDecodeError as exc:
+                    raise OpenRouterMediaError(
+                        f"{method} {url} returned non-JSON success body",
+                        status_code=getattr(response, "status", None),
+                        body=text,
+                    ) from exc
         except HTTPError as exc:
-            detail = exc.read().decode("utf-8", errors="replace")
-            raise OpenRouterMediaError(f"{method} {url} failed ({exc.code}): {detail}") from exc
+            body = exc.read().decode("utf-8", errors="replace")
+            try:
+                detail = json.loads(body).get("error", {}).get("message", body)
+            except json.JSONDecodeError:
+                detail = body or exc.reason
+            raise OpenRouterMediaError(
+                f"{method} {url} failed ({exc.code}): {detail}",
+                status_code=exc.code,
+                body=body,
+            ) from exc
         except URLError as exc:
             raise OpenRouterMediaError(f"{method} {url} failed: {exc}") from exc
 
@@ -256,6 +281,7 @@ class OpenRouterMediaClient:
         input_references: Iterable[str | Path] = (),
         params: dict[str, Any] | None = None,
         poll_seconds: int = 30,
+        on_submit: Callable[[dict[str, Any]], None] | None = None,
     ) -> GenerationRecord:
         """Submit, poll and download one asynchronous OpenRouter video job."""
         output_path = Path(output_path)
@@ -287,6 +313,17 @@ class OpenRouterMediaClient:
         if not job_id:
             raise OpenRouterMediaError(f"video response for {model} contained no job id")
         attempts.append({"attempt": 1, "status": "submitted", "job_id": job_id})
+        if on_submit:
+            on_submit(
+                {
+                    "route": route,
+                    "model": model,
+                    "job_id": job_id,
+                    "polling_url": polling_url,
+                    "submitted_at": started,
+                    "request": self._redacted_request(payload, frames + refs),
+                }
+            )
         status = submitted.get("status", "pending")
         poll_count = 0
         while status not in {"completed", "failed", "cancelled", "expired"}:
@@ -319,26 +356,85 @@ class OpenRouterMediaClient:
             attempts=attempts,
         )
 
+    def complete_video_job(
+        self,
+        *,
+        route: str,
+        model: str,
+        prompt: str,
+        job_id: str,
+        output_path: str | Path,
+        request: dict[str, Any] | None = None,
+        input_references: Iterable[str | Path] = (),
+        poll_seconds: int = 30,
+    ) -> GenerationRecord:
+        """Resume a submitted video job from its persisted ID without re-billing."""
+        output_path = Path(output_path)
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        refs = [Path(item) for item in input_references]
+        started = self._utc_now()
+        before = time.monotonic()
+        attempts = [{"attempt": 1, "status": "resumed", "job_id": job_id}]
+        polling_url = f"{self.base_url}/videos/{job_id}"
+        status = "pending"
+        poll_count = 0
+        while status not in {"completed", "failed", "cancelled", "expired"}:
+            if poll_count:
+                time.sleep(poll_seconds)
+            polled = self._request("GET", polling_url)
+            status = polled.get("status", status)
+            poll_count += 1
+            attempts.append({"attempt": poll_count + 1, "status": status, "job_id": job_id})
+        if status != "completed":
+            raise OpenRouterMediaError(f"video job {job_id} ended {status}: {polled.get('error')}")
+        content = self._request("GET", f"/videos/{job_id}/content?index=0", raw=True, timeout=self.timeout)
+        output_path.write_bytes(content)
+        return GenerationRecord(
+            route=route,
+            model=model,
+            prompt=prompt,
+            request=request or {},
+            input_references=[self.file_record(path) for path in refs],
+            output_path=str(output_path),
+            output_sha256=sha256(output_path.read_bytes()).hexdigest(),
+            started_at=started,
+            completed_at=self._utc_now(),
+            elapsed_seconds=time.monotonic() - before,
+            job_id=job_id,
+            generation_id=polled.get("generation_id"),
+            provider=polled.get("provider"),
+            usage=polled.get("usage"),
+            attempts=attempts,
+        )
+
 
 def write_records(records: Iterable[GenerationRecord], path: str | Path) -> None:
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
-    existing: list[dict[str, Any]] = []
-    if path.exists():
-        existing = json.loads(path.read_text())
-    seen = {
-        (item.get("route"), item.get("output_path"), item.get("started_at"))
-        for item in existing
-    }
-    for record in records:
-        item = asdict(record)
-        key = (item["route"], item["output_path"], item["started_at"])
-        if key not in seen:
-            existing.append(item)
-            seen.add(key)
-    path.write_text(json.dumps(existing, indent=2) + "\n")
+    with RECORD_LOCK:
+        existing: list[dict[str, Any]] = []
+        if path.exists():
+            existing = json.loads(path.read_text())
+        seen = {
+            (item.get("route"), item.get("output_path"), item.get("started_at"))
+            for item in existing
+        }
+        for record in records:
+            item = asdict(record)
+            key = (item["route"], item["output_path"], item["started_at"])
+            if key not in seen:
+                existing.append(item)
+                seen.add(key)
+        temp = path.with_suffix(path.suffix + ".tmp")
+        temp.write_text(json.dumps(existing, indent=2) + "\n")
+        os.replace(temp, path)
 
 
 def load_records(path: str | Path) -> list[dict[str, Any]]:
     path = Path(path)
-    return json.loads(path.read_text()) if path.exists() else []
+    if not path.exists():
+        return []
+    try:
+        return json.loads(path.read_text())
+    except json.JSONDecodeError as exc:
+        raise OpenRouterMediaError(f"invalid provenance ledger: {path}", body=path.read_text()) from exc

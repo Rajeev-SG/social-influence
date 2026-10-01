@@ -97,6 +97,22 @@ def save_gzip_json(path: Path, value: object) -> None:
         json.dump(value, handle, indent=2)
 
 
+def append_submission(submission: dict) -> None:
+    path = RUN_DIR / "provenance/submissions.jsonl"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with RECORD_LOCK:
+        with path.open("a", encoding="utf-8") as handle:
+            handle.write(json.dumps(submission, separators=(",", ":")) + "\n")
+
+
+def submissions_for_route(route: str) -> list[dict]:
+    path = RUN_DIR / "provenance/submissions.jsonl"
+    if not path.exists():
+        return []
+    submissions = [json.loads(line) for line in path.read_text().splitlines() if line.strip()]
+    return [item for item in submissions if item.get("route") == route]
+
+
 def cached_record(route: str, output_path: Path) -> GenerationRecord | None:
     for item in load_records(RUN_DIR / "provenance/generations.json"):
         if item.get("route") == route and Path(item.get("output_path", "")) == output_path:
@@ -241,13 +257,15 @@ def main() -> int:
         params = {"aspect_ratio": "9:16", "quality": "high"}
         if "seed" in (model.get("supported_parameters") or {}):
             params["seed"] = 900 + len(image_records)
-        return client.generate_image(
+        record = client.generate_image(
             route=route,
             model=model_id,
             prompt=image_spec["prompt"],
             output_path=output,
             params=params,
         )
+        write_records([record], RUN_DIR / "provenance/generations.json")
+        return record
 
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
         futures = [pool.submit(generate_image_job, spec, plan["models"]["imagePrimary"]) for spec in plan["imagePrompts"]]
@@ -287,11 +305,26 @@ def main() -> int:
         frame = keyframes.get(keyframe) if keyframe else None
         if output.exists() and output.stat().st_size:
             recovered = recovered_video_record(route, job, model, frame, output, params)
-            with RECORD_LOCK:
-                write_records([recovered], RUN_DIR / "provenance/generations.json")
+            write_records([recovered], RUN_DIR / "provenance/generations.json")
             print(f"RECOVER {route}: {output.name}")
             return recovered
-        return client.submit_video(
+        previous = submissions_for_route(route)
+        if previous:
+            submission = previous[-1]
+            record = client.complete_video_job(
+                route=route,
+                model=model_id,
+                prompt=job["prompt"],
+                job_id=submission["job_id"],
+                output_path=output,
+                request=submission.get("request"),
+                input_references=[frame] if frame else [],
+                poll_seconds=20,
+            )
+            write_records([record], RUN_DIR / "provenance/generations.json")
+            print(f"RESUME {route}: {submission['job_id']}")
+            return record
+        record = client.submit_video(
             route=route,
             model=model_id,
             prompt=job["prompt"],
@@ -299,7 +332,10 @@ def main() -> int:
             frame_images=[frame] if frame else [],
             params=params,
             poll_seconds=20,
+            on_submit=append_submission,
         )
+        write_records([record], RUN_DIR / "provenance/generations.json")
+        return record
 
     video_records: list[GenerationRecord] = []
     failures: list[dict] = []
@@ -309,7 +345,13 @@ def main() -> int:
             try:
                 record = future.result()
             except Exception as exc:  # keep completed work and report exact gaps
-                failures.append({"error": str(exc)})
+                failures.append(
+                    {
+                        "error": str(exc),
+                        "status_code": getattr(exc, "status_code", None),
+                        "body": getattr(exc, "body", None),
+                    }
+                )
                 print(f"FAIL video job: {exc}", file=sys.stderr)
                 continue
             video_records.append(record)

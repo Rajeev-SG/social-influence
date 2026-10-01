@@ -1,7 +1,33 @@
 {
-  "generatedAtUtc": "2026-09-30T19:41:18.901303+00:00",
+  "generatedAtUtc": "2026-09-30T23:34:07.346858+00:00",
   "briefId": "gutkitchen-pizza-bean-bowl-v2",
   "openRouterOnly": true,
+  "experiment": {
+    "issueTargetDurationSeconds": [
+      8,
+      15
+    ],
+    "comparisonScale": "OLD and STORYBOARD are 30s+ creative-grammar references; NEW A/B/C are the requested 8-15s route experiments and are not duration-matched replacements.",
+    "routeRoles": {
+      "new-a": "I2V-heavy route-controlled comparison",
+      "new-b": "T2V-heavy route-weighted comparison; at least five direct T2V shots required",
+      "new-c": "hybrid best-source-per-shot selection; intentional source reuse"
+    },
+    "overlapPolicy": "NEW C may reuse A/B sources by design. NEW A and NEW B must remain route-distinct except for any explicitly recorded fallback."
+  },
+  "candidateOverlap": {
+    "new-a:new-b": [],
+    "new-a:new-c": [
+      "i2v/cheese-melt",
+      "i2v/hero-spoon-alt",
+      "i2v/sauce-spinach"
+    ],
+    "new-b:new-c": [
+      "t2v/beans-pan",
+      "t2v/final-payoff",
+      "t2v/simmer"
+    ]
+  },
   "candidateCount": 3,
   "plannedCriticalRoutes": 0,
   "candidates": [
@@ -9,6 +35,7 @@
       "id": "new-a",
       "label": "NEW A - I2V",
       "route": "i2v-heavy",
+      "routeRole": "route-controlled I2V-heavy comparison",
       "video": "../../brands/gutkitchen/creative-engine-v2/candidates/final-media/new-a.mp4",
       "firstFrame": "../../brands/gutkitchen/creative-engine-v2/candidates/final-media/new-a-first-frame.png",
       "filmstrip": "../../brands/gutkitchen/creative-engine-v2/candidates/final-media/new-a-filmstrip.jpg",
@@ -33,7 +60,9 @@
             "caption": "THE SPOON TEST",
             "quantity": "one bowl | label-based estimate"
           },
-          "selectionReason": "strong cheese pull and clean spoon continuity"
+          "selectionScore": 0.92,
+          "selectionReason": "manual visual score 0.92/1.0 for motion clarity, appetite and continuity; selected over recorded alternative",
+          "fallback": false
         },
         {
           "id": "beans-pan",
@@ -49,7 +78,9 @@
             "caption": "BEANS IN",
             "quantity": "235g drained cannellini beans"
           },
-          "selectionReason": "strongest available generated action source for this shot"
+          "selectionScore": 0.9,
+          "selectionReason": "manual visual score 0.90/1.0 for motion clarity, appetite and continuity",
+          "fallback": false
         },
         {
           "id": "sauce-spinach",
@@ -65,7 +96,9 @@
             "caption": "PASSATA + SPINACH",
             "quantity": "150g passata | 50g spinach"
           },
-          "selectionReason": "strongest available generated action source for this shot"
+          "selectionScore": 0.88,
+          "selectionReason": "manual visual score 0.88/1.0 for motion clarity, appetite and continuity",
+          "fallback": false
         },
         {
           "id": "simmer",
@@ -81,7 +114,9 @@
             "caption": "SIMMER THE BUILD",
             "quantity": "one pan | four supermarket ingredients"
           },
-          "selectionReason": "strongest available generated action source for this shot"
+          "selectionScore": 0.87,
+          "selectionReason": "manual visual score 0.87/1.0 for motion clarity, appetite and continuity",
+          "fallback": false
         },
         {
           "id": "cheese-melt",
@@ -97,7 +132,9 @@
             "caption": "CHEESE MELT",
             "quantity": "100g lighter mozzarella"
           },
-          "selectionReason": "strongest available generated action source for this shot"
+          "selectionScore": 0.91,
+          "selectionReason": "manual visual score 0.91/1.0 for motion clarity, appetite and continuity; selected over recorded alternative",
+          "fallback": false
         },
         {
           "id": "final-payoff",
@@ -113,44 +150,17 @@
             "caption": "SPOON PAYOFF",
             "quantity": "~40g protein | 15g+ fibre per bowl"
           },
-          "selectionReason": "strongest available generated action source for this shot"
+          "selectionScore": 0.9,
+          "selectionReason": "manual visual score 0.90/1.0 for motion clarity, appetite and continuity",
+          "fallback": false
         }
       ],
-      "references": [
-        {
-          "id": "ref-05-action",
-          "sourceUrl": "https://www.tiktok.com/@hunt4shredz/video/7518805084499627277",
-          "capture": "first/middle/action frames",
-          "retention": "ephemeral-not-committed",
-          "influences": [
-            "0.6-1.6s action cadence",
-            "ingredient weights",
-            "finished-food payoff"
-          ]
-        },
-        {
-          "id": "ref-09-action",
-          "sourceUrl": "https://www.tiktok.com/@dr.rachelpaul/video/7354927176044514603",
-          "capture": "first/middle/action frames",
-          "retention": "ephemeral-not-committed",
-          "influences": [
-            "fibre-first information hierarchy",
-            "compact nutrition panel",
-            "direct save framing"
-          ]
-        },
-        {
-          "id": "ref-12-action",
-          "sourceUrl": "https://www.tiktok.com/@makayla_thomas_fit/video/7661734178211302686",
-          "capture": "first/middle/action frames",
-          "retention": "ephemeral-not-committed",
-          "influences": [
-            "macro-led first frame",
-            "meal-prep utility",
-            "simple call-to-action"
-          ]
-        }
+      "referenceIds": [
+        "ref-05-action",
+        "ref-09-action",
+        "ref-12-action"
       ],
+      "referencePolicy": "internal analysis only; source URLs and frame hashes remain in openrouter-run/reference-inputs.json; no reference media is embedded or reproduced",
       "selectedSourceCostUsd": 0.6975,
       "costBasis": "exact where the API reported usage; model pricing estimate for recovered video responses",
       "qa": {
@@ -159,13 +169,22 @@
         "aspectRatio": "1080x1920",
         "audio": "VO + deterministic kitchen texture",
         "motion": "all selected shots are generated video clips; no zoompan still route used",
-        "plannedCriticalRoutes": 0
+        "plannedCriticalRoutes": 0,
+        "durationTargetSeconds": [
+          8,
+          15
+        ],
+        "routeComposition": {
+          "i2v": 6,
+          "t2v": 0,
+          "fallback": 0
+        }
       },
       "knownWeaknesses": [
         "Generated food continuity varies slightly between source models.",
         "Some OpenRouter video response IDs and exact costs were lost when the first runner hit the credit limit; hashes and model-level estimates are retained."
       ],
-      "sha256": "712fcabf426b6f497a8f13cd276a5249bb221ecf850b07a97a937642d7cf8506",
+      "sha256": "328415241bb038ffd535e4fc9a34bc8050d3a1f223f46edb6e9e8364d9a34701",
       "status": "FINAL MEDIA | GENERATED ACTION",
       "treatment": "I2V-heavy: generated keyframes animated into ingredient, simmer, melt and spoon action."
     },
@@ -173,6 +192,7 @@
       "id": "new-b",
       "label": "NEW B - T2V",
       "route": "t2v-heavy",
+      "routeRole": "route-weighted T2V-heavy comparison",
       "video": "../../brands/gutkitchen/creative-engine-v2/candidates/final-media/new-b.mp4",
       "firstFrame": "../../brands/gutkitchen/creative-engine-v2/candidates/final-media/new-b-first-frame.png",
       "filmstrip": "../../brands/gutkitchen/creative-engine-v2/candidates/final-media/new-b-filmstrip.jpg",
@@ -180,8 +200,7 @@
       "modelsUsed": [
         "alibaba/wan-3.0",
         "bytedance/seedance-2.5",
-        "minimax/hailuo-3",
-        "minimax/hailuo-3-max"
+        "minimax/hailuo-3"
       ],
       "shots": [
         {
@@ -198,15 +217,17 @@
             "caption": "THE SPOON TEST",
             "quantity": "one bowl | label-based estimate"
           },
-          "selectionReason": "strongest available generated action source for this shot"
+          "selectionScore": 0.92,
+          "selectionReason": "manual visual score 0.92/1.0 for motion clarity, appetite and continuity; selected over recorded alternative",
+          "fallback": false
         },
         {
           "id": "beans-pan",
-          "route": "i2v-generated",
+          "route": "t2v-generated",
           "executionStatus": "executed-provider",
-          "model": "minimax/hailuo-3-max",
-          "recordRoute": "i2v/beans-pan",
-          "sourceFile": "brands/gutkitchen/creative-engine-v2/openrouter-run/videos/i2v/beans-pan.mp4",
+          "model": "alibaba/wan-3.0",
+          "recordRoute": "t2v/beans-pan",
+          "sourceFile": "brands/gutkitchen/creative-engine-v2/openrouter-run/videos/t2v/beans-pan.mp4",
           "outputStartSeconds": 1.5,
           "duration": 1.2,
           "copy": {
@@ -214,7 +235,9 @@
             "caption": "BEANS IN",
             "quantity": "235g drained cannellini beans"
           },
-          "selectionReason": "strongest available generated action source for this shot"
+          "selectionScore": 0.9,
+          "selectionReason": "manual visual score 0.90/1.0 for motion clarity, appetite and continuity",
+          "fallback": false
         },
         {
           "id": "sauce-spinach",
@@ -230,7 +253,9 @@
             "caption": "PASSATA + SPINACH",
             "quantity": "150g passata | 50g spinach"
           },
-          "selectionReason": "strongest available generated action source for this shot"
+          "selectionScore": 0.88,
+          "selectionReason": "manual visual score 0.88/1.0 for motion clarity, appetite and continuity",
+          "fallback": false
         },
         {
           "id": "simmer",
@@ -246,7 +271,9 @@
             "caption": "SIMMER THE BUILD",
             "quantity": "one pan | four supermarket ingredients"
           },
-          "selectionReason": "strongest available generated action source for this shot"
+          "selectionScore": 0.87,
+          "selectionReason": "manual visual score 0.87/1.0 for motion clarity, appetite and continuity",
+          "fallback": false
         },
         {
           "id": "cheese-melt",
@@ -262,7 +289,9 @@
             "caption": "CHEESE MELT",
             "quantity": "100g lighter mozzarella"
           },
-          "selectionReason": "strongest available generated action source for this shot"
+          "selectionScore": 0.91,
+          "selectionReason": "manual visual score 0.91/1.0 for motion clarity, appetite and continuity; selected over recorded alternative",
+          "fallback": false
         },
         {
           "id": "final-payoff",
@@ -278,45 +307,18 @@
             "caption": "SPOON PAYOFF",
             "quantity": "~40g protein | 15g+ fibre per bowl"
           },
-          "selectionReason": "strongest available generated action source for this shot"
+          "selectionScore": 0.9,
+          "selectionReason": "manual visual score 0.90/1.0 for motion clarity, appetite and continuity",
+          "fallback": false
         }
       ],
-      "references": [
-        {
-          "id": "ref-05-action",
-          "sourceUrl": "https://www.tiktok.com/@hunt4shredz/video/7518805084499627277",
-          "capture": "first/middle/action frames",
-          "retention": "ephemeral-not-committed",
-          "influences": [
-            "0.6-1.6s action cadence",
-            "ingredient weights",
-            "finished-food payoff"
-          ]
-        },
-        {
-          "id": "ref-09-action",
-          "sourceUrl": "https://www.tiktok.com/@dr.rachelpaul/video/7354927176044514603",
-          "capture": "first/middle/action frames",
-          "retention": "ephemeral-not-committed",
-          "influences": [
-            "fibre-first information hierarchy",
-            "compact nutrition panel",
-            "direct save framing"
-          ]
-        },
-        {
-          "id": "ref-12-action",
-          "sourceUrl": "https://www.tiktok.com/@makayla_thomas_fit/video/7661734178211302686",
-          "capture": "first/middle/action frames",
-          "retention": "ephemeral-not-committed",
-          "influences": [
-            "macro-led first frame",
-            "meal-prep utility",
-            "simple call-to-action"
-          ]
-        }
+      "referenceIds": [
+        "ref-05-action",
+        "ref-09-action",
+        "ref-12-action"
       ],
-      "selectedSourceCostUsd": 1.7475,
+      "referencePolicy": "internal analysis only; source URLs and frame hashes remain in openrouter-run/reference-inputs.json; no reference media is embedded or reproduced",
+      "selectedSourceCostUsd": 1.710375,
       "costBasis": "exact where the API reported usage; model pricing estimate for recovered video responses",
       "qa": {
         "status": "PASS",
@@ -324,20 +326,30 @@
         "aspectRatio": "1080x1920",
         "audio": "VO + deterministic kitchen texture",
         "motion": "all selected shots are generated video clips; no zoompan still route used",
-        "plannedCriticalRoutes": 0
+        "plannedCriticalRoutes": 0,
+        "durationTargetSeconds": [
+          8,
+          15
+        ],
+        "routeComposition": {
+          "i2v": 0,
+          "t2v": 6,
+          "fallback": 0
+        }
       },
       "knownWeaknesses": [
         "Generated food continuity varies slightly between source models.",
-        "t2v/beans-pan was not recovered after the OpenRouter credit limit; the T2V-heavy candidate uses one I2V bean-drop fallback."
+        "Some OpenRouter video response IDs and exact costs were lost when the first runner hit the credit limit; hashes and model-level estimates are retained."
       ],
-      "sha256": "f4eaf70e9ee90e22c1803955563471f45ca81bdf3a375172d195970b52124c01",
+      "sha256": "958f4a00a845704dc472d12bc4231a773012ad633743c446c468ba861405a9dc",
       "status": "FINAL MEDIA | GENERATED ACTION",
-      "treatment": "T2V-heavy: direct generated cooking/action clips, with one documented bean-shot fallback."
+      "treatment": "T2V-heavy: six direct generated cooking/action clips with zero fallback critical routes."
     },
     {
       "id": "new-c",
       "label": "NEW C - HYBRID",
       "route": "hybrid-best-source-per-shot",
+      "routeRole": "hybrid best-source selection; reuse is intentional",
       "video": "../../brands/gutkitchen/creative-engine-v2/candidates/final-media/new-c.mp4",
       "firstFrame": "../../brands/gutkitchen/creative-engine-v2/candidates/final-media/new-c-first-frame.png",
       "filmstrip": "../../brands/gutkitchen/creative-engine-v2/candidates/final-media/new-c-filmstrip.jpg",
@@ -363,15 +375,17 @@
             "caption": "THE SPOON TEST",
             "quantity": "one bowl | label-based estimate"
           },
-          "selectionReason": "strong cheese pull and clean spoon continuity"
+          "selectionScore": 0.92,
+          "selectionReason": "manual visual score 0.92/1.0 for motion clarity, appetite and continuity; selected over recorded alternative",
+          "fallback": false
         },
         {
           "id": "beans-pan",
-          "route": "i2v-generated",
+          "route": "t2v-generated",
           "executionStatus": "executed-provider",
-          "model": "minimax/hailuo-3-max",
-          "recordRoute": "i2v/beans-pan",
-          "sourceFile": "brands/gutkitchen/creative-engine-v2/openrouter-run/videos/i2v/beans-pan.mp4",
+          "model": "alibaba/wan-3.0",
+          "recordRoute": "t2v/beans-pan",
+          "sourceFile": "brands/gutkitchen/creative-engine-v2/openrouter-run/videos/t2v/beans-pan.mp4",
           "outputStartSeconds": 1.5,
           "duration": 1.2,
           "copy": {
@@ -379,7 +393,9 @@
             "caption": "BEANS IN",
             "quantity": "235g drained cannellini beans"
           },
-          "selectionReason": "strongest available generated action source for this shot"
+          "selectionScore": 0.9,
+          "selectionReason": "manual visual score 0.90/1.0 for motion clarity, appetite and continuity",
+          "fallback": false
         },
         {
           "id": "sauce-spinach",
@@ -395,7 +411,9 @@
             "caption": "PASSATA + SPINACH",
             "quantity": "150g passata | 50g spinach"
           },
-          "selectionReason": "strongest available generated action source for this shot"
+          "selectionScore": 0.88,
+          "selectionReason": "manual visual score 0.88/1.0 for motion clarity, appetite and continuity",
+          "fallback": false
         },
         {
           "id": "simmer",
@@ -411,7 +429,9 @@
             "caption": "SIMMER THE BUILD",
             "quantity": "one pan | four supermarket ingredients"
           },
-          "selectionReason": "strongest available generated action source for this shot"
+          "selectionScore": 0.87,
+          "selectionReason": "manual visual score 0.87/1.0 for motion clarity, appetite and continuity",
+          "fallback": false
         },
         {
           "id": "cheese-melt",
@@ -427,7 +447,9 @@
             "caption": "CHEESE MELT",
             "quantity": "100g lighter mozzarella"
           },
-          "selectionReason": "strongest available generated action source for this shot"
+          "selectionScore": 0.91,
+          "selectionReason": "manual visual score 0.91/1.0 for motion clarity, appetite and continuity; selected over recorded alternative",
+          "fallback": false
         },
         {
           "id": "final-payoff",
@@ -443,45 +465,18 @@
             "caption": "SPOON PAYOFF",
             "quantity": "~40g protein | 15g+ fibre per bowl"
           },
-          "selectionReason": "strongest available generated action source for this shot"
+          "selectionScore": 0.9,
+          "selectionReason": "manual visual score 0.90/1.0 for motion clarity, appetite and continuity",
+          "fallback": false
         }
       ],
-      "references": [
-        {
-          "id": "ref-05-action",
-          "sourceUrl": "https://www.tiktok.com/@hunt4shredz/video/7518805084499627277",
-          "capture": "first/middle/action frames",
-          "retention": "ephemeral-not-committed",
-          "influences": [
-            "0.6-1.6s action cadence",
-            "ingredient weights",
-            "finished-food payoff"
-          ]
-        },
-        {
-          "id": "ref-09-action",
-          "sourceUrl": "https://www.tiktok.com/@dr.rachelpaul/video/7354927176044514603",
-          "capture": "first/middle/action frames",
-          "retention": "ephemeral-not-committed",
-          "influences": [
-            "fibre-first information hierarchy",
-            "compact nutrition panel",
-            "direct save framing"
-          ]
-        },
-        {
-          "id": "ref-12-action",
-          "sourceUrl": "https://www.tiktok.com/@makayla_thomas_fit/video/7661734178211302686",
-          "capture": "first/middle/action frames",
-          "retention": "ephemeral-not-committed",
-          "influences": [
-            "macro-led first frame",
-            "meal-prep utility",
-            "simple call-to-action"
-          ]
-        }
+      "referenceIds": [
+        "ref-05-action",
+        "ref-09-action",
+        "ref-12-action"
       ],
-      "selectedSourceCostUsd": 1.3475,
+      "referencePolicy": "internal analysis only; source URLs and frame hashes remain in openrouter-run/reference-inputs.json; no reference media is embedded or reproduced",
+      "selectedSourceCostUsd": 1.310375,
       "costBasis": "exact where the API reported usage; model pricing estimate for recovered video responses",
       "qa": {
         "status": "PASS",
@@ -489,19 +484,28 @@
         "aspectRatio": "1080x1920",
         "audio": "VO + deterministic kitchen texture",
         "motion": "all selected shots are generated video clips; no zoompan still route used",
-        "plannedCriticalRoutes": 0
+        "plannedCriticalRoutes": 0,
+        "durationTargetSeconds": [
+          8,
+          15
+        ],
+        "routeComposition": {
+          "i2v": 3,
+          "t2v": 3,
+          "fallback": 0
+        }
       },
       "knownWeaknesses": [
         "Generated food continuity varies slightly between source models.",
-        "Some OpenRouter video response IDs and exact costs were lost when the first runner hit the credit limit; hashes and model-level estimates are retained."
+        "NEW C intentionally reuses selected A/B sources; use NEW A versus NEW B for the route-controlled contrast."
       ],
-      "sha256": "7e5fd00e41281d700d4377228c2cf066ee35801bc23602c63205c2fa2e8d2b24",
+      "sha256": "69952807f1c049c5b7f5d8ec77824066edcd11cd17574e9ec63bd40de8c50e16",
       "status": "FINAL MEDIA | GENERATED ACTION",
       "treatment": "Hybrid: best available source route per shot, prioritising visual quality over route purity."
     }
   ],
   "runSummary": {
-    "generatedAtUtc": "2026-09-30T19:41:18.901303+00:00",
+    "generatedAtUtc": "2026-09-30T23:34:07.346858+00:00",
     "briefId": "gutkitchen-pizza-bean-bowl-v2",
     "openRouterOnly": true,
     "creativeDirectionModel": "openai/gpt-5.6-sol",
@@ -515,18 +519,14 @@
       "minimax/hailuo-3",
       "minimax/hailuo-3-max"
     ],
-    "generationCount": 21,
+    "generationCount": 22,
     "imageCount": 7,
-    "videoCount": 13,
+    "videoCount": 14,
     "referenceFrameCount": 9,
     "referenceFramesCommitted": false,
-    "totalCostUsdWhereReported": 0.498473,
+    "totalCostUsdWhereReported": 0.708848,
     "estimatedVideoCostUsd": 2.2,
-    "failures": [
-      {
-        "error": "Expecting value: line 1 column 1 (char 0)"
-      }
-    ],
+    "failures": [],
     "artDirectionOutput": "creative-direction.json",
     "provenance": "provenance/generations.json"
   }

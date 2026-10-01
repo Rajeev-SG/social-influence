@@ -51,8 +51,8 @@ The captures are ephemeral and not committed. `openrouter-run/reference-inputs.j
 ## Candidate routes
 
 - **NEW A — I2V:** generated food keyframes were animated with OpenRouter image-to-video models. The selected shots contain spoon/cheese pull, bean drop, passata/spinach action, simmer, melt and final spoon payoff.
-- **NEW B — T2V:** five selected shots are direct OpenRouter text-to-video actions. `t2v/beans-pan` hit the account credit limit before its response was recovered, so this T2V-heavy candidate documents one I2V bean-drop fallback.
-- **NEW C — HYBRID:** the strongest available source is selected per shot. It mixes I2V and T2V without using zoompan stills for an acceptance-critical action shot.
+- **NEW B — T2V:** all six selected shots are direct OpenRouter text-to-video actions. The missing bean job was generated successfully on retry and its submission ID is retained in `provenance/submissions.jsonl`.
+- **NEW C — HYBRID:** the strongest available source is selected per shot. It intentionally mixes I2V and T2V without using zoompan stills for an acceptance-critical action shot.
 
 Every acceptance-critical final shot is `executed-provider`; `plannedCriticalRoutes` is zero in `candidates/final-media/final-media-manifest.json`.
 
@@ -70,11 +70,11 @@ Typography and factual overlays are not generated inside image/video models.
 
 ## Cost and recovery
 
-- exact OpenRouter usage reported in retained records: **$0.498473**
+- exact OpenRouter usage reported in retained records: **$0.708848**
 - model-pricing estimate for recovered video responses: **$2.20**
-- combined working estimate: **$2.70**
+- combined working estimate: **$2.91**
 
-The first runner downloaded 13 of 16 planned video outputs before OpenRouter returned `402 Insufficient credits`. The runner was changed to preserve existing output hashes and fail soft. Some recovered clips retain model/route/hash and model-level cost estimates but not their original job IDs or exact response costs. This limitation is recorded in the run summary and each affected candidate.
+The first runner downloaded 13 of 16 planned video outputs before OpenRouter returned `402 Insufficient credits`. The runner now preserves existing output hashes, records the job ID at submission, resumes stored job IDs and decodes non-JSON error bodies safely. The missing `t2v/beans-pan` job was generated on retry. Some earlier recovered clips retain model/route/hash and model-level cost estimates but not their original job IDs or exact response costs; this limitation is recorded in the run summary and each affected candidate.
 
 ## Creative assessment
 
@@ -83,7 +83,7 @@ The first runner downloaded 13 of 16 planned video outputs before OpenRouter ret
 Remaining weaknesses:
 
 - model-to-model food continuity changes slightly across cuts;
-- one T2V bean job was replaced by an I2V fallback in NEW B;
+- NEW C intentionally reuses selected NEW A/NEW B sources; use NEW A versus NEW B for the route-controlled contrast;
 - exact job IDs/costs for some recovered clips are unavailable after the credit-limit exception;
 - the recipe remains label-estimated and is not documentation of a physically tested cook.
 
