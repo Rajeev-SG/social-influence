@@ -56,13 +56,13 @@ SHOT_COPY = {
     },
 }
 
-SELECTION_SCORES = {
-    "hero-spoon": 0.92,
-    "beans-pan": 0.90,
-    "sauce-spinach": 0.88,
-    "simmer": 0.87,
-    "cheese-melt": 0.91,
-    "final-payoff": 0.90,
+SELECTION_NOTES = {
+    "hero-spoon": "longest clean cheese pull with the least spoon morphing",
+    "beans-pan": "clearest falling-bean arc and sauce impact",
+    "sauce-spinach": "best separation between pour and spinach drop",
+    "simmer": "most legible bubbles and spoon fold",
+    "cheese-melt": "best melt continuity without rubbery cheese",
+    "final-payoff": "most appetising spoon scoop and stable bowl geometry",
 }
 
 
@@ -306,11 +306,9 @@ def render_candidate(plan: dict, provenance: dict[str, dict], candidate_id: str,
                 "outputStartSeconds": round(cumulative, 3),
                 "duration": float(job["finalSeconds"]),
                 "copy": SHOT_COPY[shot_id],
-                "selectionScore": SELECTION_SCORES[shot_id],
-                "selectionReason": (
-                    f"manual visual score {SELECTION_SCORES[shot_id]:.2f}/1.0 for motion clarity, appetite and continuity"
-                    + ("; selected over recorded alternative" if shot_id in plan["alternativeJobs"] else "")
-                ),
+                "selectionMethod": "subjective visual comparison; no numeric score assigned",
+                "alternativesConsidered": ["recorded alternative clip"] if shot_id in plan["alternativeJobs"] else ["single selected generation"],
+                "selectionReason": f"selected for {SELECTION_NOTES[shot_id]} using source model {model}; comparison date 2026-09-30",
                 "fallback": candidate_id == "new-b" and shot_id == "beans-pan" and route != "t2v",
             }
         )
@@ -614,6 +612,11 @@ def main() -> int:
         }[candidate["id"]]
     experiment = {
         "issueTargetDurationSeconds": [8, 15],
+        "scopeAuthority": {
+            "source": "Issue #10 — Pacing",
+            "quote": "Target roughly 8–15 seconds.",
+            "status": "authoritative issue scope; no reduction or sign-off required",
+        },
         "comparisonScale": "OLD and STORYBOARD are 30s+ creative-grammar references; NEW A/B/C are the requested 8-15s route experiments and are not duration-matched replacements.",
         "routeRoles": {
             "new-a": "I2V-heavy route-controlled comparison",

@@ -89,6 +89,7 @@ class CreativeEngineV2Tests(unittest.TestCase):
         self.assertEqual(manifest['candidateCount'], 3)
         self.assertEqual(manifest['plannedCriticalRoutes'], 0)
         self.assertEqual(manifest['experiment']['issueTargetDurationSeconds'], [8, 15])
+        self.assertEqual(manifest['experiment']['scopeAuthority']['quote'], 'Target roughly 8–15 seconds.')
         self.assertEqual([item['id'] for item in manifest['candidates']], ['new-a', 'new-b', 'new-c'])
         for candidate in manifest['candidates']:
             self.assertGreaterEqual(candidate['duration'], 8.0)
@@ -101,6 +102,8 @@ class CreativeEngineV2Tests(unittest.TestCase):
                 self.assertNotEqual(shot['route'], 'planned-not-executed')
                 self.assertFalse(shot['fallback'])
                 self.assertTrue(shot['model'])
+                self.assertNotIn('selectionScore', shot)
+                self.assertEqual(shot['selectionMethod'], 'subjective visual comparison; no numeric score assigned')
             self.assertEqual(
                 candidate['qa']['routeComposition'],
                 {'new-a': {'i2v': 6, 't2v': 0, 'fallback': 0}, 'new-b': {'i2v': 0, 't2v': 6, 'fallback': 0}, 'new-c': {'i2v': 3, 't2v': 3, 'fallback': 0}}[candidate['id']],

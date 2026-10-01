@@ -27,6 +27,7 @@ from social_influence.openrouter_media import (  # noqa: E402
 PLAN_PATH = ROOT / "brands/gutkitchen/creative-engine-v2/openrouter-media-plan.json"
 RUN_DIR = ROOT / "brands/gutkitchen/creative-engine-v2/openrouter-run"
 RECORD_LOCK = Lock()
+SUBMISSION_LEDGER = RUN_DIR / "provenance/submissions.jsonl"
 
 
 def utc_now() -> str:
@@ -97,16 +98,8 @@ def save_gzip_json(path: Path, value: object) -> None:
         json.dump(value, handle, indent=2)
 
 
-def append_submission(submission: dict) -> None:
-    path = RUN_DIR / "provenance/submissions.jsonl"
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with RECORD_LOCK:
-        with path.open("a", encoding="utf-8") as handle:
-            handle.write(json.dumps(submission, separators=(",", ":")) + "\n")
-
-
 def submissions_for_route(route: str) -> list[dict]:
-    path = RUN_DIR / "provenance/submissions.jsonl"
+    path = SUBMISSION_LEDGER
     if not path.exists():
         return []
     submissions = [json.loads(line) for line in path.read_text().splitlines() if line.strip()]
@@ -332,7 +325,7 @@ def main() -> int:
             frame_images=[frame] if frame else [],
             params=params,
             poll_seconds=20,
-            on_submit=append_submission,
+            submission_ledger=SUBMISSION_LEDGER,
         )
         write_records([record], RUN_DIR / "provenance/generations.json")
         return record

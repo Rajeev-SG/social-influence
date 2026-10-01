@@ -18,6 +18,8 @@ The page compares five artifacts from the same pizza-bean bowl brief:
 
 Each final candidate has a playable 9:16 preview, poster/first frame, six-shot filmstrip, model IDs, route per shot, reference inputs, selected-source cost, QA state, known weaknesses, winner control and local notes. Winner selection and notes persist in `localStorage`.
 
+Scope authority is the Issue #10 pacing clause: **“Target roughly 8–15 seconds.”** The 8.1-second candidates are in scope. The longer OLD/STORYBOARD artifacts are creative-grammar references, not runtime controls.
+
 ## What was executed
 
 The reusable client is `social_influence/openrouter_media.py`. It uses only `OPENROUTER_API_KEY` and the dedicated OpenRouter APIs:
@@ -31,6 +33,8 @@ The reusable client is `social_influence/openrouter_media.py`. It uses only `OPE
 - multimodal creative direction: `POST /api/v1/chat/completions`
 
 The configuration is `brands/gutkitchen/creative-engine-v2/openrouter-media-plan.json`; model IDs are not hard-coded in GutKitchen-specific logic. `openrouter-run/discovery/summary.json` keeps the selected live capabilities readable, while the complete catalogs are retained as gzip snapshots in `discovery/raw/`. The run ledger is `brands/gutkitchen/creative-engine-v2/openrouter-run/provenance/generations.json` and records prompt, redacted input-reference hashes, request parameters, output hash, job ID where recovered, elapsed time, usage/cost where available and failures/recovery notes.
+
+Video submissions are durably appended to `provenance/submissions.jsonl` by the client before polling starts, so a later run can resume the stored job ID without resubmitting or re-billing.
 
 ### Exact models used
 
@@ -67,6 +71,8 @@ Every acceptance-critical final shot is `executed-provider`; `plannedCriticalRou
 - first frame and shot filmstrip per candidate
 
 Typography and factual overlays are not generated inside image/video models.
+
+Shot selection is explicitly subjective: the manifest records the comparison date, source model and a qualitative reason, but no numeric score.
 
 ## Cost and recovery
 

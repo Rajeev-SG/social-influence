@@ -149,6 +149,10 @@ def main() -> int:
     if final_manifest.get('experiment', {}).get('issueTargetDurationSeconds') != [8, 15]:
         print('FAIL final media manifest does not encode the Issue #10 8-15s duration band', file=sys.stderr)
         return 1
+    scope = final_manifest.get('experiment', {}).get('scopeAuthority', {})
+    if scope.get('source') != 'Issue #10 — Pacing' or scope.get('quote') != 'Target roughly 8–15 seconds.':
+        print('FAIL final media manifest does not cite the authoritative Issue #10 pacing clause', file=sys.stderr)
+        return 1
     provenance = json.loads((ROOT / 'brands/gutkitchen/creative-engine-v2/openrouter-run/provenance/generations.json').read_text())
     provenance_by_route = {item['route']: item for item in provenance}
     for candidate in final_manifest['candidates']:
@@ -163,6 +167,9 @@ def main() -> int:
         for shot in candidate['shots']:
             if shot.get('executionStatus') != 'executed-provider' or not shot.get('model') or shot.get('fallback'):
                 print(f"FAIL unfinished shot route {candidate['id']}/{shot['id']}", file=sys.stderr)
+                return 1
+            if shot.get('selectionScore') is not None or shot.get('selectionMethod') != 'subjective visual comparison; no numeric score assigned':
+                print(f"FAIL selection method is not explicit subjective review {candidate['id']}/{shot['id']}", file=sys.stderr)
                 return 1
             record = provenance_by_route.get(shot['recordRoute'])
             source = ROOT / shot['sourceFile']

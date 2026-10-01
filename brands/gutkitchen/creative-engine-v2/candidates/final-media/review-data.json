@@ -34,6 +34,11 @@
       8,
       15
     ],
+    "scopeAuthority": {
+      "source": "Issue #10 \u2014 Pacing",
+      "quote": "Target roughly 8\u201315 seconds.",
+      "status": "authoritative issue scope; no reduction or sign-off required"
+    },
     "comparisonScale": "OLD and STORYBOARD are 30s+ creative-grammar references; NEW A/B/C are the requested 8-15s route experiments and are not duration-matched replacements.",
     "routeRoles": {
       "new-a": "I2V-heavy route-controlled comparison",
@@ -159,8 +164,11 @@
             "caption": "THE SPOON TEST",
             "quantity": "one bowl | label-based estimate"
           },
-          "selectionScore": 0.92,
-          "selectionReason": "manual visual score 0.92/1.0 for motion clarity, appetite and continuity; selected over recorded alternative",
+          "selectionMethod": "subjective visual comparison; no numeric score assigned",
+          "alternativesConsidered": [
+            "recorded alternative clip"
+          ],
+          "selectionReason": "selected for longest clean cheese pull with the least spoon morphing using source model bytedance/seedance-2.5; comparison date 2026-09-30",
           "fallback": false
         },
         {
@@ -177,8 +185,11 @@
             "caption": "BEANS IN",
             "quantity": "235g drained cannellini beans"
           },
-          "selectionScore": 0.9,
-          "selectionReason": "manual visual score 0.90/1.0 for motion clarity, appetite and continuity",
+          "selectionMethod": "subjective visual comparison; no numeric score assigned",
+          "alternativesConsidered": [
+            "single selected generation"
+          ],
+          "selectionReason": "selected for clearest falling-bean arc and sauce impact using source model minimax/hailuo-3-max; comparison date 2026-09-30",
           "fallback": false
         },
         {
@@ -195,8 +206,11 @@
             "caption": "PASSATA + SPINACH",
             "quantity": "150g passata | 50g spinach"
           },
-          "selectionScore": 0.88,
-          "selectionReason": "manual visual score 0.88/1.0 for motion clarity, appetite and continuity",
+          "selectionMethod": "subjective visual comparison; no numeric score assigned",
+          "alternativesConsidered": [
+            "single selected generation"
+          ],
+          "selectionReason": "selected for best separation between pour and spinach drop using source model alibaba/wan-3.0; comparison date 2026-09-30",
           "fallback": false
         },
         {
@@ -213,8 +227,11 @@
             "caption": "SIMMER THE BUILD",
             "quantity": "one pan | four supermarket ingredients"
           },
-          "selectionScore": 0.87,
-          "selectionReason": "manual visual score 0.87/1.0 for motion clarity, appetite and continuity",
+          "selectionMethod": "subjective visual comparison; no numeric score assigned",
+          "alternativesConsidered": [
+            "single selected generation"
+          ],
+          "selectionReason": "selected for most legible bubbles and spoon fold using source model bytedance/seedance-2.5; comparison date 2026-09-30",
           "fallback": false
         },
         {
@@ -231,8 +248,11 @@
             "caption": "CHEESE MELT",
             "quantity": "100g lighter mozzarella"
           },
-          "selectionScore": 0.91,
-          "selectionReason": "manual visual score 0.91/1.0 for motion clarity, appetite and continuity; selected over recorded alternative",
+          "selectionMethod": "subjective visual comparison; no numeric score assigned",
+          "alternativesConsidered": [
+            "recorded alternative clip"
+          ],
+          "selectionReason": "selected for best melt continuity without rubbery cheese using source model minimax/hailuo-3-max; comparison date 2026-09-30",
           "fallback": false
         },
         {
@@ -249,8 +269,11 @@
             "caption": "SPOON PAYOFF",
             "quantity": "~40g protein | 15g+ fibre per bowl"
           },
-          "selectionScore": 0.9,
-          "selectionReason": "manual visual score 0.90/1.0 for motion clarity, appetite and continuity",
+          "selectionMethod": "subjective visual comparison; no numeric score assigned",
+          "alternativesConsidered": [
+            "single selected generation"
+          ],
+          "selectionReason": "selected for most appetising spoon scoop and stable bowl geometry using source model bytedance/seedance-2.5; comparison date 2026-09-30",
           "fallback": false
         }
       ],
@@ -283,7 +306,7 @@
         "Generated food continuity varies slightly between source models.",
         "Some OpenRouter video response IDs and exact costs were lost when the first runner hit the credit limit; hashes and model-level estimates are retained."
       ],
-      "sha256": "328415241bb038ffd535e4fc9a34bc8050d3a1f223f46edb6e9e8364d9a34701",
+      "sha256": "c19c1fce1cb872d033cd231f058737b5355b80eb446df38c2ee4512c5f58caf3",
       "status": "FINAL MEDIA | GENERATED ACTION",
       "treatment": "I2V-heavy: generated keyframes animated into ingredient, simmer, melt and spoon action."
     },
@@ -316,8 +339,11 @@
             "caption": "THE SPOON TEST",
             "quantity": "one bowl | label-based estimate"
           },
-          "selectionScore": 0.92,
-          "selectionReason": "manual visual score 0.92/1.0 for motion clarity, appetite and continuity; selected over recorded alternative",
+          "selectionMethod": "subjective visual comparison; no numeric score assigned",
+          "alternativesConsidered": [
+            "recorded alternative clip"
+          ],
+          "selectionReason": "selected for longest clean cheese pull with the least spoon morphing using source model bytedance/seedance-2.5; comparison date 2026-09-30",
           "fallback": false
         },
         {
@@ -334,8 +360,11 @@
             "caption": "BEANS IN",
             "quantity": "235g drained cannellini beans"
           },
-          "selectionScore": 0.9,
-          "selectionReason": "manual visual score 0.90/1.0 for motion clarity, appetite and continuity",
+          "selectionMethod": "subjective visual comparison; no numeric score assigned",
+          "alternativesConsidered": [
+            "single selected generation"
+          ],
+          "selectionReason": "selected for clearest falling-bean arc and sauce impact using source model alibaba/wan-3.0; comparison date 2026-09-30",
           "fallback": false
         },
         {
@@ -352,8 +381,11 @@
             "caption": "PASSATA + SPINACH",
             "quantity": "150g passata | 50g spinach"
           },
-          "selectionScore": 0.88,
-          "selectionReason": "manual visual score 0.88/1.0 for motion clarity, appetite and continuity",
+          "selectionMethod": "subjective visual comparison; no numeric score assigned",
+          "alternativesConsidered": [
+            "single selected generation"
+          ],
+          "selectionReason": "selected for best separation between pour and spinach drop using source model alibaba/wan-3.0; comparison date 2026-09-30",
           "fallback": false
         },
         {
@@ -370,8 +402,11 @@
             "caption": "SIMMER THE BUILD",
             "quantity": "one pan | four supermarket ingredients"
           },
-          "selectionScore": 0.87,
-          "selectionReason": "manual visual score 0.87/1.0 for motion clarity, appetite and continuity",
+          "selectionMethod": "subjective visual comparison; no numeric score assigned",
+          "alternativesConsidered": [
+            "single selected generation"
+          ],
+          "selectionReason": "selected for most legible bubbles and spoon fold using source model minimax/hailuo-3; comparison date 2026-09-30",
           "fallback": false
         },
         {
@@ -388,8 +423,11 @@
             "caption": "CHEESE MELT",
             "quantity": "100g lighter mozzarella"
           },
-          "selectionScore": 0.91,
-          "selectionReason": "manual visual score 0.91/1.0 for motion clarity, appetite and continuity; selected over recorded alternative",
+          "selectionMethod": "subjective visual comparison; no numeric score assigned",
+          "alternativesConsidered": [
+            "recorded alternative clip"
+          ],
+          "selectionReason": "selected for best melt continuity without rubbery cheese using source model minimax/hailuo-3; comparison date 2026-09-30",
           "fallback": false
         },
         {
@@ -406,8 +444,11 @@
             "caption": "SPOON PAYOFF",
             "quantity": "~40g protein | 15g+ fibre per bowl"
           },
-          "selectionScore": 0.9,
-          "selectionReason": "manual visual score 0.90/1.0 for motion clarity, appetite and continuity",
+          "selectionMethod": "subjective visual comparison; no numeric score assigned",
+          "alternativesConsidered": [
+            "single selected generation"
+          ],
+          "selectionReason": "selected for most appetising spoon scoop and stable bowl geometry using source model bytedance/seedance-2.5; comparison date 2026-09-30",
           "fallback": false
         }
       ],
@@ -440,7 +481,7 @@
         "Generated food continuity varies slightly between source models.",
         "Some OpenRouter video response IDs and exact costs were lost when the first runner hit the credit limit; hashes and model-level estimates are retained."
       ],
-      "sha256": "958f4a00a845704dc472d12bc4231a773012ad633743c446c468ba861405a9dc",
+      "sha256": "db9971172e4761acb1e844cd529e601069b4e73ec39fef6ee3a49048f981081d",
       "status": "FINAL MEDIA | GENERATED ACTION",
       "treatment": "T2V-heavy: six direct generated cooking/action clips with zero fallback critical routes."
     },
@@ -474,8 +515,11 @@
             "caption": "THE SPOON TEST",
             "quantity": "one bowl | label-based estimate"
           },
-          "selectionScore": 0.92,
-          "selectionReason": "manual visual score 0.92/1.0 for motion clarity, appetite and continuity; selected over recorded alternative",
+          "selectionMethod": "subjective visual comparison; no numeric score assigned",
+          "alternativesConsidered": [
+            "recorded alternative clip"
+          ],
+          "selectionReason": "selected for longest clean cheese pull with the least spoon morphing using source model bytedance/seedance-2.5; comparison date 2026-09-30",
           "fallback": false
         },
         {
@@ -492,8 +536,11 @@
             "caption": "BEANS IN",
             "quantity": "235g drained cannellini beans"
           },
-          "selectionScore": 0.9,
-          "selectionReason": "manual visual score 0.90/1.0 for motion clarity, appetite and continuity",
+          "selectionMethod": "subjective visual comparison; no numeric score assigned",
+          "alternativesConsidered": [
+            "single selected generation"
+          ],
+          "selectionReason": "selected for clearest falling-bean arc and sauce impact using source model alibaba/wan-3.0; comparison date 2026-09-30",
           "fallback": false
         },
         {
@@ -510,8 +557,11 @@
             "caption": "PASSATA + SPINACH",
             "quantity": "150g passata | 50g spinach"
           },
-          "selectionScore": 0.88,
-          "selectionReason": "manual visual score 0.88/1.0 for motion clarity, appetite and continuity",
+          "selectionMethod": "subjective visual comparison; no numeric score assigned",
+          "alternativesConsidered": [
+            "single selected generation"
+          ],
+          "selectionReason": "selected for best separation between pour and spinach drop using source model alibaba/wan-3.0; comparison date 2026-09-30",
           "fallback": false
         },
         {
@@ -528,8 +578,11 @@
             "caption": "SIMMER THE BUILD",
             "quantity": "one pan | four supermarket ingredients"
           },
-          "selectionScore": 0.87,
-          "selectionReason": "manual visual score 0.87/1.0 for motion clarity, appetite and continuity",
+          "selectionMethod": "subjective visual comparison; no numeric score assigned",
+          "alternativesConsidered": [
+            "single selected generation"
+          ],
+          "selectionReason": "selected for most legible bubbles and spoon fold using source model minimax/hailuo-3; comparison date 2026-09-30",
           "fallback": false
         },
         {
@@ -546,8 +599,11 @@
             "caption": "CHEESE MELT",
             "quantity": "100g lighter mozzarella"
           },
-          "selectionScore": 0.91,
-          "selectionReason": "manual visual score 0.91/1.0 for motion clarity, appetite and continuity; selected over recorded alternative",
+          "selectionMethod": "subjective visual comparison; no numeric score assigned",
+          "alternativesConsidered": [
+            "recorded alternative clip"
+          ],
+          "selectionReason": "selected for best melt continuity without rubbery cheese using source model minimax/hailuo-3-max; comparison date 2026-09-30",
           "fallback": false
         },
         {
@@ -564,8 +620,11 @@
             "caption": "SPOON PAYOFF",
             "quantity": "~40g protein | 15g+ fibre per bowl"
           },
-          "selectionScore": 0.9,
-          "selectionReason": "manual visual score 0.90/1.0 for motion clarity, appetite and continuity",
+          "selectionMethod": "subjective visual comparison; no numeric score assigned",
+          "alternativesConsidered": [
+            "single selected generation"
+          ],
+          "selectionReason": "selected for most appetising spoon scoop and stable bowl geometry using source model bytedance/seedance-2.5; comparison date 2026-09-30",
           "fallback": false
         }
       ],
@@ -598,7 +657,7 @@
         "Generated food continuity varies slightly between source models.",
         "NEW C intentionally reuses selected A/B sources; use NEW A versus NEW B for the route-controlled contrast."
       ],
-      "sha256": "69952807f1c049c5b7f5d8ec77824066edcd11cd17574e9ec63bd40de8c50e16",
+      "sha256": "0c450819354da3d7ea854e652c018d16057a2031ed4c4224530f9a7628ee020e",
       "status": "FINAL MEDIA | GENERATED ACTION",
       "treatment": "Hybrid: best available source route per shot, prioritising visual quality over route purity."
     }

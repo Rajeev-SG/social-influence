@@ -17,6 +17,8 @@ The strongest agent-reviewed candidate is **NEW C — HYBRID**. Its first-second
 
 The three finished candidates are 8.1 seconds because Issue #10 explicitly targets approximately 8–15 seconds. The 31–32 second OLD/STORYBOARD artifacts are longer creative-grammar references, not duration-matched controls or direct runtime replacements.
 
+Scope authority: Issue #10, `Pacing`: **“Target roughly 8–15 seconds.”** This is the issue’s existing scope, not a post-hoc reduction.
+
 ## OpenRouter execution
 
 - One `OPENROUTER_API_KEY` covers creative direction, image generation and video generation.
@@ -58,6 +60,7 @@ Playwright at `https://gutkitchen-review.localhost:1355/reviews/gutkitchen-creat
 - NEW C winner selection and review notes persist through reload;
 - restart-all resets final videos; play-all runs them muted to completion;
 - first frames, filmstrips, opaque reference IDs and per-shot model routes are visible.
+- shot selection is explicitly subjective and carries no numeric score.
 
 Evidence captures: `review-desktop.png`, `review-mobile.png`.
 

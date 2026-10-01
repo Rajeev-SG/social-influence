@@ -26,6 +26,7 @@ class OpenRouterMediaTests(unittest.TestCase):
                 OpenRouterMediaClient(api_key='test')._request('POST', '/videos', {})
         self.assertEqual(raised.exception.status_code, 402)
         self.assertEqual(raised.exception.body, 'quota exceeded')
+        self.assertFalse(raised.exception.retryable)
 
     def test_invalid_success_body_is_not_reported_as_json_error(self):
         class Response:
@@ -50,6 +51,7 @@ class OpenRouterMediaTests(unittest.TestCase):
             calls.append(('submit', method, path))
             if method == 'POST':
                 return {'id': 'job-1', 'polling_url': 'https://openrouter.ai/api/v1/videos/job-1', 'status': 'pending'}
+            calls.append(('ledger-before-poll', ledger.exists()))
             if raw:
                 return b'video'
             return {'id': 'job-1', 'status': 'completed', 'generation_id': 'gen-1', 'usage': {'cost': 0.1}}
@@ -57,6 +59,7 @@ class OpenRouterMediaTests(unittest.TestCase):
         client._request = submit_request
         with tempfile.TemporaryDirectory() as temp:
             output = Path(temp) / 'video.mp4'
+            ledger = Path(temp) / 'submissions.jsonl'
             record = client.submit_video(
                 route='t2v/test',
                 model='test/video',
@@ -65,7 +68,9 @@ class OpenRouterMediaTests(unittest.TestCase):
                 params={'duration': 4},
                 poll_seconds=0,
                 on_submit=lambda item: (submissions.append(item), calls.append(('recorded', item['job_id']))),
+                submission_ledger=ledger,
             )
+            self.assertIn('job-1', ledger.read_text())
         self.assertEqual(record.job_id, 'job-1')
 
         def resume_request(method, path, payload=None, *, raw=False, timeout=None):
@@ -87,6 +92,7 @@ class OpenRouterMediaTests(unittest.TestCase):
             )
         self.assertEqual(resumed.job_id, 'job-1')
         self.assertTrue(any(item[0] == 'recorded' for item in calls))
+        self.assertTrue(any(item[0] == 'ledger-before-poll' and item[1] for item in calls))
         self.assertFalse(any(item[0] == 'submit' and item[1] == 'POST' and item[2].endswith('/videos/job-1') for item in calls))
 
     def test_reference_data_urls_are_redacted_from_provenance(self):

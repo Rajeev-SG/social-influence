@@ -54,6 +54,10 @@ class OpenRouterMediaError(RuntimeError):
         self.status_code = status_code
         self.body = body
 
+    @property
+    def retryable(self) -> bool:
+        return self.status_code == 429 or (self.status_code is not None and self.status_code >= 500)
+
 
 class OpenRouterMediaClient:
     def __init__(
@@ -282,6 +286,7 @@ class OpenRouterMediaClient:
         params: dict[str, Any] | None = None,
         poll_seconds: int = 30,
         on_submit: Callable[[dict[str, Any]], None] | None = None,
+        submission_ledger: str | Path | None = None,
     ) -> GenerationRecord:
         """Submit, poll and download one asynchronous OpenRouter video job."""
         output_path = Path(output_path)
@@ -313,17 +318,18 @@ class OpenRouterMediaClient:
         if not job_id:
             raise OpenRouterMediaError(f"video response for {model} contained no job id")
         attempts.append({"attempt": 1, "status": "submitted", "job_id": job_id})
+        submission = {
+            "route": route,
+            "model": model,
+            "job_id": job_id,
+            "polling_url": polling_url,
+            "submitted_at": started,
+            "request": self._redacted_request(payload, frames + refs),
+        }
+        if submission_ledger:
+            self.write_submission_record(submission_ledger, submission)
         if on_submit:
-            on_submit(
-                {
-                    "route": route,
-                    "model": model,
-                    "job_id": job_id,
-                    "polling_url": polling_url,
-                    "submitted_at": started,
-                    "request": self._redacted_request(payload, frames + refs),
-                }
-            )
+            on_submit(submission)
         status = submitted.get("status", "pending")
         poll_count = 0
         while status not in {"completed", "failed", "cancelled", "expired"}:
@@ -355,6 +361,17 @@ class OpenRouterMediaClient:
             usage=final.get("usage"),
             attempts=attempts,
         )
+
+    @staticmethod
+    def write_submission_record(path: str | Path, submission: dict[str, Any]) -> None:
+        """Durably record a video job before polling begins."""
+        path = Path(path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with RECORD_LOCK:
+            with path.open("a", encoding="utf-8") as handle:
+                handle.write(json.dumps(submission, separators=(",", ":")) + "\n")
+                handle.flush()
+                os.fsync(handle.fileno())
 
     def complete_video_job(
         self,
