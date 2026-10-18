@@ -1,0 +1,42 @@
+@font-face{font-family:'Source Serif 4';src:url('assets/fonts/SourceSerif4.ttf');font-weight:200 900;font-style:normal;font-display:block}
+@font-face{font-family:'Manrope';src:url('assets/fonts/Manrope.ttf');font-weight:200 800;font-display:block}
+:root{--paper:#efe7d4;--green:#2e4a2a;--pink:#e89cb1;--ink:#1a1a17;--muted:#596253}
+*{box-sizing:border-box}html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:var(--paper)}
+body{font-family:'Source Serif 4',serif;color:var(--green)}
+#root{position:relative;width:100%;height:100%;overflow:hidden;background:var(--paper)}
+.scene{position:absolute;inset:0;overflow:hidden}.inside{position:absolute;inset:0;background:var(--paper)}
+.dark .inside{background:var(--green);color:var(--paper)}.pink .inside{background:var(--paper)}
+.heading{position:absolute;left:88px;right:100px;top:245px;margin:0;font-size:112px;font-weight:500;line-height:1.02;letter-spacing:-4px;font-variation-settings:'opsz' 60}
+.heading span{display:block}.heading .hl{color:var(--green)}.dark .heading .hl{color:var(--pink)}
+.kicker{position:absolute;left:90px;top:140px;font:500 26px 'Manrope',sans-serif;letter-spacing:3px;text-transform:uppercase}
+.hf-transition-text-stagger span{display:inline-block;will-change:transform,opacity}.hf-transition-text-stagger .line{display:block;overflow:hidden;padding-bottom:14px;margin-bottom:-14px}
+#cup-wrap{position:absolute;left:260px;top:880px;width:560px;height:490px;z-index:3;pointer-events:none}
+#cup-art{width:560px;height:490px;overflow:visible}
+.sentence{position:absolute;top:340px;left:90px;right:90px;font-size:122px;font-weight:500;letter-spacing:-3px;line-height:1.12}
+.sentence span{display:block}.candidate{position:absolute;font-size:146px;font-weight:500;letter-spacing:-4px;line-height:1.1}
+#tea-choice{left:90px;top:655px;color:var(--green)}#bike-choice{left:560px;top:780px;color:#74766c;font-size:68px;letter-spacing:-2px}
+#tea-underline{position:absolute;left:90px;top:817px;width:242px;height:10px;background:var(--pink);transform-origin:left center}
+#bike-art{position:absolute;left:640px;top:885px;width:165px;height:95px;color:#74766c}
+.examples{position:absolute;left:90px;right:90px;top:685px;font-size:79px;line-height:1.2;letter-spacing:-1px}
+.example-row{position:relative;padding:30px 0;border-bottom:2px solid #7d9276}.example-row em{font-style:normal;color:var(--pink)}
+.time-pair{position:absolute;left:90px;right:90px;top:740px;font-size:97px;line-height:1.12;letter-spacing:-3px}
+.time-pair p{margin:0}.time-pair .now{margin-top:180px;color:var(--pink)}
+.time-rule{position:absolute;left:105px;top:885px;width:2px;height:134px;background:var(--pink);transform-origin:top center}
+#loop-message{position:absolute;left:90px;right:90px;top:780px;font-size:83px;line-height:1.16;letter-spacing:-2px;display:flex;gap:27px;align-items:center}
+.piece{position:relative;display:inline-block;padding:11px 8px;border-radius:6px;background:rgba(232,156,177,0)}
+.divider{position:absolute;right:-15px;top:9px;width:2px;height:90px;background:#c7bda6;transform-origin:center top}
+#answer-line{position:absolute;left:90px;right:90px;top:978px;font-size:109px;font-weight:500;letter-spacing:-3px;display:flex;gap:0;line-height:1.14;align-items:baseline}
+.new-piece{display:inline-block}.new-piece.tea{color:var(--green);border-bottom:8px solid var(--pink)}
+#loop-arrow{position:absolute;left:90px;top:1188px;width:320px;height:130px;color:var(--green)}
+#loop-note{position:absolute;left:90px;top:1350px;font:500 34px 'Manrope',sans-serif;color:var(--muted)}
+.verbs{position:absolute;left:90px;right:90px;top:570px;font-size:148px;line-height:1.25;letter-spacing:-5px;font-weight:500}.verb{display:block}
+#useful-title{font-size:86px;top:255px;max-width:800px;letter-spacing:-2px}
+#check-line{position:absolute;left:90px;right:100px;top:1350px;font-size:63px;letter-spacing:-1px;color:var(--paper);font-weight:500;margin:0}
+.caption{position:absolute;inset:0;z-index:8;pointer-events:none}.caption p{position:absolute;top:1550px;left:90px;right:110px;margin:0;font:500 44px/1.36 'Manrope',sans-serif;letter-spacing:-.4px;color:var(--ink)}
+.caption.dark-caption p{color:var(--paper)}
+.caption p:before{content:'';display:block;width:44px;height:3px;background:currentColor;margin-bottom:21px;opacity:.5}
+
+#piece-please{margin-left:20px}
+
+#loop-message{color:#4f5b45}
+#answer-line{font-weight:650}

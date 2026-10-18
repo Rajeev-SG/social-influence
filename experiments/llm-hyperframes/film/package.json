@@ -1,0 +1,15 @@
+{
+  "name": "a-cup-of-context",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.8.172 preview",
+    "check": "npx --yes hyperframes@0.8.172 check",
+    "render": "mkdir -p ../.review && npx --yes hyperframes@0.8.172 render --quality delivery --fps 30 --workers 4 --output ../.review/master-render.mp4 && python3 ../scripts/deliver.py",
+    "publish": "npx --yes hyperframes@0.8.172 publish",
+    "sync": "python3 ../scripts/sync-timing.py"
+  },
+  "dependencies": {
+    "gsap": "3.14.2"
+  }
+}

@@ -1,0 +1,12 @@
+.agents/
+skills-lock.json
+.review/
+film/node_modules/
+film/.hyperframes/
+film/renders/
+film/.media/
+!deliverables/final.mp4
+!deliverables/preview.mp4
+film/.thumbnails/
+film/.waveform-cache/
+film/.audio-cache/

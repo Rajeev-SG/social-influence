@@ -1,0 +1,15 @@
+[
+ {"scene":"hook","text":"How does ChatGPT write an answer?"},
+ {"scene":"hook","text":"Think of a very advanced sentence completer."},
+ {"scene":"example","text":"Try this: I'd love a cup of..."},
+ {"scene":"example","text":"Tea fits. Bicycle probably doesn't."},
+ {"scene":"training","text":"During training, the model learned patterns from huge amounts of text."},
+ {"scene":"training","text":"Answering uses those patterns. It doesn't learn from scratch each time."},
+ {"scene":"loop","text":"When you send a message, it reads the text in small pieces."},
+ {"scene":"loop","text":"Using the context, it chooses a likely next piece."},
+ {"scene":"loop","text":"Then it adds that piece, and does it again."},
+ {"scene":"loop","text":"Piece by piece, a whole answer appears."},
+ {"scene":"useful","text":"Those learned patterns can help it explain, write, and code."},
+ {"scene":"limits","text":"But a convincing answer can still be wrong."},
+ {"scene":"limits","text":"So treat it as a helpful assistant. Check important facts."}
+]
