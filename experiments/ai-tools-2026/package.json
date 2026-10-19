@@ -1,0 +1,18 @@
+{
+  "name": "ai-tools-2026",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "npx --yes hyperframes@0.8.176 check src/hyperframes",
+    "render:middle": "npx --yes hyperframes@0.8.176 render src/hyperframes --quality high --fps 30 --workers 4 --output assets/hyperframes/middle.mp4",
+    "render:blender": "bash scripts/blender-to-video.sh",
+    "audio": "bash scripts/mix-audio.sh",
+    "finish": "bash scripts/finish-with-type.sh",
+    "render:diffusion": "node scripts/render-diffusion.mjs",
+    "deliver": "node scripts/deliver.mjs"
+  },
+  "dependencies": {
+    "@diffusionstudio/core": "4.0.3",
+    "gsap": "3.14.2"
+  }
+}
