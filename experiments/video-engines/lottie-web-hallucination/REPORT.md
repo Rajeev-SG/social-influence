@@ -5,232 +5,217 @@
 Topic: **Lottie-web - Why does AI hallucinate?**
 
 One-sentence goal: teach beginners that a language model predicts plausible
-next pieces of text instead of checking a fact database, so a fluent answer can
-still be wrong.
+next pieces from learned patterns instead of querying a fact database, so a
+fluent answer can still be wrong and important claims need verification.
 
-The single analogy is **a confident storyteller without a fact-checker**. The
-visual through-line is a warm orange "story" path that branches into a plausible
-story and a verified fact, then returns to the instruction to check claims.
+The central analogy is **a confident storyteller without a fact-checker**. The
+visual through-line is a story rail that splits into a plausible-story branch
+and a verified-fact branch, then thins into an invented gap before resolving to
+`PLAUSIBLE != TRUE`.
 
 ## Technology and rendering role
 
-- Motion renderer: `lottie-web` **5.13.0**, SVG renderer.
-- Vendored runtime: `assets/vendor/lottie.min.js`, SHA-256
-  `2eb762973aec914d981f426123040bfac9d26217239605e225ddc7cee17618ac`.
-- Generated composition: `src/lottie.json`, 579 frames at 30 fps, 1080x1920,
-  91 layers and 35 local assets.
-- Role: lottie-web produces all primary motion graphics. It renders the
-  background, story rails, diverging paths, probability bars, pattern blocks,
-  confidence meter, status marks, animated transforms and timed typography
-  assets. `src/render/index.html` only hosts the player and exposes
-  `goToAndStop(frame, true)` for deterministic Playwright capture.
-- Capture: Playwright 1.63.0 with installed Chrome, one browser batch per 120
-  frames. FFmpeg 9.0.2 encodes the captured frames and mixed audio.
+Assigned technology: **lottie-web 5.13.0**.
 
-This is a minimal compatible workflow: author generated Lottie JSON, load it
-with lottie-web, scrub exact frames in a browser, then encode the resulting
-pixels. Lottie is not a decorative side element; every scene's explanatory
-geometry and motion is in the Lottie timeline.
+`src/build-lottie.mjs` emits a Lottie JSON composition at 1080x1920, 30 fps,
+579 frames, with 91 layers, 35 assets and five scene markers. The composition
+contains the substantive motion design: kinetic typography, cards, probability
+bars, vector path draws, split/merge diagrams, transitions and captions.
 
-## Research and skill provenance
+`src/render/index.html` loads the vendored `lottie-web` runtime and calls
+`lottie.loadAnimation` with the SVG renderer. `scripts/render-video.mjs` uses
+the documented `goToAndStop(value, isFrame)` control to seek every frame and
+captures the rendered SVG in Google Chrome. FFmpeg then encodes the frame
+sequence and local audio. This is the smallest compatible Lottie-web
+capture/encoding workflow; Lottie-web remains the primary motion engine.
 
-Research date: **2026-10-19**.
+Exact runtime provenance (checked 2026-10-19):
 
-### Installed skill discovery and usage
+- npm package: `lottie-web@5.13.0`
+- registry tarball: `https://registry.npmjs.org/lottie-web/-/lottie-web-5.13.0.tgz`
+- npm dist integrity: `sha512-+gfBXl6sxXMPe8tKQm7qzLnUy5DUPJPKIyRHwtpCpyUEYjHYRJC/5gjUvdkuO2c3JllrPtHXH5UJJK8LRYl5yQ==`
+- vendored `assets/vendor/lottie.min.js` SHA-256:
+  `2eb762973aec914d981f426123040bfac9d26217239605e225ddc7cee17618ac`
+- MIT license retained at `assets/vendor/lottie-web-5.13.0-LICENSE.txt`
 
-The required searches were run:
+Current official references used:
 
-```text
-python3 /Users/rajeev/.codex/scripts/skill-index-refresh.py --find \
-  "Lottie web animation rendering video motion graphics"
-python3 /Users/rajeev/.codex/scripts/skill-index-refresh.py --find \
-  "local Kokoro TTS narration audio mix video"
-```
+- https://github.com/airbnb/lottie-web/wiki/loadAnimation-options
+- https://github.com/airbnb/lottie-web/wiki/Usage
+- https://github.com/airbnb/lottie-web/wiki/Renderer-Settings
+- https://github.com/airbnb/lottie-web/wiki/Markers
+- https://github.com/airbnb/lottie-web/blob/master/player/js/elements/ImageElement.js
+- https://github.com/airbnb/lottie-web/blob/master/player/js/utils/TransformProperty.js
 
-Both returned `no skill matched`. No skill was invented and no unlisted skill
-was used. The following installed skills were consulted and used as noted:
+These were retrieved through Context7 library `/airbnb/lottie-web` and current
+official GitHub/npm sources. LottieFiles' current developer portal was checked
+for ecosystem context at https://developers.lottiefiles.com/ but was not used
+as the runtime API.
 
-| Skill | Source | Use |
-|---|---|---|
-| `compare-screenshots` | `/Users/rajeev/.codex/skills/compare-screenshots/SKILL.md` | Representative-frame, boundary and image-evidence discipline for the render review. |
-| `acceptance-proof` | `/Users/rajeev/.codex/skills/acceptance-proof/SKILL.md` | Real-browser evidence and clean-console acceptance structure. |
-| `transcribe` | `/Users/rajeev/.codex/skills/transcribe/SKILL.md` | Consulted for narration QA. Not executed: its required `OPENAI_API_KEY` was not set and no local Whisper runtime was installed. |
+## Skills used
 
-### Official documentation and runtime
+- `official-first-docs` from
+  `/Users/rajeev/.codex/skills/official-first-docs/SKILL.md`:
+  used its version-current, official-first retrieval order for lottie-web.
+- `playwright` from `/Users/rajeev/.codex/skills/playwright/SKILL.md`:
+  used for real-browser network/DOM/screenshot diagnostics during renderer
+  debugging and proof. The deterministic build uses the same installed
+  Playwright library (`playwright 1.63.0`) rather than test files.
 
-- lottie-web repository: https://github.com/airbnb/lottie-web
-  - HEAD inspected: `bede03d25d232826e0c9dca1733d542d8a7754fb`.
-- lottie-web README:
-  https://github.com/airbnb/lottie-web/blob/master/README.md
-- Usage wiki (renderer and `goToAndStop`):
-  https://github.com/airbnb/lottie-web/wiki/Usage
-- `loadAnimation` options:
-  https://github.com/airbnb/lottie-web/wiki/loadAnimation-options
-- Renderer settings:
-  https://github.com/airbnb/lottie-web/wiki/Renderer-Settings
-- npm package: https://www.npmjs.com/package/lottie-web
-  - Version used: `5.13.0`.
-  - Tarball SHA-256:
-    `00f306a9b5669abf9622c418b549681d1b858e0b7fa7ea6adc0772ca57c3fd4f`.
-- Lottie format specification repository:
-  https://github.com/lottie/lottie-spec
-  - HEAD inspected: `4b55957472f8718e34e9c1298f0e8f021b6c597f`.
+Skill discovery used
+`python3 /Users/rajeev/.codex/scripts/skill-index-refresh.py --find ...`.
+Queries for Lottie, Kokoro, motion graphics, browser rendering and video QA
+returned no Lottie-specific installed skill (`no skill matched`). No skill was
+invented or represented as official.
 
-### Community skills/references
+## Script and factual provenance
 
-- LottieFiles `motion-design-skill`:
-  https://github.com/LottieFiles/motion-design-skill
-  - HEAD inspected: `f9a8a041b85185ee4881b3471d3415e939aac772`.
-  - SKILL.md: https://raw.githubusercontent.com/LottieFiles/motion-design-skill/main/skills/motion-design/SKILL.md
-  - Used principles: primary/secondary/ambient motion layers, decelerating
-    entrances, accelerating exits, limited simultaneous movers,1/3-distance
-    restraint and short stagger budgets.
-- diffusionstudio `text-to-lottie` community skill:
-  https://github.com/diffusionstudio/lottie
-  - HEAD inspected: `3c72912fad543897f90045ed4d355813837927fc`.
-  - Used guidance: ground motion in concrete assets, think like a camera
-    operator, specify FPS/duration and keep a local Lottie player for preview.
+The mechanism statement follows OpenAI's current explanation that language
+models learn through next-word prediction and can confidently produce false
+specific facts:
+https://openai.com/index/why-language-models-hallucinate/
 
-No community skill code was copied. They were current research references; the
-actual composition is authored by `src/build-lottie.mjs`.
+The example claim is deliberately false. The official Eiffel Tower history
+states that the structure was completed and inaugurated on March 31, 1889, and
+opened to the public on May 15, 1889:
 
-## Narration and sound design
+- https://www.toureiffel.paris/en/the-monument/history
+- https://www.toureiffel.paris/en/news/130-years/1889-2019-130-years-amazement
+- https://www.toureiffel.paris/en/news/130-years/tower-highlight-1889-world-exhibition
 
-- TTS: installed `kokoro-js` **1.2.1**.
-- Model: installed q8 ONNX cache at
-  `/Users/rajeev/Code/content-machine/node_modules/@huggingface/transformers/.cache/onnx-community/Kokoro-82M-v1.0-ONNX`.
-- Voice: `/Users/rajeev/Code/content-machine/node_modules/kokoro-js/voices/bf_emma.bin`.
-- Remote model access is disabled in `scripts/generate-narration.mjs`; no TTS
-  weights were downloaded.
-- Delivery speed: `1.22`. `scripts/mix-audio.py` removes leading/trailing
-  silence while preserving a 35 ms breath, resamples to 48 kHz, normalizes the
-  speech peak to 0.82, then adds a restrained synthesized bed.
-- Sound design: one soft opening swoop, subtle transition ticks, a low
-  descending tone when the wrong date appears, a two-note verification chime
-  for `1889`, and a quiet closing lift. Effects are synthesized mathematically;
-  no third-party audio assets are used.
-- Final mix: 19.29 seconds, 48 kHz stereo PCM before AAC encode. Decoded final
-  audio measured -20.53 dB RMS, -1.88 dB peak and zero flat-factor/clipping
-  indicators.
-- Caption/visual timing is generated from
-  `assets/audio/narration-timing.json`, not hard-coded independently.
+The video uses `1889` as the verified fact and `1927` only as the plausible
+invented answer.
 
-## Render command and measured timing
+## Local TTS and audio
 
-Command:
+No TTS weights were downloaded. `scripts/generate-narration.mjs` disables
+remote model loading and uses the already-installed local setup:
+
+- Kokoro model:
+  `/Users/rajeev/Code/content-machine/node_modules/@huggingface/transformers/.cache/onnx-community/Kokoro-82M-v1.0-ONNX`
+- q8 ONNX file:
+  `.../onnx/model_quantized.onnx`, 92,361,116 bytes, SHA-256
+  `fbae9257e1e05ffc727e951ef9b9c98418e6d79f1c9b6b13bd59f5c9028a1478`
+- voice:
+  `/Users/rajeev/Code/content-machine/node_modules/kokoro-js/voices/bf_emma.bin`,
+  522,240 bytes, SHA-256
+  `669fe0647f9dd04fcab92f1439a40eeb4c8b4ab1f82e4996fe3d918ce4a63b73`
+- `kokoro-js 1.2.1`, `@huggingface/transformers 3.8.1`, CPU `dtype: q8`
+- voice `bf_emma`, speed `1.22`
+
+`scripts/mix-audio.py` trims leading/trailing Kokoro silence with 35 ms of
+breathing room, concatenates seven segments with 80 ms gaps, normalizes speech,
+and synthesizes restrained panned tones/noise for transitions and the
+claim/verification contrast.
+
+Final narration timing:
+
+| Line | Start | End |
+|---|---:|---:|
+| hook | 0.00 s | 1.53 s |
+| analogy | 1.61 s | 3.98 s |
+| prediction | 4.06 s | 8.44 s |
+| claim | 8.52 s | 11.45 s |
+| verify | 11.53 s | 14.48 s |
+| gap | 14.56 s | 16.80 s |
+| close | 16.88 s | 19.21 s |
+
+## Render command and timing
+
+Final render command:
 
 ```bash
-node scripts/render-video.mjs deliverables/final.mp4 deliverables/preview.mp4
+node scripts/render-video.mjs \
+  deliverables/final.mp4 \
+  deliverables/preview.mp4 \
+  /tmp/lottie-web-hallucination-final-frames
 ```
 
-Measured for the delivered 579-frame source timeline:
+Machine-readable timing is in `assets/render-timing.json` (the temporary frame
+path is normalized out of its command label):
 
-- Browser capture: **36,337 ms**
-- FFmpeg final + preview encode: **3,108 ms**
-- Total: **39,445 ms**
-- Final bytes: **1,489,948**
-- Preview bytes: **580,290**
+- frames: 579
+- browser capture: 34,013 ms
+- FFmpeg encode of final + preview: 3,005 ms
+- total: 37,018 ms
+- final bytes: 1,444,727
+- preview bytes: 562,379
 
-Evidence is retained in `assets/render-timing.json`. The encoded MP4 contains
-578 complete frames because FFmpeg ends at the 19.29-second audio boundary;
-the Lottie source has 579 frames (0..578) and the final duration is compliant.
+Toolchain: Node 26.7.0, Python 3.14.7, FFmpeg 9.0.2, Google Chrome
+155.0.8059.84, Playwright 1.63.0.
 
-## Mandatory render-review-refine cycle
+## Mandatory first-cut review
 
-### Complete first cut
+A complete first cut was rendered before refinement: 743 frames, 24.733 s,
+1080x1920 H.264/yuv420p with stereo AAC. Its MP4 was decoded into 12 labelled
+frames covering the opening, each major scene, transitions and ending, and the
+full audio was played through macOS `afplay` and analyzed.
 
-A complete first cut was rendered before refinement and decoded successfully:
-24.735 seconds, H.264/yuv420p, 1080x1920, 30 fps, stereo AAC. Audio measured
--21.59 dB RMS and -1.72 dB peak.
+Concrete findings:
 
-Representative opening, middle, transition and ending frames were extracted,
-assembled into a contact sheet and inspected. The audio was decoded and checked
-with FFmpeg `astats` and `silencedetect`; line boundaries were also compared to
-the generated timing JSON.
+1. Card and panel fills were composited over their labels/dates, muting the
+   `PLAUSIBLE STORY`, `VERIFIED FACT`, probability and CTA typography.
+2. Kokoro segment boundaries included 215-248 ms of leading silence, so
+   captions appeared before audible speech. Segment tails added roughly
+   0.57-0.93 s of dead air and slowed the pacing.
+3. Caption ranges overlapped near the claim/verify transition, producing two
+   captions at once around 14.60 s.
+4. The story-to-pattern transition briefly stacked the outgoing and incoming
+   headings.
+5. After the layer-order correction, the closing white CTA lost contrast
+   against its white pill.
 
-### Full-render inspection findings
+## Creative/technical refinement
 
-1. **Major visual defect:** the first contact sheet showed the background,
-   story rails, path trims and status marks, but typography and filled cards
-   disappeared after roughly 0.73 seconds.
-2. **Root cause:** layer transform helpers used a fixed 22-frame local opacity
-   timeline. Long scene layers therefore faded out early and remained hidden.
-3. **Secondary renderer issue:** animated layer opacity caused lottie-web's SVG
-   renderer to set image/shape parent groups to `display:none` at otherwise
-   valid mid-scene frames.
-4. **Audio pacing:** the first narration pass was too slow/long for the required
-   duration; it was tightened by trimming Kokoro's dead air and preserving
-   natural inter-line pauses.
-5. **Capture robustness:** an unbatched Chromium run stopped producing usable
-   frames after the SVG became more populated. This could create a plausible
-   but truncated MP4.
-6. **Encoding issue:** JPEG-sourced frames initially encoded as `yuvj420p`,
-   not the required `yuv420p`.
+At least one substantive creative improvement was made and verified:
 
-### Creative and technical refinement
+- Reversed the generated content layers into Lottie's top-first order while
+  keeping the background last, so labels, dates, bars and CTA text sit above
+  their panels and cards.
+- Trimmed Kokoro leading/trailing silence before timing derivation, reducing
+  the video from 24.735 s to 19.29 s and aligning caption keys with audible
+  speech onsets.
+- Set caption out-points from the next line's in-point so captions cannot
+  overlap.
+- Removed scene-range overlap at the story/pattern boundary.
+- Changed `CHECK IMPORTANT CLAIMS` to dark navy on the light pill.
+- Corrected image-layer anchors to asset centres and waited for Lottie's
+  `loaded_images` event before capture, a renderer-correctness prerequisite
+  found during implementation.
 
-Exact changes after inspection:
+## Final media verification
 
-- Changed transform animations from a fixed 22-frame window to each layer's
-  actual scene duration, so content remains present until its real exit.
-- Changed image/shape layer visibility to static opacity while retaining
-  Lottie-animated position, scale, trim paths and timed layer windows.
-- Preserved paint transparency in Lottie fill/stroke opacity fields instead of
-  relying on RGBA color arrays.
-- Added a substantive creative layer to the analogy: **CONFIDENCE HIGH /
-  VERIFICATION OFF** labels and a story-confidence meter under the
-  storyteller card. This makes the "confident but unchecked" mechanism visible,
-  not merely stated.
-- Corrected probability-bar centering in the next-piece example.
-- Rebuilt scene markers and captions from measured speech starts: hook/analogy,
-  prediction, divergence, gap invention and close.
-- Split Chromium capture into 120-frame batches, asserted every frame exists,
-  and made final/preview replacement atomic.
-- Added explicit full-range JPEG to limited-range BT.709 `yuv420p` conversion.
-- Rerendered and regenerated the preview and contact sheet after these changes.
-
-## Final QA evidence
-
-`bash scripts/verify-media.sh` decoded both MP4s without error and asserted:
+`npm run verify` and direct FFmpeg decoding passed:
 
 | File | Duration | Video | Audio | Size |
 |---|---:|---|---|---:|
-| `final.mp4` | 19.29 s | H.264, yuv420p, 1080x1920, 30/1 | AAC, 48 kHz, stereo | 1,489,948 B |
-| `preview.mp4` | 19.29 s | H.264, yuv420p, 540x960, 30/1 | AAC, 48 kHz, stereo | 580,290 B |
-| `contact-sheet.jpg` | n/a | JPEG, 1348x3400 | n/a | 797,068 B |
+| `final.mp4` | 19.290 s | 1080x1920, 30/1 fps, H.264, yuv420p | AAC, 48 kHz, 2 channels | 1,444,727 B |
+| `preview.mp4` | 19.290 s | 540x960, 30/1 fps, H.264, yuv420p | AAC, 48 kHz, 2 channels | 562,379 B |
+| `contact-sheet.jpg` | n/a | 1348x3400 JPEG | n/a | 768,308 B |
 
-Additional evidence:
+Additional QA:
 
-- Clean browser probes at representative frames: one Lottie SVG, zero console
-  or page errors.
-- OCR of the contact sheet recovered the hook, `CONFIDENT STORYTELLER`,
-  `WITHOUT A FACT-CHECKER`, `PREDICT NEXT PIECE`, `1927`, `1889`,
-  `PLAUSIBLE STORY`, `VERIFIED FACT`, `FLUENCY != EVIDENCE`, and closing claim
-  check content.
-- `ffmpeg -i final.mp4 -f null -` and the equivalent preview decode completed
-  without errors.
-- Current deliverable hashes:
-  - `final.mp4`:
-    `7d6353fac350e122c9687efaadce36b48b047d01dfded156060222df2b2dbd93`
-  - `preview.mp4`:
-    `b0c94f6ff649355579332893bed23e11bebc16094edf6990b2555b4c00568072`
-  - `contact-sheet.jpg`:
-    `61cd9cd83d3d2c29cbf2b2a2d6505cdeefa704be8e9ae4fe175c400df662c648`
+- `ffmpeg -i <mp4> -f null -` completed without decode errors for both MP4s.
+- decoded mix mean volume: -20.5 dB; max volume: -1.9 dB
+- no silence of 0.35 s or longer at -45 dB was found in the final mix
+- line-start RMS rises measured 7.04-33.98 dB at the seven caption keys
+- full 19.29 s playback through `afplay` completed
+- the final contact sheet visibly confirms clean transitions, readable
+  captions, bright card labels, readable probability bars and a high-contrast
+  closing CTA
 
 ## Known limitations
 
-- The brief referenced `../llm-reel/` as a baseline, but that directory was not
-  present in the supplied workspace. The requested clarity/simplicity standard
-  was applied directly; no side-by-side baseline comparison was possible.
-- No human auditory playback or local speech-to-text runtime was available
-  (`OPENAI_API_KEY` unset, Whisper/MLX Whisper/faster-whisper absent). Narration
-  was therefore verified through the exact Kokoro source text, generated line
-  timing, FFmpeg decode/dynamics, silence boundaries and caption alignment
-  rather than a separate transcript. This is the main QA limitation.
-- Typography is generated as transparent PNG assets and animated inside Lottie,
-  rather than using Lottie native text/glyph layers. This keeps rendering
-  deterministic across the installed browser/runtime while Lottie still owns
-  the motion, timing and scene composition.
-- The video uses one concrete factual example (Eiffel Tower 1927 vs 1889) to
-  keep the explanation digestible. It does not survey all hallucination causes,
-  such as training-data errors, decoding settings or retrieval failures.
+- The explanation is intentionally beginner-level and uses the colloquial term
+  "hallucination"; it is not a complete account of any specific model
+  architecture or every cause of factual error.
+- Kokoro `bf_emma` is synthetic narration. Audio was played and objectively
+  measured, but no human listening panel rated pronunciation or performance.
+- Typography is generated from local macOS fonts into transparent PNG assets
+  for deterministic browser capture. `src/text-spec.json` remains editable and
+  regenerates those assets, but the Lottie file references raster typography.
+- The browser capture uses JPEG quality 96 intermediates before H.264 encoding;
+  this is visually validated but is not a lossless mastering workflow.
+- Rendering depends on the existing local Chrome/Playwright and
+  `content-machine` Kokoro installation paths documented above. Those
+  dependencies, model weights and caches are intentionally not retained here.

@@ -1,9 +1,9 @@
 {
   "command": "node scripts/render-video.mjs deliverables/final.mp4 deliverables/preview.mp4",
   "frames": 579,
-  "captureMs": 36337,
-  "encodeMs": 3108,
-  "totalMs": 39445,
-  "finalBytes": 1489948,
-  "previewBytes": 580290
+  "captureMs": 34013,
+  "encodeMs": 3005,
+  "totalMs": 37018,
+  "finalBytes": 1444727,
+  "previewBytes": 562379
 }
