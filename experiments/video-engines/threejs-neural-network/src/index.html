@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What is a neural network?</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="stage" aria-label="Animated explanation of a neural network">
+      <canvas id="scene" aria-hidden="true"></canvas>
+
+      <header class="topbar">
+        <div class="brand"><span class="brand-mark"></span> THREE.JS / SIGNAL LAB</div>
+        <div class="edition">BEGINNER BUILD · 01</div>
+      </header>
+
+      <section id="intro" class="intro" aria-label="Title">
+        <p class="eyebrow">A VISUAL EXPLAINER</p>
+        <h1><span>WHAT IS A</span><strong>NEURAL</strong><span>NETWORK?</span></h1>
+        <p class="dek">Follow one clue as it becomes a pattern.</p>
+      </section>
+
+      <div id="route" class="route" aria-hidden="true">
+        <span>CLUES</span><i></i><span>WEIGHTS</span><i></i><span>PATTERNS</span>
+      </div>
+
+      <section id="inputChips" class="input-chips" aria-label="Example input clues">
+        <span>EDGE</span>
+        <span>CURVE</span>
+        <span>BRIGHT SPOT</span>
+      </section>
+
+      <section id="formula" class="formula" aria-label="Node calculation">
+        <div class="formula-kicker">ONE HELPER, UP CLOSE</div>
+        <div class="formula-main">z = Σ(wᵢxᵢ) + b</div>
+        <div class="formula-arrow">↓</div>
+        <div class="formula-main activation">a = activation(z)</div>
+      </section>
+
+      <section id="outputCard" class="output-card" aria-label="Output pattern">
+        <div class="output-kicker">OUTPUT PATTERN</div>
+        <div class="output-shape"><span></span><span></span><span></span></div>
+        <div class="output-answer">CURVE FOUND</div>
+      </section>
+
+      <section id="finalTitle" class="final-title" aria-label="Closing statement">
+        <p>THE IDEA</p>
+        <h2>LAYERS<br />FIND<br /><em>PATTERNS.</em></h2>
+      </section>
+
+      <div id="depthProof" class="depth-proof" aria-hidden="true">
+        <span>4 LAYERS</span>
+        <span>30 WEIGHTED PATHS</span>
+        <span>REAL 3D CAMERA</span>
+      </div>
+
+      <footer class="caption-shell">
+        <div class="caption-meta">
+          <span id="phaseLabel">THE ANALOGY</span>
+          <span id="timecode">00:00</span>
+        </div>
+        <p id="caption" class="caption" aria-live="polite">A neural network is a team of tiny decision helpers.</p>
+        <div class="progress-track"><span id="progress"></span></div>
+      </footer>
+    </main>
+    <script type="module" src="./scene.js"></script>
+  </body>
+</html>

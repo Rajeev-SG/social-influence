@@ -1,0 +1,27 @@
+{
+  "name": "rendiv-attention",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "audio": "bash scripts/build_audio.sh",
+    "check": "tsc --noEmit",
+    "compositions": "rendiv compositions src/index.tsx",
+    "render": "bash scripts/render.sh",
+    "studio": "rendiv studio src/index.tsx"
+  },
+  "dependencies": {
+    "@rendiv/captions": "0.2.6",
+    "@rendiv/cli": "0.2.6",
+    "@rendiv/core": "0.2.6",
+    "@rendiv/fonts": "0.2.6",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.4",
+    "@vitejs/plugin-react": "5.1.1",
+    "typescript": "5.9.3",
+    "vite": "7.2.2"
+  }
+}

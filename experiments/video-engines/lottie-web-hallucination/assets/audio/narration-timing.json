@@ -1,0 +1,71 @@
+{
+  "voice": "bf_emma",
+  "speed": 1.22,
+  "sampleRate": 48000,
+  "durationSeconds": 19.29,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Why does AI hallucinate?",
+      "caption": "Why does AI hallucinate?",
+      "startSeconds": 0.0,
+      "endSeconds": 1.53,
+      "durationSeconds": 1.53
+    },
+    {
+      "id": "analogy",
+      "text": "It is a confident storyteller without a fact-checker.",
+      "caption": "A confident storyteller without a fact-checker.",
+      "startSeconds": 1.61,
+      "endSeconds": 3.98,
+      "durationSeconds": 2.37
+    },
+    {
+      "id": "prediction",
+      "text": "A language model predicts plausible next pieces rather than querying a fact database.",
+      "caption": "Plausible next pieces \u2014 not a fact database.",
+      "startSeconds": 4.06,
+      "endSeconds": 8.44,
+      "durationSeconds": 4.38
+    },
+    {
+      "id": "claim",
+      "text": "It might say, the Eiffel Tower opened in nineteen twenty-seven.",
+      "caption": "\u201cThe Eiffel Tower opened in 1927.\u201d",
+      "startSeconds": 8.52,
+      "endSeconds": 11.45,
+      "durationSeconds": 2.93
+    },
+    {
+      "id": "verify",
+      "text": "The fact is eighteen eighty-nine. Fluency is not evidence.",
+      "caption": "Fact: 1889. Fluency is not evidence.",
+      "startSeconds": 11.53,
+      "endSeconds": 14.48,
+      "durationSeconds": 2.95
+    },
+    {
+      "id": "gap",
+      "text": "Thin patterns can become a plausible invention.",
+      "caption": "Thin pattern \u2192 plausible invention.",
+      "startSeconds": 14.56,
+      "endSeconds": 16.8,
+      "durationSeconds": 2.24
+    },
+    {
+      "id": "close",
+      "text": "Check important claims. Plausible is not true.",
+      "caption": "Check claims: plausible is not true.",
+      "startSeconds": 16.88,
+      "endSeconds": 19.21,
+      "durationSeconds": 2.33
+    }
+  ],
+  "sceneStartsSeconds": [
+    0.0,
+    4.06,
+    8.52,
+    14.56,
+    16.88
+  ]
+}

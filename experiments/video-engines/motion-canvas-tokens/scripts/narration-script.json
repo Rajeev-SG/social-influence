@@ -1,0 +1,9 @@
+[
+  {"text": "Imagine your sentence as a ribbon entering a sorting machine.", "pause": 0.22},
+  {"text": "A tokenizer cuts it into reusable pieces called tokens.", "pause": 0.24},
+  {"text": "A token can be a whole word, a fragment, punctuation, or even a space pattern.", "pause": 0.24},
+  {"text": "So playground can become play plus ground.", "pause": 0.22},
+  {"text": "Each piece then gets an ID, a number the model can use.", "pause": 0.24},
+  {"text": "Different tokenizers may draw the lines differently.", "pause": 0.22},
+  {"text": "But text becomes chunks, and chunks become numbers.", "pause": 0.5}
+]

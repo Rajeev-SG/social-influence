@@ -1,0 +1,2 @@
+videoflow[distributed]==1.0.4
+pillow==11.3.0

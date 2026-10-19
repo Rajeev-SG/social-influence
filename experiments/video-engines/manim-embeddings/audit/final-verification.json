@@ -1,0 +1,91 @@
+{
+  "final.mp4": {
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1080,
+          "height": 1920,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "30/1"
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "channels": 2,
+          "r_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "19.764388",
+        "bit_rate": "1222562"
+      }
+    },
+    "audio_metrics": [
+      "[Parsed_ebur128_0 @ 0xb22c6ca80] t: 18.199979  TARGET:-23 LUFS    M: -21.5 S: -16.1     I: -16.0 LUFS       LRA:   1.3 LU  FTPK: -48.4 -50.3 dBFS  TPK:  -3.9  -3.9 dBFS",
+      "[Parsed_ebur128_0 @ 0xb22c6ca80] t: 18.299979  TARGET:-23 LUFS    M: -22.2 S: -16.1     I: -16.0 LUFS       LRA:   1.3 LU  FTPK: -52.4 -52.2 dBFS  TPK:  -3.9  -3.9 dBFS",
+      "[Parsed_ebur128_0 @ 0xb22c6ca80] t: 18.399979  TARGET:-23 LUFS    M: -25.0 S: -16.1     I: -16.1 LUFS       LRA:   1.3 LU  FTPK: -53.4 -53.1 dBFS  TPK:  -3.9  -3.9 dBFS",
+      "[Parsed_ebur128_0 @ 0xb22c6ca80] t: 18.499979  TARGET:-23 LUFS    M: -56.5 S: -16.1     I: -16.1 LUFS       LRA:   1.3 LU  FTPK: -55.1 -54.4 dBFS  TPK:  -3.9  -3.9 dBFS",
+      "[Parsed_ebur128_0 @ 0xb22c6ca80] t: 18.599979  TARGET:-23 LUFS    M: -57.7 S: -16.4     I: -16.1 LUFS       LRA:   1.3 LU  FTPK: -57.0 -56.2 dBFS  TPK:  -3.9  -3.9 dBFS",
+      "[Parsed_ebur128_0 @ 0xb22c6ca80] t: 18.699979  TARGET:-23 LUFS    M: -59.3 S: -16.7     I: -16.1 LUFS       LRA:   1.3 LU  FTPK: -59.0 -58.3 dBFS  TPK:  -3.9  -3.9 dBFS",
+      "[Parsed_ebur128_0 @ 0xb22c6ca80] t: 18.799979  TARGET:-23 LUFS    M: -61.3 S: -17.0     I: -16.1 LUFS       LRA:   1.3 LU  FTPK: -61.9 -61.6 dBFS  TPK:  -3.9  -3.9 dBFS",
+      "[Parsed_ebur128_0 @ 0xb22c6ca80] t: 18.899979  TARGET:-23 LUFS    M: -63.8 S: -17.3     I: -16.1 LUFS       LRA:   1.3 LU  FTPK: -66.2 -65.7 dBFS  TPK:  -3.9  -3.9 dBFS",
+      "Integrated loudness:",
+      "LRA:         1.3 LU",
+      "True peak:",
+      "Peak:       -3.9 dBFS"
+    ]
+  },
+  "preview.mp4": {
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 540,
+          "height": 960,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "30/1"
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "channels": 2,
+          "r_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "19.766667",
+        "bit_rate": "265578"
+      }
+    },
+    "audio_metrics": [
+      "[Parsed_ebur128_0 @ 0x9ecc50a80] t: 18.199979  TARGET:-23 LUFS    M: -21.6 S: -16.1     I: -16.1 LUFS       LRA:   1.3 LU  FTPK: -46.8 -49.7 dBFS  TPK:  -3.3  -3.7 dBFS",
+      "[Parsed_ebur128_0 @ 0x9ecc50a80] t: 18.299979  TARGET:-23 LUFS    M: -22.4 S: -16.1     I: -16.1 LUFS       LRA:   1.3 LU  FTPK: -52.3 -52.1 dBFS  TPK:  -3.3  -3.7 dBFS",
+      "[Parsed_ebur128_0 @ 0x9ecc50a80] t: 18.399979  TARGET:-23 LUFS    M: -25.0 S: -16.1     I: -16.1 LUFS       LRA:   1.3 LU  FTPK: -53.3 -53.4 dBFS  TPK:  -3.3  -3.7 dBFS",
+      "[Parsed_ebur128_0 @ 0x9ecc50a80] t: 18.499979  TARGET:-23 LUFS    M: -56.5 S: -16.1     I: -16.1 LUFS       LRA:   1.3 LU  FTPK: -55.1 -54.4 dBFS  TPK:  -3.3  -3.7 dBFS",
+      "[Parsed_ebur128_0 @ 0x9ecc50a80] t: 18.599979  TARGET:-23 LUFS    M: -57.7 S: -16.4     I: -16.1 LUFS       LRA:   1.3 LU  FTPK: -57.0 -56.1 dBFS  TPK:  -3.3  -3.7 dBFS",
+      "[Parsed_ebur128_0 @ 0x9ecc50a80] t: 18.699979  TARGET:-23 LUFS    M: -59.3 S: -16.7     I: -16.1 LUFS       LRA:   1.3 LU  FTPK: -58.9 -58.2 dBFS  TPK:  -3.3  -3.7 dBFS",
+      "[Parsed_ebur128_0 @ 0x9ecc50a80] t: 18.799979  TARGET:-23 LUFS    M: -61.4 S: -17.1     I: -16.1 LUFS       LRA:   1.3 LU  FTPK: -61.5 -61.5 dBFS  TPK:  -3.3  -3.7 dBFS",
+      "[Parsed_ebur128_0 @ 0x9ecc50a80] t: 18.899979  TARGET:-23 LUFS    M: -63.9 S: -17.3     I: -16.1 LUFS       LRA:   1.3 LU  FTPK: -65.9 -65.8 dBFS  TPK:  -3.3  -3.7 dBFS",
+      "Integrated loudness:",
+      "LRA:         1.3 LU",
+      "True peak:",
+      "Peak:       -3.3 dBFS"
+    ]
+  },
+  "contact-sheet.jpg": {
+    "bytes": 275916
+  }
+}

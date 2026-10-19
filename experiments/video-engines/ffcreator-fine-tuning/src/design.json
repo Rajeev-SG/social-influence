@@ -1,0 +1,16 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "colors": {
+    "ink": "#F7F2E8",
+    "muted": "#A7B4B0",
+    "navy": "#07151B",
+    "panel": "#10252C",
+    "cyan": "#67E8D3",
+    "blue": "#6D8CFF",
+    "coral": "#FF785A",
+    "amber": "#FFD166",
+    "line": "#294249"
+  }
+}

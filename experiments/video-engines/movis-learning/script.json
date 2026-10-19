@@ -1,0 +1,26 @@
+[
+  {
+    "scene": "miss",
+    "text": "Imagine learning to toss a ball into a bucket."
+  },
+  {
+    "scene": "miss",
+    "text": "Your first throw misses left."
+  },
+  {
+    "scene": "adjust",
+    "text": "The feedback shows how far off it was."
+  },
+  {
+    "scene": "adjust",
+    "text": "So you adjust your aim and try again."
+  },
+  {
+    "scene": "ai_loop",
+    "text": "AI learns the same way: make a guess, compare it with the right answer, measure the error, then nudge its internal settings to reduce it."
+  },
+  {
+    "scene": "repeat",
+    "text": "Repeat, and its guesses improve."
+  }
+]

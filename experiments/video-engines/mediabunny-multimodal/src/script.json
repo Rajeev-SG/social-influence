@@ -1,0 +1,46 @@
+{
+  "topic": "Mediabunny - How does multimodal AI work?",
+  "teachingGoal": "Images, audio, and text become compatible representations that a model can combine before producing one answer.",
+  "analogy": "Different senses become shared notes.",
+  "voice": "bf_emma",
+  "speed": 0.96,
+  "sampleRate": 24000,
+  "lines": [
+    {
+      "id": "hook",
+      "scene": "hook",
+      "text": "Think of multimodal A.I. as one model taking different kinds of notes.",
+      "caption": "One model. Different kinds of notes."
+    },
+    {
+      "id": "image",
+      "scene": "image",
+      "text": "An image is a sketch: shapes, colours, and relationships.",
+      "caption": "Image -> visual notes"
+    },
+    {
+      "id": "audio",
+      "scene": "audio",
+      "text": "Audio is a rhythm: sounds, tone, and timing.",
+      "caption": "Audio -> acoustic notes"
+    },
+    {
+      "id": "text",
+      "scene": "text",
+      "text": "Text is a label: words, ideas, and context.",
+      "caption": "Text -> meaning notes"
+    },
+    {
+      "id": "representations",
+      "scene": "converge",
+      "text": "Each sense becomes a representation: a shared kind of math.",
+      "caption": "Different senses -> shared representation"
+    },
+    {
+      "id": "answer",
+      "scene": "answer",
+      "text": "The model combines those notes, then produces one answer.",
+      "caption": "Combine the notes -> one answer"
+    }
+  ]
+}

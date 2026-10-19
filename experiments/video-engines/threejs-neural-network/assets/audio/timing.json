@@ -1,0 +1,56 @@
+{
+  "voice": "bf_emma",
+  "speed": 0.96,
+  "sampleRate": 24000,
+  "duration": 23.318833333333334,
+  "cues": [
+    {
+      "id": "team",
+      "scene": "intro",
+      "text": "A neural network is a team of tiny decision helpers.",
+      "caption": "A neural network is a team of tiny decision helpers.",
+      "start": 0.2,
+      "end": 3.3549166666666665
+    },
+    {
+      "id": "clues",
+      "scene": "input",
+      "text": "Each helper receives simple clues, like edges, curves, or bright spots.",
+      "caption": "Each helper receives simple clues: edges, curves, or bright spots.",
+      "start": 3.5549166666666667,
+      "end": 7.950708333333333
+    },
+    {
+      "id": "weights",
+      "scene": "connections",
+      "text": "The next layer combines those clues through weighted connections.",
+      "caption": "The next layer combines clues through weighted connections.",
+      "start": 8.190708333333333,
+      "end": 11.509666666666666
+    },
+    {
+      "id": "activation",
+      "scene": "activation",
+      "text": "A node adds its bias, sums the signals, then applies an activation.",
+      "caption": "A node adds bias, sums the signals, then applies an activation.",
+      "start": 11.709666666666667,
+      "end": 15.842583333333334
+    },
+    {
+      "id": "training",
+      "scene": "training",
+      "text": "Training tunes those weights until the layers learn which clues matter.",
+      "caption": "Training tunes the weights until the layers learn which clues matter.",
+      "start": 16.042583333333333,
+      "end": 19.690708333333333
+    },
+    {
+      "id": "output",
+      "scene": "output",
+      "text": "Those learned patterns become the network's answer.",
+      "caption": "Those learned patterns become the network's answer.",
+      "start": 19.890708333333333,
+      "end": 22.698833333333333
+    }
+  ]
+}

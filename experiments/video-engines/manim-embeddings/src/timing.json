@@ -1,0 +1,42 @@
+{
+  "duration": 18.945333333333334,
+  "sampleRate": 24000,
+  "voice": "/Users/rajeev/Code/content-machine/node_modules/kokoro-js/voices/bf_emma.bin",
+  "cues": [
+    {
+      "scene": "hook",
+      "text": "Words don't arrive with meaning attached.",
+      "start": 0.24,
+      "end": 2.515,
+      "file": "audio/line-0.wav"
+    },
+    {
+      "scene": "coordinates",
+      "text": "An embedding turns a word into numbers, coordinates on a meaning map.",
+      "start": 2.765,
+      "end": 6.693083333333333,
+      "file": "audio/line-1.wav"
+    },
+    {
+      "scene": "neighbourhood",
+      "text": "Puppy and dog land close. Kitten joins the neighbourhood. Car stays farther away.",
+      "start": 7.033083333333333,
+      "end": 11.763541666666667,
+      "file": "audio/line-2.wav"
+    },
+    {
+      "scene": "distance",
+      "text": "Now the computer can compare meaning by measuring distance.",
+      "start": 12.013541666666667,
+      "end": 15.195375,
+      "file": "audio/line-3.wav"
+    },
+    {
+      "scene": "ending",
+      "text": "Embeddings turn language into relationships.",
+      "start": 15.445375,
+      "end": 18.165333333333333,
+      "file": "audio/line-4.wav"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "duration": 51.147166666666664,
+  "cues": [
+    {
+      "scene": "hook",
+      "text": "How does ChatGPT actually know what to say?",
+      "start": 0.3,
+      "end": 3.223708333333333,
+      "file": "audio/line-0.wav"
+    },
+    {
+      "scene": "hook",
+      "text": "It doesn't look up a finished answer.",
+      "start": 3.453708333333333,
+      "end": 5.496583333333334,
+      "file": "audio/line-1.wav"
+    },
+    {
+      "scene": "tokens",
+      "text": "First, your message becomes tokens: small pieces of text.",
+      "start": 5.796583333333333,
+      "end": 9.448916666666667,
+      "file": "audio/line-2.wav"
+    },
+    {
+      "scene": "network",
+      "text": "Inside a neural network, attention connects each piece to relevant context.",
+      "start": 9.678916666666666,
+      "end": 14.368666666666666,
+      "file": "audio/line-3.wav"
+    },
+    {
+      "scene": "attention",
+      "text": "Take: The cat sat on the...",
+      "start": 14.598666666666666,
+      "end": 16.22758333333333,
+      "file": "audio/line-4.wav"
+    },
+    {
+      "scene": "attention",
+      "text": "Mat fits better than moon.",
+      "start": 16.457583333333332,
+      "end": 18.1555,
+      "file": "audio/line-5.wav"
+    },
+    {
+      "scene": "prediction",
+      "text": "The model assigns probabilities to possible next tokens, then selects one.",
+      "start": 18.3855,
+      "end": 22.830416666666668,
+      "file": "audio/line-6.wav"
+    },
+    {
+      "scene": "generation",
+      "text": "Add it to the text. Run the network again.",
+      "start": 23.060416666666665,
+      "end": 25.525041666666667,
+      "file": "audio/line-7.wav"
+    },
+    {
+      "scene": "generation",
+      "text": "That's a response, built one piece at a time.",
+      "start": 25.755041666666667,
+      "end": 28.235583333333334,
+      "file": "audio/line-8.wav"
+    },
+    {
+      "scene": "training",
+      "text": "But where did those abilities come from?",
+      "start": 28.615583333333333,
+      "end": 30.762041666666665,
+      "file": "audio/line-9.wav"
+    },
+    {
+      "scene": "training",
+      "text": "Training adjusted billions of internal settings, learning patterns from examples.",
+      "start": 30.992041666666665,
+      "end": 35.81829166666667,
+      "file": "audio/line-10.wav"
+    },
+    {
+      "scene": "inference",
+      "text": "Answering uses those settings. It doesn't retrain the model with every reply.",
+      "start": 36.048291666666664,
+      "end": 40.62745833333334,
+      "file": "audio/line-11.wav"
+    },
+    {
+      "scene": "payoff",
+      "text": "From that simple loop emerge explanations, code, and ideas.",
+      "start": 40.927458333333334,
+      "end": 44.523875,
+      "file": "audio/line-12.wav"
+    },
+    {
+      "scene": "payoff",
+      "text": "But a likely next word isn't a guarantee of truth.",
+      "start": 44.753875,
+      "end": 47.52220833333333,
+      "file": "audio/line-13.wav"
+    },
+    {
+      "scene": "end",
+      "text": "Powerful prediction. Not perfect knowledge.",
+      "start": 47.752208333333336,
+      "end": 50.147166666666664,
+      "file": "audio/line-14.wav"
+    }
+  ]
+}

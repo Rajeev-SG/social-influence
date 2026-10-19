@@ -1,0 +1,14 @@
+node_modules/
+.render-tmp/
+src/diffusion/dist/
+assets/hyperframes/intermediates/
+assets/diffusion/intermediates/
+assets/blender/opening-frames/
+assets/blender/finale-frames/
+qa/frames/
+qa/*.png
+qa/*.jpg
+src/blender/*.blend1
+src/hyperframes/.hyperframes/
+!deliverables/*.mp4
+!deliverables/*.jpg

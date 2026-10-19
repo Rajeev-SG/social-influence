@@ -1,0 +1,12 @@
+.agents/
+skills-lock.json
+.review/
+app/node_modules/
+app/build/
+app/out/
+app/public/audio/line-*.wav
+app/public/audio/narration-raw.wav
+deliverables/sample-*.wav
+deliverables/first-cut.mp4
+!deliverables/final.mp4
+!deliverables/preview.mp4

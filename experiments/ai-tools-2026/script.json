@@ -1,0 +1,52 @@
+[
+  {
+    "id": 0,
+    "scene": "hook",
+    "text": "This is the 2026 AI power map. The ranking is not what most people think."
+  },
+  {
+    "id": 1,
+    "scene": "method",
+    "text": "We are ranking seven major assistants by one comparable metric: share of worldwide website visits in September 2026. That is web traffic, not total users."
+  },
+  {
+    "id": 2,
+    "scene": "ranking",
+    "text": "ChatGPT still leads with fifty-six point four percent, but its monopoly is over."
+  },
+  {
+    "id": 3,
+    "scene": "ranking",
+    "text": "Gemini is second at twenty-five percent, powered by Google distribution. Claude is third at nine point six, growing fastest through coding and serious knowledge work."
+  },
+  {
+    "id": 4,
+    "scene": "pair-one",
+    "text": "ChatGPT is the best all-rounder: writing, images, agents, files and voice in one workflow. Gemini wins when your life already runs on Google."
+  },
+  {
+    "id": 5,
+    "scene": "pair-two",
+    "text": "Claude is the precision pick for long documents, careful writing and agentic coding. DeepSeek is the efficient value play for capable open-model workflows."
+  },
+  {
+    "id": 6,
+    "scene": "pair-three",
+    "text": "Copilot belongs where work already happens: Microsoft three-sixty-five, Windows and enterprise data. Perplexity is different again: cited, search-shaped research."
+  },
+  {
+    "id": 7,
+    "scene": "pair-four",
+    "text": "Grok is built for live, fast, X-native conversation. Meta AI is the distribution exception: huge reach inside WhatsApp, Instagram and Facebook, so website rankings miss it."
+  },
+  {
+    "id": 8,
+    "scene": "choice",
+    "text": "Choose by job: broad daily work, Google ecosystem, deep analysis, cost, workplace context, sourced research, real-time social, or embedded convenience."
+  },
+  {
+    "id": 9,
+    "scene": "finale",
+    "text": "In 2026, there is no single best AI. Match the tool to the task."
+  }
+]

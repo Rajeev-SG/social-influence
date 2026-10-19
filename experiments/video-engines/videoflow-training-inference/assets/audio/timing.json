@@ -1,0 +1,114 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "sample_rate": 24000,
+  "voice": "bf_emma",
+  "voice_path": "/Users/rajeev/Code/content-machine/node_modules/kokoro-js/voices/bf_emma.bin",
+  "model_path": "/Users/rajeev/Code/content-machine/node_modules/@huggingface/transformers/.cache/onnx-community/Kokoro-82M-v1.0-ONNX",
+  "kokoro_js_version": "1.2.1",
+  "lead_seconds": 0.42,
+  "tail_seconds": 1.15,
+  "pauses_seconds": [
+    0.28,
+    0.38,
+    0.28,
+    0.34
+  ],
+  "lines": [
+    {
+      "id": "training",
+      "text": "Training studies many examples, compares each guess with the answer, and slowly adjusts.",
+      "start": 0.42,
+      "end": 6.045,
+      "duration": 5.625,
+      "path": "assets/audio/line-01.wav",
+      "synthesis_ms": 2240
+    },
+    {
+      "id": "recipe",
+      "text": "Like a chef tasting dishes to learn one recipe.",
+      "start": 6.325,
+      "end": 9.875,
+      "duration": 3.55,
+      "path": "assets/audio/line-02.wav",
+      "synthesis_ms": 1343
+    },
+    {
+      "id": "fixed",
+      "text": "Inference is different: the recipe is fixed.",
+      "start": 10.255,
+      "end": 13.655,
+      "duration": 3.4,
+      "path": "assets/audio/line-03.wav",
+      "synthesis_ms": 1281
+    },
+    {
+      "id": "prediction",
+      "text": "A new question goes in, and the trained model makes one prediction.",
+      "start": 13.935,
+      "end": 18.46,
+      "duration": 4.525,
+      "path": "assets/audio/line-04.wav",
+      "synthesis_ms": 1683
+    },
+    {
+      "id": "takeaway",
+      "text": "Learn once. Use many times.",
+      "start": 18.8,
+      "end": 21.375,
+      "duration": 2.575,
+      "path": "assets/audio/line-05.wav",
+      "synthesis_ms": 995
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro",
+      "start": 0,
+      "end": 3.14
+    },
+    {
+      "id": "training",
+      "start": 3.14,
+      "end": 10.235
+    },
+    {
+      "id": "transition",
+      "start": 10.235,
+      "end": 13.775
+    },
+    {
+      "id": "inference",
+      "start": 13.775,
+      "end": 18.64
+    },
+    {
+      "id": "outro",
+      "start": 18.64,
+      "end": 22.5333
+    }
+  ],
+  "sound_events": [
+    {
+      "id": "training-ticks",
+      "at": 3.46,
+      "gain": 0.18
+    },
+    {
+      "id": "lock-click",
+      "at": 13.535,
+      "gain": 0.24
+    },
+    {
+      "id": "resolve-chime",
+      "at": 18.72,
+      "gain": 0.17
+    }
+  ],
+  "last_line_end": 21.375,
+  "raw_duration_before_frame_alignment": 22.525,
+  "total_frames": 676,
+  "total_duration": 22.5333,
+  "tts_total_ms": 7851
+}

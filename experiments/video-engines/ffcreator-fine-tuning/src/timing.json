@@ -1,0 +1,107 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "total": 23.065541666666668,
+  "duration": 23.065541666666668,
+  "hash": "57dbd827b6834289",
+  "cues": [
+    {
+      "id": "base",
+      "scene": "base",
+      "say": "A base model already knows broad patterns.",
+      "caption": "A base model already knows broad patterns.",
+      "start": 0.24,
+      "end": 2.7390416666666666,
+      "dur": 2.499041666666667,
+      "file": "audio/line-0.wav"
+    },
+    {
+      "id": "course",
+      "scene": "course",
+      "say": "Fine-tuning gives it a focused course.",
+      "caption": "Fine-tuning gives it a focused course.",
+      "start": 2.9190416666666668,
+      "end": 5.256583333333333,
+      "dur": 2.3375416666666666,
+      "file": "audio/line-1.wav"
+    },
+    {
+      "id": "examples",
+      "scene": "course",
+      "say": "You provide curated examples and feedback.",
+      "caption": "You provide curated examples and feedback.",
+      "start": 5.456583333333334,
+      "end": 8.145916666666666,
+      "dur": 2.689333333333333,
+      "file": "audio/line-2.wav"
+    },
+    {
+      "id": "analogy",
+      "scene": "analogy",
+      "say": "Think of a chef learning a bakery's croissant style.",
+      "caption": "Think of a chef learning a bakery's croissant style.",
+      "start": 8.385916666666667,
+      "end": 11.105791666666667,
+      "dur": 2.719875,
+      "file": "audio/line-3.wav"
+    },
+    {
+      "id": "adapt",
+      "scene": "analogy",
+      "say": "A few guided shifts adapt technique, not every cooking skill.",
+      "caption": "A few guided shifts adapt technique—not every cooking skill.",
+      "start": 11.285791666666666,
+      "end": 14.709291666666667,
+      "dur": 3.4235000000000007,
+      "file": "audio/line-4.wav"
+    },
+    {
+      "id": "settings",
+      "scene": "settings",
+      "say": "Training adjusts selected internal settings while the foundation stays.",
+      "caption": "Training adjusts selected settings while the foundation stays.",
+      "start": 14.949291666666667,
+      "end": 18.9365,
+      "dur": 3.9872083333333315,
+      "file": "audio/line-5.wav"
+    },
+    {
+      "id": "specialist",
+      "scene": "specialist",
+      "say": "The result: same base model, better fit for your task.",
+      "caption": "Same base model. Better fit for your task.",
+      "start": 19.3565,
+      "end": 22.385541666666665,
+      "dur": 3.0290416666666644,
+      "file": "audio/line-6.wav"
+    }
+  ],
+  "scenes": [
+    {
+      "name": "base",
+      "start": 0.24,
+      "end": 2.7390416666666666
+    },
+    {
+      "name": "course",
+      "start": 2.9190416666666668,
+      "end": 8.145916666666666
+    },
+    {
+      "name": "analogy",
+      "start": 8.385916666666667,
+      "end": 14.709291666666667
+    },
+    {
+      "name": "settings",
+      "start": 14.949291666666667,
+      "end": 18.9365
+    },
+    {
+      "name": "specialist",
+      "start": 19.3565,
+      "end": 22.385541666666665
+    }
+  ]
+}

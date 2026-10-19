@@ -1,0 +1,33 @@
+{
+  "name": "revideo-next-token",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A bespoke 22-second Revideo explainer about next-token prediction.",
+  "scripts": {
+    "typecheck": "tsc --noEmit -p .",
+    "build": "tsc -p .",
+    "render": "tsc -p . && node dist/render.js",
+    "narrate": "node scripts/narrate.cjs",
+    "soundscape": "python3 scripts/soundscape.py",
+    "inspect": "python3 scripts/inspect_media.py",
+    "deliver": "python3 scripts/deliver.py"
+  },
+  "dependencies": {
+    "@fontsource/inter": "5.3.0",
+    "@fontsource/jetbrains-mono": "5.3.0",
+    "@revideo/2d": "0.11.0",
+    "@revideo/core": "0.11.0",
+    "@revideo/ffmpeg": "0.11.0",
+    "@revideo/renderer": "0.11.0",
+    "@revideo/ui": "0.11.0",
+    "@revideo/vite-plugin": "0.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.9",
+    "typescript": "5.9.3"
+  },
+  "overrides": {
+    "@xmldom/xmldom": "0.9.12"
+  }
+}

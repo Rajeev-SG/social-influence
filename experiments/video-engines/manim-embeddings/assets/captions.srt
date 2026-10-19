@@ -1,0 +1,20 @@
+1
+00:00:00,240 --> 00:00:02,515
+Words don't arrive with meaning attached.
+
+2
+00:00:02,765 --> 00:00:06,693
+An embedding turns a word into numbers, coordinates on a meaning map.
+
+3
+00:00:07,033 --> 00:00:11,764
+Puppy and dog land close. Kitten joins the neighbourhood. Car stays farther away.
+
+4
+00:00:12,014 --> 00:00:15,195
+Now the computer can compare meaning by measuring distance.
+
+5
+00:00:15,445 --> 00:00:18,165
+Embeddings turn language into relationships.
+

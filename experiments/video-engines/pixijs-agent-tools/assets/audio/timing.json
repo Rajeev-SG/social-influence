@@ -1,0 +1,62 @@
+{
+  "voice": "bf_emma",
+  "modelDir": "/Users/rajeev/Code/content-machine/node_modules/@huggingface/transformers/.cache/onnx-community/Kokoro-82M-v1.0-ONNX",
+  "sampleRate": 24000,
+  "timing": [
+    {
+      "id": "control-desk",
+      "start": 0.45,
+      "text": "Think of an AI agent at a control desk.",
+      "caption": [
+        "THINK OF AN AI AGENT",
+        "AT A CONTROL DESK"
+      ],
+      "file": "assets/audio/control-desk.wav",
+      "duration": 3.4
+    },
+    {
+      "id": "choose-tool",
+      "start": 3.55,
+      "text": "It sees a goal, then chooses the tool that fits.",
+      "caption": [
+        "SEE THE GOAL.",
+        "CHOOSE THE RIGHT TOOL."
+      ],
+      "file": "assets/audio/choose-tool.wav",
+      "duration": 3.375
+    },
+    {
+      "id": "supply-action",
+      "start": 7.75,
+      "text": "Then it supplies an action: the exact request for that tool.",
+      "caption": [
+        "SUPPLY AN ACTION:",
+        "THE EXACT REQUEST."
+      ],
+      "file": "assets/audio/supply-action.wav",
+      "duration": 4.075
+    },
+    {
+      "id": "read-result",
+      "start": 12.65,
+      "text": "The tool runs and returns a result.",
+      "caption": [
+        "THE TOOL RUNS.",
+        "IT RETURNS A RESULT."
+      ],
+      "file": "assets/audio/read-result.wav",
+      "duration": 2.95
+    },
+    {
+      "id": "continue",
+      "start": 16.55,
+      "text": "The agent reads that result, updates its plan, and continues.",
+      "caption": [
+        "READ THE RESULT.",
+        "UPDATE. CONTINUE."
+      ],
+      "file": "assets/audio/continue.wav",
+      "duration": 4.4
+    }
+  ]
+}

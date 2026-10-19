@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "skills": {
+    "manim-frame-review": {
+      "metadataName": "manim-skill",
+      "source": "https://github.com/DominikPeters/manim-skill",
+      "sourceType": "github",
+      "ref": "f27ced8f8bb010131e96593c0cba20b5ab6e01ed",
+      "repositoryVersion": "1.0.20",
+      "skillPath": "manim-skill/SKILL.md",
+      "installedPath": "skills/manim-frame-review/SKILL.md",
+      "computedHash": "58ad771f16f0b1a427e5eb3554ffb635f7438fddfe487aeb42ed48339b323f50",
+      "license": "MIT",
+      "installedVia": "/Users/rajeev/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py",
+      "installedAt": "2026-10-18"
+    }
+  }
+}

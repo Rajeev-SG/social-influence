@@ -1,0 +1,80 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "total": 20.097833333333334,
+  "duration": 20.097833333333334,
+  "hash": "87a07edc651cc3a0",
+  "cues": [
+    {
+      "id": "p1",
+      "scene": "hook",
+      "cap": "Next-token prediction is beautifully simple.",
+      "say": "Next-token prediction is beautifully simple.",
+      "start": 0.28,
+      "end": 2.9684166666666667,
+      "dur": 2.688416666666667,
+      "file": "audio/line-0.wav"
+    },
+    {
+      "id": "p2",
+      "scene": "context",
+      "cap": "The model reads the pieces so far: The cat sat on the...",
+      "say": "The model reads the pieces so far: The cat sat on the...",
+      "start": 3.2184166666666667,
+      "end": 6.440291666666667,
+      "dur": 3.2218750000000003,
+      "file": "audio/line-1.wav"
+    },
+    {
+      "id": "p3",
+      "scene": "score",
+      "cap": "Then it scores every possible next piece.",
+      "say": "Then it scores every possible next piece.",
+      "start": 6.660291666666667,
+      "end": 8.967083333333333,
+      "dur": 2.3067916666666664,
+      "file": "audio/line-2.wav"
+    },
+    {
+      "id": "p4",
+      "scene": "ballot",
+      "cap": "Think of a weighted ballot: mat leads, then floor, bed, and moon.",
+      "say": "Think of a weighted ballot: mat leads, then floor, bed, and moon.",
+      "start": 9.187083333333334,
+      "end": 12.62575,
+      "dur": 3.4386666666666663,
+      "file": "audio/line-3.wav"
+    },
+    {
+      "id": "p5",
+      "scene": "select",
+      "cap": "One piece is chosen and added.",
+      "say": "One piece is chosen and added.",
+      "start": 12.85575,
+      "end": 14.903291666666666,
+      "dur": 2.0475416666666657,
+      "file": "audio/line-4.wav"
+    },
+    {
+      "id": "p6",
+      "scene": "repeat",
+      "cap": "Predict. Place. Repeat.",
+      "say": "Predict. Place. Repeat.",
+      "start": 15.123291666666667,
+      "end": 16.777083333333334,
+      "dur": 1.6537916666666668,
+      "file": "audio/line-5.wav"
+    },
+    {
+      "id": "p7",
+      "scene": "truth",
+      "cap": "Likely wording is not guaranteed truth.",
+      "say": "Likely wording is not guaranteed truth.",
+      "start": 17.077083333333334,
+      "end": 19.477833333333333,
+      "dur": 2.4007499999999986,
+      "file": "audio/line-6.wav"
+    }
+  ]
+}

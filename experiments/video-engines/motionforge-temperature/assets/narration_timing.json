@@ -1,0 +1,55 @@
+{
+  "fps": 30,
+  "durationInFrames": 660,
+  "narrationDuration": 24.35,
+  "segments": [
+    {
+      "id": "hook",
+      "text": "AI has to choose the next word.",
+      "start": 0,
+      "end": 2.85,
+      "duration": 2.85,
+      "file": "assets/narration-parts/hook.wav"
+    },
+    {
+      "id": "definition",
+      "text": "Temperature is the dial for how surprising that choice can be.",
+      "start": 2.97,
+      "end": 7.02,
+      "duration": 4.05,
+      "file": "assets/narration-parts/definition.wav"
+    },
+    {
+      "id": "low",
+      "text": "Turn it low, and the path stays focused: the safest option wins every time.",
+      "start": 7.14,
+      "end": 12.49,
+      "duration": 5.35,
+      "file": "assets/narration-parts/low.wav"
+    },
+    {
+      "id": "high",
+      "text": "Turn it up, and more paths become possible.",
+      "start": 12.61,
+      "end": 15.76,
+      "duration": 3.15,
+      "file": "assets/narration-parts/high.wav"
+    },
+    {
+      "id": "tradeoff",
+      "text": "Low temperature feels predictable. High temperature feels creative.",
+      "start": 15.88,
+      "end": 20.855,
+      "duration": 4.975,
+      "file": "assets/narration-parts/tradeoff.wav"
+    },
+    {
+      "id": "end",
+      "text": "It changes variety, not intelligence.",
+      "start": 20.975,
+      "end": 24.35,
+      "duration": 3.375,
+      "file": "assets/narration-parts/end.wav"
+    }
+  ]
+}

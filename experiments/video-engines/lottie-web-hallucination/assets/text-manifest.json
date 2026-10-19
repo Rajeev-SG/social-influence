@@ -1,0 +1,252 @@
+{
+  "colors": {
+    "ink": "#F5F7FF",
+    "muted": "#A9B8CB",
+    "yellow": "#FFD166",
+    "orange": "#FF8A4C",
+    "coral": "#FF6B6B",
+    "mint": "#67E8B5",
+    "cyan": "#63D5FF",
+    "navy": "#08111F"
+  },
+  "items": [
+    {
+      "id": "hook_why",
+      "path": "text/01-hook_why.png",
+      "width": 700,
+      "height": 157,
+      "text": "WHY DOES AI"
+    },
+    {
+      "id": "hook_hallucinate",
+      "path": "text/02-hook_hallucinate.png",
+      "width": 1058,
+      "height": 202,
+      "text": "HALLUCINATE?"
+    },
+    {
+      "id": "analogy_a",
+      "path": "text/03-analogy_a.png",
+      "width": 855,
+      "height": 94,
+      "text": "CONFIDENT STORYTELLER"
+    },
+    {
+      "id": "analogy_b",
+      "path": "text/04-analogy_b.png",
+      "width": 898,
+      "height": 105,
+      "text": "WITHOUT A FACT-CHECKER"
+    },
+    {
+      "id": "label_story",
+      "path": "text/05-label_story.png",
+      "width": 272,
+      "height": 67,
+      "text": "THE STORY"
+    },
+    {
+      "id": "label_check",
+      "path": "text/06-label_check.png",
+      "width": 277,
+      "height": 67,
+      "text": "THE CHECK"
+    },
+    {
+      "id": "label_predict",
+      "path": "text/07-label_predict.png",
+      "width": 469,
+      "height": 69,
+      "text": "PREDICT NEXT PIECE"
+    },
+    {
+      "id": "token_the",
+      "path": "text/08-token_the.png",
+      "width": 507,
+      "height": 96,
+      "text": "The Eiffel Tower"
+    },
+    {
+      "id": "token_opened",
+      "path": "text/09-token_opened.png",
+      "width": 321,
+      "height": 96,
+      "text": "opened in"
+    },
+    {
+      "id": "token_1927",
+      "path": "text/10-token_1927.png",
+      "width": 306,
+      "height": 145,
+      "text": "1927?"
+    },
+    {
+      "id": "candidate_1889",
+      "path": "text/11-candidate_1889.png",
+      "width": 160,
+      "height": 91,
+      "text": "1889"
+    },
+    {
+      "id": "candidate_1927",
+      "path": "text/12-candidate_1927.png",
+      "width": 160,
+      "height": 91,
+      "text": "1927"
+    },
+    {
+      "id": "candidate_1930",
+      "path": "text/13-candidate_1930.png",
+      "width": 160,
+      "height": 91,
+      "text": "1930"
+    },
+    {
+      "id": "plausible_label",
+      "path": "text/14-plausible_label.png",
+      "width": 435,
+      "height": 72,
+      "text": "PLAUSIBLE STORY"
+    },
+    {
+      "id": "verified_label",
+      "path": "text/15-verified_label.png",
+      "width": 360,
+      "height": 72,
+      "text": "VERIFIED FACT"
+    },
+    {
+      "id": "date_1927",
+      "path": "text/16-date_1927.png",
+      "width": 362,
+      "height": 205,
+      "text": "1927"
+    },
+    {
+      "id": "date_1889",
+      "path": "text/17-date_1889.png",
+      "width": 362,
+      "height": 205,
+      "text": "1889"
+    },
+    {
+      "id": "fact_sentence",
+      "path": "text/18-fact_sentence.png",
+      "width": 521,
+      "height": 85,
+      "text": "Eiffel Tower opened"
+    },
+    {
+      "id": "fluency",
+      "path": "text/19-fluency.png",
+      "width": 694,
+      "height": 103,
+      "text": "FLUENCY \u2260 EVIDENCE"
+    },
+    {
+      "id": "pattern_label",
+      "path": "text/20-pattern_label.png",
+      "width": 505,
+      "height": 76,
+      "text": "PATTERN GETS THIN"
+    },
+    {
+      "id": "invention_label",
+      "path": "text/21-invention_label.png",
+      "width": 702,
+      "height": 100,
+      "text": "PLAUSIBLE INVENTION"
+    },
+    {
+      "id": "plausible_word",
+      "path": "text/22-plausible_word.png",
+      "width": 701,
+      "height": 182,
+      "text": "PLAUSIBLE"
+    },
+    {
+      "id": "true_word",
+      "path": "text/23-true_word.png",
+      "width": 362,
+      "height": 182,
+      "text": "TRUE"
+    },
+    {
+      "id": "check_claim",
+      "path": "text/24-check_claim.png",
+      "width": 841,
+      "height": 100,
+      "text": "CHECK IMPORTANT CLAIMS"
+    },
+    {
+      "id": "small_source",
+      "path": "text/25-small_source.png",
+      "width": 478,
+      "height": 67,
+      "text": "source \u2192 claim \u2192 check"
+    },
+    {
+      "id": "confidence_high",
+      "path": "text/26-confidence_high.png",
+      "width": 403,
+      "height": 74,
+      "text": "CONFIDENCE HIGH"
+    },
+    {
+      "id": "verification_off",
+      "path": "text/27-verification_off.png",
+      "width": 403,
+      "height": 74,
+      "text": "VERIFICATION OFF"
+    },
+    {
+      "id": "caption_01",
+      "path": "text/28-caption_01.png",
+      "width": 548,
+      "height": 76,
+      "text": "Why does AI hallucinate?"
+    },
+    {
+      "id": "caption_02",
+      "path": "text/29-caption_02.png",
+      "width": 957,
+      "height": 76,
+      "text": "A confident storyteller without a fact-checker."
+    },
+    {
+      "id": "caption_03",
+      "path": "text/30-caption_03.png",
+      "width": 921,
+      "height": 76,
+      "text": "Plausible next pieces \u2014 not a fact database."
+    },
+    {
+      "id": "caption_04",
+      "path": "text/31-caption_04.png",
+      "width": 737,
+      "height": 76,
+      "text": "\u201cThe Eiffel Tower opened in 1927.\u201d"
+    },
+    {
+      "id": "caption_05",
+      "path": "text/32-caption_05.png",
+      "width": 751,
+      "height": 76,
+      "text": "Fact: 1889. Fluency is not evidence."
+    },
+    {
+      "id": "caption_06",
+      "path": "text/33-caption_06.png",
+      "width": 742,
+      "height": 76,
+      "text": "Thin pattern \u2192 plausible invention."
+    },
+    {
+      "id": "caption_07",
+      "path": "text/34-caption_07.png",
+      "width": 741,
+      "height": 76,
+      "text": "Check claims: plausible is not true."
+    }
+  ]
+}

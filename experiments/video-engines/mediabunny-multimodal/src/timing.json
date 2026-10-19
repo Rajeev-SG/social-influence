@@ -1,0 +1,64 @@
+{
+  "topic": "Mediabunny - How does multimodal AI work?",
+  "voice": "/Users/rajeev/Code/content-machine/node_modules/kokoro-js/voices/bf_emma.bin",
+  "voiceName": "bf_emma",
+  "speed": 0.96,
+  "sampleRate": 24000,
+  "duration": 22.821875,
+  "cues": [
+    {
+      "id": "hook",
+      "scene": "hook",
+      "text": "Think of multimodal A.I. as one model taking different kinds of notes.",
+      "caption": "One model. Different kinds of notes.",
+      "start": 0.22,
+      "end": 4.186166666666667,
+      "samples": 95188
+    },
+    {
+      "id": "image",
+      "scene": "image",
+      "text": "An image is a sketch: shapes, colours, and relationships.",
+      "caption": "Image -> visual notes",
+      "start": 4.406166666666667,
+      "end": 7.868,
+      "samples": 83084
+    },
+    {
+      "id": "audio",
+      "scene": "audio",
+      "text": "Audio is a rhythm: sounds, tone, and timing.",
+      "caption": "Audio -> acoustic notes",
+      "start": 8.168,
+      "end": 11.082125,
+      "samples": 69939
+    },
+    {
+      "id": "text",
+      "scene": "text",
+      "text": "Text is a label: words, ideas, and context.",
+      "caption": "Text -> meaning notes",
+      "start": 11.302125,
+      "end": 14.425416666666667,
+      "samples": 74959
+    },
+    {
+      "id": "representations",
+      "scene": "converge",
+      "text": "Each sense becomes a representation: a shared kind of math.",
+      "caption": "Different senses -> shared representation",
+      "start": 14.645416666666666,
+      "end": 18.456166666666668,
+      "samples": 91458
+    },
+    {
+      "id": "answer",
+      "scene": "answer",
+      "text": "The model combines those notes, then produces one answer.",
+      "caption": "Combine the notes -> one answer",
+      "start": 18.676166666666667,
+      "end": 22.141875,
+      "samples": 83177
+    }
+  ]
+}

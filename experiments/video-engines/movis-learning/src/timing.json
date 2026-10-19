@@ -1,0 +1,53 @@
+{
+  "fps": 30,
+  "frame_count": 649,
+  "duration": 21.633333333333333,
+  "voice": "bf_emma",
+  "voice_path": "/Users/rajeev/Code/content-machine/node_modules/kokoro-js/voices/bf_emma.bin",
+  "voice_sha256": "669fe0647f9dd04fcab92f1439a40eeb4c8b4ab1f82e4996fe3d918ce4a63b73",
+  "model_cache": "/Users/rajeev/Code/content-machine/node_modules/@huggingface/transformers/.cache/onnx-community/Kokoro-82M-v1.0-ONNX",
+  "cues": [
+    {
+      "scene": "miss",
+      "text": "Imagine learning to toss a ball into a bucket.",
+      "start": 0.22,
+      "end": 2.9205833333333335,
+      "file": "assets/audio/line-0.wav"
+    },
+    {
+      "scene": "miss",
+      "text": "Your first throw misses left.",
+      "start": 3.1605833333333333,
+      "end": 5.014083333333334,
+      "file": "assets/audio/line-1.wav"
+    },
+    {
+      "scene": "adjust",
+      "text": "The feedback shows how far off it was.",
+      "start": 5.254083333333333,
+      "end": 7.5372916666666665,
+      "file": "assets/audio/line-2.wav"
+    },
+    {
+      "scene": "adjust",
+      "text": "So you adjust your aim and try again.",
+      "start": 7.777291666666667,
+      "end": 9.922375,
+      "file": "assets/audio/line-3.wav"
+    },
+    {
+      "scene": "ai_loop",
+      "text": "AI learns the same way: make a guess, compare it with the right answer, measure the error, then nudge its internal settings to reduce it.",
+      "start": 10.262375,
+      "end": 18.009333333333334,
+      "file": "assets/audio/line-4.wav"
+    },
+    {
+      "scene": "repeat",
+      "text": "Repeat, and its guesses improve.",
+      "start": 18.449333333333332,
+      "end": 20.558791666666668,
+      "file": "assets/audio/line-5.wav"
+    }
+  ]
+}

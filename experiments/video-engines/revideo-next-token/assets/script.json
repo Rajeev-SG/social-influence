@@ -1,0 +1,44 @@
+[
+  {
+    "id": "p1",
+    "scene": "hook",
+    "cap": "Next-token prediction is beautifully simple.",
+    "say": "Next-token prediction is beautifully simple."
+  },
+  {
+    "id": "p2",
+    "scene": "context",
+    "cap": "The model reads the pieces so far: The cat sat on the...",
+    "say": "The model reads the pieces so far: The cat sat on the..."
+  },
+  {
+    "id": "p3",
+    "scene": "score",
+    "cap": "Then it scores every possible next piece.",
+    "say": "Then it scores every possible next piece."
+  },
+  {
+    "id": "p4",
+    "scene": "ballot",
+    "cap": "Think of a weighted ballot: mat leads, then floor, bed, and moon.",
+    "say": "Think of a weighted ballot: mat leads, then floor, bed, and moon."
+  },
+  {
+    "id": "p5",
+    "scene": "select",
+    "cap": "One piece is chosen and added.",
+    "say": "One piece is chosen and added."
+  },
+  {
+    "id": "p6",
+    "scene": "repeat",
+    "cap": "Predict. Place. Repeat.",
+    "say": "Predict. Place. Repeat."
+  },
+  {
+    "id": "p7",
+    "scene": "truth",
+    "cap": "Likely wording is not guaranteed truth.",
+    "say": "Likely wording is not guaranteed truth."
+  }
+]

@@ -1,0 +1,17 @@
+[
+ {"scene":"hook","text":"How does ChatGPT actually know what to say?"},
+ {"scene":"hook","text":"It doesn't look up a finished answer."},
+ {"scene":"tokens","text":"First, your message becomes tokens: small pieces of text."},
+ {"scene":"network","text":"Inside a neural network, attention connects each piece to relevant context."},
+ {"scene":"attention","text":"Take: The cat sat on the..."},
+ {"scene":"attention","text":"Mat fits better than moon."},
+ {"scene":"prediction","text":"The model assigns probabilities to possible next tokens, then selects one."},
+ {"scene":"generation","text":"Add it to the text. Run the network again."},
+ {"scene":"generation","text":"That's a response, built one piece at a time."},
+ {"scene":"training","text":"But where did those abilities come from?"},
+ {"scene":"training","text":"Training adjusted billions of internal settings, learning patterns from examples."},
+ {"scene":"inference","text":"Answering uses those settings. It doesn't retrain the model with every reply."},
+ {"scene":"payoff","text":"From that simple loop emerge explanations, code, and ideas."},
+ {"scene":"payoff","text":"But a likely next word isn't a guarantee of truth."},
+ {"scene":"end","text":"Powerful prediction. Not perfect knowledge."}
+]
