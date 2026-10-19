@@ -1,0 +1,41 @@
+{
+  "colors": {
+    "ink": "#F5F7FF",
+    "muted": "#A9B8CB",
+    "yellow": "#FFD166",
+    "orange": "#FF8A4C",
+    "coral": "#FF6B6B",
+    "mint": "#67E8B5",
+    "cyan": "#63D5FF",
+    "navy": "#08111F"
+  },
+  "items": [
+    {"id": "hook_why", "text": "WHY DOES AI", "size": 104, "font": "sans", "color": "#F5F7FF", "tracking": 3},
+    {"id": "hook_hallucinate", "text": "HALLUCINATE?", "size": 116, "font": "black", "color": "#FFD166", "tracking": 1},
+    {"id": "analogy_a", "text": "CONFIDENT STORYTELLER", "size": 58, "font": "bold", "color": "#F5F7FF", "tracking": 2},
+    {"id": "analogy_b", "text": "WITHOUT A FACT-CHECKER", "size": 54, "font": "black", "color": "#FF8A4C", "tracking": 1},
+    {"id": "label_story", "text": "THE STORY", "size": 34, "font": "bold", "color": "#A9B8CB", "tracking": 5},
+    {"id": "label_check", "text": "THE CHECK", "size": 34, "font": "bold", "color": "#A9B8CB", "tracking": 5},
+    {"id": "label_predict", "text": "PREDICT NEXT PIECE", "size": 36, "font": "bold", "color": "#63D5FF", "tracking": 3},
+    {"id": "token_the", "text": "The Eiffel Tower", "size": 60, "font": "bold", "color": "#F5F7FF"},
+    {"id": "token_opened", "text": "opened in", "size": 60, "font": "bold", "color": "#F5F7FF"},
+    {"id": "token_1927", "text": "1927?", "size": 82, "font": "black", "color": "#FF8A4C"},
+    {"id": "candidate_1889", "text": "1889", "size": 56, "font": "bold", "color": "#67E8B5"},
+    {"id": "candidate_1927", "text": "1927", "size": 56, "font": "bold", "color": "#FF8A4C"},
+    {"id": "candidate_1930", "text": "1930", "size": 56, "font": "bold", "color": "#A9B8CB"},
+    {"id": "plausible_label", "text": "PLAUSIBLE STORY", "size": 38, "font": "bold", "color": "#FF8A4C", "tracking": 3},
+    {"id": "verified_label", "text": "VERIFIED FACT", "size": 38, "font": "bold", "color": "#67E8B5", "tracking": 3},
+    {"id": "date_1927", "text": "1927", "size": 118, "font": "black", "color": "#FF8A4C"},
+    {"id": "date_1889", "text": "1889", "size": 118, "font": "black", "color": "#67E8B5"},
+    {"id": "fact_sentence", "text": "Eiffel Tower opened", "size": 50, "font": "bold", "color": "#F5F7FF"},
+    {"id": "fluency", "text": "FLUENCY ≠ EVIDENCE", "size": 52, "font": "black", "color": "#FFD166", "tracking": 1},
+    {"id": "pattern_label", "text": "PATTERN GETS THIN", "size": 42, "font": "bold", "color": "#63D5FF", "tracking": 2},
+    {"id": "invention_label", "text": "PLAUSIBLE INVENTION", "size": 50, "font": "black", "color": "#FF8A4C", "tracking": 1},
+    {"id": "plausible_word", "text": "PLAUSIBLE", "size": 104, "font": "black", "color": "#FFD166", "tracking": 1},
+    {"id": "true_word", "text": "TRUE", "size": 104, "font": "black", "color": "#67E8B5", "tracking": 1},
+    {"id": "check_claim", "text": "CHECK IMPORTANT CLAIMS", "size": 50, "font": "black", "color": "#08111F", "tracking": 1},
+    {"id": "small_source", "text": "source → claim → check", "size": 34, "font": "bold", "color": "#A9B8CB", "tracking": 2},
+    {"id": "confidence_high", "text": "CONFIDENCE HIGH", "size": 32, "font": "black", "color": "#FFD166", "tracking": 2},
+    {"id": "verification_off", "text": "VERIFICATION OFF", "size": 32, "font": "black", "color": "#FF6B6B", "tracking": 2}
+  ]
+}

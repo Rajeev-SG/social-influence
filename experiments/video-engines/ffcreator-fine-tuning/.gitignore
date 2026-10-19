@@ -1,0 +1,4 @@
+node_modules/
+.render/
+.review/
+.DS_Store

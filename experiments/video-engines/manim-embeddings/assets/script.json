@@ -1,0 +1,22 @@
+[
+  {
+    "scene": "hook",
+    "text": "Words don't arrive with meaning attached."
+  },
+  {
+    "scene": "coordinates",
+    "text": "An embedding turns a word into numbers, coordinates on a meaning map."
+  },
+  {
+    "scene": "neighbourhood",
+    "text": "Puppy and dog land close. Kitten joins the neighbourhood. Car stays farther away."
+  },
+  {
+    "scene": "distance",
+    "text": "Now the computer can compare meaning by measuring distance."
+  },
+  {
+    "scene": "ending",
+    "text": "Embeddings turn language into relationships."
+  }
+]

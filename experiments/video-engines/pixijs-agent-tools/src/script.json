@@ -1,0 +1,39 @@
+{
+  "topic": "PixiJS — How do AI agents use tools?",
+  "audience": "intelligent beginners",
+  "duration_seconds": 22.2,
+  "fps": 30,
+  "narration": [
+    {
+      "id": "control-desk",
+      "start": 0.45,
+      "text": "Think of an AI agent at a control desk.",
+      "caption": ["THINK OF AN AI AGENT", "AT A CONTROL DESK"]
+    },
+    {
+      "id": "choose-tool",
+      "start": 3.55,
+      "text": "It sees a goal, then chooses the tool that fits.",
+      "caption": ["SEE THE GOAL.", "CHOOSE THE RIGHT TOOL."]
+    },
+    {
+      "id": "supply-action",
+      "start": 7.75,
+      "text": "Then it supplies an action: the exact request for that tool.",
+      "caption": ["SUPPLY AN ACTION:", "THE EXACT REQUEST."]
+    },
+    {
+      "id": "read-result",
+      "start": 12.65,
+      "text": "The tool runs and returns a result.",
+      "caption": ["THE TOOL RUNS.", "IT RETURNS A RESULT."]
+    },
+    {
+      "id": "continue",
+      "start": 16.55,
+      "text": "The agent reads that result, updates its plan, and continues.",
+      "caption": ["READ THE RESULT.", "UPDATE. CONTINUE."]
+    }
+  ],
+  "teaching_goal": "An agent uses a tool by choosing it, supplying an action, reading the result, and continuing from that new information."
+}

@@ -1,0 +1,14 @@
+{
+  "name": "editly-context-window",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render": "node render.mjs",
+    "render:preview": "node render.mjs --preview"
+  },
+  "dependencies": {
+    "canvas": "2.11.2",
+    "editly": "0.15.0-rc.1"
+  }
+}
+

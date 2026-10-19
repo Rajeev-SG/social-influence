@@ -1,0 +1,42 @@
+{
+  "voice": "bf_emma",
+  "speed": 1.22,
+  "gapSeconds": 0.08,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Why does AI hallucinate?",
+      "caption": "Why does AI hallucinate?"
+    },
+    {
+      "id": "analogy",
+      "text": "It is a confident storyteller without a fact-checker.",
+      "caption": "A confident storyteller without a fact-checker."
+    },
+    {
+      "id": "prediction",
+      "text": "A language model predicts plausible next pieces rather than querying a fact database.",
+      "caption": "Plausible next pieces — not a fact database."
+    },
+    {
+      "id": "claim",
+      "text": "It might say, the Eiffel Tower opened in nineteen twenty-seven.",
+      "caption": "“The Eiffel Tower opened in 1927.”"
+    },
+    {
+      "id": "verify",
+      "text": "The fact is eighteen eighty-nine. Fluency is not evidence.",
+      "caption": "Fact: 1889. Fluency is not evidence."
+    },
+    {
+      "id": "gap",
+      "text": "Thin patterns can become a plausible invention.",
+      "caption": "Thin pattern → plausible invention."
+    },
+    {
+      "id": "close",
+      "text": "Check important claims. Plausible is not true.",
+      "caption": "Check claims: plausible is not true."
+    }
+  ]
+}

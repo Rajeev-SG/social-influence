@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1080, initial-scale=1" />
+    <link rel="icon" href="data:," />
+    <title>Lottie-web hallucination benchmark</title>
+    <style>
+      html,
+      body {
+        width: 1080px;
+        height: 1920px;
+        margin: 0;
+        overflow: hidden;
+        background: #08111f;
+      }
+      #stage {
+        width: 1080px;
+        height: 1920px;
+      }
+      #stage svg {
+        display: block;
+        width: 1080px !important;
+        height: 1920px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="stage" aria-label="Animated explanation of AI hallucination"></main>
+    <script src="../../assets/vendor/lottie.min.js"></script>
+    <script type="module">
+      const stage = document.getElementById("stage");
+      const animationData = await fetch("../lottie.json").then((response) => {
+        if (!response.ok) throw new Error(`lottie.json HTTP ${response.status}`);
+        return response.json();
+      });
+      const animation = lottie.loadAnimation({
+        container: stage,
+        renderer: "svg",
+        loop: false,
+        autoplay: false,
+        animationData,
+        rendererSettings: {
+          preserveAspectRatio: "xMidYMid meet",
+          progressiveLoad: false,
+          hideOnTransparent: true,
+        },
+      });
+      window.__lottieFrame = async (frame) => {
+        animation.goToAndStop(frame, true);
+        await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+      };
+      animation.addEventListener("loaded_images", async () => {
+        await new Promise((resolve) =>
+          requestAnimationFrame(() => requestAnimationFrame(resolve)),
+        );
+        window.__lottieReady = true;
+      }, { once: true });
+    </script>
+  </body>
+</html>

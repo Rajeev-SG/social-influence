@@ -1,0 +1,43 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "durationSeconds": 19.29,
+  "totalFrames": 579,
+  "layerCount": 91,
+  "assetCount": 35,
+  "sceneStartsSeconds": [
+    0,
+    4.066666666666666,
+    8.533333333333333,
+    14.566666666666666,
+    16.866666666666667
+  ],
+  "markers": [
+    {
+      "tm": 0,
+      "cm": "scene-1-hook-analogy",
+      "dr": 122
+    },
+    {
+      "tm": 122,
+      "cm": "scene-2-predict",
+      "dr": 134
+    },
+    {
+      "tm": 256,
+      "cm": "scene-3-diverge",
+      "dr": 181
+    },
+    {
+      "tm": 437,
+      "cm": "scene-4-gap",
+      "dr": 69
+    },
+    {
+      "tm": 506,
+      "cm": "scene-5-close",
+      "dr": 73
+    }
+  ]
+}

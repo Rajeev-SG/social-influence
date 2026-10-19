@@ -1,0 +1,42 @@
+{
+  "title": "What is RAG?",
+  "fps": 30,
+  "durationSeconds": 21.6,
+  "segments": [
+    {
+      "id": "title",
+      "start": 0,
+      "end": 2.35,
+      "caption": "What is RAG?",
+      "spoken": "What is RAG?"
+    },
+    {
+      "id": "plain-english",
+      "start": 2.2,
+      "end": 7.7,
+      "caption": "Look up useful notes before you answer.",
+      "spoken": "RAG means retrieval augmented generation. In plain English: look up useful notes before you answer."
+    },
+    {
+      "id": "retrieve",
+      "start": 7.55,
+      "end": 13.1,
+      "caption": "Retrieval finds the useful pages.",
+      "spoken": "Imagine a notebook library. A question pulls the most useful pages. That step is retrieval."
+    },
+    {
+      "id": "context",
+      "start": 12.95,
+      "end": 17.4,
+      "caption": "The pages add context.",
+      "spoken": "Those pages add context: fresh, relevant notes beside the question."
+    },
+    {
+      "id": "generate",
+      "start": 17.25,
+      "end": 21.6,
+      "caption": "Retrieve. Add context. Generate.",
+      "spoken": "Then the model generates an answer from that context. Retrieve. Add context. Generate."
+    }
+  ]
+}

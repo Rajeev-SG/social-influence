@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What is RAG?</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="stage" aria-label="What is RAG animated explainer">
+      <div class="paper-grid"></div>
+      <div class="vignette"></div>
+      <div class="accent-orbit"></div>
+
+      <header class="topbar">
+        <div class="brand-mark"><span></span> FIELD GUIDE / AI BASICS</div>
+        <div class="timecode" id="timecode">00:00.0</div>
+      </header>
+
+      <section class="scene scene-title" id="scene-title">
+        <div class="title-kicker">A 21-SECOND PRIMER</div>
+        <h1 class="hero-title" aria-label="What is RAG?">
+          <span>WHAT</span>
+          <span class="is-word">IS</span>
+          <span class="rag-word">RAG?</span>
+        </h1>
+        <div class="bookmark-thread"></div>
+        <p class="hero-sub">Look up useful notes <em>before</em> you answer.</p>
+        <div class="mini-flow" aria-hidden="true">
+          <div class="flow-chip question-chip">QUESTION</div>
+          <div class="flow-line"><i></i></div>
+          <div class="flow-chip notes-chip">NOTES</div>
+          <div class="flow-line"><i></i></div>
+          <div class="flow-chip answer-chip">ANSWER</div>
+        </div>
+      </section>
+
+      <section class="scene scene-explain" id="scene-explain">
+        <div class="section-index">01 / THE IDEA</div>
+        <h2>RAG, in plain English.</h2>
+        <p class="lead-copy">
+          <strong>Retrieval</strong> finds useful notes.<br />
+          The model adds them as <strong>context</strong>.<br />
+          Then it <strong>generates</strong> an answer.
+        </p>
+        <div class="term-stack" aria-label="RAG acronym">
+          <div class="term term-r"><span>R</span><b>ETRIEVAL</b><small>find the notes</small></div>
+          <div class="term term-a"><span>A</span><b>UGMENTED</b><small>add the context</small></div>
+          <div class="term term-g"><span>G</span><b>ENERATION</b><small>write the answer</small></div>
+        </div>
+        <div class="answer-sheet">
+          <div class="sheet-hole"></div>
+          <div class="sheet-label">YOUR ANSWER</div>
+          <div class="sheet-line wide"></div>
+          <div class="sheet-line"></div>
+          <div class="sheet-line short"></div>
+          <div class="sheet-stamp">WITH NOTES</div>
+        </div>
+      </section>
+
+      <section class="scene scene-library" id="scene-library">
+        <div class="section-index">02 / RETRIEVAL</div>
+        <h2>Think: a notebook library.</h2>
+        <div class="library-layout">
+          <div class="question-card">
+            <div class="card-label">THE QUESTION</div>
+            <div class="question-mark">?</div>
+            <div class="question-text">What should I know?</div>
+          </div>
+          <svg class="search-radar" viewBox="0 0 460 500" aria-hidden="true">
+            <defs>
+              <linearGradient id="radarGradient" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ffcf70" stop-opacity=".7" />
+                <stop offset="1" stop-color="#ff6b58" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+            <path class="radar-cone" d="M228 238 L28 26 L422 26 Z" fill="url(#radarGradient)" />
+            <path class="radar-wave wave-one" d="M228 238 C150 180 120 125 85 35" />
+            <path class="radar-wave wave-two" d="M228 238 C245 160 310 105 374 38" />
+            <circle class="radar-core" cx="228" cy="238" r="16" />
+          </svg>
+          <div class="shelf" aria-label="library of notes">
+            <div class="shelf-label">RELEVANT NOTES</div>
+            <div class="book book-1"><span>GUIDE</span></div>
+            <div class="book book-2"><span>FACTS</span></div>
+            <div class="book book-3 selected"><span>USEFUL</span></div>
+            <div class="book book-4"><span>IDEAS</span></div>
+            <div class="book book-5 selected"><span>RECENT</span></div>
+            <div class="book book-6"><span>NOTES</span></div>
+            <div class="shelf-board"></div>
+          </div>
+          <div class="retrieval-stream" aria-hidden="true">
+            <div class="flying-page page-a"><b>NOTE 01</b><i></i><i></i></div>
+            <div class="flying-page page-b"><b>NOTE 02</b><i></i><i></i></div>
+            <div class="flying-page page-c"><b>NOTE 03</b><i></i><i></i></div>
+            <div class="page-destination"><small>GATHERED</small><strong>03 useful pages</strong></div>
+          </div>
+          <div class="retrieval-chip chip-1">TOP MATCH</div>
+          <div class="retrieval-chip chip-2">RELEVANT</div>
+          <div class="retrieval-chip chip-3">RECENT</div>
+        </div>
+        <p class="scene-caption-large">Retrieval = finding the useful pages.</p>
+      </section>
+
+      <section class="scene scene-context" id="scene-context">
+        <div class="section-index">03 / CONTEXT</div>
+        <h2>Now the notes sit beside the question.</h2>
+        <div class="context-stage">
+          <div class="context-question">
+            <small>QUESTION</small>
+            <strong>What should<br />I know?</strong>
+          </div>
+          <div class="context-arrow arrow-one"><span>RETRIEVE</span></div>
+          <div class="note-pile">
+            <div class="note-card note-back"><b>NOTE 03</b><i></i><i></i></div>
+            <div class="note-card note-mid"><b>NOTE 02</b><i></i><i></i></div>
+            <div class="note-card note-front"><b>NOTE 01</b><i></i><i></i></div>
+            <div class="note-glow"></div>
+          </div>
+          <div class="context-arrow arrow-two"><span>ADD CONTEXT</span></div>
+          <div class="context-bubble">
+            <div class="bubble-label">MODEL CONTEXT</div>
+            <div class="bubble-row"><span class="dot fresh"></span> fresh</div>
+            <div class="bubble-row"><span class="dot relevant"></span> relevant</div>
+            <div class="bubble-row"><span class="dot nearby"></span> beside your question</div>
+          </div>
+        </div>
+        <div class="context-equation">
+          <span>QUESTION</span><b>+</b><span>USEFUL NOTES</span><b>=</b><span class="highlight">CONTEXT</span>
+        </div>
+      </section>
+
+      <section class="scene scene-generate" id="scene-generate">
+        <div class="section-index">04 / GENERATION</div>
+        <h2>From context to a grounded answer.</h2>
+        <div class="pipeline">
+          <div class="pipe-node node-retrieve">
+            <div class="node-number">1</div>
+            <div><small>RETRIEVE</small><strong>useful pages</strong></div>
+            <div class="node-check">✓</div>
+          </div>
+          <div class="pipe-connector"><i></i></div>
+          <div class="pipe-node node-context">
+            <div class="node-number">2</div>
+            <div><small>ADD CONTEXT</small><strong>fresh + relevant</strong></div>
+            <div class="node-check">✓</div>
+          </div>
+          <div class="pipe-connector"><i></i></div>
+          <div class="pipe-node node-generate">
+            <div class="node-number">3</div>
+            <div><small>GENERATE</small><strong>clear answer</strong></div>
+            <div class="node-spark">✦</div>
+          </div>
+          <div class="pipe-runner"></div>
+        </div>
+        <div class="generated-answer">
+          <div class="answer-top"><span class="status-dot"></span> ANSWER / WITH CONTEXT</div>
+          <p>RAG helps answers stay grounded<br />in useful, up-to-date notes.</p>
+          <div class="answer-rule"></div>
+          <small>source-aware • explainable • current</small>
+        </div>
+      </section>
+
+      <section class="scene scene-finale" id="scene-finale">
+        <div class="finale-kicker">THE SHORT VERSION</div>
+        <h2><span>RETRIEVE.</span><span>ADD CONTEXT.</span><span class="accent">GENERATE.</span></h2>
+        <div class="finale-rule"></div>
+        <p>RAG = look up useful notes before answering.</p>
+        <div class="finale-seal">RAG / 01</div>
+      </section>
+
+      <footer class="caption-bar">
+        <div class="caption-progress"><span id="caption-progress-fill"></span></div>
+        <div class="caption-text" id="caption-text">What is RAG?</div>
+        <div class="caption-hint">CAPTIONS ON</div>
+      </footer>
+    </main>
+    <script src="./scene.bundle.js"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+[
+  {"scene": "intro", "text": "Imagine a sentence as a room full of clues."},
+  {"scene": "context", "text": "The words around a word tell the model what it means."},
+  {"scene": "river", "text": "Near river, words like water and current pull toward one meaning."},
+  {"scene": "money", "text": "Near money, words like cash and account pull toward another."},
+  {"scene": "measure", "text": "Attention measures those relationships."},
+  {"scene": "ask", "text": "Each word looks around and asks, what matters here?"},
+  {"scene": "shape", "text": "The strongest clues shape its meaning."},
+  {"scene": "end", "text": "That's attention: context choosing the meaning."}
+]

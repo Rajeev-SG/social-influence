@@ -1,0 +1,5 @@
+src/node_modules/
+src/.render/
+assets/audio/.tts-tmp/
+*.log
+

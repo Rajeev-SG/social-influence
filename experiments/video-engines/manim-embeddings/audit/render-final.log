@@ -1,0 +1,259 @@
+Manim Community v0.22.0
+
+[10/19/26 00:25:37] INFO     Log file will be saved in       logger_utils.py:164
+                             /Users/rajeev/Code/social-influ                    
+                             ence/experiments/video-engines/                    
+                             manim-embeddings/.work/logs/emb                    
+                             eddings_scene_EmbeddingsScene.l                    
+                             og                                                 
+[10/19/26 00:25:38] INFO     Animation 0 : Using cached    cairo_renderer.py:105
+                             data (hash :                                       
+                             47783ccf983da51642787efac4fd9                      
+                             ef06a77600523bfb8141765d2e21d                      
+                             496765)                                            
+                    INFO     Animation 1 : Partial      scene_file_writer.py:173
+                             movie file written in                              
+                             '/Users/rajeev/Code/social                         
+                             -influence/experiments/vid                         
+                             eo-engines/manim-embedding                         
+                             s/.work/media/videos/embed                         
+                             dings_scene/1920p30/partia                         
+                             l_movie_files/EmbeddingsSc                         
+                             ene/a80f96cdfb5b1564c60da9                         
+                             313f29f7b2946f6c14299d9b02                         
+                             5176d49c4606fe9d.mp4'                              
+[10/19/26 00:25:39] INFO     Animation 2 : Partial      scene_file_writer.py:173
+                             movie file written in                              
+                             '/Users/rajeev/Code/social                         
+                             -influence/experiments/vid                         
+                             eo-engines/manim-embedding                         
+                             s/.work/media/videos/embed                         
+                             dings_scene/1920p30/partia                         
+                             l_movie_files/EmbeddingsSc                         
+                             ene/054223bab7d3967a1fcaea                         
+                             534be66630e91e8b408e465b20                         
+                             14199c4dcf7b0769.mp4'                              
+                    INFO     Animation 3 : Partial      scene_file_writer.py:173
+                             movie file written in                              
+                             '/Users/rajeev/Code/social                         
+                             -influence/experiments/vid                         
+                             eo-engines/manim-embedding                         
+                             s/.work/media/videos/embed                         
+                             dings_scene/1920p30/partia                         
+                             l_movie_files/EmbeddingsSc                         
+                             ene/1a80f642c3992024db948c                         
+                             796177e4c59862d73cd181254b                         
+                             1417781490a064f2.mp4'                              
+[10/19/26 00:25:40] INFO     Animation 4 : Partial      scene_file_writer.py:173
+                             movie file written in                              
+                             '/Users/rajeev/Code/social                         
+                             -influence/experiments/vid                         
+                             eo-engines/manim-embedding                         
+                             s/.work/media/videos/embed                         
+                             dings_scene/1920p30/partia                         
+                             l_movie_files/EmbeddingsSc                         
+                             ene/7413d9b41c09aef0d898af                         
+                             25602f50c435c608470167625c                         
+                             93e5b5f09abdd178.mp4'                              
+[10/19/26 00:25:41] INFO     Animation 5 : Partial      scene_file_writer.py:173
+                             movie file written in                              
+                             '/Users/rajeev/Code/social                         
+                             -influence/experiments/vid                         
+                             eo-engines/manim-embedding                         
+                             s/.work/media/videos/embed                         
+                             dings_scene/1920p30/partia                         
+                             l_movie_files/EmbeddingsSc                         
+                             ene/675e248dd03b5fad526e9f                         
+                             6881e23693abef6dbb3efb6549                         
+                             25d49170137702b4.mp4'                              
+[10/19/26 00:25:42] INFO     Animation 6 : Partial      scene_file_writer.py:173
+                             movie file written in                              
+                             '/Users/rajeev/Code/social                         
+                             -influence/experiments/vid                         
+                             eo-engines/manim-embedding                         
+                             s/.work/media/videos/embed                         
+                             dings_scene/1920p30/partia                         
+                             l_movie_files/EmbeddingsSc                         
+                             ene/ed2fa99b68634d8feeaa4e                         
+                             b5155cc9d4c3ba94f835c372f3                         
+                             14966e2b4a09e01f.mp4'                              
+                    INFO     Animation 7 : Partial      scene_file_writer.py:173
+                             movie file written in                              
+                             '/Users/rajeev/Code/social                         
+                             -influence/experiments/vid                         
+                             eo-engines/manim-embedding                         
+                             s/.work/media/videos/embed                         
+                             dings_scene/1920p30/partia                         
+                             l_movie_files/EmbeddingsSc                         
+                             ene/104e43a23295e7579ceb68                         
+                             317018a3b7299e1e81adb5cad0                         
+                             33afcbf2e08dccf4.mp4'                              
+[10/19/26 00:25:43] INFO     Animation 8 : Partial      scene_file_writer.py:173
+                             movie file written in                              
+                             '/Users/rajeev/Code/social                         
+                             -influence/experiments/vid                         
+                             eo-engines/manim-embedding                         
+                             s/.work/media/videos/embed                         
+                             dings_scene/1920p30/partia                         
+                             l_movie_files/EmbeddingsSc                         
+                             ene/3d7637ef60cf64a0af98b0                         
+                             af1dd06a60b1a3ee0c9c09f866                         
+                             108db32a9e32efe5.mp4'                              
+[10/19/26 00:25:44] INFO     Animation 9 : Partial      scene_file_writer.py:173
+                             movie file written in                              
+                             '/Users/rajeev/Code/social                         
+                             -influence/experiments/vid                         
+                             eo-engines/manim-embedding                         
+                             s/.work/media/videos/embed                         
+                             dings_scene/1920p30/partia                         
+                             l_movie_files/EmbeddingsSc                         
+                             ene/224dee138562f53292369a                         
+                             10291d71063a1254af0db0e782                         
+                             a677bdbed367d6fa.mp4'                              
+[10/19/26 00:25:46] INFO     Animation 10 : Partial     scene_file_writer.py:173
+                             movie file written in                              
+                             '/Users/rajeev/Code/social                         
+                             -influence/experiments/vid                         
+                             eo-engines/manim-embedding                         
+                             s/.work/media/videos/embed                         
+                             dings_scene/1920p30/partia                         
+                             l_movie_files/EmbeddingsSc                         
+                             ene/dead389e9efcd61e343247                         
+                             e0e61387213fab2f97002c0711                         
+                             ce050980161310eb.mp4'                              
+[10/19/26 00:25:47] INFO     Animation 11 : Partial     scene_file_writer.py:173
+                             movie file written in                              
+                             '/Users/rajeev/Code/social                         
+                             -influence/experiments/vid                         
+                             eo-engines/manim-embedding                         
+                             s/.work/media/videos/embed                         
+                             dings_scene/1920p30/partia                         
+                             l_movie_files/EmbeddingsSc                         
+                             ene/6acf71a059945353811ca1                         
+                             45b3252879b147fdd2aefe0059                         
+                             8296f3c61f30b8d2.mp4'                              
+                    INFO     Animation 12 : Partial     scene_file_writer.py:173
+                             movie file written in                              
+                             '/Users/rajeev/Code/social                         
+                             -influence/experiments/vid                         
+                             eo-engines/manim-embedding                         
+                             s/.work/media/videos/embed                         
+                             dings_scene/1920p30/partia                         
+                             l_movie_files/EmbeddingsSc                         
+                             ene/5f6e6e5537bd0e94755983                         
+                             e00bc1aadf7e4357e1e187ee91                         
+                             1e80d6e92e3d6f8f.mp4'                              
+[10/19/26 00:25:48] INFO     Animation 13 : Partial     scene_file_writer.py:173
+                             movie file written in                              
+                             '/Users/rajeev/Code/social                         
+                             -influence/experiments/vid                         
+                             eo-engines/manim-embedding                         
+                             s/.work/media/videos/embed                         
+                             dings_scene/1920p30/partia                         
+                             l_movie_files/EmbeddingsSc                         
+                             ene/5e3f6f894881588af3a1fe                         
+                             ed38fa07cc4f1604164465f75c                         
+                             908766237a4fd5d5.mp4'                              
+[10/19/26 00:25:49] INFO     Animation 14 : Partial     scene_file_writer.py:173
+                             movie file written in                              
+                             '/Users/rajeev/Code/social                         
+                             -influence/experiments/vid                         
+                             eo-engines/manim-embedding                         
+                             s/.work/media/videos/embed                         
+                             dings_scene/1920p30/partia                         
+                             l_movie_files/EmbeddingsSc                         
+                             ene/35212372dbf81d8860b49c                         
+                             9dfb0482f37f9cf4bd03093014                         
+                             4c0ab53795f8f47e.mp4'                              
+[10/19/26 00:25:50] INFO     Animation 15 : Partial     scene_file_writer.py:173
+                             movie file written in                              
+                             '/Users/rajeev/Code/social                         
+                             -influence/experiments/vid                         
+                             eo-engines/manim-embedding                         
+                             s/.work/media/videos/embed                         
+                             dings_scene/1920p30/partia                         
+                             l_movie_files/EmbeddingsSc                         
+                             ene/a2d372e39673859a683e1b                         
+                             04acbe43df919c7d6f2bb025e2                         
+                             07d4f7e9d76c1841.mp4'                              
+                    INFO     Animation 16 : Partial     scene_file_writer.py:173
+                             movie file written in                              
+                             '/Users/rajeev/Code/social                         
+                             -influence/experiments/vid                         
+                             eo-engines/manim-embedding                         
+                             s/.work/media/videos/embed                         
+                             dings_scene/1920p30/partia                         
+                             l_movie_files/EmbeddingsSc                         
+                             ene/4aafc64fe62a6b1db06187                         
+                             bbe5edcdc7c38332b5cc3120f0                         
+                             88d5ccf01e8d3f3c.mp4'                              
+                    INFO     Animation 17 : Partial     scene_file_writer.py:173
+                             movie file written in                              
+                             '/Users/rajeev/Code/social                         
+                             -influence/experiments/vid                         
+                             eo-engines/manim-embedding                         
+                             s/.work/media/videos/embed                         
+                             dings_scene/1920p30/partia                         
+                             l_movie_files/EmbeddingsSc                         
+                             ene/807ac8de679dbfd2a810e1                         
+                             f1175cf4c3d0e6202af6c2f774                         
+                             d01d95a841f15a96.mp4'                              
+[10/19/26 00:25:51] INFO     Animation 18 : Partial     scene_file_writer.py:173
+                             movie file written in                              
+                             '/Users/rajeev/Code/social                         
+                             -influence/experiments/vid                         
+                             eo-engines/manim-embedding                         
+                             s/.work/media/videos/embed                         
+                             dings_scene/1920p30/partia                         
+                             l_movie_files/EmbeddingsSc                         
+                             ene/4f70526d802eba5441ad44                         
+                             5e63e71009687c16d3de2c6ad8                         
+                             4b9eb927f1440daa.mp4'                              
+[10/19/26 00:25:52] INFO     Animation 19 : Partial     scene_file_writer.py:173
+                             movie file written in                              
+                             '/Users/rajeev/Code/social                         
+                             -influence/experiments/vid                         
+                             eo-engines/manim-embedding                         
+                             s/.work/media/videos/embed                         
+                             dings_scene/1920p30/partia                         
+                             l_movie_files/EmbeddingsSc                         
+                             ene/9c76d5090924f2e09c92e5                         
+                             08cd081ecbb295bc918d0077b3                         
+                             8875aa284da0029f.mp4'                              
+                    INFO     Animation 20 : Partial     scene_file_writer.py:173
+                             movie file written in                              
+                             '/Users/rajeev/Code/social                         
+                             -influence/experiments/vid                         
+                             eo-engines/manim-embedding                         
+                             s/.work/media/videos/embed                         
+                             dings_scene/1920p30/partia                         
+                             l_movie_files/EmbeddingsSc                         
+                             ene/a3132a10dab049404d2c73                         
+                             f90a3cceb1ade1db9b8f3cbbc6                         
+                             e4f6b873eaf8ccc8.mp4'                              
+                    INFO     Animation 21 : Partial     scene_file_writer.py:173
+                             movie file written in                              
+                             '/Users/rajeev/Code/social                         
+                             -influence/experiments/vid                         
+                             eo-engines/manim-embedding                         
+                             s/.work/media/videos/embed                         
+                             dings_scene/1920p30/partia                         
+                             l_movie_files/EmbeddingsSc                         
+                             ene/c26173aacb88d6ef2a8862                         
+                             03cb8344492a41b4e8f2fa0f13                         
+                             52746e27c70cc7a7.mp4'                              
+                    INFO     Combining to Movie file.   scene_file_writer.py:877
+                    INFO                                scene_file_writer.py:999
+                             File ready at                                      
+                             '/Users/rajeev/Code/social                         
+                             -influence/experiments/vid                         
+                             eo-engines/manim-embedding                         
+                             s/.work/media/videos/embed                         
+                             dings_scene/1920p30/embedd                         
+                             ings-final.mp4'                                    
+                                                                                
+                    INFO     Rendered EmbeddingsScene             manager.py:226
+                             Played 22 animations                               
+real 16.35
+user 24.18
+sys 1.71

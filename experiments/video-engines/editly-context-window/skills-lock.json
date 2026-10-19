@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "video-editing-skill": {
+      "source": "https://github.com/6missedcalls/video-editing-skill",
+      "sourceType": "github",
+      "ref": "7dc6e1da66f43eff44c3692d4b84e06aef6590b6",
+      "skillPath": "SKILL.md",
+      "installedPath": "assets/skills/video-editing-skill",
+      "computedHash": "ab35fe2089c7c3ea832559f01bc1f5268acfcad888886275c3dc5ba08ee9ce44",
+      "licenseHash": "6c1187ae8ba024d130a1e99903179f74f2c81e7bf85de50b0d159f23eda28947"
+    }
+  }
+}
+

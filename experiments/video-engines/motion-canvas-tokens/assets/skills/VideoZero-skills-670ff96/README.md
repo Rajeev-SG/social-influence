@@ -1,0 +1,23 @@
+# VideoZero Skills
+
+Skills for building animated videos with [Motion Canvas](https://github.com/motion-canvas/motion-canvas). These skills provide comprehensive reference documentation and agent tooling for programmatic control of the Motion Canvas editor. Demo video available here: [Demo](https://www.youtube.com/watch?v=e8eHLTMWLlo)
+
+- **Docs**: https://archive.canvascommons.io/ (user guides and API reference)
+
+## Skills
+
+| Skill | Description |
+|-------|-------------|
+| **motion-canvas** | Framework reference — components, signals, refs, layout, transitions, filters, gradients, camera, LaTeX, media, and 18 reference docs |
+| **motion-canvas-agent** | HTTP API for programmatic editor control — seek, screenshot, scene graph inspection, settings, rendering |
+| **animation-basics** | 12 principles of animation and timing guidance |
+
+## Install
+
+```bash
+npx skills add videozero/skills
+```
+
+## Contributing
+
+Contributions welcome! If you find incorrect documentation, missing API coverage, please open a PR.

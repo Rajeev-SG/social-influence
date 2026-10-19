@@ -1,0 +1,20 @@
+{
+  "name": "theatre-js-rag-video",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "audio": "node scripts/generate-audio.mjs",
+    "render": "node scripts/render.mjs",
+    "inspect": "node scripts/inspect.mjs",
+    "clean": "node scripts/clean.mjs"
+  },
+  "dependencies": {
+    "@theatre/core": "0.7.2"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.10",
+    "playwright-core": "1.55.1"
+  }
+}

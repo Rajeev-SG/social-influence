@@ -1,0 +1,34 @@
+{
+  "title": "Training versus inference",
+  "technology": "VideoFlow",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "voice": "bf_emma",
+  "speed": 1.04,
+  "lead_seconds": 0.42,
+  "tail_seconds": 1.15,
+  "pauses_seconds": [0.28, 0.38, 0.28, 0.34],
+  "narration": [
+    {
+      "id": "training",
+      "text": "Training studies many examples, compares each guess with the answer, and slowly adjusts."
+    },
+    {
+      "id": "recipe",
+      "text": "Like a chef tasting dishes to learn one recipe."
+    },
+    {
+      "id": "fixed",
+      "text": "Inference is different: the recipe is fixed."
+    },
+    {
+      "id": "prediction",
+      "text": "A new question goes in, and the trained model makes one prediction."
+    },
+    {
+      "id": "takeaway",
+      "text": "Learn once. Use many times."
+    }
+  ]
+}

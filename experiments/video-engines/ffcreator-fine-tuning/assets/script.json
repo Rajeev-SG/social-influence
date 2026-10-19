@@ -1,0 +1,44 @@
+[
+  {
+    "id": "base",
+    "scene": "base",
+    "say": "A base model already knows broad patterns.",
+    "caption": "A base model already knows broad patterns."
+  },
+  {
+    "id": "course",
+    "scene": "course",
+    "say": "Fine-tuning gives it a focused course.",
+    "caption": "Fine-tuning gives it a focused course."
+  },
+  {
+    "id": "examples",
+    "scene": "course",
+    "say": "You provide curated examples and feedback.",
+    "caption": "You provide curated examples and feedback."
+  },
+  {
+    "id": "analogy",
+    "scene": "analogy",
+    "say": "Think of a chef learning a bakery's croissant style.",
+    "caption": "Think of a chef learning a bakery's croissant style."
+  },
+  {
+    "id": "adapt",
+    "scene": "analogy",
+    "say": "A few guided shifts adapt technique, not every cooking skill.",
+    "caption": "A few guided shifts adapt technique—not every cooking skill."
+  },
+  {
+    "id": "settings",
+    "scene": "settings",
+    "say": "Training adjusts selected internal settings while the foundation stays.",
+    "caption": "Training adjusts selected settings while the foundation stays."
+  },
+  {
+    "id": "specialist",
+    "scene": "specialist",
+    "say": "The result: same base model, better fit for your task.",
+    "caption": "Same base model. Better fit for your task."
+  }
+]

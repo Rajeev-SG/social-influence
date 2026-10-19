@@ -1,0 +1,48 @@
+{
+  "duration": 21.828291666666665,
+  "sampleRate": 24000,
+  "cues": [
+    {
+      "id": "hook",
+      "scene": "hook",
+      "text": "What is a context window?",
+      "start": 0.24,
+      "end": 2.0069583333333334
+    },
+    {
+      "id": "desk",
+      "scene": "desk",
+      "text": "Think of it as the model's desk: the text it can consider in one go.",
+      "start": 2.246958333333333,
+      "end": 6.252125
+    },
+    {
+      "id": "fills",
+      "scene": "capacity",
+      "text": "Add too much conversation, and the desk fills.",
+      "start": 6.492125,
+      "end": 9.207541666666666
+    },
+    {
+      "id": "trim",
+      "scene": "capacity",
+      "text": "The app may trim or summarize older notes to fit the next request.",
+      "start": 9.447541666666666,
+      "end": 13.211416666666667
+    },
+    {
+      "id": "now",
+      "scene": "meaning",
+      "text": "So context is what the model can use right now, not permanent memory.",
+      "start": 13.551416666666666,
+      "end": 17.621375
+    },
+    {
+      "id": "limit",
+      "scene": "limit",
+      "text": "Bigger windows hold more, but every window has a limit.",
+      "start": 17.861375,
+      "end": 21.108291666666666
+    }
+  ]
+}
