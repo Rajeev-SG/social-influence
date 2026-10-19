@@ -1,0 +1,92 @@
+{
+  "visualSystem": {
+    "format": "Vertical 9:16 with a food-first, mobile-native layout.",
+    "framing": [
+      "Use tight close-ups where the finished bowl occupies most of the lower two-thirds.",
+      "Reserve the upper third for the primary claim so it remains separate from the food.",
+      "Mix food footage with one clean, full-frame information card rather than placing dense recipe text over moving food.",
+      "An occasional presenter or hand can enter from a side edge while the supporting chart or ingredient remains visible."
+    ],
+    "informationDensity": "Alternate visually rich food shots with sparse headline overlays and a separate, denser evidence or ingredient card. Avoid combining a long ingredient list, method and nutrition table in one moving shot.",
+    "foodPlacement": "Keep the bowl centered or slightly low, with the mozzarella, red passata and green spinach visible as distinct cues. Favor a close hero angle that makes one bowl feel abundant.",
+    "cameraStyle": "Predominantly stable, close and direct: locked-off overhead or shallow high-angle preparation shots, followed by a low-to-mid high-angle hero close-up. Any movement should be restrained and motivated by stirring, spooning or revealing the cheese.",
+    "palette": "Let tomato red, mozzarella white, bean cream and spinach green provide the color system against a quiet neutral surface. Use high-contrast white or dark text rather than decorative branding."
+  },
+  "shotRhythm": {
+    "structure": [
+      "Immediate finished-bowl hero and nutrition hook.",
+      "Fast ingredient identification using individual packs or measured ingredients.",
+      "Short preparation sequence focused on large, readable actions.",
+      "Brief nutrition or portion card.",
+      "Return to the finished bowl for a spoon lift or texture reveal.",
+      "End on the complete one-bowl serving with the verification caveat."
+    ],
+    "pacing": "The references support a contrast between quick food-led shots and longer holds on dense informational frames. Keep action shots brief, but allow charts or ingredient cards enough time to scan.",
+    "recommendedPattern": "Hero \u2192 ingredients \u2192 assembly \u2192 information card \u2192 cheese/texture payoff \u2192 final claim.",
+    "constraint": "Exact cut duration cannot be determined from still reference frames."
+  },
+  "firstSecond": {
+    "visual": "Open directly on the completed pizza-bean bowl, tightly framed, with visible melted mozzarella and passata. Use a spoon entering frame or a short cheese reveal to create immediate motion.",
+    "primaryText": "40g protein + 15g fibre",
+    "secondaryText": "pizza-bean bowl",
+    "placement": "Primary claim in the upper third; smaller dish name directly beneath it. Keep both clear of the food.",
+    "claimHandling": "Present the rounded figures as label-based estimates for one bowl, not as physically verified results."
+  },
+  "typography": {
+    "hierarchy": [
+      {
+        "level": "Primary hook",
+        "style": "Large, bold, condensed or heavy sans serif in uppercase or strong title case.",
+        "content": "40g PROTEIN + 15g FIBRE"
+      },
+      {
+        "level": "Dish descriptor",
+        "style": "Smaller, lighter sans serif with generous spacing.",
+        "content": "Pizza-bean bowl"
+      },
+      {
+        "level": "Ingredient labels",
+        "style": "Compact bold sans serif, one short label at a time.",
+        "content": "235g beans / 100g lighter mozzarella / 150g passata / 50g spinach"
+      },
+      {
+        "level": "Evidence and caveat",
+        "style": "Small but legible regular sans serif on a solid or translucent panel.",
+        "content": "Label-based estimate per bowl. Check purchased labels."
+      }
+    ],
+    "principles": "Use no more than two type styles. Preserve a strong size difference between headline and supporting copy. Avoid reproducing the references' exact type combinations, chart design or branded marks."
+  },
+  "overlayZones": {
+    "upperThird": "Primary nutrition hook and short recipe title. Best used when the bowl is positioned lower in frame.",
+    "sideZone": "Short ingredient callouts beside a hand, pack or measured ingredient; keep the central cooking action unobstructed.",
+    "lowerThird": "Captions, one-line method prompts and the final label-check caveat. Use a high-contrast backing when footage is busy.",
+    "fullFrameCard": "Use for the four-ingredient list or nutrition methodology. Keep it visually simpler than the dense reference recipe pages.",
+    "avoid": [
+      "Covering the melted-cheese focal point with text.",
+      "Placing small copy over textured food.",
+      "Stacking headline, captions, ingredient list and disclaimer in the same zone.",
+      "Using creator logos, page counters or replicated chart layouts from the references."
+    ]
+  },
+  "transitions": {
+    "supportedApproach": "Favor direct cuts between food actions and a clean cut to any information card. The frames emphasize clear state changes rather than elaborate effects.",
+    "options": [
+      "Action match from pouring passata to stirring the bowl.",
+      "Cut on hand movement between ingredient additions.",
+      "Hard cut from preparation to a static nutrition card.",
+      "Return cut from the card to a close spoon lift or melted-cheese detail."
+    ],
+    "avoid": "Do not infer or imitate creator-specific transition effects that are not visible in the still frames."
+  },
+  "candidateNotes": [
+    "All quantities are for one bowl: 235g drained cannellini beans, 100g lighter mozzarella, 150g passata and 50g spinach.",
+    "Calculated basis supplied: 40.025g protein and a fibre lower bound of 15.69g per serving.",
+    "Round the consumer-facing hook to 40g protein and 15g fibre, while retaining the label-based estimate caveat.",
+    "Because the recipe has not been physically tested, do not make claims about exact cook time, final texture, cheese pull or guaranteed appearance.",
+    "Show supermarket-style ingredients generically and avoid implying endorsement by a specific retailer or brand.",
+    "A useful evidence frame can show the four quantities and the line: 'Estimated from product labels; values vary by purchase.'",
+    "Keep the final serving visibly singular so the nutrition claim clearly refers to one bowl.",
+    "The concept should borrow only broad reference traits\u2014food-dominant framing, strong top headline, separated information cards and restrained camera movement\u2014not exact compositions or imagery."
+  ]
+}

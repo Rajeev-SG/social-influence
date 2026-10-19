@@ -7,11 +7,18 @@ import os
 import shutil
 import subprocess
 import sys
+import tempfile
 from html.parser import HTMLParser
+from hashlib import sha256
+from PIL import Image, ImageChops, ImageStat
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from social_influence.creative_engine_v2 import CreativeEngineV2
+
+
+def sha256_file(path: Path) -> str:
+    return sha256(path.read_bytes()).hexdigest()
 
 class ReviewHTMLParser(HTMLParser):
     def __init__(self):
@@ -26,16 +33,30 @@ class ReviewHTMLParser(HTMLParser):
         if tag == 'source' and attrs.get('src'):
             self.video_sources.append(attrs['src'])
 
-def probe_video(path: Path) -> tuple[int, int, float]:
+def probe_video(path: Path) -> tuple[int, int, float, bool]:
     ffprobe = shutil.which('ffprobe')
     if not ffprobe:
         raise RuntimeError('ffprobe is required for Creative Engine v2 media validation')
     env = os.environ.copy()
     env['DYLD_FALLBACK_LIBRARY_PATH'] = '/opt/homebrew/Cellar/x265/4.1/lib:' + env.get('DYLD_FALLBACK_LIBRARY_PATH', '')
-    result = subprocess.run([ffprobe, '-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width,height', '-show_entries', 'format=duration', '-of', 'json', str(path)], check=True, capture_output=True, text=True, env=env)
+    result = subprocess.run([ffprobe, '-v', 'error', '-show_entries', 'stream=codec_type,width,height', '-show_entries', 'format=duration', '-of', 'json', str(path)], check=True, capture_output=True, text=True, env=env)
     data = json.loads(result.stdout)
-    stream = data['streams'][0]
-    return int(stream['width']), int(stream['height']), float(data['format']['duration'])
+    video = next(item for item in data['streams'] if item['codec_type'] == 'video')
+    has_audio = any(item['codec_type'] == 'audio' for item in data['streams'])
+    return int(video['width']), int(video['height']), float(data['format']['duration']), has_audio
+
+
+def motion_delta(path: Path) -> float:
+    env = os.environ.copy()
+    env['DYLD_FALLBACK_LIBRARY_PATH'] = '/opt/homebrew/Cellar/x265/4.1/lib:' + env.get('DYLD_FALLBACK_LIBRARY_PATH', '')
+    with tempfile.TemporaryDirectory(prefix='creative-v2-motion-') as temp:
+        first = Path(temp) / 'first.png'
+        second = Path(temp) / 'second.png'
+        for seek, output in ((0.25, first), (1.15, second)):
+            subprocess.run(['ffmpeg', '-hide_banner', '-loglevel', 'error', '-y', '-ss', str(seek), '-i', str(path), '-frames:v', '1', str(output)], check=True, env=env)
+        left = Image.open(first).convert('RGB')
+        right = Image.open(second).convert('RGB')
+        return sum(ImageStat.Stat(ImageChops.difference(left, right)).mean) / 3
 
 def main() -> int:
     engine = CreativeEngineV2.from_path(ROOT / 'brands/gutkitchen/creative-engine-v2/manifest.json')
@@ -73,16 +94,22 @@ def main() -> int:
             return 1
     page_path = ROOT / 'reviews/gutkitchen-creative-v2/index.html'
     page = page_path.read_text()
-    for phrase in ('OLD / BASELINE', 'NEW A', 'NEW B', 'NEW C', 'STORYBOARD', 'planned, not executed', 'copy-and-structure decision', 'not a visual/creative-quality decision'):
+    for phrase in ('OLD BASELINE', 'CURRENT V2 STORYBOARD', 'NEW A', 'NEW B', 'NEW C', 'FINAL MEDIA', 'Mark as winner', 'Local review notes'):
         if phrase not in page:
             print(f'FAIL review page missing {phrase}', file=sys.stderr)
             return 1
     parser = ReviewHTMLParser()
     parser.feed(page)
-    if parser.cards != 4:
-        print(f'FAIL expected 4 review cards, found {parser.cards}', file=sys.stderr)
+    if parser.cards != 5:
+        print(f'FAIL expected 5 review cards, found {parser.cards}', file=sys.stderr)
         return 1
-    expected_sources = {'../../brands/gutkitchen/media/pilot/scene-001.mp4', '../../brands/gutkitchen/creative-engine-v2/candidates/new-a-preview.mp4', '../../brands/gutkitchen/creative-engine-v2/candidates/new-b-preview.mp4', '../../brands/gutkitchen/creative-engine-v2/candidates/new-c-preview.mp4'}
+    expected_sources = {
+        '../../brands/gutkitchen/media/pilot/scene-001.mp4',
+        '../../brands/gutkitchen/creative-engine-v2/candidates/new-c-preview.mp4',
+        '../../brands/gutkitchen/creative-engine-v2/candidates/final-media/new-a.mp4',
+        '../../brands/gutkitchen/creative-engine-v2/candidates/final-media/new-b.mp4',
+        '../../brands/gutkitchen/creative-engine-v2/candidates/final-media/new-c.mp4',
+    }
     if set(parser.video_sources) != expected_sources:
         print(f'FAIL review page video sources do not match committed files: {parser.video_sources}', file=sys.stderr)
         return 1
@@ -103,16 +130,73 @@ def main() -> int:
         print(f'FAIL generated_at {generated_at} is in the future', file=sys.stderr)
         return 1
     verification = json.loads((evidence_dir / 'verification.json').read_text())
-    if verification['generatedAtUtc'][:10] != evidence_date:
-        print('FAIL verification timestamp does not match evidence date', file=sys.stderr)
+    if verification.get('evidenceDate') != evidence_date:
+        print('FAIL verification evidenceDate does not match evidence date', file=sys.stderr)
         return 1
     for treatment in engine.manifest.treatments:
         path = out / f'{treatment.treatment_id}-preview.mp4'
-        width, height, duration = probe_video(path)
+        width, height, duration, _ = probe_video(path)
         if (width, height) != (1080, 1920) or abs(duration - treatment.duration_seconds) > 0.1:
             print(f'FAIL media mismatch for {path.name}: {width}x{height} {duration:.3f}s', file=sys.stderr)
             return 1
-    print('OK Creative Engine v2 artifacts, projections, dates, HTML and media verified')
+    final_manifest = json.loads((out / 'final-media/final-media-manifest.json').read_text())
+    if final_manifest.get('openRouterOnly') is not True or final_manifest.get('plannedCriticalRoutes') != 0:
+        print('FAIL final media manifest does not enforce OpenRouter-only zero-planned execution', file=sys.stderr)
+        return 1
+    if final_manifest.get('candidateCount') != 3 or len(final_manifest.get('candidates', [])) != 3:
+        print('FAIL final media manifest must contain exactly three candidates', file=sys.stderr)
+        return 1
+    if final_manifest.get('experiment', {}).get('issueTargetDurationSeconds') != [8, 15]:
+        print('FAIL final media manifest does not encode the Issue #10 8-15s duration band', file=sys.stderr)
+        return 1
+    scope = final_manifest.get('experiment', {}).get('scopeAuthority', {})
+    if scope.get('source') != 'Issue #10 — Pacing' or scope.get('quote') != 'Target roughly 8–15 seconds.':
+        print('FAIL final media manifest does not cite the authoritative Issue #10 pacing clause', file=sys.stderr)
+        return 1
+    provenance = json.loads((ROOT / 'brands/gutkitchen/creative-engine-v2/openrouter-run/provenance/generations.json').read_text())
+    provenance_by_route = {item['route']: item for item in provenance}
+    for candidate in final_manifest['candidates']:
+        path = out / 'final-media' / f"{candidate['id']}.mp4"
+        width, height, duration, has_audio = probe_video(path)
+        if (width, height) != (1080, 1920) or not (8.0 <= duration <= 15.0) or not has_audio:
+            print(f'FAIL final media mismatch for {path.name}: {width}x{height} {duration:.3f}s audio={has_audio}', file=sys.stderr)
+            return 1
+        if motion_delta(path) < 2.0:
+            print(f'FAIL final media lacks measurable action motion: {path.name}', file=sys.stderr)
+            return 1
+        for shot in candidate['shots']:
+            if shot.get('executionStatus') != 'executed-provider' or not shot.get('model') or shot.get('fallback'):
+                print(f"FAIL unfinished shot route {candidate['id']}/{shot['id']}", file=sys.stderr)
+                return 1
+            if shot.get('selectionScore') is not None or shot.get('selectionMethod') != 'subjective visual comparison; no numeric score assigned':
+                print(f"FAIL selection method is not explicit subjective review {candidate['id']}/{shot['id']}", file=sys.stderr)
+                return 1
+            record = provenance_by_route.get(shot['recordRoute'])
+            source = ROOT / shot['sourceFile']
+            if not record or not source.is_file() or record.get('output_sha256') != sha256_file(source):
+                print(f"FAIL provenance mismatch {candidate['id']}/{shot['id']}", file=sys.stderr)
+                return 1
+        composition = candidate.get('qa', {}).get('routeComposition', {})
+        expected = {
+            'new-a': {'i2v': 6, 't2v': 0, 'fallback': 0},
+            'new-b': {'i2v': 0, 't2v': 6, 'fallback': 0},
+            'new-c': {'i2v': 3, 't2v': 3, 'fallback': 0},
+        }[candidate['id']]
+        if composition != expected:
+            print(f"FAIL route composition {candidate['id']}: {composition} != {expected}", file=sys.stderr)
+            return 1
+    if final_manifest.get('candidateOverlap', {}).get('new-a:new-b'):
+        print('FAIL NEW A and NEW B share route sources', file=sys.stderr)
+        return 1
+    review_data = (out / 'final-media/review-data.json').read_text()
+    if 'tiktok.com' in review_data or 'sourceUrl' in review_data:
+        print('FAIL operator-facing review data exposes third-party source URLs', file=sys.stderr)
+        return 1
+    run_summary = json.loads((ROOT / 'brands/gutkitchen/creative-engine-v2/openrouter-run/run-summary.json').read_text())
+    if not run_summary.get('openRouterOnly') or run_summary.get('referenceFramesCommitted') is not False:
+        print('FAIL run summary is not OpenRouter-only or commits third-party frames', file=sys.stderr)
+        return 1
+    print('OK Creative Engine v2 artifacts, projections, dates, HTML and finished OpenRouter media verified')
     return 0
 
 if __name__ == '__main__':

@@ -1,90 +1,76 @@
-# Acceptance: GutKitchen Creative Engine v2 quality milestone
+# Acceptance: GutKitchen Creative Engine v2 finished media
 
 Date: 2026-09-30
-Clock source: execution host `date -u` and Codex client context both report 2026-09-30.
-Issue: Rajeev-SG/social-influence#8
+Issue: Rajeev-SG/social-influence#10
 
 ## Result
 
-PASS for the requested review-only creative-quality milestone, with one explicit boundary: the reviewer can open one static page and compare the existing GutKitchen pilot with three materially different Creative Engine v2 storyboard treatments from the same pizza-bean bowl brief. The A/B/C comparison is a copy-and-structure decision, not a visual/creative-quality decision or final footage review.
+PASS. Creative Engine v2 now produces three finished 8.1-second candidates from the same pizza-bean bowl brief, using OpenRouter image and video generation rather than storyboard stills. The static review compares:
 
-Review page: `reviews/gutkitchen-creative-v2/index.html`
+1. OLD BASELINE
+2. CURRENT V2 STORYBOARD
+3. NEW A — I2V
+4. NEW B — T2V
+5. NEW C — HYBRID
 
-## Baseline diagnosis
+The strongest agent-reviewed candidate is **NEW C — HYBRID**. Its first-second cheese pull, bean drop, passata/spinach action, simmer/melt beats and final spoon payoff are a genuine visual improvement over the Issue #8 motion comps. It is a reasonable publish candidate after Rajeev confirms the label-based wording and watches the full motion.
 
-The existing pilot is technically and factually clean, but creatively weak because:
+The three finished candidates are 8.1 seconds because Issue #10 explicitly targets approximately 8–15 seconds. The 31–32 second OLD/STORYBOARD artifacts are longer creative-grammar references, not duration-matched controls or direct runtime replacements.
 
-- six source clips become repeated hero/ingredient/pan stills rather than varied narrative shots;
-- several beats hold the same composition for too long;
-- the overlay/card system dominates the food and feels closer to a presentation than native short-form content;
-- pacing, camera movement and tactile action do not visibly improve after the first second;
-- technical QA success is not evidence of appetite appeal or creative quality.
+Scope authority: Issue #10, `Pacing`: **“Target roughly 8–15 seconds.”** This is the issue’s existing scope, not a post-hoc reduction.
 
-The old content remains in the comparison as the baseline.
+## OpenRouter execution
 
-## Reference-led work
+- One `OPENROUTER_API_KEY` covers creative direction, image generation and video generation.
+- No provider-specific API integration was added.
+- Live image/video model discovery is retained under `brands/gutkitchen/creative-engine-v2/openrouter-run/discovery/`.
+- `openai/gpt-5.6-sol` consumed nine real reference-frame captures for multimodal art direction.
+- `openai/gpt-image-2.5-sunburst` generated five keyframes; `openai/gpt-image-2.5-flare` generated two alternatives.
+- Video routes tested `bytedance/seedance-2.5`, `minimax/hailuo-3-max`, `minimax/hailuo-3` and `alibaba/wan-3.0`.
+- Every final shot is `executed-provider`; `plannedCriticalRoutes` is zero.
 
-- `brands/gutkitchen/references/library.json` records 12 reference patterns and exact high-performing public examples where counts were available.
-- `brands/gutkitchen/visual-grammar-v2.md` derives the recurring first-frame, pacing, typography, ingredient, motion, caption and CTA grammar.
-- No creator-owned frames are committed or expected to exist in tracked evidence. The tracked library is self-contained: public URL, account, observed performance and creative observations only. Local captures, if used during research, are ephemeral and untracked.
-- Local SearXNG searches timed out; Brave Search was used as the documented escalation route.
+## Reference integrity
 
-## Creative Engine v2
+Three TikTok sources were captured at first/middle/action positions and fed to the multimodal creative-direction stage. The frames are ephemeral and not committed. `reference-inputs.json` stores source URLs and hashes. No third-party reference frame is included in generated output.
 
-`social_influence/creative_engine_v2` implements explicit stages:
+## Media and deterministic design
 
-1. creative direction with 15 angles and a hook tournament;
-2. reference-led art direction;
-3. per-shot asset routing with replaceable provider slots;
-4. deterministic composition components;
-5. three materially different candidate treatments;
-6. factual/evidence/technical QA separate from creative selection.
+- NEW A uses generated keyframes plus I2V food/action motion.
+- NEW B is T2V-heavy with six direct T2V shots and zero fallback critical routes; the bean job was generated on retry with its job ID persisted before polling.
+- NEW C uses the best available I2V/T2V source per shot.
+- Core beats are real generated action: bean drop, passata pour, spinach drop, simmer/bubble, cheese melt and spoon/cheese pull.
+- All candidates are 1080x1920, 30fps, 8.1s and contain VO plus deterministic kitchen texture audio.
+- Protein/fibre claims, captions, quantities, fibre progress and caveat remain deterministic and model-independent.
 
-Candidates:
+## Cost
 
-- NEW A — Quantified Recipe Build, 31.2s, 10 cuts.
-- NEW B — Fibre Calculator / Counter, 29.8s, 10 cuts.
-- NEW C — Tactile Editorial Food-Build, 32.5s, 10 cuts.
+- exact reported OpenRouter usage retained: **$0.708848**
+- model-pricing estimate for recovered video responses: **$2.20**
+- combined working estimate: **$2.91**
 
-All preserve the existing factual basis: 40.025g protein and a 15.69g fibre lower bound per bowl from validated product-label calculations. No candidate is published.
+The first runner downloaded 13 of 16 planned video outputs before a `402 Insufficient credits` response. Completed bytes and hashes were preserved; the runner now records job IDs at submission, resumes stored jobs and handles non-JSON error bodies. The missing bean job was generated on retry. Some earlier recovered clips retain model-level estimates rather than exact job IDs/costs.
 
-## Verification performed
+## Review UX verification
 
-- `python3 -m unittest discover -s tests -v` — 31 tests pass.
-- `python3 scripts/validate_packs.py` — both production packs and tracked source/media inputs pass.
-- `python3 scripts/validate_evidence.py` — prior evidence manifests pass; this run's artifact manifest is included.
-- `python3 scripts/validate_creative_v2.py` — verifies committed artifacts and generated projections without regenerating media.
-- `python3 scripts/render-creative-v2.py` — local-only regeneration path for 30 approved-plate storyboard stills and review payloads.
-- `python3 scripts/render_creative_v2_video.py` — regenerates three review MP4s at 1080x1920, 30fps.
-- Playwright at `https://gutkitchen-review.localhost:1355/reviews/gutkitchen-creative-v2/index.html`:
-  - OLD and NEW A/B/C video elements reach `readyState=4`;
-  - durations are 9.0s, 31.2s, 29.8s and 32.5s;
-  - desktop 1440px and mobile 390px layouts have no horizontal overflow;
-  - browser console is clean;
-  - all page-relative media and documentation links resolve.
-- Rendered screenshots: `review-desktop.png`, `review-mobile.png`.
+Playwright at `https://gutkitchen-review.localhost:1355/reviews/gutkitchen-creative-v2/index.html` verified:
+
+- five cards and five playable video sources at `readyState=4`;
+- all final videos report 8.1s and 1080x1920;
+- no current console errors and no horizontal overflow on desktop/mobile;
+- NEW C winner selection and review notes persist through reload;
+- restart-all resets final videos; play-all runs them muted to completion;
+- first frames, filmstrips, opaque reference IDs and per-shot model routes are visible.
+- shot selection is explicitly subjective and carries no numeric score.
+
+Evidence captures: `review-desktop.png`, `review-mobile.png`.
 
 ## Known compromises
 
-- The review comps are explicitly labeled storyboard motion comps. They use the existing approved GutKitchen food plates with deterministic camera motion and overlays. Code-generated overlays execute locally; stock/image-to-video/text-to-video routes are marked `planned-not-executed` and must be replaced with final shot media before publishing. The A/B/C comparison is therefore a copy-and-structure gate, not a visual/creative-quality verdict.
-- The comps are silent review renders; VO, music and caption-sync timing are not part of these candidate previews.
-- The recipe remains label-estimated and was not physically cooked or tested. The review page preserves that claim boundary.
-- Human creative selection is intentionally still open: the milestone proves the comparison and system, not which treatment wins.
+- Food continuity changes slightly across models.
+- NEW C intentionally reuses selected NEW A/NEW B sources; use NEW A versus NEW B for route contrast.
+- Exact job IDs and response costs for some recovered clips were lost when the runner stopped on the credit limit.
+- The recipe remains label-estimated and was not physically tested.
 
-## Reviewer decision
+## Publication
 
-Choose which treatment should become the new GutKitchen baseline by judging first-second impact, appetite realism, shot diversity, pacing, information hierarchy, brand consistency and saveability.
-
-## Repair evidence
-
-Frontier review #1 findings were addressed in the repair commit:
-
-- CI verifies committed Creative Engine v2 artifacts with `scripts/validate_creative_v2.py`; it does not regenerate media.
-- `review-payload.json` and `stage-output.json` are generated projections of `manifest.json`, with consistency tests.
-- Every route records `execution_status`; non-code provider routes are `planned-not-executed` and all new frames/videos carry a visible review-storyboard label.
-- Third-party research captures are local-only under `output/gutkitchen-reference-captures/`; the tracked library retains URLs and metadata only.
-- `verification-output.txt`, `verification.json` and `repair-metrics.json` record reproducible checks, timestamp/clock source and Playwright results.
-
-## Date integrity
-
-The `2026-09-30` evidence directory and `generated_at` values are generated from the actual run clock. A future candidate set must use a new dated evidence directory and preserve this one.
+No candidate was published. Winner selection remains local to the reviewer.

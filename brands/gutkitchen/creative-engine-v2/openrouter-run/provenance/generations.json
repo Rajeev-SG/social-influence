@@ -1,0 +1,1024 @@
+[
+  {
+    "route": "creative-direction",
+    "model": "openai/gpt-5.6-sol",
+    "prompt": "You are the creative director for a vertical food short. Analyse the attached real reference frames for framing, information density, shot rhythm, food placement, typography hierarchy, overlay positioning, camera style and transitions. Do not copy creator branding, exact compositions or imagery. Return JSON with keys: visualSystem, shotRhythm, firstSecond, typography, overlayZones, transitions, candidateNotes. Use only observations supported by the frames and the factual brief below. Brief: 40g protein + 15g fibre pizza-bean bowl using supermarket ingredients. Factual basis: {\"proteinGPerServing\": 40.025, \"fibreGLowerBound\": 15.69, \"portion\": \"one bowl\", \"ingredients\": [\"235g drained cannellini beans\", \"100g lighter mozzarella\", \"150g passata\", \"50g spinach\"], \"claimBoundary\": \"label-based estimates; suggested recipe not physically tested; check purchased labels\"}.",
+    "request": {
+      "model": "openai/gpt-5.6-sol",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "You are the creative director for a vertical food short. Analyse the attached real reference frames for framing, information density, shot rhythm, food placement, typography hierarchy, overlay positioning, camera style and transitions. Do not copy creator branding, exact compositions or imagery. Return JSON with keys: visualSystem, shotRhythm, firstSecond, typography, overlayZones, transitions, candidateNotes. Use only observations supported by the frames and the factual brief below. Brief: 40g protein + 15g fibre pizza-bean bowl using supermarket ingredients. Factual basis: {\"proteinGPerServing\": 40.025, \"fibreGLowerBound\": 15.69, \"portion\": \"one bowl\", \"ingredients\": [\"235g drained cannellini beans\", \"100g lighter mozzarella\", \"150g passata\", \"50g spinach\"], \"claimBoundary\": \"label-based estimates; suggested recipe not physically tested; check purchased labels\"}."
+            },
+            {
+              "type": "image_url",
+              "image_url": {
+                "url": "sha256:f918a7fabe1e4b8ae572d853dd5a18422f85ee30ec4acc20f02a43986310f8fc"
+              }
+            },
+            {
+              "type": "image_url",
+              "image_url": {
+                "url": "sha256:122c78bdf35752f142ca4c61b326c527ab29ce15b6d4bf5cc4160abee74af19c"
+              }
+            },
+            {
+              "type": "image_url",
+              "image_url": {
+                "url": "sha256:30f839d70c30b42f025a27440a2720f2ecdd082b7709cd9612a79211424da407"
+              }
+            }
+          ]
+        }
+      ],
+      "response_format": {
+        "type": "json_object"
+      },
+      "max_tokens": 1800,
+      "reasoning_effort": "low"
+    },
+    "input_references": [
+      {
+        "path": "/tmp/gutkitchen-ref-captures/ref-05-action.jpg",
+        "sha256": "f918a7fabe1e4b8ae572d853dd5a18422f85ee30ec4acc20f02a43986310f8fc",
+        "bytes": 119806
+      },
+      {
+        "path": "/tmp/gutkitchen-ref-captures/ref-09-middle.jpg",
+        "sha256": "122c78bdf35752f142ca4c61b326c527ab29ce15b6d4bf5cc4160abee74af19c",
+        "bytes": 77571
+      },
+      {
+        "path": "/tmp/gutkitchen-ref-captures/ref-12-first.jpg",
+        "sha256": "30f839d70c30b42f025a27440a2720f2ecdd082b7709cd9612a79211424da407",
+        "bytes": 170278
+      }
+    ],
+    "output_path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/creative-direction.json",
+    "output_sha256": "a6d2ca9dc7fa5dfb2117cf3b5c548ed7160c427ebb29c993257ee354296e83ea",
+    "started_at": "2026-09-30T19:26:58.042954+00:00",
+    "completed_at": "2026-09-30T19:27:22.000943+00:00",
+    "elapsed_seconds": 23.953713750001043,
+    "job_id": null,
+    "generation_id": "gen-1790796418-IjYJQIs791UfTjluZkxG",
+    "provider": "OpenAI",
+    "usage": {
+      "prompt_tokens": 2686,
+      "completion_tokens": 1436,
+      "total_tokens": 4122,
+      "cost": 0.020862765,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 2683,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0210735,
+        "upstream_inference_prompt_cost": 0.0067135,
+        "upstream_inference_completions_cost": 0.01436
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 58,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "status": "completed",
+        "response_keys": [
+          "choices",
+          "created",
+          "id",
+          "model",
+          "object",
+          "provider",
+          "service_tier",
+          "system_fingerprint",
+          "usage"
+        ]
+      }
+    ]
+  },
+  {
+    "route": "image/sauce-spinach",
+    "model": "openai/gpt-image-2.5-sunburst",
+    "prompt": "Vertical 45-degree editorial food photograph of thick tomato passata pouring from a plain glass measuring jug into a cast-iron pan with white beans, a handful of bright spinach leaves beginning to drop, glossy sauce ribbon and natural steam, believable home-kitchen lighting, rich tomato red and fresh green, shallow depth of field, unbranded and clean, calm top and bottom safe regions. No text, no logos, no extra ingredients, no malformed hands or jug.",
+    "request": {
+      "model": "openai/gpt-image-2.5-sunburst",
+      "prompt": "Vertical 45-degree editorial food photograph of thick tomato passata pouring from a plain glass measuring jug into a cast-iron pan with white beans, a handful of bright spinach leaves beginning to drop, glossy sauce ribbon and natural steam, believable home-kitchen lighting, rich tomato red and fresh green, shallow depth of field, unbranded and clean, calm top and bottom safe regions. No text, no logos, no extra ingredients, no malformed hands or jug.",
+      "aspect_ratio": "9:16",
+      "quality": "high"
+    },
+    "input_references": [],
+    "output_path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/images/sauce-spinach.png",
+    "output_sha256": "30b9d8395f38a7ef670d8f34d59367c7041e91f706fba9a38962fabc4d82c064",
+    "started_at": "2026-09-30T19:27:22.002966+00:00",
+    "completed_at": "2026-09-30T19:27:50.831338+00:00",
+    "elapsed_seconds": 28.825452959001268,
+    "job_id": null,
+    "generation_id": null,
+    "provider": null,
+    "usage": {
+      "prompt_tokens": 99,
+      "completion_tokens": 1078,
+      "total_tokens": 1177,
+      "cost": 0.032835,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.032835,
+        "upstream_inference_prompt_cost": 0.000495,
+        "upstream_inference_completions_cost": 0.03234
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 1078
+      }
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "status": "completed",
+        "response_keys": [
+          "created",
+          "data",
+          "usage"
+        ]
+      }
+    ]
+  },
+  {
+    "route": "image/hero-spoon",
+    "model": "openai/gpt-image-2.5-sunburst",
+    "prompt": "Vertical editorial food photograph of a homemade white-bean pizza bowl: a polished steel spoon lifting a generous bite from a shallow dark bowl, one visible strand of melted lighter mozzarella, glossy tomato passata, tender cannellini beans and just-wilted spinach. Real kitchen daylight from the left, 50mm macro lens, natural steam, crisp food texture, deep reds and greens, clean unbranded dark slate worktop, appetising and believable. Leave the top 22% and bottom 14% visually calm for typography. No text, no logo, no packaging, no hands beyond one natural spoon grip, no artificial plastic-looking food.",
+    "request": {
+      "model": "openai/gpt-image-2.5-sunburst",
+      "prompt": "Vertical editorial food photograph of a homemade white-bean pizza bowl: a polished steel spoon lifting a generous bite from a shallow dark bowl, one visible strand of melted lighter mozzarella, glossy tomato passata, tender cannellini beans and just-wilted spinach. Real kitchen daylight from the left, 50mm macro lens, natural steam, crisp food texture, deep reds and greens, clean unbranded dark slate worktop, appetising and believable. Leave the top 22% and bottom 14% visually calm for typography. No text, no logo, no packaging, no hands beyond one natural spoon grip, no artificial plastic-looking food.",
+      "aspect_ratio": "9:16",
+      "quality": "high"
+    },
+    "input_references": [],
+    "output_path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/images/hero-spoon.png",
+    "output_sha256": "2443cc13593d3b922499ad3f5cad5d2e78494cb099604e45070d570c98fbcd87",
+    "started_at": "2026-09-30T19:27:22.003071+00:00",
+    "completed_at": "2026-09-30T19:27:52.714427+00:00",
+    "elapsed_seconds": 30.707900666999194,
+    "job_id": null,
+    "generation_id": null,
+    "provider": null,
+    "usage": {
+      "prompt_tokens": 136,
+      "completion_tokens": 1078,
+      "total_tokens": 1214,
+      "cost": 0.03302,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.03302,
+        "upstream_inference_prompt_cost": 0.00068,
+        "upstream_inference_completions_cost": 0.03234
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 1078
+      }
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "status": "completed",
+        "response_keys": [
+          "created",
+          "data",
+          "usage"
+        ]
+      }
+    ]
+  },
+  {
+    "route": "image/beans-pan",
+    "model": "openai/gpt-image-2.5-sunburst",
+    "prompt": "Vertical overhead editorial food photograph at the instant drained cannellini beans tumble into a hot cast-iron pan of glossy tomato passata, several beans suspended in motion, natural motion blur only on the falling beans, fresh steam, realistic home-kitchen light, tactile bean skins and sauce texture, dark red and cream palette, clean unbranded surroundings, top and bottom safe areas kept calm. No text, no logos, no packaging, no distorted beans or utensils.",
+    "request": {
+      "model": "openai/gpt-image-2.5-sunburst",
+      "prompt": "Vertical overhead editorial food photograph at the instant drained cannellini beans tumble into a hot cast-iron pan of glossy tomato passata, several beans suspended in motion, natural motion blur only on the falling beans, fresh steam, realistic home-kitchen light, tactile bean skins and sauce texture, dark red and cream palette, clean unbranded surroundings, top and bottom safe areas kept calm. No text, no logos, no packaging, no distorted beans or utensils.",
+      "aspect_ratio": "9:16",
+      "quality": "high"
+    },
+    "input_references": [],
+    "output_path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/images/beans-pan.png",
+    "output_sha256": "17225e47cca921a673ee5f13303d7058947d4d6b400c96f1c6abe55da91d45ad",
+    "started_at": "2026-09-30T19:27:22.002613+00:00",
+    "completed_at": "2026-09-30T19:27:53.294282+00:00",
+    "elapsed_seconds": 31.28370383299989,
+    "job_id": null,
+    "generation_id": null,
+    "provider": null,
+    "usage": {
+      "prompt_tokens": 99,
+      "completion_tokens": 1078,
+      "total_tokens": 1177,
+      "cost": 0.032835,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.032835,
+        "upstream_inference_prompt_cost": 0.000495,
+        "upstream_inference_completions_cost": 0.03234
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 1078
+      }
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "status": "completed",
+        "response_keys": [
+          "created",
+          "data",
+          "usage"
+        ]
+      }
+    ]
+  },
+  {
+    "route": "image/cheese-melt",
+    "model": "openai/gpt-image-2.5-sunburst",
+    "prompt": "Vertical macro editorial food photograph of torn lighter mozzarella landing on a bubbling white-bean and tomato pan, cheese beginning to melt into soft ribbons, tiny sauce bubbles, fresh basil-like green from spinach only, natural kitchen window light, glossy but not oily, realistic texture, appetising close crop, calm top and bottom safe areas. No text, no logos, no packaging, no synthetic-looking cheese strands.",
+    "request": {
+      "model": "openai/gpt-image-2.5-sunburst",
+      "prompt": "Vertical macro editorial food photograph of torn lighter mozzarella landing on a bubbling white-bean and tomato pan, cheese beginning to melt into soft ribbons, tiny sauce bubbles, fresh basil-like green from spinach only, natural kitchen window light, glossy but not oily, realistic texture, appetising close crop, calm top and bottom safe areas. No text, no logos, no packaging, no synthetic-looking cheese strands.",
+      "aspect_ratio": "9:16",
+      "quality": "high"
+    },
+    "input_references": [],
+    "output_path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/images/cheese-melt.png",
+    "output_sha256": "bc92e5e6c832e9eb9694fb69fe5de59346ba5b27dcf72029ccfebced2c30d735",
+    "started_at": "2026-09-30T19:27:22.003239+00:00",
+    "completed_at": "2026-09-30T19:27:53.604477+00:00",
+    "elapsed_seconds": 31.59486687500248,
+    "job_id": null,
+    "generation_id": null,
+    "provider": null,
+    "usage": {
+      "prompt_tokens": 86,
+      "completion_tokens": 1078,
+      "total_tokens": 1164,
+      "cost": 0.03277,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.03277,
+        "upstream_inference_prompt_cost": 0.00043,
+        "upstream_inference_completions_cost": 0.03234
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 1078
+      }
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "status": "completed",
+        "response_keys": [
+          "created",
+          "data",
+          "usage"
+        ]
+      }
+    ]
+  },
+  {
+    "route": "image/hero-spoon-flare-alt",
+    "model": "openai/gpt-image-2.5-flare",
+    "prompt": "Vertical editorial food photograph of a homemade white-bean pizza bowl: a polished steel spoon lifting a generous bite from a shallow dark bowl, one visible strand of melted lighter mozzarella, glossy tomato passata, tender cannellini beans and just-wilted spinach. Real kitchen daylight from the left, 50mm macro lens, natural steam, crisp food texture, deep reds and greens, clean unbranded dark slate worktop, appetising and believable. Leave the top 22% and bottom 14% visually calm for typography. No text, no logo, no packaging, no hands beyond one natural spoon grip, no artificial plastic-looking food.",
+    "request": {
+      "model": "openai/gpt-image-2.5-flare",
+      "prompt": "Vertical editorial food photograph of a homemade white-bean pizza bowl: a polished steel spoon lifting a generous bite from a shallow dark bowl, one visible strand of melted lighter mozzarella, glossy tomato passata, tender cannellini beans and just-wilted spinach. Real kitchen daylight from the left, 50mm macro lens, natural steam, crisp food texture, deep reds and greens, clean unbranded dark slate worktop, appetising and believable. Leave the top 22% and bottom 14% visually calm for typography. No text, no logo, no packaging, no hands beyond one natural spoon grip, no artificial plastic-looking food.",
+      "aspect_ratio": "9:16",
+      "quality": "high"
+    },
+    "input_references": [],
+    "output_path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/images/hero-spoon-flare-alt.png",
+    "output_sha256": "cc6e8da74df54bc351e7fd0d271324cc99fa7bba473deac4c8dccd82e171dabf",
+    "started_at": "2026-09-30T19:27:52.714639+00:00",
+    "completed_at": "2026-09-30T19:28:11.332705+00:00",
+    "elapsed_seconds": 18.613967167002556,
+    "job_id": null,
+    "generation_id": null,
+    "provider": null,
+    "usage": {
+      "prompt_tokens": 136,
+      "completion_tokens": 1078,
+      "total_tokens": 1214,
+      "cost": 0.03302,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.03302,
+        "upstream_inference_prompt_cost": 0.00068,
+        "upstream_inference_completions_cost": 0.03234
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 1078
+      }
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "status": "completed",
+        "response_keys": [
+          "created",
+          "data",
+          "usage"
+        ]
+      }
+    ]
+  },
+  {
+    "route": "image/cheese-melt-flare-alt",
+    "model": "openai/gpt-image-2.5-flare",
+    "prompt": "Vertical macro editorial food photograph of torn lighter mozzarella landing on a bubbling white-bean and tomato pan, cheese beginning to melt into soft ribbons, tiny sauce bubbles, fresh basil-like green from spinach only, natural kitchen window light, glossy but not oily, realistic texture, appetising close crop, calm top and bottom safe areas. No text, no logos, no packaging, no synthetic-looking cheese strands.",
+    "request": {
+      "model": "openai/gpt-image-2.5-flare",
+      "prompt": "Vertical macro editorial food photograph of torn lighter mozzarella landing on a bubbling white-bean and tomato pan, cheese beginning to melt into soft ribbons, tiny sauce bubbles, fresh basil-like green from spinach only, natural kitchen window light, glossy but not oily, realistic texture, appetising close crop, calm top and bottom safe areas. No text, no logos, no packaging, no synthetic-looking cheese strands.",
+      "aspect_ratio": "9:16",
+      "quality": "high"
+    },
+    "input_references": [],
+    "output_path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/images/cheese-melt-flare-alt.png",
+    "output_sha256": "af79ae0ca7e74489014ad2a480efebe66ebf5165e3643138a217c3a6241fd75a",
+    "started_at": "2026-09-30T19:27:53.294934+00:00",
+    "completed_at": "2026-09-30T19:28:11.945750+00:00",
+    "elapsed_seconds": 18.645718916999613,
+    "job_id": null,
+    "generation_id": null,
+    "provider": null,
+    "usage": {
+      "prompt_tokens": 86,
+      "completion_tokens": 1078,
+      "total_tokens": 1164,
+      "cost": 0.03277,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.03277,
+        "upstream_inference_prompt_cost": 0.00043,
+        "upstream_inference_completions_cost": 0.03234
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 1078
+      }
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "status": "completed",
+        "response_keys": [
+          "created",
+          "data",
+          "usage"
+        ]
+      }
+    ]
+  },
+  {
+    "route": "image/final-payoff",
+    "model": "openai/gpt-image-2.5-sunburst",
+    "prompt": "Vertical hero food photograph of the finished pizza-bean bowl, a deep spoon scoop revealing creamy cannellini beans, tomato passata and melted lighter mozzarella with one restrained cheese pull, spinach flecks, natural steam, dark ceramic bowl on an unbranded worktop, 50mm macro lens, authentic restaurant-quality home food, crisp texture and balanced colour, calm top and bottom safe regions. No text, no logos, no packaging, no floating ingredients, no overly glossy fake food.",
+    "request": {
+      "model": "openai/gpt-image-2.5-sunburst",
+      "prompt": "Vertical hero food photograph of the finished pizza-bean bowl, a deep spoon scoop revealing creamy cannellini beans, tomato passata and melted lighter mozzarella with one restrained cheese pull, spinach flecks, natural steam, dark ceramic bowl on an unbranded worktop, 50mm macro lens, authentic restaurant-quality home food, crisp texture and balanced colour, calm top and bottom safe regions. No text, no logos, no packaging, no floating ingredients, no overly glossy fake food.",
+      "aspect_ratio": "9:16",
+      "quality": "high"
+    },
+    "input_references": [],
+    "output_path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/images/final-payoff.png",
+    "output_sha256": "b24e833a18009e2c08c14034a5475f8961b723160641f09386a91de4eaa3fb13",
+    "started_at": "2026-09-30T19:27:50.831526+00:00",
+    "completed_at": "2026-09-30T19:28:23.279235+00:00",
+    "elapsed_seconds": 32.441215791001014,
+    "job_id": null,
+    "generation_id": null,
+    "provider": null,
+    "usage": {
+      "prompt_tokens": 104,
+      "completion_tokens": 1078,
+      "total_tokens": 1182,
+      "cost": 0.03286,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.03286,
+        "upstream_inference_prompt_cost": 0.00052,
+        "upstream_inference_completions_cost": 0.03234
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 1078
+      }
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "status": "completed",
+        "response_keys": [
+          "created",
+          "data",
+          "usage"
+        ]
+      }
+    ]
+  },
+  {
+    "route": "i2v/beans-pan",
+    "model": "minimax/hailuo-3-max",
+    "prompt": "Top-down cooking action in a cast-iron pan: drained cannellini beans fall in a loose arc into glossy tomato passata, bounce softly once and settle. Sauce ripples, steam rises, the pan is hot but controlled. Crisp food texture, natural physics, quick satisfying insert, vertical 9:16. No text, no logos, no packaging, no duplicated beans, no malformed pan or hands.",
+    "request": {
+      "model": "minimax/hailuo-3-max",
+      "prompt": "Top-down cooking action in a cast-iron pan: drained cannellini beans fall in a loose arc into glossy tomato passata, bounce softly once and settle. Sauce ripples, steam rises, the pan is hot but controlled. Crisp food texture, natural physics, quick satisfying insert, vertical 9:16. No text, no logos, no packaging, no duplicated beans, no malformed pan or hands.",
+      "frame_images": [
+        {
+          "type": "image_url",
+          "image_url": {
+            "url": "sha256:17225e47cca921a673ee5f13303d7058947d4d6b400c96f1c6abe55da91d45ad"
+          },
+          "frame_type": "first_frame"
+        }
+      ],
+      "duration": 5,
+      "resolution": "480p",
+      "aspect_ratio": "9:16",
+      "generate_audio": false
+    },
+    "input_references": [
+      {
+        "path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/images/beans-pan.png",
+        "sha256": "17225e47cca921a673ee5f13303d7058947d4d6b400c96f1c6abe55da91d45ad",
+        "bytes": 2128485
+      }
+    ],
+    "output_path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/videos/i2v/beans-pan.mp4",
+    "output_sha256": "aa1e09e50c52166e256893ee1dc0cf8f1e606e437f88b1336d3f6f476122eb56",
+    "started_at": "2026-09-30T19:28:23.292473+00:00",
+    "completed_at": "2026-09-30T19:28:51.717213+00:00",
+    "elapsed_seconds": 28.42464850000033,
+    "job_id": "gen-vid-1790796507-2Ru1lXEfKTsJqssdXCJm",
+    "generation_id": "gen-vid-1790796507-2Ru1lXEfKTsJqssdXCJm",
+    "provider": null,
+    "usage": {
+      "cost": 0.2475,
+      "is_byok": false
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "status": "submitted",
+        "job_id": "gen-vid-1790796507-2Ru1lXEfKTsJqssdXCJm"
+      },
+      {
+        "attempt": 2,
+        "status": "completed",
+        "job_id": "gen-vid-1790796507-2Ru1lXEfKTsJqssdXCJm"
+      }
+    ]
+  },
+  {
+    "route": "t2v/hero-spoon",
+    "model": "bytedance/seedance-2.5",
+    "prompt": "Macro food action: a steel spoon lifts one generous bite from a white-bean pizza bowl. The spoon rises slowly, melted lighter mozzarella stretches for a few centimetres, tomato sauce glistens, spinach stays green, steam curls naturally. Shallow depth of field, 50mm lens, believable home-kitchen light, controlled handheld micro-movement, appetising real food physics, vertical 9:16. No text, no logos, no packaging, no morphing bowl or spoon, no people's faces.",
+    "request": {
+      "model": "bytedance/seedance-2.5",
+      "duration": 5,
+      "resolution": "480p",
+      "aspect_ratio": "9:16",
+      "generate_audio": true,
+      "seed": 101
+    },
+    "input_references": [],
+    "output_path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/videos/t2v/hero-spoon.mp4",
+    "output_sha256": "3d7aa5dad677d860d37003066c29842e842047f8ce8438994a67de21e0bc8b21",
+    "started_at": "2026-09-30T19:31:46.383970+00:00",
+    "completed_at": "2026-09-30T19:31:46.383970+00:00",
+    "elapsed_seconds": 0.0,
+    "job_id": null,
+    "generation_id": null,
+    "provider": null,
+    "usage": {
+      "cost": null,
+      "estimated_cost_usd": null,
+      "cost_basis": "model pricing_skus estimate; exact response lost after runner exception"
+    },
+    "attempts": [
+      {
+        "status": "recovered-existing-output",
+        "output_sha256": "3d7aa5dad677d860d37003066c29842e842047f8ce8438994a67de21e0bc8b21"
+      }
+    ]
+  },
+  {
+    "route": "i2v/hero-spoon",
+    "model": "bytedance/seedance-2.5",
+    "prompt": "Macro food action: a steel spoon lifts one generous bite from a white-bean pizza bowl. The spoon rises slowly, melted lighter mozzarella stretches for a few centimetres, tomato sauce glistens, spinach stays green, steam curls naturally. Shallow depth of field, 50mm lens, believable home-kitchen light, controlled handheld micro-movement, appetising real food physics, vertical 9:16. No text, no logos, no packaging, no morphing bowl or spoon, no people's faces.",
+    "request": {
+      "model": "bytedance/seedance-2.5",
+      "duration": 5,
+      "resolution": "480p",
+      "aspect_ratio": "9:16",
+      "generate_audio": true,
+      "seed": 101
+    },
+    "input_references": [
+      {
+        "path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/images/hero-spoon.png",
+        "sha256": "2443cc13593d3b922499ad3f5cad5d2e78494cb099604e45070d570c98fbcd87",
+        "bytes": 1969712
+      }
+    ],
+    "output_path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/videos/i2v/hero-spoon.mp4",
+    "output_sha256": "ae1e462ddc878f09f7af31ccddaa4d8bc2ced535d7a9c60cb1599e07a0e10035",
+    "started_at": "2026-09-30T19:33:28.396428+00:00",
+    "completed_at": "2026-09-30T19:33:28.396428+00:00",
+    "elapsed_seconds": 0.0,
+    "job_id": null,
+    "generation_id": null,
+    "provider": null,
+    "usage": {
+      "cost": null,
+      "estimated_cost_usd": null,
+      "cost_basis": "model pricing_skus estimate; exact response lost after runner exception"
+    },
+    "attempts": [
+      {
+        "status": "recovered-existing-output",
+        "output_sha256": "ae1e462ddc878f09f7af31ccddaa4d8bc2ced535d7a9c60cb1599e07a0e10035"
+      }
+    ]
+  },
+  {
+    "route": "i2v/hero-spoon-alt",
+    "model": "bytedance/seedance-2.5",
+    "prompt": "Macro food action: a steel spoon lifts one generous bite from a white-bean pizza bowl. The spoon rises slowly, melted lighter mozzarella stretches for a few centimetres, tomato sauce glistens, spinach stays green, steam curls naturally. Shallow depth of field, 50mm lens, believable home-kitchen light, controlled handheld micro-movement, appetising real food physics, vertical 9:16. No text, no logos, no packaging, no morphing bowl or spoon, no people's faces.",
+    "request": {
+      "model": "bytedance/seedance-2.5",
+      "duration": 5,
+      "resolution": "480p",
+      "aspect_ratio": "9:16",
+      "generate_audio": true,
+      "seed": 101
+    },
+    "input_references": [
+      {
+        "path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/images/hero-spoon.png",
+        "sha256": "2443cc13593d3b922499ad3f5cad5d2e78494cb099604e45070d570c98fbcd87",
+        "bytes": 1969712
+      }
+    ],
+    "output_path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/videos/i2v/hero-spoon-alt.mp4",
+    "output_sha256": "73914fd85d45a4bced025e284e9944a8307cbdd1989f1e4dcbdaa86b4350298d",
+    "started_at": "2026-09-30T19:33:26.501305+00:00",
+    "completed_at": "2026-09-30T19:33:26.501305+00:00",
+    "elapsed_seconds": 0.0,
+    "job_id": null,
+    "generation_id": null,
+    "provider": null,
+    "usage": {
+      "cost": null,
+      "estimated_cost_usd": null,
+      "cost_basis": "model pricing_skus estimate; exact response lost after runner exception"
+    },
+    "attempts": [
+      {
+        "status": "recovered-existing-output",
+        "output_sha256": "73914fd85d45a4bced025e284e9944a8307cbdd1989f1e4dcbdaa86b4350298d"
+      }
+    ]
+  },
+  {
+    "route": "t2v/sauce-spinach",
+    "model": "alibaba/wan-3.0",
+    "prompt": "Cooking action insert: thick tomato passata pours in a clean ribbon over white beans in a cast-iron pan, then a handful of fresh spinach drops and folds into the hot sauce. Natural sauce weight, glossy texture, light steam, rich red and green colour, quick controlled camera drift, vertical 9:16. No text, no logos, no packaging, no malformed jug or leaves, no soup-like consistency.",
+    "request": {
+      "model": "alibaba/wan-3.0",
+      "duration": 4,
+      "resolution": "480p",
+      "aspect_ratio": "9:16",
+      "generate_audio": true,
+      "seed": 303
+    },
+    "input_references": [],
+    "output_path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/videos/t2v/sauce-spinach.mp4",
+    "output_sha256": "5379c34c1c16ad8d7908def3af94d6a646d187618c154b2010be2b4090b59883",
+    "started_at": "2026-09-30T19:32:50.832335+00:00",
+    "completed_at": "2026-09-30T19:32:50.832335+00:00",
+    "elapsed_seconds": 0.0,
+    "job_id": null,
+    "generation_id": null,
+    "provider": null,
+    "usage": {
+      "cost": null,
+      "estimated_cost_usd": 0.2,
+      "cost_basis": "model pricing_skus estimate; exact response lost after runner exception"
+    },
+    "attempts": [
+      {
+        "status": "recovered-existing-output",
+        "output_sha256": "5379c34c1c16ad8d7908def3af94d6a646d187618c154b2010be2b4090b59883"
+      }
+    ]
+  },
+  {
+    "route": "i2v/sauce-spinach",
+    "model": "alibaba/wan-3.0",
+    "prompt": "Cooking action insert: thick tomato passata pours in a clean ribbon over white beans in a cast-iron pan, then a handful of fresh spinach drops and folds into the hot sauce. Natural sauce weight, glossy texture, light steam, rich red and green colour, quick controlled camera drift, vertical 9:16. No text, no logos, no packaging, no malformed jug or leaves, no soup-like consistency.",
+    "request": {
+      "model": "alibaba/wan-3.0",
+      "duration": 4,
+      "resolution": "480p",
+      "aspect_ratio": "9:16",
+      "generate_audio": true,
+      "seed": 303
+    },
+    "input_references": [
+      {
+        "path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/images/sauce-spinach.png",
+        "sha256": "30b9d8395f38a7ef670d8f34d59367c7041e91f706fba9a38962fabc4d82c064",
+        "bytes": 1938119
+      }
+    ],
+    "output_path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/videos/i2v/sauce-spinach.mp4",
+    "output_sha256": "86c7d6013d804693898968bb73dda719f9146abb3dd35077b8168f823d603647",
+    "started_at": "2026-09-30T19:30:45.784796+00:00",
+    "completed_at": "2026-09-30T19:30:45.784796+00:00",
+    "elapsed_seconds": 0.0,
+    "job_id": null,
+    "generation_id": null,
+    "provider": null,
+    "usage": {
+      "cost": null,
+      "estimated_cost_usd": 0.2,
+      "cost_basis": "model pricing_skus estimate; exact response lost after runner exception"
+    },
+    "attempts": [
+      {
+        "status": "recovered-existing-output",
+        "output_sha256": "86c7d6013d804693898968bb73dda719f9146abb3dd35077b8168f823d603647"
+      }
+    ]
+  },
+  {
+    "route": "i2v/simmer",
+    "model": "bytedance/seedance-2.5",
+    "prompt": "Macro cooking action: a cast-iron pan of white beans in tomato passata simmers actively, small glossy bubbles rise and pop, steam moves through side light, a spoon briefly folds the sauce without splashing. Close crop, authentic heat and food physics, no burnt edges, vertical 9:16. No text, no logos, no packaging, no distorted bubbles or spoon.",
+    "request": {
+      "model": "bytedance/seedance-2.5",
+      "duration": 5,
+      "resolution": "480p",
+      "aspect_ratio": "9:16",
+      "generate_audio": true,
+      "seed": 404
+    },
+    "input_references": [],
+    "output_path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/videos/i2v/simmer.mp4",
+    "output_sha256": "84f66d54f57ea2b98fe3481c47d4c89b6d3611fb23a997ae12efe3f605cccbe7",
+    "started_at": "2026-09-30T19:34:14.734479+00:00",
+    "completed_at": "2026-09-30T19:34:14.734479+00:00",
+    "elapsed_seconds": 0.0,
+    "job_id": null,
+    "generation_id": null,
+    "provider": null,
+    "usage": {
+      "cost": null,
+      "estimated_cost_usd": null,
+      "cost_basis": "model pricing_skus estimate; exact response lost after runner exception"
+    },
+    "attempts": [
+      {
+        "status": "recovered-existing-output",
+        "output_sha256": "84f66d54f57ea2b98fe3481c47d4c89b6d3611fb23a997ae12efe3f605cccbe7"
+      }
+    ]
+  },
+  {
+    "route": "t2v/simmer",
+    "model": "minimax/hailuo-3",
+    "prompt": "Macro cooking action: a cast-iron pan of white beans in tomato passata simmers actively, small glossy bubbles rise and pop, steam moves through side light, a spoon briefly folds the sauce without splashing. Close crop, authentic heat and food physics, no burnt edges, vertical 9:16. No text, no logos, no packaging, no distorted bubbles or spoon.",
+    "request": {
+      "model": "minimax/hailuo-3",
+      "duration": 5,
+      "resolution": "2K",
+      "aspect_ratio": "9:16",
+      "generate_audio": true
+    },
+    "input_references": [],
+    "output_path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/videos/t2v/simmer.mp4",
+    "output_sha256": "032a8a7a24bde5b167db1222d87ec02e7d9d0693e178ff70d2f78210584f7991",
+    "started_at": "2026-09-30T19:37:00.294522+00:00",
+    "completed_at": "2026-09-30T19:37:00.294522+00:00",
+    "elapsed_seconds": 0.0,
+    "job_id": null,
+    "generation_id": null,
+    "provider": null,
+    "usage": {
+      "cost": null,
+      "estimated_cost_usd": 0.65,
+      "cost_basis": "model pricing_skus estimate; exact response lost after runner exception"
+    },
+    "attempts": [
+      {
+        "status": "recovered-existing-output",
+        "output_sha256": "032a8a7a24bde5b167db1222d87ec02e7d9d0693e178ff70d2f78210584f7991"
+      }
+    ]
+  },
+  {
+    "route": "t2v/cheese-melt",
+    "model": "minimax/hailuo-3",
+    "prompt": "Macro food action: torn lighter mozzarella pieces drop onto bubbling white beans and tomato sauce, then soften and melt into the pan. Tiny sauce bubbles continue, cheese becomes glossy and elastic, a spoon nudges one piece and creates a short natural cheese pull. Authentic food physics, appetising close-up, vertical 9:16. No text, no logos, no packaging, no rubbery or duplicated cheese, no distorted spoon.",
+    "request": {
+      "model": "minimax/hailuo-3",
+      "duration": 5,
+      "resolution": "2K",
+      "aspect_ratio": "9:16",
+      "generate_audio": true
+    },
+    "input_references": [],
+    "output_path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/videos/t2v/cheese-melt.mp4",
+    "output_sha256": "12608f40a1e179f72cb520e582fe15f5888d494bddcaa0f0aa9258785dd61e6f",
+    "started_at": "2026-09-30T19:37:16.565261+00:00",
+    "completed_at": "2026-09-30T19:37:16.565261+00:00",
+    "elapsed_seconds": 0.0,
+    "job_id": null,
+    "generation_id": null,
+    "provider": null,
+    "usage": {
+      "cost": null,
+      "estimated_cost_usd": 0.65,
+      "cost_basis": "model pricing_skus estimate; exact response lost after runner exception"
+    },
+    "attempts": [
+      {
+        "status": "recovered-existing-output",
+        "output_sha256": "12608f40a1e179f72cb520e582fe15f5888d494bddcaa0f0aa9258785dd61e6f"
+      }
+    ]
+  },
+  {
+    "route": "i2v/cheese-melt",
+    "model": "minimax/hailuo-3-max",
+    "prompt": "Macro food action: torn lighter mozzarella pieces drop onto bubbling white beans and tomato sauce, then soften and melt into the pan. Tiny sauce bubbles continue, cheese becomes glossy and elastic, a spoon nudges one piece and creates a short natural cheese pull. Authentic food physics, appetising close-up, vertical 9:16. No text, no logos, no packaging, no rubbery or duplicated cheese, no distorted spoon.",
+    "request": {
+      "model": "minimax/hailuo-3-max",
+      "duration": 5,
+      "resolution": "480p",
+      "aspect_ratio": "9:16",
+      "generate_audio": false
+    },
+    "input_references": [
+      {
+        "path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/images/cheese-melt.png",
+        "sha256": "bc92e5e6c832e9eb9694fb69fe5de59346ba5b27dcf72029ccfebced2c30d735",
+        "bytes": 2141388
+      }
+    ],
+    "output_path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/videos/i2v/cheese-melt.mp4",
+    "output_sha256": "dd01ee07edaa170cece4a1f9155d2ce8cc9fd6f0d41ffb3716ce47206c2d4cd2",
+    "started_at": "2026-09-30T19:33:53.007171+00:00",
+    "completed_at": "2026-09-30T19:33:53.007171+00:00",
+    "elapsed_seconds": 0.0,
+    "job_id": null,
+    "generation_id": null,
+    "provider": null,
+    "usage": {
+      "cost": null,
+      "estimated_cost_usd": 0.25,
+      "cost_basis": "model pricing_skus estimate; exact response lost after runner exception"
+    },
+    "attempts": [
+      {
+        "status": "recovered-existing-output",
+        "output_sha256": "dd01ee07edaa170cece4a1f9155d2ce8cc9fd6f0d41ffb3716ce47206c2d4cd2"
+      }
+    ]
+  },
+  {
+    "route": "i2v/final-payoff",
+    "model": "bytedance/seedance-2.5",
+    "prompt": "Finished-food payoff: a spoon scoops through a pizza-bean bowl, lifting creamy white beans, tomato passata, wilted spinach and melted lighter mozzarella. The bite stays on the spoon with one restrained cheese strand, steam catches the light, then the spoon moves toward camera and comes to rest. Crisp macro texture, natural motion, vertical 9:16. No text, no logos, no packaging, no face, no morphing spoon or food.",
+    "request": {
+      "model": "bytedance/seedance-2.5",
+      "duration": 5,
+      "resolution": "480p",
+      "aspect_ratio": "9:16",
+      "generate_audio": true,
+      "seed": 606
+    },
+    "input_references": [
+      {
+        "path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/images/final-payoff.png",
+        "sha256": "b24e833a18009e2c08c14034a5475f8961b723160641f09386a91de4eaa3fb13",
+        "bytes": 2149080
+      }
+    ],
+    "output_path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/videos/i2v/final-payoff.mp4",
+    "output_sha256": "bcf94ddebd2ebadb7f5ff5f187847687501f37d250533432608dca22644e0124",
+    "started_at": "2026-09-30T19:38:14.957104+00:00",
+    "completed_at": "2026-09-30T19:38:14.957104+00:00",
+    "elapsed_seconds": 0.0,
+    "job_id": null,
+    "generation_id": null,
+    "provider": null,
+    "usage": {
+      "cost": null,
+      "estimated_cost_usd": null,
+      "cost_basis": "model pricing_skus estimate; exact response lost after runner exception"
+    },
+    "attempts": [
+      {
+        "status": "recovered-existing-output",
+        "output_sha256": "bcf94ddebd2ebadb7f5ff5f187847687501f37d250533432608dca22644e0124"
+      }
+    ]
+  },
+  {
+    "route": "i2v/cheese-melt-alt",
+    "model": "minimax/hailuo-3-max",
+    "prompt": "Macro food action: torn lighter mozzarella pieces drop onto bubbling white beans and tomato sauce, then soften and melt into the pan. Tiny sauce bubbles continue, cheese becomes glossy and elastic, a spoon nudges one piece and creates a short natural cheese pull. Authentic food physics, appetising close-up, vertical 9:16. No text, no logos, no packaging, no rubbery or duplicated cheese, no distorted spoon.",
+    "request": {
+      "model": "minimax/hailuo-3-max",
+      "duration": 5,
+      "resolution": "480p",
+      "aspect_ratio": "9:16",
+      "generate_audio": false
+    },
+    "input_references": [
+      {
+        "path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/images/cheese-melt.png",
+        "sha256": "bc92e5e6c832e9eb9694fb69fe5de59346ba5b27dcf72029ccfebced2c30d735",
+        "bytes": 2141388
+      }
+    ],
+    "output_path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/videos/i2v/cheese-melt-alt.mp4",
+    "output_sha256": "4b4ba0f84702860f1b238093f330d4add376936f086fe10fb3e80d6e02b5a254",
+    "started_at": "2026-09-30T19:34:18.855440+00:00",
+    "completed_at": "2026-09-30T19:34:18.855440+00:00",
+    "elapsed_seconds": 0.0,
+    "job_id": null,
+    "generation_id": null,
+    "provider": null,
+    "usage": {
+      "cost": null,
+      "estimated_cost_usd": 0.25,
+      "cost_basis": "model pricing_skus estimate; exact response lost after runner exception"
+    },
+    "attempts": [
+      {
+        "status": "recovered-existing-output",
+        "output_sha256": "4b4ba0f84702860f1b238093f330d4add376936f086fe10fb3e80d6e02b5a254"
+      }
+    ]
+  },
+  {
+    "route": "t2v/final-payoff",
+    "model": "bytedance/seedance-2.5",
+    "prompt": "Finished-food payoff: a spoon scoops through a pizza-bean bowl, lifting creamy white beans, tomato passata, wilted spinach and melted lighter mozzarella. The bite stays on the spoon with one restrained cheese strand, steam catches the light, then the spoon moves toward camera and comes to rest. Crisp macro texture, natural motion, vertical 9:16. No text, no logos, no packaging, no face, no morphing spoon or food.",
+    "request": {
+      "model": "bytedance/seedance-2.5",
+      "duration": 5,
+      "resolution": "480p",
+      "aspect_ratio": "9:16",
+      "generate_audio": true,
+      "seed": 606
+    },
+    "input_references": [],
+    "output_path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/videos/t2v/final-payoff.mp4",
+    "output_sha256": "fd24a25b6bf617510920249a835ecdd61b5c2b19ed51ca5cc4a072605b9afbaf",
+    "started_at": "2026-09-30T19:36:48.281474+00:00",
+    "completed_at": "2026-09-30T19:36:48.281474+00:00",
+    "elapsed_seconds": 0.0,
+    "job_id": null,
+    "generation_id": null,
+    "provider": null,
+    "usage": {
+      "cost": null,
+      "estimated_cost_usd": null,
+      "cost_basis": "model pricing_skus estimate; exact response lost after runner exception"
+    },
+    "attempts": [
+      {
+        "status": "recovered-existing-output",
+        "output_sha256": "fd24a25b6bf617510920249a835ecdd61b5c2b19ed51ca5cc4a072605b9afbaf"
+      }
+    ]
+  },
+  {
+    "route": "t2v/beans-pan",
+    "model": "alibaba/wan-3.0",
+    "prompt": "Top-down cooking action in a cast-iron pan: drained cannellini beans fall in a loose arc into glossy tomato passata, bounce softly once and settle. Sauce ripples, steam rises, the pan is hot but controlled. Crisp food texture, natural physics, quick satisfying insert, vertical 9:16. No text, no logos, no packaging, no duplicated beans, no malformed pan or hands.",
+    "request": {
+      "model": "alibaba/wan-3.0",
+      "prompt": "Top-down cooking action in a cast-iron pan: drained cannellini beans fall in a loose arc into glossy tomato passata, bounce softly once and settle. Sauce ripples, steam rises, the pan is hot but controlled. Crisp food texture, natural physics, quick satisfying insert, vertical 9:16. No text, no logos, no packaging, no duplicated beans, no malformed pan or hands.",
+      "duration": 5,
+      "resolution": "480p",
+      "aspect_ratio": "9:16",
+      "generate_audio": true,
+      "seed": 202
+    },
+    "input_references": [],
+    "output_path": "/Users/rajeev/social-influence-gh10/brands/gutkitchen/creative-engine-v2/openrouter-run/videos/t2v/beans-pan.mp4",
+    "output_sha256": "faa3bda74690ac0e2d6f93387dee545bcf8d28dc2021840d5a7f7dbc6d234744",
+    "started_at": "2026-09-30T23:30:40.953105+00:00",
+    "completed_at": "2026-09-30T23:34:07.342925+00:00",
+    "elapsed_seconds": 206.3904594170017,
+    "job_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt",
+    "generation_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt",
+    "provider": null,
+    "usage": {
+      "cost": 0.210375,
+      "is_byok": false
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "status": "submitted",
+        "job_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt"
+      },
+      {
+        "attempt": 2,
+        "status": "pending",
+        "job_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt"
+      },
+      {
+        "attempt": 3,
+        "status": "pending",
+        "job_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt"
+      },
+      {
+        "attempt": 4,
+        "status": "pending",
+        "job_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt"
+      },
+      {
+        "attempt": 5,
+        "status": "pending",
+        "job_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt"
+      },
+      {
+        "attempt": 6,
+        "status": "pending",
+        "job_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt"
+      },
+      {
+        "attempt": 7,
+        "status": "pending",
+        "job_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt"
+      },
+      {
+        "attempt": 8,
+        "status": "pending",
+        "job_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt"
+      },
+      {
+        "attempt": 9,
+        "status": "pending",
+        "job_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt"
+      },
+      {
+        "attempt": 10,
+        "status": "pending",
+        "job_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt"
+      },
+      {
+        "attempt": 11,
+        "status": "completed",
+        "job_id": "gen-vid-1790811041-GwU7lTze3eixk1OLwOCt"
+      }
+    ]
+  }
+]

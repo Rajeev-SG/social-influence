@@ -1,14 +1,64 @@
-$ .venv/bin/python -m unittest discover -s tests -v
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 -m unittest discover -s tests -v
 
-$ .venv/bin/python scripts/validate_packs.py
+test_evidence_coverage_required (test_cli.WorkflowTests.test_evidence_coverage_required) ... ok
+test_failed_engine_does_not_advance_queue (test_cli.WorkflowTests.test_failed_engine_does_not_advance_queue) ... ok
+test_generated_food_requires_ai_label_contract (test_cli.WorkflowTests.test_generated_food_requires_ai_label_contract) ... ok
+test_harness_tolerates_banner_before_json (test_cli.WorkflowTests.test_harness_tolerates_banner_before_json) ... ok
+test_lock (test_cli.WorkflowTests.test_lock) ... ok
+test_machine_qa_failed_or_missing_never_finalizes (test_cli.WorkflowTests.test_machine_qa_failed_or_missing_never_finalizes) ... ok
+test_media_hash_required (test_cli.WorkflowTests.test_media_hash_required) ... ok
+test_missing_caption_rejected (test_cli.WorkflowTests.test_missing_caption_rejected) ... ok
+test_missing_pack_keeps_queue (test_cli.WorkflowTests.test_missing_pack_keeps_queue) ... ok
+test_nutrient_arithmetic (test_cli.WorkflowTests.test_nutrient_arithmetic) ... ok
+test_partial_review_rejected (test_cli.WorkflowTests.test_partial_review_rejected) ... ok
+test_path_traversal (test_cli.WorkflowTests.test_path_traversal) ... ok
+test_queue_order_and_crlf (test_cli.WorkflowTests.test_queue_order_and_crlf) ... ok
+test_reviewed_success_resumes_without_regeneration (test_cli.WorkflowTests.test_reviewed_success_resumes_without_regeneration) ... ok
+test_shared_interface_distinct_profiles (test_cli.WorkflowTests.test_shared_interface_distinct_profiles) ... ok
+test_source_hash_required (test_cli.WorkflowTests.test_source_hash_required) ... ok
+test_stale_brief_rejected (test_cli.WorkflowTests.test_stale_brief_rejected) ... ok
+test_stale_video_rejected (test_cli.WorkflowTests.test_stale_video_rejected) ... ok
+test_stock_fallback_rejected (test_cli.WorkflowTests.test_stock_fallback_rejected) ... ok
+test_string_true_is_not_approval (test_cli.WorkflowTests.test_string_true_is_not_approval) ... ok
+test_topic_binding (test_cli.WorkflowTests.test_topic_binding) ... ok
+test_unapproved_media_rejected (test_cli.WorkflowTests.test_unapproved_media_rejected) ... ok
+test_unknown_quality_rejected (test_cli.WorkflowTests.test_unknown_quality_rejected) ... ok
+test_asset_routes_are_replaceable_and_execution_is_explicit (test_creative_engine_v2.CreativeEngineV2Tests.test_asset_routes_are_replaceable_and_execution_is_explicit) ... ok
+test_committed_projections_match_single_manifest_source (test_creative_engine_v2.CreativeEngineV2Tests.test_committed_projections_match_single_manifest_source) ... ok
+test_finished_openrouter_media_has_zero_planned_critical_routes (test_creative_engine_v2.CreativeEngineV2Tests.test_finished_openrouter_media_has_zero_planned_critical_routes) ... ok
+test_generated_stills_exist_for_every_candidate (test_creative_engine_v2.CreativeEngineV2Tests.test_generated_stills_exist_for_every_candidate) ... ok
+test_generation_date_matches_evidence_directory (test_creative_engine_v2.CreativeEngineV2Tests.test_generation_date_matches_evidence_directory) ... ok
+test_materially_different_lanes (test_creative_engine_v2.CreativeEngineV2Tests.test_materially_different_lanes) ... ok
+test_no_redundant_ai_branding_in_new_storyboards (test_creative_engine_v2.CreativeEngineV2Tests.test_no_redundant_ai_branding_in_new_storyboards) ... ok
+test_qa_is_not_creative_selection (test_creative_engine_v2.CreativeEngineV2Tests.test_qa_is_not_creative_selection) ... ok
+test_reference_inputs_are_recorded_per_treatment (test_creative_engine_v2.CreativeEngineV2Tests.test_reference_inputs_are_recorded_per_treatment) ... ok
+test_reference_library_is_self_contained (test_creative_engine_v2.CreativeEngineV2Tests.test_reference_library_is_self_contained) ... ok
+test_review_page_mentions_baseline_and_all_new_lanes (test_creative_engine_v2.CreativeEngineV2Tests.test_review_page_mentions_baseline_and_all_new_lanes) ... ok
+test_stages_are_explicit_and_three_treatments_exist (test_creative_engine_v2.CreativeEngineV2Tests.test_stages_are_explicit_and_three_treatments_exist) ... ok
+test_generation_records_are_deduplicated_by_route_output_and_start (test_openrouter_media.OpenRouterMediaTests.test_generation_records_are_deduplicated_by_route_output_and_start) ... ok
+test_invalid_success_body_is_not_reported_as_json_error (test_openrouter_media.OpenRouterMediaTests.test_invalid_success_body_is_not_reported_as_json_error) ... ok
+test_non_json_http_error_preserves_status_and_body (test_openrouter_media.OpenRouterMediaTests.test_non_json_http_error_preserves_status_and_body) ... ok
+test_reference_data_urls_are_redacted_from_provenance (test_openrouter_media.OpenRouterMediaTests.test_reference_data_urls_are_redacted_from_provenance) ... ok
+test_video_submission_is_recorded_before_polling_and_resumes_by_job_id (test_openrouter_media.OpenRouterMediaTests.test_video_submission_is_recorded_before_polling_and_resumes_by_job_id) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 0.187s
+
+OK
+
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 scripts/validate_packs.py
+
 OK brands/ai-for-accountants/posts/turn-raw-client-meeting-notes-into-a-follow-up-email-action--55f1a74aa4.json (tracked inputs verified v2)
 OK brands/gutkitchen/posts/40g-protein-15g-fibre-pizza-bean-bowl-using-supermarket-ingr-967b36228b.json (tracked inputs verified v2)
 
-$ .venv/bin/python scripts/validate_creative_v2.py
-OK Creative Engine v2 artifacts, projections, dates, HTML and media verified
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 scripts/validate_creative_v2.py
+
+OK Creative Engine v2 artifacts, projections, dates, HTML and finished OpenRouter media verified
 
 $ date -u
-Wed Sep 30 18:32:37 UTC 2026
 
-$ python3 --version
+Thu Oct  1 00:48:53 UTC 2026
+
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 --version
+
 Python 3.14.7

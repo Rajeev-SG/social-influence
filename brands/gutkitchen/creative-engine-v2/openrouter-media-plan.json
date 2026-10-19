@@ -1,0 +1,165 @@
+{
+  "schemaVersion": "1.0.0",
+  "briefId": "gutkitchen-pizza-bean-bowl-v2",
+  "brief": "40g protein + 15g fibre pizza-bean bowl using supermarket ingredients",
+  "factualBasis": {
+    "proteinGPerServing": 40.025,
+    "fibreGLowerBound": 15.69,
+    "portion": "one bowl",
+    "ingredients": [
+      "235g drained cannellini beans",
+      "100g lighter mozzarella",
+      "150g passata",
+      "50g spinach"
+    ],
+    "claimBoundary": "label-based estimates; suggested recipe not physically tested; check purchased labels"
+  },
+  "api": {
+    "imageModels": "https://openrouter.ai/api/v1/images/models",
+    "imageGeneration": "https://openrouter.ai/api/v1/images",
+    "videoModels": "https://openrouter.ai/api/v1/videos/models",
+    "videoGeneration": "https://openrouter.ai/api/v1/videos"
+  },
+  "models": {
+    "creativeDirection": "openai/gpt-5.6-sol",
+    "creativeReview": "anthropic/claude-fable-5.1",
+    "imagePrimary": "openai/gpt-image-2.5-sunburst",
+    "imageIteration": "openai/gpt-image-2.5-flare",
+    "i2v": [
+      "bytedance/seedance-2.5",
+      "minimax/hailuo-3-max",
+      "alibaba/wan-3.0"
+    ],
+    "t2v": [
+      "alibaba/wan-3.0",
+      "bytedance/seedance-2.5",
+      "minimax/hailuo-3"
+    ]
+  },
+  "referenceInputs": [
+    {
+      "id": "ref-05-action",
+      "sourceUrl": "https://www.tiktok.com/@hunt4shredz/video/7518805084499627277",
+      "capture": "first/middle/action frames",
+      "retention": "ephemeral-not-committed",
+      "influences": ["0.6-1.6s action cadence", "ingredient weights", "finished-food payoff"]
+    },
+    {
+      "id": "ref-09-action",
+      "sourceUrl": "https://www.tiktok.com/@dr.rachelpaul/video/7354927176044514603",
+      "capture": "first/middle/action frames",
+      "retention": "ephemeral-not-committed",
+      "influences": ["fibre-first information hierarchy", "compact nutrition panel", "direct save framing"]
+    },
+    {
+      "id": "ref-12-action",
+      "sourceUrl": "https://www.tiktok.com/@makayla_thomas_fit/video/7661734178211302686",
+      "capture": "first/middle/action frames",
+      "retention": "ephemeral-not-committed",
+      "influences": ["macro-led first frame", "meal-prep utility", "simple call-to-action"]
+    }
+  ],
+  "imagePrompts": [
+    {
+      "id": "hero-spoon",
+      "prompt": "Vertical editorial food photograph of a homemade white-bean pizza bowl: a polished steel spoon lifting a generous bite from a shallow dark bowl, one visible strand of melted lighter mozzarella, glossy tomato passata, tender cannellini beans and just-wilted spinach. Real kitchen daylight from the left, 50mm macro lens, natural steam, crisp food texture, deep reds and greens, clean unbranded dark slate worktop, appetising and believable. Leave the top 22% and bottom 14% visually calm for typography. No text, no logo, no packaging, no hands beyond one natural spoon grip, no artificial plastic-looking food."
+    },
+    {
+      "id": "beans-pan",
+      "prompt": "Vertical overhead editorial food photograph at the instant drained cannellini beans tumble into a hot cast-iron pan of glossy tomato passata, several beans suspended in motion, natural motion blur only on the falling beans, fresh steam, realistic home-kitchen light, tactile bean skins and sauce texture, dark red and cream palette, clean unbranded surroundings, top and bottom safe areas kept calm. No text, no logos, no packaging, no distorted beans or utensils."
+    },
+    {
+      "id": "sauce-spinach",
+      "prompt": "Vertical 45-degree editorial food photograph of thick tomato passata pouring from a plain glass measuring jug into a cast-iron pan with white beans, a handful of bright spinach leaves beginning to drop, glossy sauce ribbon and natural steam, believable home-kitchen lighting, rich tomato red and fresh green, shallow depth of field, unbranded and clean, calm top and bottom safe regions. No text, no logos, no extra ingredients, no malformed hands or jug."
+    },
+    {
+      "id": "cheese-melt",
+      "prompt": "Vertical macro editorial food photograph of torn lighter mozzarella landing on a bubbling white-bean and tomato pan, cheese beginning to melt into soft ribbons, tiny sauce bubbles, fresh basil-like green from spinach only, natural kitchen window light, glossy but not oily, realistic texture, appetising close crop, calm top and bottom safe areas. No text, no logos, no packaging, no synthetic-looking cheese strands."
+    },
+    {
+      "id": "final-payoff",
+      "prompt": "Vertical hero food photograph of the finished pizza-bean bowl, a deep spoon scoop revealing creamy cannellini beans, tomato passata and melted lighter mozzarella with one restrained cheese pull, spinach flecks, natural steam, dark ceramic bowl on an unbranded worktop, 50mm macro lens, authentic restaurant-quality home food, crisp texture and balanced colour, calm top and bottom safe regions. No text, no logos, no packaging, no floating ingredients, no overly glossy fake food."
+    }
+  ],
+  "videoJobs": [
+    {
+      "id": "hero-spoon",
+      "i2vModel": "bytedance/seedance-2.5",
+      "t2vModel": "bytedance/seedance-2.5",
+      "imageKeyframe": "hero-spoon",
+      "prompt": "Macro food action: a steel spoon lifts one generous bite from a white-bean pizza bowl. The spoon rises slowly, melted lighter mozzarella stretches for a few centimetres, tomato sauce glistens, spinach stays green, steam curls naturally. Shallow depth of field, 50mm lens, believable home-kitchen light, controlled handheld micro-movement, appetising real food physics, vertical 9:16. No text, no logos, no packaging, no morphing bowl or spoon, no people's faces.",
+      "params": {"duration": 5, "resolution": "480p", "aspect_ratio": "9:16", "generate_audio": true, "seed": 101},
+      "finalSeconds": 1.5
+    },
+    {
+      "id": "beans-pan",
+      "i2vModel": "minimax/hailuo-3-max",
+      "t2vModel": "alibaba/wan-3.0",
+      "imageKeyframe": "beans-pan",
+      "prompt": "Top-down cooking action in a cast-iron pan: drained cannellini beans fall in a loose arc into glossy tomato passata, bounce softly once and settle. Sauce ripples, steam rises, the pan is hot but controlled. Crisp food texture, natural physics, quick satisfying insert, vertical 9:16. No text, no logos, no packaging, no duplicated beans, no malformed pan or hands.",
+      "params": {"duration": 5, "resolution": "480p", "aspect_ratio": "9:16", "generate_audio": true, "seed": 202},
+      "finalSeconds": 1.2
+    },
+    {
+      "id": "sauce-spinach",
+      "i2vModel": "alibaba/wan-3.0",
+      "t2vModel": "alibaba/wan-3.0",
+      "imageKeyframe": "sauce-spinach",
+      "prompt": "Cooking action insert: thick tomato passata pours in a clean ribbon over white beans in a cast-iron pan, then a handful of fresh spinach drops and folds into the hot sauce. Natural sauce weight, glossy texture, light steam, rich red and green colour, quick controlled camera drift, vertical 9:16. No text, no logos, no packaging, no malformed jug or leaves, no soup-like consistency.",
+      "params": {"duration": 4, "resolution": "480p", "aspect_ratio": "9:16", "generate_audio": true, "seed": 303},
+      "finalSeconds": 1.2
+    },
+    {
+      "id": "simmer",
+      "i2vModel": "bytedance/seedance-2.5",
+      "t2vModel": "minimax/hailuo-3",
+      "prompt": "Macro cooking action: a cast-iron pan of white beans in tomato passata simmers actively, small glossy bubbles rise and pop, steam moves through side light, a spoon briefly folds the sauce without splashing. Close crop, authentic heat and food physics, no burnt edges, vertical 9:16. No text, no logos, no packaging, no distorted bubbles or spoon.",
+      "params": {"duration": 5, "resolution": "480p", "aspect_ratio": "9:16", "generate_audio": true, "seed": 404},
+      "finalSeconds": 1.2
+    },
+    {
+      "id": "cheese-melt",
+      "i2vModel": "minimax/hailuo-3-max",
+      "t2vModel": "minimax/hailuo-3",
+      "imageKeyframe": "cheese-melt",
+      "prompt": "Macro food action: torn lighter mozzarella pieces drop onto bubbling white beans and tomato sauce, then soften and melt into the pan. Tiny sauce bubbles continue, cheese becomes glossy and elastic, a spoon nudges one piece and creates a short natural cheese pull. Authentic food physics, appetising close-up, vertical 9:16. No text, no logos, no packaging, no rubbery or duplicated cheese, no distorted spoon.",
+      "params": {"duration": 5, "resolution": "480p", "aspect_ratio": "9:16", "generate_audio": true, "seed": 505},
+      "finalSeconds": 1.5
+    },
+    {
+      "id": "final-payoff",
+      "i2vModel": "bytedance/seedance-2.5",
+      "t2vModel": "bytedance/seedance-2.5",
+      "imageKeyframe": "final-payoff",
+      "prompt": "Finished-food payoff: a spoon scoops through a pizza-bean bowl, lifting creamy white beans, tomato passata, wilted spinach and melted lighter mozzarella. The bite stays on the spoon with one restrained cheese strand, steam catches the light, then the spoon moves toward camera and comes to rest. Crisp macro texture, natural motion, vertical 9:16. No text, no logos, no packaging, no face, no morphing spoon or food.",
+      "params": {"duration": 5, "resolution": "480p", "aspect_ratio": "9:16", "generate_audio": true, "seed": 606},
+      "finalSeconds": 1.5
+    }
+  ],
+  "alternativeJobs": ["hero-spoon", "cheese-melt"],
+  "candidates": {
+    "new-a": {
+      "label": "NEW A - I2V",
+      "route": "i2v-heavy",
+      "shots": ["hero-spoon", "beans-pan", "sauce-spinach", "simmer", "cheese-melt", "final-payoff"]
+    },
+    "new-b": {
+      "label": "NEW B - T2V",
+      "route": "t2v-heavy",
+      "shots": ["hero-spoon", "beans-pan", "sauce-spinach", "simmer", "cheese-melt", "final-payoff"]
+    },
+    "new-c": {
+      "label": "NEW C - HYBRID",
+      "route": "hybrid-best-source-per-shot",
+      "shots": ["hero-spoon", "beans-pan", "sauce-spinach", "simmer", "cheese-melt", "final-payoff"],
+      "selection": {
+        "hero-spoon": "i2v",
+        "beans-pan": "t2v",
+        "sauce-spinach": "i2v",
+        "simmer": "t2v",
+        "cheese-melt": "i2v",
+        "final-payoff": "t2v"
+      }
+    }
+  }
+}

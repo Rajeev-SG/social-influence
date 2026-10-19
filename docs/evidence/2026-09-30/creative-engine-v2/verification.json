@@ -1,78 +1,159 @@
 {
-  "schemaVersion": "1.0.0",
-  "generatedAtUtc": "2026-09-30T18:09:01Z",
-  "clockSource": "execution host date -u; Codex client context date 2026-09-30",
+  "schemaVersion": "2.1.0",
+  "generatedAtUtc": "2026-10-01T00:31:39.010423Z",
+  "clockSource": "execution host date -u; Codex client context date 2026-10-01",
+  "issue": "Rajeev-SG/social-influence#10",
   "commands": [
-    ".venv/bin/python -m unittest discover -s tests -v",
-    ".venv/bin/python scripts/validate_packs.py",
-    ".venv/bin/python scripts/validate_creative_v2.py"
+    "python3 -m unittest discover -s tests -v",
+    "python3 scripts/validate_packs.py",
+    "python3 scripts/validate_creative_v2.py"
   ],
   "unitTests": {
-    "count": 34,
+    "count": 40,
     "status": "pass"
   },
+  "validators": {
+    "packs": "pass",
+    "creativeEngineV2": "pass"
+  },
+  "openRouter": {
+    "keySource": "approved rig env only",
+    "modelsUsed": [
+      "openai/gpt-5.6-sol",
+      "openai/gpt-image-2.5-sunburst",
+      "openai/gpt-image-2.5-flare",
+      "bytedance/seedance-2.5",
+      "minimax/hailuo-3-max",
+      "minimax/hailuo-3",
+      "alibaba/wan-3.0"
+    ],
+    "exactCostUsdWhereReported": 0.708848,
+    "estimatedRecoveredVideoCostUsd": 2.2,
+    "combinedEstimateUsd": 2.908848,
+    "failureBoundary": "initial 402 preserved 13 completed clips; the missing t2v/beans-pan job later completed and its ID was persisted at submission; earlier recovered clips retain hashes/model-level estimates when exact response IDs were unavailable",
+    "submissionLedger": "brands/gutkitchen/creative-engine-v2/openrouter-run/provenance/submissions.jsonl"
+  },
+  "referenceFrames": {
+    "count": 9,
+    "committed": false,
+    "consumedByMultimodalModel": "openai/gpt-5.6-sol",
+    "operatorReviewUrls": "opaque IDs only"
+  },
+  "finalMedia": {
+    "candidateCount": 3,
+    "durationSeconds": 8.1,
+    "issueTargetDurationSeconds": [
+      8,
+      15
+    ],
+    "dimensions": "1080x1920",
+    "audio": true,
+    "plannedCriticalRoutes": 0,
+    "routeComposition": {
+      "new-a": {
+        "i2v": 6,
+        "t2v": 0,
+        "fallback": 0
+      },
+      "new-b": {
+        "i2v": 0,
+        "t2v": 6,
+        "fallback": 0
+      },
+      "new-c": {
+        "i2v": 3,
+        "t2v": 3,
+        "fallback": 0
+      }
+    }
+  },
   "playwright": {
+    "url": "https://gutkitchen-review.localhost:1355/reviews/gutkitchen-creative-v2/index.html",
     "desktop": {
-      "url": "https://gutkitchen-review.localhost:1355/reviews/gutkitchen-creative-v2/index.html",
-      "viewport": [
+      "viewportCss": [
         1440,
         1100
       ],
-      "scroll": [
-        1440,
-        2644
+      "screenshotPixels": [
+        2850,
+        14120
       ],
       "overflow": false,
-      "cards": 4,
-      "videos": [
-        {
-          "src": "https://gutkitchen-review.localhost:1355/brands/gutkitchen/media/pilot/scene-001.mp4",
-          "readyState": 4,
-          "duration": 9,
-          "width": 1080,
-          "height": 1920,
-          "error": null
-        },
-        {
-          "src": "https://gutkitchen-review.localhost:1355/brands/gutkitchen/creative-engine-v2/candidates/new-a-preview.mp4",
-          "readyState": 4,
-          "duration": 31.2,
-          "width": 1080,
-          "height": 1920,
-          "error": null
-        },
-        {
-          "src": "https://gutkitchen-review.localhost:1355/brands/gutkitchen/creative-engine-v2/candidates/new-b-preview.mp4",
-          "readyState": 4,
-          "duration": 29.8,
-          "width": 1080,
-          "height": 1920,
-          "error": null
-        },
-        {
-          "src": "https://gutkitchen-review.localhost:1355/brands/gutkitchen/creative-engine-v2/candidates/new-c-preview.mp4",
-          "readyState": 4,
-          "duration": 32.5,
-          "width": 1080,
-          "height": 1920,
-          "error": null
-        }
-      ]
+      "cards": 5
     },
     "mobile": {
-      "viewport": [
+      "viewportCss": [
         390,
         844
       ],
-      "scroll": [
-        390,
-        7759
+      "screenshotPixels": [
+        750,
+        15121
       ],
-      "overflow": false
+      "overflow": false,
+      "cards": 5,
+      "noteFields": 5,
+      "winnerControls": 3
     },
+    "videos": [
+      {
+        "src": "brands/gutkitchen/media/pilot/scene-001.mp4",
+        "readyState": 4,
+        "duration": 9.0,
+        "width": 1080,
+        "height": 1920,
+        "error": null
+      },
+      {
+        "src": "brands/gutkitchen/creative-engine-v2/candidates/new-c-preview.mp4",
+        "readyState": 4,
+        "duration": 32.5,
+        "width": 1080,
+        "height": 1920,
+        "error": null
+      },
+      {
+        "src": "brands/gutkitchen/creative-engine-v2/candidates/final-media/new-a.mp4",
+        "readyState": 4,
+        "duration": 8.1,
+        "width": 1080,
+        "height": 1920,
+        "error": null
+      },
+      {
+        "src": "brands/gutkitchen/creative-engine-v2/candidates/final-media/new-b.mp4",
+        "readyState": 4,
+        "duration": 8.1,
+        "width": 1080,
+        "height": 1920,
+        "error": null
+      },
+      {
+        "src": "brands/gutkitchen/creative-engine-v2/candidates/final-media/new-c.mp4",
+        "readyState": 4,
+        "duration": 8.1,
+        "width": 1080,
+        "height": 1920,
+        "error": null
+      }
+    ],
+    "interactions": {
+      "winner": "new-c",
+      "winnerPersistedAfterReload": true,
+      "notePersistedAfterReload": true,
+      "restartAll": true,
+      "playAllMuted": true
+    },
+    "thirdPartySourceLinks": 0,
     "console": []
+  },
+  "creativeAssessment": {
+    "bestCandidate": "new-c",
+    "reason": "strongest cheese pull, clear bean/sauce/spinach action, fast simmer/melt beats and final spoon payoff",
+    "humanDecisionRequired": true
   },
   "reviewPage": "reviews/gutkitchen-creative-v2/index.html",
   "localUrl": "https://gutkitchen-review.localhost:1355/reviews/gutkitchen-creative-v2/index.html",
-  "publish": false
+  "publish": false,
+  "evidenceDate": "2026-09-30"
 }
